@@ -1,3 +1,2 @@
-sudo docker run -d -p 0.0.0.0:8787:8787 -i -t r-studio
-
+docker run -d -p 0.0.0.0:8787:8787 -e USERPASS=badpassword  -i -t r-studio
 

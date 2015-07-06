@@ -1,0 +1,3 @@
+docker run -d -e USERPASS=badpassword  \
+        -v /home/foobar/r-studio-in-docker/r-studio-homedirs/mccahill:/home/guest \
+        -p 0.0.0.0:8787:8787 -i -t r-studio
