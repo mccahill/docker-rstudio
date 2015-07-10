@@ -53,3 +53,42 @@ To access the app, point your web browser at
 You will be prompted to login. Use the username 'guest' and the password 'badpassword'
 
 
+## Run a large scale RStudio container farm
+
+Suppose you want to run RStudio for a couple hundred users, and want to keep 
+each user sequestered as much as possible. To do this you would want to run an
+Rstudio container for each user, and map the user's home directory to an external
+volume. 
+
+You would also need to map each user to a different port, and keep track of
+the mapping of user to port and external home directory volume -- and you need
+to have unique passwords for each user.
+
+With all this information in hand, you could construct URLs specific to each user and
+after they have authenticated at some other web site, redirect them to the appropriate
+container and automatically log them in. Ideally, you would also run the entire RStudio 
+session over https so that everything is encrypted.
+
+To accomplish all of this, we use two additional containerized services:
+- nginx (https://github.com/nginxinc/docker-nginx) 
+- docker-gen (https://github.com/jwilder/docker-gen).
+
+Nginx provides https support by accepting https connections and proxying them to the appropriate
+rstudio container port on the local server. Nginx needs a configuration file to to know what
+to do, and the prospect of maintaining a config file for over a hundred rstudio containers
+was not appealing, so we take advantage of docker-gen to dynamically update the nginx config as containers are started/stopped.
+
+Docker-gen tracks activity (container starts/stops) from the docker daemon, and based
+on the VIRTUAL_HOST environmental variable for the containers can select an appropriate
+template to use for updating the nginx config file. This is cool because it means that
+we are not faced with manually updating the nginx config - instead docker-gen updates it
+for us. 
+
+With a little bit of shell scripting it is possible to read a mapping file that lists users and passwords for RStudio users, and based on this file launch RDtudio containers -- something you
+will want to be able to do when your server starts. 
+
+For details on the configurations of these services used at Duke and how to script startup of
+a cluster of rstudio instances front-ended by nginx and docker-gen see
+https://github.com/mccahill/docker-gen/tree/duke
+
+
