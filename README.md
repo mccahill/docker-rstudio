@@ -39,10 +39,11 @@ docker run -d -p 0.0.0.0:8787:8787 -e USERPASS=badpassword  -i -t r-studio
 
 You probably want the user's home directory to persist, so if the container restarts
 the users' work is not blown away. To do this, map a home directory like this:
-
+```
 docker run -d -e USERPASS=badpassword  \
         -v /external/directory/for/user:/home/guest \
         -p 0.0.0.0:8787:8787 -i -t r-studio
+```
 
 ## How to access
 
