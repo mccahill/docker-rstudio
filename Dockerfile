@@ -1,6 +1,6 @@
 # mccahill/r-studio
 #
-# VERSION               0.7
+# VERSION               0.7.1
 
 FROM   ubuntu:14.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
@@ -384,6 +384,7 @@ RUN echo "" >> /etc/R/Rprofile.site && \
     echo "library(rvest)" >> /etc/R/Rprofile.site && \
     echo "library(readr)" >> /etc/R/Rprofile.site && \
     echo "library(openintro)" >> /etc/R/Rprofile.site && \
+    echo "library(broom)" >> /etc/R/Rprofile.site && \
     echo "}" >> /etc/R/Rprofile.site  && \
     echo "" >> /etc/R/Rprofile.site
 
