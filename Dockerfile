@@ -1,6 +1,6 @@
 # mccahill/r-studio
 #
-# VERSION               0.7.2
+# VERSION               0.8
 
 FROM   ubuntu:14.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
@@ -59,12 +59,12 @@ RUN rm rstudio-server-0.99.681-amd64.deb
 
 # update the R packages we will need for knitr
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://mirrors.nics.utk.edu/cran/src/contrib/knitr_1.11.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/knitr_1.12.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/yaml_2.1.13.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/htmltools_0.2.6.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/htmltools_0.3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/caTools_1.17.1.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/bitops_1.0-6.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.8.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.9.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/stringr_1.0.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/markdown_0.7.7.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/highr_0.5.1.tar.gz \
@@ -78,8 +78,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    bitops_1.0-6.tar.gz \
    caTools_1.17.1.tar.gz \
-   digest_0.6.8.tar.gz \
-   htmltools_0.2.6.tar.gz \
+   digest_0.6.9.tar.gz \
+   htmltools_0.3.tar.gz \
    yaml_2.1.13.tar.gz \
    stringi_1.0-1.tar.gz \
    magrittr_1.5.tar.gz \
@@ -89,7 +89,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    formatR_1.2.1.tar.gz \
    evaluate_0.8.tar.gz \
    markdown_0.7.7.tar.gz \
-   knitr_1.11.tar.gz 
+   knitr_1.12.tar.gz 
 
 RUN rm \
    evaluate_0.8.tar.gz \
@@ -99,12 +99,12 @@ RUN rm \
    stringi_1.0-1.tar.gz \
    magrittr_1.5.tar.gz \
    stringr_1.0.0.tar.gz \
-   knitr_1.11.tar.gz \
+   knitr_1.12.tar.gz \
    yaml_2.1.13.tar.gz \
-   htmltools_0.2.6.tar.gz \
+   htmltools_0.3.tar.gz \
    caTools_1.17.1.tar.gz \
    bitops_1.0-6.tar.gz \
-   digest_0.6.8.tar.gz \
+   digest_0.6.9.tar.gz \
    mime_0.4.tar.gz
 
 # dependency for R XML library
@@ -115,73 +115,73 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://mirrors.nics.utk.edu/cran/src/contrib/rstudioapi_0.3.1.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/rstudioapi_0.4.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/brew_1.0-6.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/roxygen2_5.0.1.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/rversions_1.0.2.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/git2r_0.11.0.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/git2r_0.13.1.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/devtools_1.9.1.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/R6_2.1.1.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/httr_1.0.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/RCurl_1.95-4.7.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/BH_1.58.0-1.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/BH_1.60.0-1.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/xml2_0.1.2.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/curl_0.9.3.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/jsonlite_0.9.17.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/curl_0.9.4.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/jsonlite_0.9.19.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/downloader_0.4.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/memoise_0.2.1.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.1.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.2.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/plyr_1.8.3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/XML_3.98-1.3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/whisker_0.3-2.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   jsonlite_0.9.17.tar.gz \
+   jsonlite_0.9.19.tar.gz \
    memoise_0.2.1.tar.gz \
    whisker_0.3-2.tar.gz \
    RCurl_1.95-4.7.tar.gz \
-   Rcpp_0.12.1.tar.gz \
+   Rcpp_0.12.2.tar.gz \
    plyr_1.8.3.tar.gz \
    R6_2.1.1.tar.gz \
-   curl_0.9.3.tar.gz \
+   curl_0.9.4.tar.gz \
    httr_1.0.0.tar.gz \
-   rstudioapi_0.3.1.tar.gz \
+   rstudioapi_0.4.0.tar.gz \
    brew_1.0-6.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.3.tar.gz \
-   BH_1.58.0-1.tar.gz \
+   BH_1.60.0-1.tar.gz \
    xml2_0.1.2.tar.gz \
    rversions_1.0.2.tar.gz \
-   git2r_0.11.0.tar.gz \
+   git2r_0.13.1.tar.gz \
    devtools_1.9.1.tar.gz \
    downloader_0.4.tar.gz
 
 RUN rm \
-   jsonlite_0.9.17.tar.gz \
+   jsonlite_0.9.19.tar.gz \
    memoise_0.2.1.tar.gz \
    whisker_0.3-2.tar.gz \
    RCurl_1.95-4.7.tar.gz \
-   Rcpp_0.12.1.tar.gz \
+   Rcpp_0.12.2.tar.gz \
    plyr_1.8.3.tar.gz \
    R6_2.1.1.tar.gz \
    httr_1.0.0.tar.gz \
-   rstudioapi_0.3.1.tar.gz \
+   rstudioapi_0.4.0.tar.gz \
    brew_1.0-6.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.3.tar.gz \
-   BH_1.58.0-1.tar.gz \
+   BH_1.60.0-1.tar.gz \
    xml2_0.1.2.tar.gz \
-   curl_0.9.3.tar.gz \
+   curl_0.9.4.tar.gz \
    rversions_1.0.2.tar.gz \
-   git2r_0.11.0.tar.gz \
+   git2r_0.13.1.tar.gz \
    devtools_1.9.1.tar.gz \
    downloader_0.4.tar.gz
    
 
 # libraries Eric Green wanted
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://mirrors.nics.utk.edu/cran/src/contrib/lubridate_1.3.3.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/ggplot2_1.0.1.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/lubridate_1.5.0.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/ggplot2_2.0.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/colorspace_1.2-6.tar.gz \
@@ -198,7 +198,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/lme4_1.1-10.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   lubridate_1.3.3.tar.gz  \
+   lubridate_1.5.0.tar.gz  \
    gtable_0.1.2.tar.gz \
    RColorBrewer_1.1-2.tar.gz \
    dichromat_2.0-0.tar.gz \
@@ -208,7 +208,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    scales_0.3.0.tar.gz \
    proto_0.3-10.tar.gz \
    reshape2_1.4.1.tar.gz \
-   ggplot2_1.0.1.tar.gz \
+   ggplot2_2.0.0.tar.gz \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
    nloptr_1.0.4.tar.gz \
@@ -216,7 +216,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lme4_1.1-10.tar.gz
 
 RUN rm \
-   lubridate_1.3.3.tar.gz  \
+   lubridate_1.5.0.tar.gz  \
    gtable_0.1.2.tar.gz \
    RColorBrewer_1.1-2.tar.gz \
    dichromat_2.0-0.tar.gz \
@@ -226,7 +226,7 @@ RUN rm \
    scales_0.3.0.tar.gz \
    proto_0.3-10.tar.gz \
    reshape2_1.4.1.tar.gz \
-   ggplot2_1.0.1.tar.gz \
+   ggplot2_2.0.0.tar.gz \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
    nloptr_1.0.4.tar.gz \
@@ -242,7 +242,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/lazyeval_0.1.10.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/DBI_0.3.1.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/BH_1.58.0-1.tar.gz 
+   http://mirrors.nics.utk.edu/cran/src/contrib/BH_1.60.0-1.tar.gz 
 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -252,7 +252,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    magrittr_1.5.tar.gz \
    lazyeval_0.1.10.tar.gz \
    DBI_0.3.1.tar.gz \
-   BH_1.58.0-1.tar.gz \
+   BH_1.60.0-1.tar.gz \
    dplyr_0.4.3.tar.gz 
 
 RUN rm \
@@ -262,7 +262,7 @@ RUN rm \
    magrittr_1.5.tar.gz \
    lazyeval_0.1.10.tar.gz \
    DBI_0.3.1.tar.gz \
-   BH_1.58.0-1.tar.gz \
+   BH_1.60.0-1.tar.gz \
    dplyr_0.4.3.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
@@ -274,7 +274,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/readr_0.2.2.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/selectr_0.2-3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/rvest_0.3.1.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/pbkrtest_0.4-2.tar.gz 
+   http://mirrors.nics.utk.edu/cran/src/contrib/pbkrtest_0.4-4.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    chron_2.3-47.tar.gz \
@@ -285,7 +285,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    readr_0.2.2.tar.gz \
    selectr_0.2-3.tar.gz \
    rvest_0.3.1.tar.gz \
-   pbkrtest_0.4-2.tar.gz 
+   pbkrtest_0.4-4.tar.gz 
 
 RUN rm \
    chron_2.3-47.tar.gz \
@@ -296,55 +296,55 @@ RUN rm \
    readr_0.2.2.tar.gz \
    selectr_0.2-3.tar.gz \
    rvest_0.3.1.tar.gz \
-   pbkrtest_0.4-2.tar.gz 
+   pbkrtest_0.4-4.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/SparseM_1.7.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/MatrixModels_0.4-1.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/quantreg_5.19.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/car_2.1-0.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/mosaicData_0.9.1.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/car_2.1-1.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/mosaicData_0.13.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/latticeExtra_0.6-26.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/gridExtra_2.0.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/ggdendro_0.1-17.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/mnormt_1.5-3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/psych_1.5.8.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/broom_0.3.7.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/broom_0.4.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/reshape_0.8.5.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/GGally_0.5.0.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/mosaic_0.12.tar.gz 
+   http://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.0.0.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/mosaic_0.13.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    SparseM_1.7.tar.gz \
    MatrixModels_0.4-1.tar.gz \
    quantreg_5.19.tar.gz \
-   car_2.1-0.tar.gz \
-   mosaicData_0.9.1.tar.gz \
+   car_2.1-1.tar.gz \
+   mosaicData_0.13.0.tar.gz \
    latticeExtra_0.6-26.tar.gz \
    gridExtra_2.0.0.tar.gz \
    ggdendro_0.1-17.tar.gz \
    mnormt_1.5-3.tar.gz \
    psych_1.5.8.tar.gz \
-   broom_0.3.7.tar.gz \
+   broom_0.4.0.tar.gz \
    reshape_0.8.5.tar.gz \
-   GGally_0.5.0.tar.gz \
-   mosaic_0.12.tar.gz 
+   GGally_1.0.0.tar.gz \
+   mosaic_0.13.0.tar.gz 
 
 RUN rm \
    SparseM_1.7.tar.gz \
    MatrixModels_0.4-1.tar.gz \
    quantreg_5.19.tar.gz \
-   car_2.1-0.tar.gz \
-   mosaicData_0.9.1.tar.gz \
+   car_2.1-1.tar.gz \
+   mosaicData_0.13.0.tar.gz \
    latticeExtra_0.6-26.tar.gz \
    gridExtra_2.0.0.tar.gz \
    ggdendro_0.1-17.tar.gz \
    mnormt_1.5-3.tar.gz \
    psych_1.5.8.tar.gz \
-   broom_0.3.7.tar.gz \
+   broom_0.4.0.tar.gz \
    reshape_0.8.5.tar.gz \
-   GGally_0.5.0.tar.gz \
-   mosaic_0.12.tar.gz 
+   GGally_1.0.0.tar.gz \
+   mosaic_0.13.0.tar.gz 
 
 # install rmarkdown
 ADD ./conf /r-studio
