@@ -130,7 +130,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/jsonlite_0.9.19.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/downloader_0.4.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/memoise_0.2.1.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.2.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/plyr_1.8.3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/XML_3.98-1.3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/whisker_0.3-2.tar.gz
@@ -140,7 +140,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    memoise_0.2.1.tar.gz \
    whisker_0.3-2.tar.gz \
    RCurl_1.95-4.7.tar.gz \
-   Rcpp_0.12.2.tar.gz \
+   Rcpp_0.12.3.tar.gz \
    plyr_1.8.3.tar.gz \
    R6_2.1.1.tar.gz \
    curl_0.9.4.tar.gz \
@@ -161,7 +161,7 @@ RUN rm \
    memoise_0.2.1.tar.gz \
    whisker_0.3-2.tar.gz \
    RCurl_1.95-4.7.tar.gz \
-   Rcpp_0.12.2.tar.gz \
+   Rcpp_0.12.3.tar.gz \
    plyr_1.8.3.tar.gz \
    R6_2.1.1.tar.gz \
    httr_1.0.0.tar.gz \
@@ -194,7 +194,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/proto_0.3-10.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/minqa_1.2.4.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/nloptr_1.0.4.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/RcppEigen_0.3.2.5.1.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/RcppEigen_0.3.2.7.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/lme4_1.1-10.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -212,7 +212,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
    nloptr_1.0.4.tar.gz \
-   RcppEigen_0.3.2.5.1.tar.gz \
+   RcppEigen_0.3.2.7.0.tar.gz \
    lme4_1.1-10.tar.gz
 
 RUN rm \
@@ -230,7 +230,7 @@ RUN rm \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
    nloptr_1.0.4.tar.gz \
-   RcppEigen_0.3.2.5.1.tar.gz \
+   RcppEigen_0.3.2.7.0.tar.gz \
    lme4_1.1-10.tar.gz
   
 # more libraries Mine Cetinakya-Rundel asked for
@@ -269,34 +269,34 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/chron_2.3-47.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/data.table_1.9.6.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/cellranger_1.0.0.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/tidyr_0.3.1.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/tidyr_0.4.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/googlesheets_0.1.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/readr_0.2.2.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/selectr_0.2-3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/rvest_0.3.1.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/pbkrtest_0.4-4.tar.gz 
+   http://mirrors.nics.utk.edu/cran/src/contrib/pbkrtest_0.4-5.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    chron_2.3-47.tar.gz \
    data.table_1.9.6.tar.gz \
    cellranger_1.0.0.tar.gz \
-   tidyr_0.3.1.tar.gz \
+   tidyr_0.4.0.tar.gz \
    googlesheets_0.1.0.tar.gz \
    readr_0.2.2.tar.gz \
    selectr_0.2-3.tar.gz \
    rvest_0.3.1.tar.gz \
-   pbkrtest_0.4-4.tar.gz 
+   pbkrtest_0.4-5.tar.gz 
 
 RUN rm \
    chron_2.3-47.tar.gz \
    data.table_1.9.6.tar.gz \
    cellranger_1.0.0.tar.gz \
-   tidyr_0.3.1.tar.gz \
+   tidyr_0.4.0.tar.gz \
    googlesheets_0.1.0.tar.gz \
    readr_0.2.2.tar.gz \
    selectr_0.2-3.tar.gz \
    rvest_0.3.1.tar.gz \
-   pbkrtest_0.4-4.tar.gz 
+   pbkrtest_0.4-5.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/SparseM_1.7.tar.gz \
@@ -311,7 +311,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/psych_1.5.8.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/broom_0.4.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/reshape_0.8.5.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.0.0.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.0.1.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/mosaic_0.13.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -327,7 +327,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    psych_1.5.8.tar.gz \
    broom_0.4.0.tar.gz \
    reshape_0.8.5.tar.gz \
-   GGally_1.0.0.tar.gz \
+   GGally_1.0.1.tar.gz \
    mosaic_0.13.0.tar.gz 
 
 RUN rm \
@@ -343,7 +343,7 @@ RUN rm \
    psych_1.5.8.tar.gz \
    broom_0.4.0.tar.gz \
    reshape_0.8.5.tar.gz \
-   GGally_1.0.0.tar.gz \
+   GGally_1.0.1.tar.gz \
    mosaic_0.13.0.tar.gz 
 
 # install rmarkdown
@@ -373,7 +373,6 @@ RUN echo "" >> /etc/R/Rprofile.site && \
     echo "library(lubridate)" >> /etc/R/Rprofile.site && \
     echo "library(stringr)" >> /etc/R/Rprofile.site && \
     echo "library(rvest)" >> /etc/R/Rprofile.site && \
-    echo "library(readr)" >> /etc/R/Rprofile.site && \
     echo "library(openintro)" >> /etc/R/Rprofile.site && \
     echo "library(broom)" >> /etc/R/Rprofile.site && \
     echo "library(GGally)" >> /etc/R/Rprofile.site && \
