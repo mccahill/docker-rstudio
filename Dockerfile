@@ -146,9 +146,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    plyr_1.8.3.tar.gz \
    R6_2.1.2.tar.gz \
    curl_0.9.5.tar.gz \
+   openssl_0.9.1.tar.gz \
    httr_1.1.0.tar.gz \
    rstudioapi_0.5.tar.gz \
-   openssl_0.9.1.tar.gz \
    withr_1.0.0.tar.gz \
    brew_1.0-6.tar.gz \
    roxygen2_5.0.1.tar.gz \
@@ -280,7 +280,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/readr_0.2.2.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/selectr_0.2-3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/rvest_0.3.1.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/pbkrtest_0.4-5.tar.gz 
+   http://mirrors.nics.utk.edu/cran/src/contrib/pbkrtest_0.4-6.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    chron_2.3-47.tar.gz \
@@ -291,7 +291,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    readr_0.2.2.tar.gz \
    selectr_0.2-3.tar.gz \
    rvest_0.3.1.tar.gz \
-   pbkrtest_0.4-5.tar.gz 
+   pbkrtest_0.4-6.tar.gz 
 
 RUN rm \
    chron_2.3-47.tar.gz \
@@ -302,7 +302,7 @@ RUN rm \
    readr_0.2.2.tar.gz \
    selectr_0.2-3.tar.gz \
    rvest_0.3.1.tar.gz \
-   pbkrtest_0.4-5.tar.gz 
+   pbkrtest_0.4-6.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/SparseM_1.7.tar.gz \
