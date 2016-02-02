@@ -115,21 +115,21 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://mirrors.nics.utk.edu/cran/src/contrib/rstudioapi_0.4.0.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/rstudioapi_0.5.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/brew_1.0-6.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/roxygen2_5.0.1.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/rversions_1.0.2.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/git2r_0.13.1.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/devtools_1.9.1.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/R6_2.1.1.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/httr_1.0.0.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/devtools_1.10.0.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/R6_2.1.2.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/httr_1.1.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/RCurl_1.95-4.7.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/BH_1.60.0-1.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/xml2_0.1.2.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/curl_0.9.4.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/curl_0.9.5.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/jsonlite_0.9.19.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/downloader_0.4.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/memoise_0.2.1.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/memoise_1.0.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/plyr_1.8.3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/XML_3.98-1.3.tar.gz \
@@ -137,15 +137,15 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    jsonlite_0.9.19.tar.gz \
-   memoise_0.2.1.tar.gz \
+   memoise_1.0.0.tar.gz \
    whisker_0.3-2.tar.gz \
    RCurl_1.95-4.7.tar.gz \
    Rcpp_0.12.3.tar.gz \
    plyr_1.8.3.tar.gz \
-   R6_2.1.1.tar.gz \
-   curl_0.9.4.tar.gz \
-   httr_1.0.0.tar.gz \
-   rstudioapi_0.4.0.tar.gz \
+   R6_2.1.2.tar.gz \
+   curl_0.9.5.tar.gz \
+   httr_1.1.0.tar.gz \
+   rstudioapi_0.45.0.tar.gz \
    brew_1.0-6.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.3.tar.gz \
@@ -153,28 +153,28 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    xml2_0.1.2.tar.gz \
    rversions_1.0.2.tar.gz \
    git2r_0.13.1.tar.gz \
-   devtools_1.9.1.tar.gz \
+   devtools_1.10.0.tar.gz \
    downloader_0.4.tar.gz
 
 RUN rm \
    jsonlite_0.9.19.tar.gz \
-   memoise_0.2.1.tar.gz \
+   memoise_1.0.0.tar.gz \
    whisker_0.3-2.tar.gz \
    RCurl_1.95-4.7.tar.gz \
    Rcpp_0.12.3.tar.gz \
    plyr_1.8.3.tar.gz \
-   R6_2.1.1.tar.gz \
-   httr_1.0.0.tar.gz \
-   rstudioapi_0.4.0.tar.gz \
+   R6_2.1.2.tar.gz \
+   httr_1.1.0.tar.gz \
+   rstudioapi_0.5.tar.gz \
    brew_1.0-6.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.3.tar.gz \
    BH_1.60.0-1.tar.gz \
    xml2_0.1.2.tar.gz \
-   curl_0.9.4.tar.gz \
+   curl_0.9.5.tar.gz \
    rversions_1.0.2.tar.gz \
    git2r_0.13.1.tar.gz \
-   devtools_1.9.1.tar.gz \
+   devtools_1.10.0.tar.gz \
    downloader_0.4.tar.gz
    
 
@@ -238,7 +238,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/openintro_1.4.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/dplyr_0.4.3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/assertthat_0.1.tar.gz \
-   http://mirrors.nics.utk.edu/cran/src/contrib/R6_2.1.1.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/R6_2.1.2.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/lazyeval_0.1.10.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/DBI_0.3.1.tar.gz \
@@ -248,7 +248,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    openintro_1.4.tar.gz \
    assertthat_0.1.tar.gz \
-   R6_2.1.1.tar.gz \
+   R6_2.1.2.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.1.10.tar.gz \
    DBI_0.3.1.tar.gz \
@@ -258,7 +258,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
    openintro_1.4.tar.gz \
    assertthat_0.1.tar.gz \
-   R6_2.1.1.tar.gz \
+   R6_2.1.2.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.1.10.tar.gz \
    DBI_0.3.1.tar.gz \
