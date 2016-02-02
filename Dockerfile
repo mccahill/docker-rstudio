@@ -59,7 +59,7 @@ RUN rm rstudio-server-0.99.681-amd64.deb
 
 # update the R packages we will need for knitr
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://mirrors.nics.utk.edu/cran/src/contrib/knitr_1.12.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/knitr_1.12.3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/yaml_2.1.13.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/htmltools_0.3.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/caTools_1.17.1.tar.gz \
@@ -89,7 +89,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    formatR_1.2.1.tar.gz \
    evaluate_0.8.tar.gz \
    markdown_0.7.7.tar.gz \
-   knitr_1.12.tar.gz 
+   knitr_1.12.3.tar.gz 
 
 RUN rm \
    evaluate_0.8.tar.gz \
@@ -99,7 +99,7 @@ RUN rm \
    stringi_1.0-1.tar.gz \
    magrittr_1.5.tar.gz \
    stringr_1.0.0.tar.gz \
-   knitr_1.12.tar.gz \
+   knitr_1.12.3.tar.gz \
    yaml_2.1.13.tar.gz \
    htmltools_0.3.tar.gz \
    caTools_1.17.1.tar.gz \
