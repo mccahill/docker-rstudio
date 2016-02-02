@@ -116,6 +116,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/rstudioapi_0.5.tar.gz \
+   http://mirrors.nics.utk.edu/cran/src/contrib/withr_1.0.0.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/brew_1.0-6.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/roxygen2_5.0.1.tar.gz \
    http://mirrors.nics.utk.edu/cran/src/contrib/rversions_1.0.2.tar.gz \
@@ -145,7 +146,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    R6_2.1.2.tar.gz \
    curl_0.9.5.tar.gz \
    httr_1.1.0.tar.gz \
-   rstudioapi_0.45.0.tar.gz \
+   rstudioapi_0.5.tar.gz \
+   withr_1.0.0.tar.gz \
    brew_1.0-6.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.3.tar.gz \
@@ -166,6 +168,7 @@ RUN rm \
    R6_2.1.2.tar.gz \
    httr_1.1.0.tar.gz \
    rstudioapi_0.5.tar.gz \
+   withr_1.0.0.tar.gz \
    brew_1.0-6.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.3.tar.gz \
