@@ -360,6 +360,10 @@ ADD ./conf /r-studio
 RUN R CMD BATCH /r-studio/install-rmarkdown.R
 RUN rm /install-rmarkdown.Rout 
 
+# install templates and examples from Reed
+RUN R CMD BATCH /r-studio/install-reed.R
+RUN rm /install-reed.Rout 
+
 # Supervisord
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y supervisor && \
    mkdir -p /var/log/supervisor
