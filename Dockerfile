@@ -111,6 +111,9 @@ RUN rm \
    mime_0.4.tar.gz
 
 # dependency for R XML library
+RUN apt-get update && \
+    apt-get upgrade -y
+
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
    libxml2 \ 
    libxml2-dev
