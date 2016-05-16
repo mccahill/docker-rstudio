@@ -361,6 +361,15 @@ RUN R CMD BATCH /r-studio/install-rmarkdown.R
 RUN rm /install-rmarkdown.Rout 
 
 # install templates and examples from Reed
+RUN DEBIAN_FRONTEND=noninteractive wget \
+   http://mirrors.nics.utk.edu/cran/src/contrib/BHH2_2015.06.25.tar.gz
+   
+RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
+   BHH2_2015.06.25.tar.gz
+   
+RUN rm \
+  BHH2_2015.06.25.tar.gz
+  
 RUN R CMD BATCH /r-studio/install-reed.R
 RUN rm /install-reed.Rout 
 
