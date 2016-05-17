@@ -363,7 +363,7 @@ ADD ./conf /r-studio
 RUN R CMD BATCH /r-studio/install-rmarkdown.R
 RUN rm /install-rmarkdown.Rout 
 
-# install templates and examples from Reed
+# install templates and examples from Reed and the Tufte package
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://mirrors.nics.utk.edu/cran/src/contrib/BHH2_2015.06.25.tar.gz
    
