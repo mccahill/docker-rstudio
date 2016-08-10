@@ -355,7 +355,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/broom_0.4.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/reshape_0.8.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/GGally_1.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/mosaic_0.14.tar.gz 
+   http://archive.linux.duke.edu/cran/src/contrib/mosaic_0.14.4.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    SparseM_1.7.tar.gz \
@@ -371,7 +371,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    broom_0.4.1.tar.gz \
    reshape_0.8.5.tar.gz \
    GGally_1.2.0.tar.gz \
-   mosaic_0.14.tar.gz 
+   mosaic_0.14.4.tar.gz 
 
 RUN rm \
    SparseM_1.7.tar.gz \
@@ -387,7 +387,7 @@ RUN rm \
    broom_0.4.1.tar.gz \
    reshape_0.8.5.tar.gz \
    GGally_1.2.0.tar.gz \
-   mosaic_0.14.tar.gz 
+   mosaic_0.14.4.tar.gz 
 
 # install rmarkdown
 ADD ./conf /r-studio
