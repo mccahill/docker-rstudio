@@ -302,6 +302,7 @@ RUN rm \
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/chron_2.3-47.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/data.table_1.9.6.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/rematch_1.0.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/cellranger_1.1.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/tidyr_0.5.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/googlesheets_0.2.1.tar.gz \
@@ -314,6 +315,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    chron_2.3-47.tar.gz \
    data.table_1.9.6.tar.gz \
+   rematch_1.0.1.tar.gz \
    cellranger_1.1.0.tar.gz \
    tidyr_0.5.1.tar.gz \
    readr_1.0.0.tar.gz \
@@ -326,6 +328,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
    chron_2.3-47.tar.gz \
    data.table_1.9.6.tar.gz \
+   rematch_1.0.1.tar.gz \
    cellranger_1.1.0.tar.gz \
    tidyr_0.5.1.tar.gz \
    googlesheets_0.2.1.tar.gz \
