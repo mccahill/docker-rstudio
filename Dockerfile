@@ -35,7 +35,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
    python-software-properties \
    wget \
    sudo \
-   libcurl4-openssl-dev 
+   libcurl4-openssl-dev \
+   libxml2-dev 
 
 RUN apt-get update && \
     apt-get upgrade -y
@@ -125,36 +126,50 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/openssl_0.9.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/withr_1.0.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/brew_1.0-6.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/stringr_1.0.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/roxygen2_5.0.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/rversions_1.0.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/git2r_0.15.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/devtools_1.12.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/R6_2.1.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/httr_1.2.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/mime_0.4.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/httr_1.2.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/RCurl_1.95-4.8.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/BH_1.60.0-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/xml2_1.0.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/curl_0.9.7.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/jsonlite_1.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/jsonlite_0.9.22.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/digest_0.6.9.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/downloader_0.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/memoise_1.0.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/plyr_1.8.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/XML_3.98-1.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/whisker_0.3-2.tar.gz
+   http://archive.linux.duke.edu/cran/src/contrib/whisker_0.3-2.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   jsonlite_1.0.tar.gz \
+   jsonlite_0.9.22.tar.gz \
+   digest_0.6.9.tar.gz \
    memoise_1.0.0.tar.gz \
    whisker_0.3-2.tar.gz \
+   bitops_1.0-6.tar.gz \
    RCurl_1.95-4.8.tar.gz \
+   Rcpp_0.12.5.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.1.2.tar.gz \
    curl_0.9.7.tar.gz \
    openssl_0.9.4.tar.gz \
-   httr_1.2.1.tar.gz \
+   mime_0.4.tar.gz \
+   httr_1.2.0.tar.gz \
    rstudioapi_0.6.tar.gz \
    withr_1.0.2.tar.gz \
    brew_1.0-6.tar.gz \
+   stringi_1.1.1.tar.gz \
+   magrittr_1.5.tar.gz \
+   stringr_1.0.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.4.tar.gz \
    BH_1.60.0-2.tar.gz \
@@ -165,17 +180,24 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    downloader_0.4.tar.gz
 
 RUN rm \
-   jsonlite_1.0.tar.gz \
+   jsonlite_0.9.22.tar.gz \
+   digest_0.6.9.tar.gz \
    memoise_1.0.0.tar.gz \
    whisker_0.3-2.tar.gz \
+   bitops_1.0-6.tar.gz \
    RCurl_1.95-4.8.tar.gz \
+   Rcpp_0.12.5.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.1.2.tar.gz \
-   httr_1.2.1.tar.gz \
+   mime_0.4.tar.gz \
+   httr_1.2.0.tar.gz \
    rstudioapi_0.6.tar.gz \
    openssl_0.9.4.tar.gz \
    withr_1.0.2.tar.gz \
    brew_1.0-6.tar.gz \
+   stringi_1.1.1.tar.gz \
+   magrittr_1.5.tar.gz \
+   stringr_1.0.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.4.tar.gz \
    BH_1.60.0-2.tar.gz \
@@ -406,6 +428,17 @@ RUN echo "" >> /etc/R/Rprofile.site && \
     echo "library(GGally)" >> /etc/R/Rprofile.site && \
     echo "}" >> /etc/R/Rprofile.site  && \
     echo "" >> /etc/R/Rprofile.site
+	
+ADD ./conf /additional-configs
+RUN cp /additional-configs/supervisord-shiny.conf /etc/supervisor/conf.d/supervisord-shiny.conf
+
+RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.4.2.786-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.4.2.786-amd64.deb
+RUN rm shiny-server-1.4.2.786-amd64.deb
+
+# Shiny
+RUN R CMD BATCH /additional-configs/install-Shiny.R
+
 
 # add a non-root user so we can log into R studio as that user; make sure that user is in the group "users"
 RUN adduser --disabled-password --gecos "" --ingroup users guest 
@@ -428,6 +461,10 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 #
 #########
 
+# expose the RStudio IDE port
 EXPOSE 8787 
+
+# expose the port for the shiny server
+#EXPOSE 3838
 
 CMD ["/usr/bin/supervisord"]
