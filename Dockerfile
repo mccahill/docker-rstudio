@@ -130,18 +130,18 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/stringr_1.0.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/roxygen2_5.0.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/rversions_1.0.2.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/git2r_0.15.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/devtools_1.12.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/R6_2.1.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/mime_0.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/httr_1.2.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/httr_1.2.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/RCurl_1.95-4.8.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/BH_1.60.0-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/xml2_1.0.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/curl_0.9.7.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/jsonlite_0.9.22.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/curl_1.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/jsonlite_1.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/digest_0.6.10.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/downloader_0.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/memoise_1.0.0.tar.gz \
@@ -151,7 +151,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   jsonlite_0.9.22.tar.gz \
+   jsonlite_1.0.tar.gz \
    digest_0.6.10.tar.gz \
    memoise_1.0.0.tar.gz \
    whisker_0.3-2.tar.gz \
@@ -160,10 +160,10 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    Rcpp_0.12.6.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.1.2.tar.gz \
-   curl_0.9.7.tar.gz \
+   curl_1.1.tar.gz \
    openssl_0.9.4.tar.gz \
    mime_0.5.tar.gz \
-   httr_1.2.0.tar.gz \
+   httr_1.2.1.tar.gz \
    rstudioapi_0.6.tar.gz \
    withr_1.0.2.tar.gz \
    brew_1.0-6.tar.gz \
@@ -174,13 +174,13 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    XML_3.98-1.4.tar.gz \
    BH_1.60.0-2.tar.gz \
    xml2_1.0.0.tar.gz \
-   rversions_1.0.2.tar.gz \
+   rversions_1.0.3.tar.gz \
    git2r_0.15.0.tar.gz \
    devtools_1.12.0.tar.gz \
    downloader_0.4.tar.gz
 
 RUN rm \
-   jsonlite_0.9.22.tar.gz \
+   jsonlite_1.0.tar.gz \
    digest_0.6.10.tar.gz \
    memoise_1.0.0.tar.gz \
    whisker_0.3-2.tar.gz \
@@ -190,7 +190,7 @@ RUN rm \
    plyr_1.8.4.tar.gz \
    R6_2.1.2.tar.gz \
    mime_0.5.tar.gz \
-   httr_1.2.0.tar.gz \
+   httr_1.2.1.tar.gz \
    rstudioapi_0.6.tar.gz \
    openssl_0.9.4.tar.gz \
    withr_1.0.2.tar.gz \
@@ -202,8 +202,8 @@ RUN rm \
    XML_3.98-1.4.tar.gz \
    BH_1.60.0-2.tar.gz \
    xml2_1.0.0.tar.gz \
-   curl_0.9.7.tar.gz \
-   rversions_1.0.2.tar.gz \
+   curl_1.1.tar.gz \
+   rversions_1.0.3.tar.gz \
    git2r_0.15.0.tar.gz \
    devtools_1.12.0.tar.gz \
    downloader_0.4.tar.gz
