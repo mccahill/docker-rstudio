@@ -394,6 +394,12 @@ ADD ./conf /r-studio
 RUN R CMD BATCH /r-studio/install-rmarkdown.R
 RUN rm /install-rmarkdown.Rout 
 
+# Shiny
+RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.4.2.786-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.4.2.786-amd64.deb
+RUN rm shiny-server-1.4.2.786-amd64.deb
+RUN R CMD BATCH /r-studio/install-Shiny.R
+
 # install templates and examples from Reed and the Tufte package
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/BHH2_2016.05.31.tar.gz
@@ -406,6 +412,7 @@ RUN rm \
   
 RUN R CMD BATCH /r-studio/install-reed.R
 RUN rm /install-reed.Rout 
+
 
 # Supervisord
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y supervisor && \
@@ -435,16 +442,6 @@ RUN echo "" >> /etc/R/Rprofile.site && \
     echo "}" >> /etc/R/Rprofile.site  && \
     echo "" >> /etc/R/Rprofile.site
 	
-ADD ./conf /additional-configs
-RUN cp /additional-configs/supervisord-shiny.conf /etc/supervisor/conf.d/supervisord-shiny.conf
-
-RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.4.2.786-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.4.2.786-amd64.deb
-RUN rm shiny-server-1.4.2.786-amd64.deb
-
-# Shiny
-RUN R CMD BATCH /additional-configs/install-Shiny.R
-
 
 # add a non-root user so we can log into R studio as that user; make sure that user is in the group "users"
 RUN adduser --disabled-password --gecos "" --ingroup users guest 
