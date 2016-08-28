@@ -267,13 +267,13 @@ RUN rm \
 # more libraries Mine Cetinakya-Rundel asked for
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/openintro_1.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/tibble_1.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/tibble_1.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/dplyr_0.5.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/R6_2.1.3.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/DBI_0.4-1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/DBI_0.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/BH_1.60.0-2.tar.gz 
 
 
@@ -283,9 +283,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    R6_2.1.3.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.0.tar.gz \
-   DBI_0.4-1.tar.gz \
+   DBI_0.5.tar.gz \
    BH_1.60.0-2.tar.gz \
-   tibble_1.1.tar.gz \
+   tibble_1.2.tar.gz \
    dplyr_0.5.0.tar.gz 
 
 RUN rm \
@@ -294,9 +294,9 @@ RUN rm \
    R6_2.1.3.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.0.tar.gz \
-   DBI_0.4-1.tar.gz \
+   DBI_0.5.tar.gz \
    BH_1.60.0-2.tar.gz \
-   tibble_1.1.tar.gz \
+   tibble_1.2.tar.gz \
    dplyr_0.5.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
