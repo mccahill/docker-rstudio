@@ -304,7 +304,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/data.table_1.9.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/rematch_1.0.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/cellranger_1.1.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/tidyr_0.5.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/tidyr_0.6.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/googlesheets_0.2.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/hms_0.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/readr_1.0.0.tar.gz \
@@ -318,7 +318,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    data.table_1.9.6.tar.gz \
    rematch_1.0.1.tar.gz \
    cellranger_1.1.0.tar.gz \
-   tidyr_0.5.1.tar.gz \
+   tidyr_0.6.0.tar.gz \
    hms_0.2.tar.gz \
    readr_1.0.0.tar.gz \
    purrr_0.2.2.tar.gz \
@@ -332,7 +332,7 @@ RUN rm \
    data.table_1.9.6.tar.gz \
    rematch_1.0.1.tar.gz \
    cellranger_1.1.0.tar.gz \
-   tidyr_0.5.1.tar.gz \
+   tidyr_0.6.0.tar.gz \
    googlesheets_0.2.1.tar.gz \
    hms_0.2.tar.gz \
    readr_1.0.0.tar.gz \
