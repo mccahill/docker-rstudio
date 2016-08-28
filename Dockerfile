@@ -133,14 +133,14 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/git2r_0.15.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/devtools_1.12.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/R6_2.1.2.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/R6_2.1.3.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/mime_0.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/httr_1.2.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/RCurl_1.95-4.8.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/BH_1.60.0-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/xml2_1.0.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/curl_1.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/curl_1.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/jsonlite_1.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/digest_0.6.10.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/downloader_0.4.tar.gz \
@@ -159,8 +159,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    RCurl_1.95-4.8.tar.gz \
    Rcpp_0.12.6.tar.gz \
    plyr_1.8.4.tar.gz \
-   R6_2.1.2.tar.gz \
-   curl_1.1.tar.gz \
+   R6_2.1.3.tar.gz \
+   curl_1.2.tar.gz \
    openssl_0.9.4.tar.gz \
    mime_0.5.tar.gz \
    httr_1.2.1.tar.gz \
@@ -188,7 +188,7 @@ RUN rm \
    RCurl_1.95-4.8.tar.gz \
    Rcpp_0.12.6.tar.gz \
    plyr_1.8.4.tar.gz \
-   R6_2.1.2.tar.gz \
+   R6_2.1.3.tar.gz \
    mime_0.5.tar.gz \
    httr_1.2.1.tar.gz \
    rstudioapi_0.6.tar.gz \
@@ -202,7 +202,7 @@ RUN rm \
    XML_3.98-1.4.tar.gz \
    BH_1.60.0-2.tar.gz \
    xml2_1.0.0.tar.gz \
-   curl_1.1.tar.gz \
+   curl_1.2.tar.gz \
    rversions_1.0.3.tar.gz \
    git2r_0.15.0.tar.gz \
    devtools_1.12.0.tar.gz \
@@ -270,7 +270,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/tibble_1.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/dplyr_0.5.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/R6_2.1.2.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/R6_2.1.3.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/DBI_0.4-1.tar.gz \
@@ -280,7 +280,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    openintro_1.4.tar.gz \
    assertthat_0.1.tar.gz \
-   R6_2.1.2.tar.gz \
+   R6_2.1.3.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.0.tar.gz \
    DBI_0.4-1.tar.gz \
@@ -291,7 +291,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
    openintro_1.4.tar.gz \
    assertthat_0.1.tar.gz \
-   R6_2.1.2.tar.gz \
+   R6_2.1.3.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.0.tar.gz \
    DBI_0.4-1.tar.gz \
