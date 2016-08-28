@@ -1,6 +1,6 @@
 # mccahill/r-studio
 #
-# VERSION               0.86
+# VERSION               0.87
 
 FROM   ubuntu:14.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
@@ -9,7 +9,7 @@ MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/"  >> /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
-RUN apt-get update && \
+RUN apt-get update &&  \
     apt-get upgrade -y
 
 # we want OpenBLAS for faster linear algebra as described here: http://brettklamer.com/diversions/statistical/faster-blas-in-r/
