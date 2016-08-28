@@ -60,14 +60,14 @@ RUN rm rstudio-server-0.99.902-amd64.deb
 
 # update the R packages we will need for knitr
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://archive.linux.duke.edu/cran/src/contrib/knitr_1.13.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/knitr_1.14.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/yaml_2.1.13.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/htmltools_0.3.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/caTools_1.17.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/digest_0.6.10.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/stringr_1.0.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/stringr_1.1.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/markdown_0.7.7.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/highr_0.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/formatR_1.4.tar.gz \
@@ -87,12 +87,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    stringi_1.1.1.tar.gz \
    magrittr_1.5.tar.gz \
    mime_0.5.tar.gz \
-   stringr_1.0.0.tar.gz \
+   stringr_1.1.0.tar.gz \
    highr_0.6.tar.gz \
    formatR_1.4.tar.gz \
    evaluate_0.9.tar.gz \
    markdown_0.7.7.tar.gz \
-   knitr_1.13.tar.gz 
+   knitr_1.14.tar.gz 
 
 RUN rm \
    evaluate_0.9.tar.gz \
@@ -101,8 +101,8 @@ RUN rm \
    markdown_0.7.7.tar.gz \
    stringi_1.1.1.tar.gz \
    magrittr_1.5.tar.gz \
-   stringr_1.0.0.tar.gz \
-   knitr_1.13.tar.gz \
+   stringr_1.1.0.tar.gz \
+   knitr_1.14.tar.gz \
    yaml_2.1.13.tar.gz \
    Rcpp_0.12.6.tar.gz \
    htmltools_0.3.5.tar.gz \
@@ -128,7 +128,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/brew_1.0-6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/stringr_1.0.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/stringr_1.1.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/roxygen2_5.0.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/git2r_0.15.0.tar.gz \
@@ -169,7 +169,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    brew_1.0-6.tar.gz \
    stringi_1.1.1.tar.gz \
    magrittr_1.5.tar.gz \
-   stringr_1.0.0.tar.gz \
+   stringr_1.1.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.4.tar.gz \
    BH_1.60.0-2.tar.gz \
@@ -197,7 +197,7 @@ RUN rm \
    brew_1.0-6.tar.gz \
    stringi_1.1.1.tar.gz \
    magrittr_1.5.tar.gz \
-   stringr_1.0.0.tar.gz \
+   stringr_1.1.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.4.tar.gz \
    BH_1.60.0-2.tar.gz \
