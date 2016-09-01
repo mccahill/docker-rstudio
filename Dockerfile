@@ -309,7 +309,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/hms_0.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/readr_1.0.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/purrr_0.2.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/selectr_0.2-3.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/selectr_0.3-0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/rvest_0.3.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/pbkrtest_0.4-6.tar.gz 
 
@@ -323,7 +323,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    readr_1.0.0.tar.gz \
    purrr_0.2.2.tar.gz \
    googlesheets_0.2.1.tar.gz \
-   selectr_0.2-3.tar.gz \
+   selectr_0.3-0.tar.gz \
    rvest_0.3.2.tar.gz \
    pbkrtest_0.4-6.tar.gz 
 
@@ -337,7 +337,7 @@ RUN rm \
    hms_0.2.tar.gz \
    readr_1.0.0.tar.gz \
    purrr_0.2.2.tar.gz \
-   selectr_0.2-3.tar.gz \
+   selectr_0.3-0.tar.gz \
    rvest_0.3.2.tar.gz \
    pbkrtest_0.4-6.tar.gz 
 
