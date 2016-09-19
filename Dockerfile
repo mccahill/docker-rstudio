@@ -211,7 +211,7 @@ RUN rm \
 
 # libraries Eric Green wanted
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://archive.linux.duke.edu/cran/src/contrib/lubridate_1.5.6.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/lubridate_1.6.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/ggplot2_2.1.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
@@ -229,7 +229,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/lme4_1.1-12.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   lubridate_1.5.6.tar.gz  \
+   lubridate_1.6.0.tar.gz  \
    gtable_0.2.0.tar.gz \
    RColorBrewer_1.1-2.tar.gz \
    dichromat_2.0-0.tar.gz \
@@ -247,7 +247,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lme4_1.1-12.tar.gz
 
 RUN rm \
-   lubridate_1.5.6.tar.gz  \
+   lubridate_1.6.0.tar.gz  \
    gtable_0.2.0.tar.gz \
    RColorBrewer_1.1-2.tar.gz \
    dichromat_2.0-0.tar.gz \
