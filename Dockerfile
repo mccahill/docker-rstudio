@@ -62,7 +62,7 @@ RUN rm rstudio-server-0.99.902-amd64.deb
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/knitr_1.14.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/yaml_2.1.13.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.6.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.7.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/htmltools_0.3.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/caTools_1.17.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz \
@@ -81,7 +81,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    bitops_1.0-6.tar.gz \
    caTools_1.17.1.tar.gz \
    digest_0.6.10.tar.gz \
-   Rcpp_0.12.6.tar.gz \
+   Rcpp_0.12.7.tar.gz \
    htmltools_0.3.5.tar.gz \
    yaml_2.1.13.tar.gz \
    stringi_1.1.1.tar.gz \
@@ -104,7 +104,7 @@ RUN rm \
    stringr_1.1.0.tar.gz \
    knitr_1.14.tar.gz \
    yaml_2.1.13.tar.gz \
-   Rcpp_0.12.6.tar.gz \
+   Rcpp_0.12.7.tar.gz \
    htmltools_0.3.5.tar.gz \
    caTools_1.17.1.tar.gz \
    bitops_1.0-6.tar.gz \
@@ -137,11 +137,11 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/mime_0.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/httr_1.2.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/RCurl_1.95-4.8.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.6.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.7.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/BH_1.60.0-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/xml2_1.0.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/curl_1.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/jsonlite_1.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/curl_2.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/jsonlite_1.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/digest_0.6.10.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/downloader_0.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/memoise_1.0.0.tar.gz \
@@ -151,16 +151,16 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   jsonlite_1.0.tar.gz \
+   jsonlite_1.1.tar.gz \
    digest_0.6.10.tar.gz \
    memoise_1.0.0.tar.gz \
    whisker_0.3-2.tar.gz \
    bitops_1.0-6.tar.gz \
    RCurl_1.95-4.8.tar.gz \
-   Rcpp_0.12.6.tar.gz \
+   Rcpp_0.12.7.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.1.3.tar.gz \
-   curl_1.2.tar.gz \
+   curl_2.0.tar.gz \
    openssl_0.9.4.tar.gz \
    mime_0.5.tar.gz \
    httr_1.2.1.tar.gz \
@@ -180,13 +180,13 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    downloader_0.4.tar.gz
 
 RUN rm \
-   jsonlite_1.0.tar.gz \
+   jsonlite_1.1.tar.gz \
    digest_0.6.10.tar.gz \
    memoise_1.0.0.tar.gz \
    whisker_0.3-2.tar.gz \
    bitops_1.0-6.tar.gz \
    RCurl_1.95-4.8.tar.gz \
-   Rcpp_0.12.6.tar.gz \
+   Rcpp_0.12.7.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.1.3.tar.gz \
    mime_0.5.tar.gz \
@@ -202,7 +202,7 @@ RUN rm \
    XML_3.98-1.4.tar.gz \
    BH_1.60.0-2.tar.gz \
    xml2_1.0.0.tar.gz \
-   curl_1.2.tar.gz \
+   curl_2.0.tar.gz \
    rversions_1.0.3.tar.gz \
    git2r_0.15.0.tar.gz \
    devtools_1.12.0.tar.gz \
