@@ -123,7 +123,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/rstudioapi_0.6.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/openssl_0.9..tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/openssl_0.9.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/withr_1.0.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/brew_1.0-6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.2.tar.gz \
