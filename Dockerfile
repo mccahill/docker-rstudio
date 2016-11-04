@@ -395,9 +395,9 @@ RUN R CMD BATCH /r-studio/install-rmarkdown.R
 RUN rm /install-rmarkdown.Rout 
 
 # Shiny
-RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.4.2.786-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.4.2.786-amd64.deb
-RUN rm shiny-server-1.4.2.786-amd64.deb
+RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.0.831-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.0.831-amd64.deb
+RUN rm shiny-server-1.5.0.831-amd64.deb
 RUN R CMD BATCH /r-studio/install-Shiny.R
 
 # install templates and examples from Reed and the Tufte package
