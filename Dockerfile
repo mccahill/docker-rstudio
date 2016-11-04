@@ -140,7 +140,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.7.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/BH_1.60.0-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/xml2_1.0.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/curl_2.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/curl_2.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/jsonlite_1.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/digest_0.6.10.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/downloader_0.4.tar.gz \
@@ -160,7 +160,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    Rcpp_0.12.7.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.2.0.tar.gz \
-   curl_2.1.tar.gz \
+   curl_2.2.tar.gz \
    openssl_0.9.5.tar.gz \
    mime_0.5.tar.gz \
    httr_1.2.1.tar.gz \
@@ -202,7 +202,7 @@ RUN rm \
    XML_3.98-1.4.tar.gz \
    BH_1.60.0-2.tar.gz \
    xml2_1.0.0.tar.gz \
-   curl_2.1.tar.gz \
+   curl_2.2.tar.gz \
    rversions_1.0.3.tar.gz \
    git2r_0.15.0.tar.gz \
    devtools_1.12.0.tar.gz \
