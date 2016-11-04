@@ -71,7 +71,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/markdown_0.7.7.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/highr_0.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/formatR_1.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/evaluate_0.9.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/evaluate_0.10.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/mime_0.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz
@@ -90,12 +90,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    stringr_1.1.0.tar.gz \
    highr_0.6.tar.gz \
    formatR_1.4.tar.gz \
-   evaluate_0.9.tar.gz \
+   evaluate_0.10.tar.gz \
    markdown_0.7.7.tar.gz \
    knitr_1.14.tar.gz 
 
 RUN rm \
-   evaluate_0.9.tar.gz \
+   evaluate_0.10.tar.gz \
    formatR_1.4.tar.gz \
    highr_0.6.tar.gz \
    markdown_0.7.7.tar.gz \
