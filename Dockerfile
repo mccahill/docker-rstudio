@@ -1,28 +1,28 @@
 # mccahill/r-studio
 #
-# VERSION 0.88
+# VERSION 1.0
 
 FROM   ubuntu:14.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 
 # get R from a CRAN archive 
-RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/"  >>  /etc/apt/sources.list
+RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >>  /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
-RUN apt-get update &&   \
-    apt-get upgrade -y
+RUN apt-get update  &&   \
+    apt-get upgrade  -y
 
 # we want OpenBLAS for faster linear algebra as described here: http://brettklamer.com/diversions/statistical/faster-blas-in-r/
-RUN apt-get install -y \
+RUN apt-get install  -y \
    libopenblas-base
-RUN apt-get update
+RUN apt-get  update
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y --force-yes \
    r-base \
    r-base-dev
 
 #Utilities
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    vim \
    less \
    net-tools \
@@ -44,14 +44,14 @@ RUN apt-get update && \
 # we need TeX for the rmarkdown package in RStudio
 
 # TeX 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    texlive \ 
    texlive-base \ 
    texlive-latex-extra \ 
    texlive-pstricks 
 
 # R-Studio
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    gdebi-core \
    libapparmor1
 RUN DEBIAN_FRONTEND=noninteractive wget https://download1.rstudio.org/rstudio-1.0.44-amd64.deb
