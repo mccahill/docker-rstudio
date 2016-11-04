@@ -215,14 +215,14 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/ggplot2_2.1.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/colorspace_1.2-6.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/colorspace_1.2-7.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/munsell_0.4.3.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/labeling_0.3.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/scales_0.4.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/stargazer_5.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/reshape2_1.4.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/reshape2_1.4.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/gtable_0.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/proto_0.3-10.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/proto_1.0.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/minqa_1.2.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/nloptr_1.0.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/RcppEigen_0.3.2.9.0.tar.gz \
@@ -233,12 +233,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    gtable_0.2.0.tar.gz \
    RColorBrewer_1.1-2.tar.gz \
    dichromat_2.0-0.tar.gz \
-   colorspace_1.2-6.tar.gz \
+   colorspace_1.2-7.tar.gz \
    munsell_0.4.3.tar.gz \
    labeling_0.3.tar.gz \
    scales_0.4.0.tar.gz \
-   proto_0.3-10.tar.gz \
-   reshape2_1.4.1.tar.gz \
+   proto_1.0.0.tar.gz \
+   reshape2_1.4.2.tar.gz \
    ggplot2_2.1.0.tar.gz \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
@@ -251,12 +251,12 @@ RUN rm \
    gtable_0.2.0.tar.gz \
    RColorBrewer_1.1-2.tar.gz \
    dichromat_2.0-0.tar.gz \
-   colorspace_1.2-6.tar.gz \
+   colorspace_1.2-7.tar.gz \
    munsell_0.4.3.tar.gz \
    labeling_0.3.tar.gz \
    scales_0.4.0.tar.gz \
-   proto_0.3-10.tar.gz \
-   reshape2_1.4.1.tar.gz \
+   proto_1.0.0.tar.gz \
+   reshape2_1.4.2.tar.gz \
    ggplot2_2.1.0.tar.gz \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
