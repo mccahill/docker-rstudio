@@ -212,8 +212,9 @@ RUN rm \
 # libraries Eric Green wanted
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/lubridate_1.6.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/tibble_1.2.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/tibble_1.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/ggplot2_2.2.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
@@ -241,8 +242,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    scales_0.4.1.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.2.tar.gz \
-   tibble_1.2.tar.gz \
+   assertthat_0.1.tar.gz \
    lazyeval_0.2.0.tar.gz \
+   tibble_1.2.tar.gz \
    ggplot2_2.2.0.tar.gz \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
@@ -261,8 +263,9 @@ RUN rm \
    scales_0.4.1.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.2.tar.gz \
-   tibble_1.2.tar.gz \
+   assertthat_0.1.tar.gz \
    lazyeval_0.2.0.tar.gz \
+   tibble_1.2.tar.gz \
    ggplot2_2.2.0.tar.gz \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
