@@ -363,6 +363,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/psych_1.6.9.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/broom_0.4.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/reshape_0.8.6.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/progress_1.1.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/GGally_1.3.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/mosaic_0.14.4.tar.gz 
@@ -380,6 +381,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    psych_1.6.9.tar.gz \
    broom_0.4.1.tar.gz \
    reshape_0.8.6.tar.gz \
+   prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
    GGally_1.3.0.tar.gz \
    mosaic_0.14.4.tar.gz 
@@ -397,6 +399,7 @@ RUN rm \
    psych_1.6.9.tar.gz \
    broom_0.4.1.tar.gz \
    reshape_0.8.6.tar.gz \
+   prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
    GGally_1.3.0.tar.gz \
    mosaic_0.14.4.tar.gz 
