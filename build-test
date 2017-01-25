@@ -1,1 +1,1 @@
-sudo docker build --tag r-studio .
+sudo docker build --tag r-studio-test .
