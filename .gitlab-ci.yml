@@ -36,7 +36,7 @@ deploy_datafest_staging:
   tags: 
     - rstudio
     - labs-az-10
-  stage: deploy_datafest
+  stage: deploy_staging
   script:
     - echo "Deploy to datafest staging server"
     - pwd; ls -la
