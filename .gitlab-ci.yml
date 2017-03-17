@@ -71,6 +71,9 @@ deploy_staging_01:
     - labs-az-01
   stage: deploy
   script:
+    - echo "Building the app in staging"
+    - pwd; ls -la
+    - ./build-test
     - echo "Deploy to staging server"
     - pwd; ls -la
     - ./run-test-instance
@@ -86,6 +89,9 @@ deploy_staging_02:
     - labs-az-02
   stage: deploy
   script:
+    - echo "Building the app in staging"
+    - pwd; ls -la
+    - ./build-test
     - echo "Deploy to staging server"
     - pwd; ls -la
     - ./run-test-instance
@@ -101,6 +107,9 @@ deploy_staging_03:
     - labs-az-03
   stage: deploy
   script:
+    - echo "Building the app in staging"
+    - pwd; ls -la
+    - ./build-test
     - echo "Deploy to staging server"
     - pwd; ls -la
     - ./run-test-instance
@@ -116,6 +125,9 @@ deploy_staging_04:
     - labs-az-04
   stage: deploy
   script:
+    - echo "Building the app in staging"
+    - pwd; ls -la
+    - ./build-test
     - echo "Deploy to staging server"
     - pwd; ls -la
     - ./run-test-instance
@@ -131,6 +143,9 @@ deploy_staging_08:
     - labs-az-08
   stage: deploy
   script:
+    - echo "Building the app in staging"
+    - pwd; ls -la
+    - ./build-test
     - echo "Deploy to staging server"
     - pwd; ls -la
     - ./run-test-instance
