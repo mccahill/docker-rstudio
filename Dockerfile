@@ -283,7 +283,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/R6_2.2.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/DBI_0.5-1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/DBI_0.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/BH_1.62.0-1.tar.gz 
 
 
@@ -293,7 +293,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    R6_2.2.0.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.0.tar.gz \
-   DBI_0.5-1.tar.gz \
+   DBI_0.6.tar.gz \
    BH_1.62.0-1.tar.gz \
    tibble_1.2.tar.gz \
    dplyr_0.5.0.tar.gz 
@@ -304,7 +304,7 @@ RUN rm \
    R6_2.2.0.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.0.tar.gz \
-   DBI_0.5-1.tar.gz \
+   DBI_0.6.tar.gz \
    BH_1.62.0-1.tar.gz \
    tibble_1.2.tar.gz \
    dplyr_0.5.0.tar.gz 
