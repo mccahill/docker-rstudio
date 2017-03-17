@@ -283,8 +283,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/R6_2.2.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/DBI_0.6.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/BH_1.62.0-1.tar.gz 
+   http://archive.linux.duke.edu/cran/src/contrib/DBI_0.6.tar.gz 
+
 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
