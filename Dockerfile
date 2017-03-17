@@ -352,7 +352,7 @@ RUN rm \
    pbkrtest_0.4-7.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://archive.linux.duke.edu/cran/src/contrib/SparseM_1.74.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/SparseM_1.76.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/MatrixModels_0.4-1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/quantreg_5.29.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/car_2.1-4.tar.gz \
@@ -361,8 +361,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/gridExtra_2.2.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/ggdendro_0.1-20.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/mnormt_1.5-5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/psych_1.6.9.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/broom_0.4.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/psych_1.6.12.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/broom_0.4.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/reshape_0.8.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/progress_1.1.2.tar.gz \
@@ -370,7 +370,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/mosaic_0.14.4.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   SparseM_1.74.tar.gz \
+   SparseM_1.76.tar.gz \
    MatrixModels_0.4-1.tar.gz \
    quantreg_5.29.tar.gz \
    car_2.1-4.tar.gz \
@@ -379,8 +379,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    gridExtra_2.2.1.tar.gz \
    ggdendro_0.1-20.tar.gz \
    mnormt_1.5-5.tar.gz \
-   psych_1.6.9.tar.gz \
-   broom_0.4.1.tar.gz \
+   psych_1.6.12.tar.gz \
+   broom_0.4.2.tar.gz \
    reshape_0.8.6.tar.gz \
    prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
@@ -388,7 +388,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    mosaic_0.14.4.tar.gz 
 
 RUN rm \
-   SparseM_1.74.tar.gz \
+   SparseM_1.76.tar.gz \
    MatrixModels_0.4-1.tar.gz \
    quantreg_5.29.tar.gz \
    car_2.1-4.tar.gz \
@@ -397,8 +397,8 @@ RUN rm \
    gridExtra_2.2.1.tar.gz \
    ggdendro_0.1-20.tar.gz \
    mnormt_1.5-5.tar.gz \
-   psych_1.6.9.tar.gz \
-   broom_0.4.1.tar.gz \
+   psych_1.6.12.tar.gz \
+   broom_0.4.2.tar.gz \
    reshape_0.8.6.tar.gz \
    prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
