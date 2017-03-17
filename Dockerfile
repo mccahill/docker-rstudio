@@ -129,6 +129,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/stringr_1.2.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/desc_1.1.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/roxygen2_6.0.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/git2r_0.18.0.tar.gz \
@@ -170,10 +171,11 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    stringi_1.1.2.tar.gz \
    magrittr_1.5.tar.gz \
    stringr_1.2.0.tar.gz \
+   xml2_1.1.1.tar.gz \
+   desc_1.1.0.tar.gz \
    roxygen2_6.0.1.tar.gz \
    XML_3.98-1.5.tar.gz \
    BH_1.62.0-1.tar.gz \
-   xml2_1.1.1.tar.gz \
    rversions_1.0.3.tar.gz \
    git2r_0.18.0.tar.gz \
    devtools_1.12.0.tar.gz \
@@ -202,6 +204,7 @@ RUN rm \
    XML_3.98-1.5.tar.gz \
    BH_1.62.0-1.tar.gz \
    xml2_1.1.1.tar.gz \
+   desc_1.1.0.tar.gz \
    curl_2.3.tar.gz \
    rversions_1.0.3.tar.gz \
    git2r_0.18.0.tar.gz \
