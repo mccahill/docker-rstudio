@@ -201,10 +201,10 @@ RUN rm \
    magrittr_1.5.tar.gz \
    stringr_1.2.0.tar.gz \
    roxygen2_6.0.1.tar.gz \
-   XML_3.98-1.5.tar.gz \
    BH_1.62.0-1.tar.gz \
-   xml2_1.1.1.tar.gz \
+   XML_3.98-1.5.tar.gz \
    desc_1.1.0.tar.gz \
+   xml2_1.1.1.tar.gz \
    curl_2.3.tar.gz \
    rversions_1.0.3.tar.gz \
    git2r_0.18.0.tar.gz \
