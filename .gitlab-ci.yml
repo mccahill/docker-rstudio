@@ -104,7 +104,7 @@ deploy_datafest_staging_13:
   - datafest_staging
 
 
-deploy_datafest_production:
+deploy_datafest_production_10:
   tags: 
     - rstudio
     - labs-az-10
@@ -121,23 +121,56 @@ deploy_datafest_production:
   only:
   - datafest
 
-
-deploy_staging_01:
+deploy_datafest_production_11:
   tags: 
     - rstudio
-    - labs-az-01
+    - labs-az-11
   stage: deploy
   script:
-    - echo "Building the app in staging"
+    - echo "Building the production app"
     - pwd; ls -la
-    - ./build-test
-    - echo "Deploy to staging server"
-    - pwd; ls -la
-    - ./run-test-instance
+    - ./build-production
+    - echo "Deploy to production server"
+    - cd /srv/persistent-data/docker-scripts; ./run-everything
   environment:
-    name: staging
+    name: datafest_production
+  when: manual
   only:
-  - staging
+  - datafest
+
+deploy_datafest_production_12:
+  tags: 
+    - rstudio
+    - labs-az-12
+  stage: deploy
+  script:
+    - echo "Building the production app"
+    - pwd; ls -la
+    - ./build-production
+    - echo "Deploy to production server"
+    - cd /srv/persistent-data/docker-scripts; ./run-everything
+  environment:
+    name: datafest_production
+  when: manual
+  only:
+  - datafest
+
+deploy_datafest_production_13:
+  tags: 
+    - rstudio
+    - labs-az-13
+  stage: deploy
+  script:
+    - echo "Building the production app"
+    - pwd; ls -la
+    - ./build-production
+    - echo "Deploy to production server"
+    - cd /srv/persistent-data/docker-scripts; ./run-everything
+  environment:
+    name: datafest_production
+  when: manual
+  only:
+  - datafest
 
 
 deploy_staging_02:
