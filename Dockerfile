@@ -408,6 +408,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/maps_3.1.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/zoo_1.7-14.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/xtable_1.8-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/pkgmaker_0.22.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/registry_0.3.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/rngtools_1.2.4.tar.gz \
@@ -425,8 +426,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    RColorBrewer_1.1-2.tar.gz \
    maps_3.1.1.tar.gz \
    zoo_1.7-14.tar.gz \
-   pkgmaker_0.22.tar.gz \
+   xtable_1.8-2.tar.gz \
    registry_0.3.tar.gz \
+   pkgmaker_0.22.tar.gz \
    rngtools_1.2.4.tar.gz \
    gridBase_0.4-7.tar.gz \
    foreach_1.4.3.tar.gz \
@@ -442,8 +444,9 @@ RUN rm \
    RColorBrewer_1.1-2.tar.gz \
    maps_3.1.1.tar.gz \
    zoo_1.7-14.tar.gz \
-   pkgmaker_0.22.tar.gz \
+   xtable_1.8-2.tar.gz \
    registry_0.3.tar.gz \
+   pkgmaker_0.22.tar.gz \
    rngtools_1.2.4.tar.gz \
    gridBase_0.4-7.tar.gz \
    foreach_1.4.3.tar.gz \
