@@ -409,6 +409,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/maps_3.1.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/zoo_1.7-14.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/mclust_5.2.3.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/modeltools_0.2-21.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/flexmix_2.3-13.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/prabclus_2.2-6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/diptest_0.75-7.tar.gz \
@@ -429,6 +430,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    maps_3.1.1.tar.gz \
    zoo_1.7-14.tar.gz \
    mclust_5.2.3.tar.gz \
+   modeltools_0.2-21.tar.gz \
    flexmix_2.3-13.tar.gz \
    prabclus_2.2-6.tar.gz \
    diptest_0.75-7.tar.gz \
@@ -449,6 +451,7 @@ RUN rm \
    maps_3.1.1.tar.gz \
    zoo_1.7-14.tar.gz \
    mclust_5.2.3.tar.gz \
+   modeltools_0.2-21.tar.gz \
    flexmix_2.3-13.tar.gz \
    prabclus_2.2-6.tar.gz \
    diptest_0.75-7.tar.gz \
