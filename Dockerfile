@@ -408,6 +408,12 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/maps_3.1.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/zoo_1.7-14.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/pkgmaker_0.22.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/registry_0.3.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/rngtools_1.2.4.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/gridBase_0.4-7.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/foreach_1.4.3.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/doParallel_1.0.10.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/NMF_0.20.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/irlba_2.1.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/igraph_1.0.1.tar.gz \
@@ -419,6 +425,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    RColorBrewer_1.1-2.tar.gz \
    maps_3.1.1.tar.gz \
    zoo_1.7-14.tar.gz \
+   pkgmaker_0.22.tar.gz \
+   registry_0.3.tar.gz \
+   rngtools_1.2.4.tar.gz \
+   gridBase_0.4-7.tar.gz \
+   foreach_1.4.3.tar.gz \
+   doParallel_1.0.10.tar.gz \
    NMF_0.20.6.tar.gz \
    irlba_2.1.2.tar.gz \
    igraph_1.0.1.tar.gz \
@@ -430,6 +442,12 @@ RUN rm \
    RColorBrewer_1.1-2.tar.gz \
    maps_3.1.1.tar.gz \
    zoo_1.7-14.tar.gz \
+   pkgmaker_0.22.tar.gz \
+   registry_0.3.tar.gz \
+   rngtools_1.2.4.tar.gz \
+   gridBase_0.4-7.tar.gz \
+   foreach_1.4.3.tar.gz \
+   doParallel_1.0.10.tar.gz \
    NMF_0.20.6.tar.gz \
    irlba_2.1.2.tar.gz \
    igraph_1.0.1.tar.gz \
