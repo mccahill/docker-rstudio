@@ -408,6 +408,14 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/maps_3.1.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/zoo_1.7-14.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/mclust_5.2.3.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/flexmix_2.3-13.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/prabclus_2.2-6.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/diptest_0.75-7.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/mvtnorm_1.0-6.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/robustbase_0.92-7.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/kernlab_0.9-25.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/trimcluster_0.1-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/fpc_2.1-10.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/viridis_0.3.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/dendextend_1.4.0.tar.gz \
@@ -420,6 +428,14 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    RColorBrewer_1.1-2.tar.gz \
    maps_3.1.1.tar.gz \
    zoo_1.7-14.tar.gz \
+   mclust_5.2.3.tar.gz \
+   flexmix_2.3-13.tar.gz \
+   prabclus_2.2-6.tar.gz \
+   diptest_0.75-7.tar.gz \
+   mvtnorm_1.0-6.tar.gz \
+   robustbase_0.92-7.tar.gz \
+   kernlab_0.9-25.tar.gz \
+   trimcluster_0.1-2.tar.gz \
    fpc_2.1-10.tar.gz \
    viridis_0.3.4.tar.gz \
    dendextend_1.4.0.tar.gz \
@@ -432,6 +448,14 @@ RUN rm \
    RColorBrewer_1.1-2.tar.gz \
    maps_3.1.1.tar.gz \
    zoo_1.7-14.tar.gz \
+   mclust_5.2.3.tar.gz \
+   flexmix_2.3-13.tar.gz \
+   prabclus_2.2-6.tar.gz \
+   diptest_0.75-7.tar.gz \
+   mvtnorm_1.0-6.tar.gz \
+   robustbase_0.92-7.tar.gz \
+   kernlab_0.9-25.tar.gz \
+   trimcluster_0.1-2.tar.gz \
    fpc_2.1-10.tar.gz \
    viridis_0.3.4.tar.gz \
    dendextend_1.4.0.tar.gz \
