@@ -403,6 +403,37 @@ RUN rm \
    GGally_1.3.0.tar.gz \
    mosaic_0.14.4.tar.gz 
 
+# Cliburn Chan requested these:
+RUN DEBIAN_FRONTEND=noninteractive wget \
+   http://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/maps_3.1.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/zoo_1.7-14.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/dendextend_1.4.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/igraph_1.0.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/gcookbook_1.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/corrplot_0.77.tar.gz 
+
+
+RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
+   RColorBrewer_1.1-2.tar.gz \
+   maps_3.1.1.tar.gz \
+   zoo_1.7-14.tar.gz \
+   dendextend_1.4.0.tar.gz \
+   igraph_1.0.1.tar.gz \
+   gcookbook_1.0.tar.gz \
+   corrplot_0.77.tar.gz 
+
+
+RUN rm \
+   RColorBrewer_1.1-2.tar.gz \
+   maps_3.1.1.tar.gz \
+   zoo_1.7-14.tar.gz \
+   dendextend_1.4.0.tar.gz \
+   igraph_1.0.1.tar.gz \
+   gcookbook_1.0.tar.gz \
+   corrplot_0.77.tar.gz 
+
+
 # install rmarkdown
 ADD ./conf /r-studio
 RUN R CMD BATCH /r-studio/install-rmarkdown.R
