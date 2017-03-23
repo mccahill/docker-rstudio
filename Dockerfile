@@ -427,12 +427,19 @@ RUN rm \
    gcookbook_1.0.tar.gz \
    corrplot_0.77.tar.gz 
 
-
-
 # install rmarkdown
 ADD ./conf /r-studio
 RUN R CMD BATCH /r-studio/install-rmarkdown.R
 RUN rm /install-rmarkdown.Rout 
+
+# CLiburn also wanted these
+# dendextend
+# igraph
+# but they have mega-dependencies, so intall them the other way
+RUN R CMD BATCH /r-studio/install-dendextend.R
+RUN rm /install-dendextend.Rout 
+RUN R CMD BATCH /r-studio/install-igraph.R
+RUN rm /install-igraph.Rout 
 
 # Shiny
 RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.0.831-amd64.deb
