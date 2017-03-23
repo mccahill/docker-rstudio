@@ -416,7 +416,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/mvtnorm_1.0-6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/DEoptimR_1.0-8.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/robustbase_0.92-7.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/kernlab_0.9-25.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/Archive/kernlab/kernlab_0.9-24.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/trimcluster_0.1-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/fpc_2.1-10.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/viridis_0.3.4.tar.gz \
@@ -438,7 +438,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    mvtnorm_1.0-6.tar.gz \
    DEoptimR_1.0-8.tar.gz \
    robustbase_0.92-7.tar.gz \
-   kernlab_0.9-25.tar.gz \
+   kernlab_0.9-24.tar.gz \
    trimcluster_0.1-2.tar.gz \
    fpc_2.1-10.tar.gz \
    viridis_0.3.4.tar.gz \
@@ -460,7 +460,7 @@ RUN rm \
    mvtnorm_1.0-6.tar.gz \
    DEoptimR_1.0-8.tar.gz \
    robustbase_0.92-7.tar.gz \
-   kernlab_0.9-25.tar.gz \
+   kernlab_0.9-24.tar.gz \
    trimcluster_0.1-2.tar.gz \
    fpc_2.1-10.tar.gz \
    viridis_0.3.4.tar.gz \
