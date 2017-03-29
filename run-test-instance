@@ -2,6 +2,7 @@
 #
 # run the test/monitoring instance at port 443 
 #
+#
 sudo docker kill r-studio-test-443
 sudo docker rm r-studio-test-443
 sudo docker run --name r-studio-test-443 \
