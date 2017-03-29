@@ -359,7 +359,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/gridExtra_2.2.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/ggdendro_0.1-20.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/mnormt_1.5-5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/psych_1.6.12.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/psych_1.7.3.21.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/broom_0.4.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/reshape_0.8.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
@@ -377,7 +377,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    gridExtra_2.2.1.tar.gz \
    ggdendro_0.1-20.tar.gz \
    mnormt_1.5-5.tar.gz \
-   psych_1.6.12.tar.gz \
+   psych_1.7.3.21.tar.gz \
    broom_0.4.2.tar.gz \
    reshape_0.8.6.tar.gz \
    prettyunits_1.0.2.tar.gz \
@@ -395,7 +395,7 @@ RUN rm \
    gridExtra_2.2.1.tar.gz \
    ggdendro_0.1-20.tar.gz \
    mnormt_1.5-5.tar.gz \
-   psych_1.6.12.tar.gz \
+   psych_1.7.3.21.tar.gz \
    broom_0.4.2.tar.gz \
    reshape_0.8.6.tar.gz \
    prettyunits_1.0.2.tar.gz \
