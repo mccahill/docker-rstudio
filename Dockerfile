@@ -213,7 +213,7 @@ RUN rm \
 # libraries Eric Green wanted
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/lubridate_1.6.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/tibble_1.3.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/ggplot2_2.2.1.tar.gz \
@@ -243,7 +243,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    scales_0.4.1.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.2.tar.gz \
-   assertthat_0.1.tar.gz \
+   assertthat_0.2.0.tar.gz \
    lazyeval_0.2.0.tar.gz \
    tibble_1.3.0.tar.gz \
    ggplot2_2.2.1.tar.gz \
@@ -264,7 +264,7 @@ RUN rm \
    scales_0.4.1.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.2.tar.gz \
-   assertthat_0.1.tar.gz \
+   assertthat_0.2.0.tar.gz \
    lazyeval_0.2.0.tar.gz \
    tibble_1.3.0.tar.gz \
    ggplot2_2.2.1.tar.gz \
@@ -279,7 +279,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/openintro_1.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/tibble_1.3.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/dplyr_0.5.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/R6_2.2.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
@@ -289,7 +289,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    openintro_1.4.tar.gz \
-   assertthat_0.1.tar.gz \
+   assertthat_0.2.0.tar.gz \
    R6_2.2.0.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.0.tar.gz \
@@ -299,7 +299,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 
 RUN rm \
    openintro_1.4.tar.gz \
-   assertthat_0.1.tar.gz \
+   assertthat_0.2.0.tar.gz \
    R6_2.2.0.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.0.tar.gz \
