@@ -141,17 +141,17 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/BH_1.62.0-1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/xml2_1.1.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/curl_2.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/jsonlite_1.3.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/jsonlite_1.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/digest_0.6.12.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/downloader_0.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/memoise_1.0.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/plyr_1.8.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/XML_3.98-1.5.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/XML_3.98-1.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/whisker_0.3-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   jsonlite_1.3.tar.gz \
+   jsonlite_1.4.tar.gz \
    digest_0.6.12.tar.gz \
    memoise_1.0.0.tar.gz \
    whisker_0.3-2.tar.gz \
@@ -173,14 +173,14 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    magrittr_1.5.tar.gz \
    stringr_1.2.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
-   XML_3.98-1.5.tar.gz \
+   XML_3.98-1.6.tar.gz \
    BH_1.62.0-1.tar.gz \
    xml2_1.1.1.tar.gz \
    rversions_1.0.3.tar.gz \
    downloader_0.4.tar.gz
 
 RUN rm \
-   jsonlite_1.3.tar.gz \
+   jsonlite_1.4.tar.gz \
    digest_0.6.12.tar.gz \
    memoise_1.0.0.tar.gz \
    whisker_0.3-2.tar.gz \
@@ -200,7 +200,7 @@ RUN rm \
    stringr_1.2.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
    BH_1.62.0-1.tar.gz \
-   XML_3.98-1.5.tar.gz \
+   XML_3.98-1.6.tar.gz \
    xml2_1.1.1.tar.gz \
    curl_2.4.tar.gz \
    rversions_1.0.3.tar.gz \
