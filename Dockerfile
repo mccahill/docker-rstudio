@@ -73,8 +73,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/formatR_1.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/evaluate_0.10.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/mime_0.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.5.tar.gz
- \
+   http://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz
 
 
@@ -85,8 +84,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    Rcpp_0.12.10.tar.gz \
    htmltools_0.3.5.tar.gz \
    yaml_2.1.14.tar.gz \
-   stringi_1.1.5.tar.gz
- \
+   stringi_1.1.5.tar.gz \
    magrittr_1.5.tar.gz \
    mime_0.5.tar.gz \
    stringr_1.2.0.tar.gz \
@@ -101,8 +99,7 @@ RUN rm \
    formatR_1.4.tar.gz \
    highr_0.6.tar.gz \
    markdown_0.7.7.tar.gz \
-   stringi_1.1.5.tar.gz
- \
+   stringi_1.1.5.tar.gz \
    magrittr_1.5.tar.gz \
    stringr_1.2.0.tar.gz \
    knitr_1.15.1.tar.gz \
@@ -129,8 +126,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/openssl_0.9.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/withr_1.0.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/brew_1.0-6.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.5.tar.gz
- \
+   http://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/stringr_1.2.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
@@ -173,8 +169,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    git2r_0.18.0.tar.gz \
    devtools_1.12.0.tar.gz \
    brew_1.0-6.tar.gz \
-   stringi_1.1.5.tar.gz
- \
+   stringi_1.1.5.tar.gz \
    magrittr_1.5.tar.gz \
    stringr_1.2.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
@@ -200,8 +195,7 @@ RUN rm \
    openssl_0.9.6.tar.gz \
    withr_1.0.2.tar.gz \
    brew_1.0-6.tar.gz \
-   stringi_1.1.5.tar.gz
- \
+   stringi_1.1.5.tar.gz \
    magrittr_1.5.tar.gz \
    stringr_1.2.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
