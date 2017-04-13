@@ -215,7 +215,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/lubridate_1.6.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/tibble_1.2.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/tibble_1.3.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/ggplot2_2.2.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
@@ -245,7 +245,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    reshape2_1.4.2.tar.gz \
    assertthat_0.1.tar.gz \
    lazyeval_0.2.0.tar.gz \
-   tibble_1.2.tar.gz \
+   tibble_1.3.0.tar.gz \
    ggplot2_2.2.1.tar.gz \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
@@ -266,7 +266,7 @@ RUN rm \
    reshape2_1.4.2.tar.gz \
    assertthat_0.1.tar.gz \
    lazyeval_0.2.0.tar.gz \
-   tibble_1.2.tar.gz \
+   tibble_1.3.0.tar.gz \
    ggplot2_2.2.1.tar.gz \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
@@ -277,7 +277,7 @@ RUN rm \
 # more libraries Mine Cetinakya-Rundel asked for
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/openintro_1.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/tibble_1.2.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/tibble_1.3.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/dplyr_0.5.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/R6_2.2.0.tar.gz \
@@ -294,7 +294,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.0.tar.gz \
    DBI_0.6.tar.gz \
-   tibble_1.2.tar.gz \
+   tibble_1.3.0.tar.gz \
    dplyr_0.5.0.tar.gz 
 
 RUN rm \
@@ -304,7 +304,7 @@ RUN rm \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.0.tar.gz \
    DBI_0.6.tar.gz \
-   tibble_1.2.tar.gz \
+   tibble_1.3.0.tar.gz \
    dplyr_0.5.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
