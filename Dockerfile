@@ -132,8 +132,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/git2r_0.18.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/devtools_1.12.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/R6_2.2.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/devtools_1.13.1.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/R6_2.2.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/mime_0.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/httr_1.2.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/RCurl_1.95-4.8.tar.gz \
@@ -144,22 +144,22 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/jsonlite_1.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/digest_0.6.12.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/downloader_0.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/memoise_1.0.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/memoise_1.1.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/plyr_1.8.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/XML_3.98-1.6.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/XML_3.98-1.7.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/whisker_0.3-2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    jsonlite_1.4.tar.gz \
    digest_0.6.12.tar.gz \
-   memoise_1.0.0.tar.gz \
+   memoise_1.1.0.tar.gz \
    whisker_0.3-2.tar.gz \
    bitops_1.0-6.tar.gz \
    RCurl_1.95-4.8.tar.gz \
    Rcpp_0.12.11.tar.gz \
    plyr_1.8.4.tar.gz \
-   R6_2.2.0.tar.gz \
+   R6_2.2.1.tar.gz \
    curl_2.4.tar.gz \
    openssl_0.9.6.tar.gz \
    mime_0.5.tar.gz \
@@ -167,13 +167,13 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    rstudioapi_0.6.tar.gz \
    withr_1.0.2.tar.gz \
    git2r_0.18.0.tar.gz \
-   devtools_1.12.0.tar.gz \
+   devtools_1.13.1.tar.gz \
    brew_1.0-6.tar.gz \
    stringi_1.1.5.tar.gz \
    magrittr_1.5.tar.gz \
    stringr_1.2.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
-   XML_3.98-1.6.tar.gz \
+   XML_3.98-1.7.tar.gz \
    BH_1.62.0-1.tar.gz \
    xml2_1.1.1.tar.gz \
    rversions_1.0.3.tar.gz \
@@ -182,13 +182,13 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
    jsonlite_1.4.tar.gz \
    digest_0.6.12.tar.gz \
-   memoise_1.0.0.tar.gz \
+   memoise_1.1.0.tar.gz \
    whisker_0.3-2.tar.gz \
    bitops_1.0-6.tar.gz \
    RCurl_1.95-4.8.tar.gz \
    Rcpp_0.12.11.tar.gz \
    plyr_1.8.4.tar.gz \
-   R6_2.2.0.tar.gz \
+   R6_2.2.1.tar.gz \
    mime_0.5.tar.gz \
    httr_1.2.1.tar.gz \
    rstudioapi_0.6.tar.gz \
@@ -200,12 +200,12 @@ RUN rm \
    stringr_1.2.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
    BH_1.62.0-1.tar.gz \
-   XML_3.98-1.6.tar.gz \
+   XML_3.98-1.7.tar.gz \
    xml2_1.1.1.tar.gz \
    curl_2.4.tar.gz \
    rversions_1.0.3.tar.gz \
    git2r_0.18.0.tar.gz \
-   devtools_1.12.0.tar.gz \
+   devtools_1.13.1.tar.gz \
    downloader_0.4.tar.gz
 
    
@@ -280,7 +280,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/tibble_1.3.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/dplyr_0.5.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/R6_2.2.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/R6_2.2.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/DBI_0.6-1.tar.gz 
@@ -290,7 +290,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    openintro_1.4.tar.gz \
    assertthat_0.2.0.tar.gz \
-   R6_2.2.0.tar.gz \
+   R6_2.2.1.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.0.tar.gz \
    DBI_0.6-1.tar.gz \
@@ -300,7 +300,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
    openintro_1.4.tar.gz \
    assertthat_0.2.0.tar.gz \
-   R6_2.2.0.tar.gz \
+   R6_2.2.1.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.0.tar.gz \
    DBI_0.6-1.tar.gz \
