@@ -229,7 +229,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/proto_1.0.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/minqa_1.2.4.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/nloptr_1.0.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/RcppEigen_0.3.3.3.0tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/RcppEigen_0.3.3.3.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/lme4_1.1-13.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -250,7 +250,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
    nloptr_1.0.4.tar.gz \
-   RcppEigen_0.3.3.3.0tar.gz \
+   RcppEigen_0.3.3.3.0.tar.gz \
    lme4_1.1-13.tar.gz
 
 RUN rm \
@@ -271,7 +271,7 @@ RUN rm \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
    nloptr_1.0.4.tar.gz \
-   RcppEigen_0.3.3.3.0tar.gz \
+   RcppEigen_0.3.3.3.0.tar.gz \
    lme4_1.1-13.tar.gz
   
 # more libraries Mine Cetinakya-Rundel asked for
