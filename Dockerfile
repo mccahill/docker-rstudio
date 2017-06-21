@@ -302,10 +302,10 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lazyeval_0.2.0.tar.gz \
    DBI_0.7.tar.gz \
    tibble_1.3.3.tar.gz \
-   bindrcpp_0.2.tar.gz \
    glue_1.1.0.tar.gz \
    pkgconfig_2.0.1.tar.gz \
    plogr_0.1-1.tar.gz \
+   bindrcpp_0.2.tar.gz \
    dplyr_0.7.0.tar.gz 
 
 RUN rm \
