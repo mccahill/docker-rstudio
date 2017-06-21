@@ -382,7 +382,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/reshape_0.8.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/progress_1.1.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/GGally_1.3.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/GGally_1.3.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/mosaic_0.14.4.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -400,7 +400,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    reshape_0.8.6.tar.gz \
    prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
-   GGally_1.3.0.tar.gz \
+   GGally_1.3.1.tar.gz \
    mosaic_0.14.4.tar.gz 
 
 RUN rm \
@@ -418,7 +418,7 @@ RUN rm \
    reshape_0.8.6.tar.gz \
    prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
-   GGally_1.3.0.tar.gz \
+   GGally_1.3.1.tar.gz \
    mosaic_0.14.4.tar.gz 
 
 # Cliburn Chan requested these:
