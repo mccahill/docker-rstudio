@@ -306,8 +306,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    glue_1.1.0.tar.gz \
    pkgconfig_2.0.1.tar.gz \
    plogr_0.1-1.tar.gz \
-   bindrcpp_0.2.tar.gz \
    bindr_0.1.tar.gz \
+   bindrcpp_0.2.tar.gz \
    dplyr_0.7.0.tar.gz 
 
 RUN rm \
