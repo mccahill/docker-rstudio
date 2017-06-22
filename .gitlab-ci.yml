@@ -11,7 +11,7 @@ stages:
 build:
   tags: 
     - rstudio
-    - labs-az-01
+    - labs-az-01r
   stage: build
   script: 
     - echo "Building the app in staging"
@@ -22,7 +22,7 @@ build:
 deploy_staging_02:
   tags: 
     - rstudio
-    - labs-az-02
+    - labs-az-02r
   stage: deploy
   script:
     - echo "Building the app in staging"
@@ -40,7 +40,7 @@ deploy_staging_02:
 deploy_staging_03:
   tags: 
     - rstudio
-    - labs-az-03
+    - labs-az-03r
   stage: deploy
   script:
     - echo "Building the app in staging"
@@ -58,7 +58,7 @@ deploy_staging_03:
 deploy_staging_04:
   tags: 
     - rstudio
-    - labs-az-04
+    - labs-az-04r
   stage: deploy
   script:
     - echo "Building the app in staging"
@@ -76,7 +76,7 @@ deploy_staging_04:
 deploy_staging_08:
   tags: 
     - rstudio
-    - labs-az-08
+    - labs-az-08r
   stage: deploy
   script:
     - echo "Building the app in staging"
@@ -94,7 +94,7 @@ deploy_staging_08:
 deploy_production_01:
   tags: 
     - rstudio
-    - labs-az-01
+    - labs-az-01r
   stage: deploy
   script:
     - echo "Building the production app"
@@ -111,7 +111,7 @@ deploy_production_01:
 deploy_production_02:
   tags: 
     - rstudio
-    - labs-az-02
+    - labs-az-02r
   stage: deploy
   script:
     - echo "Building the production app"
@@ -128,7 +128,7 @@ deploy_production_02:
 deploy_production_03:
   tags: 
     - rstudio
-    - labs-az-03
+    - labs-az-03r
   stage: deploy
   script:
     - echo "Building the production app"
@@ -145,7 +145,7 @@ deploy_production_03:
 deploy_production_04:
   tags: 
     - rstudio
-    - labs-az-04
+    - labs-az-04r
   stage: deploy
   script:
     - echo "Building the production app"
@@ -162,7 +162,7 @@ deploy_production_04:
 deploy_production_08:
   tags: 
     - rstudio
-    - labs-az-08
+    - labs-az-08r
   stage: deploy
   script:
     - echo "Building the production app"
@@ -179,7 +179,7 @@ deploy_production_08:
 push_to_gitlab_registry:
   tags: 
     - rstudio
-    - labs-az-01
+    - labs-az-01r
   stage: deploy
   script:
     - echo "pushing image to gitlab.oit.duke.edu container registry"
