@@ -1,6 +1,6 @@
 # mccahill/r-studio
 #
-# VERSION 1.0
+# VERSION 1.1
 
 FROM   ubuntu:16.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
@@ -10,12 +10,12 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >>  /etc/apt/sou
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  E084DAB9
 
 RUN apt-get update  &&   \
-    apt-get upgrade  -y
+    apt-get dist-update  -y
 
 # we want OpenBLAS for faster linear algebra as described here: http://brettklamer.com/diversions/statistical/faster-blas-in-r/
 RUN apt-get install  -y \
    libopenblas-base
-RUN apt-get  update
+
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y --force-yes \
    r-base \
@@ -38,8 +38,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    libcurl4-openssl-dev \
    libxml2-dev 
 
-RUN apt-get update && \
-    apt-get upgrade -y
+RUN apt-get update 
 
 # we need TeX for the rmarkdown package in RStudio
 
@@ -117,9 +116,7 @@ RUN rm \
    mime_0.5.tar.gz
 
 # dependency for R XML library
-RUN apt-get update && \
-    apt-get upgrade -y
-
+RUN apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
    libxml2 \ 
    libxml2-dev
