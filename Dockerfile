@@ -523,7 +523,7 @@ RUN adduser --disabled-password --gecos "" --ingroup users guest
 ADD initialize.sh /
 
 # set the locale so RStudio doesn't complain about UTF-8
-RUN locale-gen en_US en_US.UTF-8
+RUN /usr/sbin/locale-gen en_US en_US.UTF-8
 RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 
 
