@@ -213,7 +213,14 @@ RUN rm \
    devtools_1.13.2.tar.gz \
    downloader_0.4.tar.gz
 
-   
+
+# the CRAN install from source fails because a server at MIT will not respond
+# maybe e can use the Ubuntu distro
+#    https://mirrors.nics.utk.edu/cran/src/contrib/nloptr_1.0.4.tar.gz \
+RUN apt-get update 
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
+   r-cran-nloptr
+
 
 # libraries Eric Green wanted
 RUN DEBIAN_FRONTEND=noninteractive wget \
@@ -236,8 +243,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/minqa_1.2.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/RcppEigen_0.3.3.3.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/lme4_1.1-13.tar.gz
-
-#    https://mirrors.nics.utk.edu/cran/src/contrib/nloptr_1.0.4.tar.gz \
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lubridate_1.6.0.tar.gz  \
