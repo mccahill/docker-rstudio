@@ -10,7 +10,7 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >>  /etc/apt/sou
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  E084DAB9
 
 RUN apt-get update ; \
-    apt-get dist-update -y
+    apt-get dist-upgrade -y 
 
 # we want OpenBLAS for faster linear algebra as described here: http://brettklamer.com/diversions/statistical/faster-blas-in-r/
 RUN apt-get install  -y \
