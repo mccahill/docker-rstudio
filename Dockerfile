@@ -54,6 +54,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    gdebi-core \
    libapparmor1
+   
 #RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/rstudio-server-1.0.44-amd64.deb
 #RUN DEBIAN_FRONTEND=noninteractive gdebi -n rstudio-server-1.0.44-amd64.deb
 #RUN rm rstudio-server-1.0.44-amd64.deb
@@ -64,21 +65,21 @@ RUN rm rstudio-server-1.0.143-amd64.deb
 
 # update the R packages we will need for knitr
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://archive.linux.duke.edu/cran/src/contrib/knitr_1.16.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/yaml_2.1.14.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.11.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/htmltools_0.3.6.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/caTools_1.17.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/digest_0.6.12.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/stringr_1.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/markdown_0.8.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/highr_0.6.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/formatR_1.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/evaluate_0.10.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/mime_0.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/knitr_1.16.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/yaml_2.1.14.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.11.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/htmltools_0.3.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/caTools_1.17.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/digest_0.6.12.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/stringr_1.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/markdown_0.8.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/highr_0.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/formatR_1.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/evaluate_0.10.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/mime_0.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz
 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -126,33 +127,33 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://archive.linux.duke.edu/cran/src/contrib/rstudioapi_0.6.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/openssl_0.9.6.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/withr_1.0.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/brew_1.0-6.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/stringr_1.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/git2r_0.18.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/devtools_1.13.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/R6_2.2.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/mime_0.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/httr_1.2.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/RCurl_1.95-4.8.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.11.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/BH_1.62.0-1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/xml2_1.1.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/curl_2.6.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/jsonlite_1.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/digest_0.6.12.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/downloader_0.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/memoise_1.1.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/plyr_1.8.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/XML_3.98-1.9.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/whisker_0.3-2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/rstudioapi_0.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/openssl_0.9.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/withr_1.0.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/brew_1.0-6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/stringr_1.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/git2r_0.18.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/devtools_1.13.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/R6_2.2.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/mime_0.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/httr_1.2.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/RCurl_1.95-4.8.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/Rcpp_0.12.11.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/BH_1.62.0-1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/xml2_1.1.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/curl_2.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/jsonlite_1.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/digest_0.6.12.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/downloader_0.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/memoise_1.1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/plyr_1.8.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/XML_3.98-1.9.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/whisker_0.3-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    jsonlite_1.5.tar.gz \
@@ -216,26 +217,26 @@ RUN rm \
 
 # libraries Eric Green wanted
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://archive.linux.duke.edu/cran/src/contrib/lubridate_1.6.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/rlang_0.1.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/tibble_1.3.3.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/ggplot2_2.2.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/colorspace_1.3-2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/munsell_0.4.3.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/labeling_0.3.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/scales_0.4.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/stargazer_5.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/reshape2_1.4.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/gtable_0.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/proto_1.0.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/minqa_1.2.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/nloptr_1.0.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/RcppEigen_0.3.3.3.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/lme4_1.1-13.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/lubridate_1.6.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rlang_0.1.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/tibble_1.3.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/ggplot2_2.2.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/colorspace_1.3-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/munsell_0.4.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/labeling_0.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/scales_0.4.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/stargazer_5.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/reshape2_1.4.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/gtable_0.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/proto_1.0.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/minqa_1.2.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/nloptr_1.0.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/RcppEigen_0.3.3.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/lme4_1.1-13.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lubridate_1.6.0.tar.gz  \
@@ -283,19 +284,19 @@ RUN rm \
   
 # more libraries Mine Cetinakya-Rundel asked for
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://archive.linux.duke.edu/cran/src/contrib/openintro_1.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/tibble_1.3.3.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/bindr_0.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/bindrcpp_0.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/glue_1.1.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/pkgconfig_2.0.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/plogr_0.1-1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/dplyr_0.7.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/R6_2.2.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/DBI_0.7.tar.gz 
+   https://archive.linux.duke.edu/cran/src/contrib/openintro_1.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/tibble_1.3.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/bindr_0.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/bindrcpp_0.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/glue_1.1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/pkgconfig_2.0.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/plogr_0.1-1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/dplyr_0.7.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/R6_2.2.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/DBI_0.7.tar.gz 
 
 
 
@@ -330,18 +331,18 @@ RUN rm \
    dplyr_0.7.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://archive.linux.duke.edu/cran/src/contrib/chron_2.3-50.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/data.table_1.10.4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/rematch_1.0.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/cellranger_1.1.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/tidyr_0.6.3.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/googlesheets_0.2.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/hms_0.3.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/readr_1.1.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/purrr_0.2.2.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/selectr_0.3-1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/rvest_0.3.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/pbkrtest_0.4-7.tar.gz 
+   https://archive.linux.duke.edu/cran/src/contrib/chron_2.3-50.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/data.table_1.10.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rematch_1.0.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/cellranger_1.1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/tidyr_0.6.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/googlesheets_0.2.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/hms_0.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/readr_1.1.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/purrr_0.2.2.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/selectr_0.3-1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rvest_0.3.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/pbkrtest_0.4-7.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    chron_2.3-50.tar.gz \
@@ -372,22 +373,22 @@ RUN rm \
    pbkrtest_0.4-7.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://archive.linux.duke.edu/cran/src/contrib/SparseM_1.77.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/MatrixModels_0.4-1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/quantreg_5.33.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/car_2.1-4.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/mosaicData_0.14.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/latticeExtra_0.6-28.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/gridExtra_2.2.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/ggdendro_0.1-20.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/mnormt_1.5-5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/psych_1.7.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/broom_0.4.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/reshape_0.8.6.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/progress_1.1.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/GGally_1.3.1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/mosaic_0.14.4.tar.gz 
+   https://archive.linux.duke.edu/cran/src/contrib/SparseM_1.77.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/MatrixModels_0.4-1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/quantreg_5.33.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/car_2.1-4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/mosaicData_0.14.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/latticeExtra_0.6-28.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/gridExtra_2.2.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/ggdendro_0.1-20.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/mnormt_1.5-5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/psych_1.7.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/broom_0.4.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/reshape_0.8.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/progress_1.1.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/GGally_1.3.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/mosaic_0.14.4.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    SparseM_1.77.tar.gz \
@@ -427,11 +428,11 @@ RUN rm \
 
 # Cliburn Chan requested these:
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/maps_3.2.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/zoo_1.8-0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/gcookbook_1.0.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/corrplot_0.77.tar.gz 
+   https://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/maps_3.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/zoo_1.8-0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/gcookbook_1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/corrplot_0.77.tar.gz 
 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -471,7 +472,7 @@ RUN R CMD BATCH /r-studio/install-Shiny.R
 
 # install templates and examples from Reed and the Tufte package
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   http://archive.linux.duke.edu/cran/src/contrib/BHH2_2016.05.31.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/BHH2_2016.05.31.tar.gz
    
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    BHH2_2016.05.31.tar.gz
