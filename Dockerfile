@@ -9,8 +9,8 @@ MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >>  /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  E084DAB9
 
-RUN apt-get update  &&   \
-    apt-get dist-update  -y
+RUN apt-get update ; \
+    apt-get dist-update -y
 
 # we want OpenBLAS for faster linear algebra as described here: http://brettklamer.com/diversions/statistical/faster-blas-in-r/
 RUN apt-get install  -y \
@@ -39,7 +39,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    libxml2-dev 
 
 RUN apt-get update 
-
 # we need TeX for the rmarkdown package in RStudio
 
 # TeX 
