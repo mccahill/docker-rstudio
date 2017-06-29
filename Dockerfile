@@ -256,7 +256,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    tibble_1.3.3.tar.gz \
    ggplot2_2.2.1.tar.gz \
    stargazer_5.2.tar.gz \
-   minqa_1.2.4.tar.gz \\
+   minqa_1.2.4.tar.gz \
    RcppEigen_0.3.3.3.0.tar.gz \
    lme4_1.1-13.tar.gz
 
