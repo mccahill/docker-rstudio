@@ -76,7 +76,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/markdown_0.8.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/highr_0.6.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/formatR_1.5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/evaluate_0.10.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/evaluate_0.10.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mime_0.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/stringi_1.1.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/magrittr_1.5.tar.gz
@@ -95,12 +95,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    stringr_1.2.0.tar.gz \
    highr_0.6.tar.gz \
    formatR_1.5.tar.gz \
-   evaluate_0.10.tar.gz \
+   evaluate_0.10.1.tar.gz \
    markdown_0.8.tar.gz \
    knitr_1.16.tar.gz 
 
 RUN rm \
-   evaluate_0.10.tar.gz \
+   evaluate_0.10.1.tar.gz \
    formatR_1.5.tar.gz \
    highr_0.6.tar.gz \
    markdown_0.8.tar.gz \
