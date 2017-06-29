@@ -234,9 +234,10 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/gtable_0.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/proto_1.0.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/minqa_1.2.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/nloptr_1.0.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/RcppEigen_0.3.3.3.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/lme4_1.1-13.tar.gz
+
+#    https://mirrors.nics.utk.edu/cran/src/contrib/nloptr_1.0.4.tar.gz \
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lubridate_1.6.0.tar.gz  \
@@ -255,8 +256,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    tibble_1.3.3.tar.gz \
    ggplot2_2.2.1.tar.gz \
    stargazer_5.2.tar.gz \
-   minqa_1.2.4.tar.gz \
-   nloptr_1.0.4.tar.gz \
+   minqa_1.2.4.tar.gz \\
    RcppEigen_0.3.3.3.0.tar.gz \
    lme4_1.1-13.tar.gz
 
@@ -278,7 +278,6 @@ RUN rm \
    ggplot2_2.2.1.tar.gz \
    stargazer_5.2.tar.gz \
    minqa_1.2.4.tar.gz \
-   nloptr_1.0.4.tar.gz \
    RcppEigen_0.3.3.3.0.tar.gz \
    lme4_1.1-13.tar.gz
   
