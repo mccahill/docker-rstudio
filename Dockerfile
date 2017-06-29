@@ -71,7 +71,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/markdown_0.8.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/highr_0.6.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/formatR_1.5.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/evaluate_0.10.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/evaluate_0.10.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/mime_0.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/stringi_1.1.5.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz
@@ -90,12 +90,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    stringr_1.2.0.tar.gz \
    highr_0.6.tar.gz \
    formatR_1.5.tar.gz \
-   evaluate_0.10.tar.gz \
+   evaluate_0.10.1.tar.gz \
    markdown_0.8.tar.gz \
    knitr_1.16.tar.gz 
 
 RUN rm \
-   evaluate_0.10.tar.gz \
+   evaluate_0.10.1.tar.gz \
    formatR_1.5.tar.gz \
    highr_0.6.tar.gz \
    markdown_0.8.tar.gz \
@@ -283,10 +283,10 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/tibble_1.3.3.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/bindr_0.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/bindrcpp_0.2.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/glue_1.1.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/glue_1.1.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/pkgconfig_2.0.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/plogr_0.1-1.tar.gz \
-   http://archive.linux.duke.edu/cran/src/contrib/dplyr_0.7.0.tar.gz \
+   http://archive.linux.duke.edu/cran/src/contrib/dplyr_0.7.1.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/R6_2.2.2.tar.gz \
    http://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
@@ -303,12 +303,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lazyeval_0.2.0.tar.gz \
    DBI_0.7.tar.gz \
    tibble_1.3.3.tar.gz \
-   glue_1.1.0.tar.gz \
+   glue_1.1.1.tar.gz \
    pkgconfig_2.0.1.tar.gz \
    plogr_0.1-1.tar.gz \
    bindr_0.1.tar.gz \
    bindrcpp_0.2.tar.gz \
-   dplyr_0.7.0.tar.gz 
+   dplyr_0.7.1.tar.gz
 
 RUN rm \
    openintro_1.4.tar.gz \
@@ -320,10 +320,10 @@ RUN rm \
    tibble_1.3.3.tar.gz \
    bindr_0.1.tar.gz \
    bindrcpp_0.2.tar.gz \
-   glue_1.1.0.tar.gz \
+   glue_1.1.1.tar.gz \
    pkgconfig_2.0.1.tar.gz \
    plogr_0.1-1.tar.gz \
-   dplyr_0.7.0.tar.gz 
+   dplyr_0.7.1.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
    http://archive.linux.duke.edu/cran/src/contrib/chron_2.3-50.tar.gz \
