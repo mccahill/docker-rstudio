@@ -37,7 +37,7 @@ deploy_staging_02:
   - staging
 
 
-deploy_staging_03:
+.deploy_staging_03:
   tags: 
     - rstudio
     - labs-az-03r
@@ -55,7 +55,7 @@ deploy_staging_03:
   - staging
 
 
-deploy_staging_04:
+.deploy_staging_04:
   tags: 
     - rstudio
     - labs-az-04r
@@ -73,7 +73,7 @@ deploy_staging_04:
   - staging
 
 
-deploy_staging_08:
+.deploy_staging_08:
   tags: 
     - rstudio
     - labs-az-08r
@@ -125,7 +125,7 @@ deploy_production_02:
   only:
   - master
 
-deploy_production_03:
+.deploy_production_03:
   tags: 
     - rstudio
     - labs-az-03r
@@ -142,7 +142,7 @@ deploy_production_03:
   only:
   - master
 
-deploy_production_04:
+.deploy_production_04:
   tags: 
     - rstudio
     - labs-az-04r
@@ -159,7 +159,7 @@ deploy_production_04:
   only:
   - master
 
-deploy_production_08:
+.deploy_production_08:
   tags: 
     - rstudio
     - labs-az-08r
