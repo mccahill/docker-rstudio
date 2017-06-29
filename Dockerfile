@@ -2,7 +2,7 @@
 #
 # VERSION 1.0
 
-FROM   ubuntu:14.04
+FROM   ubuntu:16.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 
 # get R from a CRAN archive 
