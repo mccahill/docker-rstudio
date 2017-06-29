@@ -119,7 +119,8 @@ RUN rm \
 RUN apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
    libxml2 \ 
-   libxml2-dev
+   libxml2-dev \
+   libssl-dev
 
 
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
