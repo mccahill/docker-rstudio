@@ -20,7 +20,7 @@ build:
     - echo "Building the app in staging"
     - pwd; ls -la
     - ./build-test
-	
+
 #
 ############# deploy_staging ##############
 #
