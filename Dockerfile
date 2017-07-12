@@ -377,7 +377,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/SparseM_1.77.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/MatrixModels_0.4-1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/quantreg_5.33.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/car_2.1-4.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/car_2.1-5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mosaicData_0.14.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/latticeExtra_0.6-28.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/gridExtra_2.2.1.tar.gz \
@@ -395,7 +395,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    SparseM_1.77.tar.gz \
    MatrixModels_0.4-1.tar.gz \
    quantreg_5.33.tar.gz \
-   car_2.1-4.tar.gz \
+   car_2.1-5.tar.gz \
    mosaicData_0.14.0.tar.gz \
    latticeExtra_0.6-28.tar.gz \
    gridExtra_2.2.1.tar.gz \
@@ -413,7 +413,7 @@ RUN rm \
    SparseM_1.77.tar.gz \
    MatrixModels_0.4-1.tar.gz \
    quantreg_5.33.tar.gz \
-   car_2.1-4.tar.gz \
+   car_2.1-5.tar.gz \
    mosaicData_0.14.0.tar.gz \
    latticeExtra_0.6-28.tar.gz \
    gridExtra_2.2.1.tar.gz \
