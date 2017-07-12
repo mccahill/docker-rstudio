@@ -39,10 +39,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    libcurl4-openssl-dev \
    libxml2-dev 
 
+# we need TeX for the rmarkdown package in RStudio 
 RUN apt-get update 
-# we need TeX for the rmarkdown package in RStudio
-
-# TeX 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    texlive \ 
    texlive-base \ 
@@ -467,9 +465,9 @@ RUN R CMD BATCH /r-studio/install-igraph.R
 RUN rm /install-igraph.Rout 
 
 # Shiny
-RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.0.831-amd64.deb
+RUN https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.3.838-amd64.deb
 RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.0.831-amd64.deb
-RUN rm shiny-server-1.5.0.831-amd64.deb
+RUN rm shiny-server-1.5.3.838-amd64.deb
 RUN R CMD BATCH /r-studio/install-Shiny.R
 
 # install templates and examples from Reed and the Tufte package
