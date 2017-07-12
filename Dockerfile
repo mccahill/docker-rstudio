@@ -14,7 +14,7 @@ RUN apt-get update ; \
 
 # we want OpenBLAS for faster linear algebra as described here: http://brettklamer.com/diversions/statistical/faster-blas-in-r/
 RUN apt-get install  -y \
-   apt-utils \
+   apt-utils   \
    libopenblas-base
 
 
