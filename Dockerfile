@@ -6,7 +6,7 @@ FROM   ubuntu:16.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 
 # get R from a CRAN archive 
-RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >>  /etc/apt/sources.list
+RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" >>  /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  E084DAB9
 
 RUN apt-get update ; \
