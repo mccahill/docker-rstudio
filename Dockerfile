@@ -526,6 +526,8 @@ RUN apt-get install  -y locales
 RUN locale-gen en_US en_US.UTF-8
 RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 
+# pandoc is very useful for rmarkdown::render
+RUN apt-get install -y pandoc
 
 #########
 #
