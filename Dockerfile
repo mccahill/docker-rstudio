@@ -388,7 +388,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/reshape_0.8.6.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/progress_1.1.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.3.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.3.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/ggformula_0.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mosaicCore_0.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mosaic_1.0.0.tar.gz 
@@ -408,7 +408,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    reshape_0.8.6.tar.gz \
    prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
-   GGally_1.3.1.tar.gz \
+   GGally_1.3.2.tar.gz \
    mosaicCore_0.2.0.tar.gz \
    ggformula_0.5.tar.gz \
    mosaic_1.0.0.tar.gz 
@@ -428,7 +428,7 @@ RUN rm \
    reshape_0.8.6.tar.gz \
    prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
-   GGally_1.3.1.tar.gz \
+   GGally_1.3.2.tar.gz \
    mosaicCore_0.2.0.tar.gz \
    ggformula_0.5.tar.gz \
    mosaic_1.0.0.tar.gz 
