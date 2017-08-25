@@ -137,7 +137,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/devtools_1.13.3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/R6_2.2.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mime_0.5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/httr_1.2.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/httr_1.3.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/RCurl_1.95-4.8.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.12.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/BH_1.62.0-1.tar.gz \
@@ -165,7 +165,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    curl_2.8.1.tar.gz \
    openssl_0.9.6.tar.gz \
    mime_0.5.tar.gz \
-   httr_1.2.1.tar.gz \
+   httr_1.3.1.tar.gz \
    rstudioapi_0.6.tar.gz \
    withr_2.0.0.tar.gz \
    git2r_0.19.0.tar.gz \
@@ -192,7 +192,7 @@ RUN rm \
    plyr_1.8.4.tar.gz \
    R6_2.2.2.tar.gz \
    mime_0.5.tar.gz \
-   httr_1.2.1.tar.gz \
+   httr_1.3.1.tar.gz \
    rstudioapi_0.6.tar.gz \
    openssl_0.9.6.tar.gz \
    withr_2.0.0.tar.gz \
