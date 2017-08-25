@@ -9,8 +9,8 @@ MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 RUN echo  "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" >>  /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  E084DAB9
 
-RUN apt-get update ; \
-    apt-get dist-upgrade -y 
+RUN apt-get   update ; \
+    apt-get   dist-upgrade -y 
 
 # we want OpenBLAS for faster linear algebra as described here: http://brettklamer.com/diversions/statistical/faster-blas-in-r/
 RUN apt-get install  -y \
@@ -63,7 +63,7 @@ RUN rm rstudio-server-1.1.345-amd64.deb
 
 # update the R packages we will need for knitr
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/knitr_1.16.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/knitr_1.17.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/yaml_2.1.14.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.12.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/htmltools_0.3.6.tar.gz \
@@ -95,7 +95,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    formatR_1.5.tar.gz \
    evaluate_0.10.1.tar.gz \
    markdown_0.8.tar.gz \
-   knitr_1.16.tar.gz 
+   knitr_1.17.tar.gz 
 
 RUN rm \
    evaluate_0.10.1.tar.gz \
@@ -105,7 +105,7 @@ RUN rm \
    stringi_1.1.5.tar.gz \
    magrittr_1.5.tar.gz \
    stringr_1.2.0.tar.gz \
-   knitr_1.16.tar.gz \
+   knitr_1.17.tar.gz \
    yaml_2.1.14.tar.gz \
    Rcpp_0.12.12.tar.gz \
    htmltools_0.3.6.tar.gz \
