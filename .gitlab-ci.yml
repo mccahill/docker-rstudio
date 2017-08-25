@@ -116,23 +116,23 @@ deploy_production_08:
   <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
 
 
-push_to_gitlab_registry:
-  tags: 
-    - rstudio
-    - labs-az-01r
-  stage: deploy
-  script:
-    - echo "pushing image to gitlab.oit.duke.edu container registry"
-    - pwd; ls -la
-    - ./build-production
-    - echo "pushing to gitlab"
-    - sudo docker login --password $GITLAB_PW --username mccahill gitlab-registry.oit.duke.edu 
-    - sudo docker tag docker-rstudio gitlab-registry.oit.duke.edu/mccahill/docker-rstudio
-    - sudo docker push gitlab-registry.oit.duke.edu/mccahill/docker-rstudio
-    - sudo docker logout gitlab-registry.oit.duke.edu 
-  environment:
-    name: production
-  when: manual
-  only:
-  - master
+#push_to_gitlab_registry:
+#  tags: 
+#    - rstudio
+#    - labs-az-01r
+#  stage: deploy
+#  script:
+#    - echo "pushing image to gitlab.oit.duke.edu container registry"
+#    - pwd; ls -la
+#    - ./build-production
+#    - echo "pushing to gitlab"
+#    - sudo docker login --password $GITLAB_PW --username mccahill gitlab-registry.oit.duke.edu 
+#    - sudo docker tag docker-rstudio gitlab-registry.oit.duke.edu/mccahill/docker-rstudio
+#    - sudo docker push gitlab-registry.oit.duke.edu/mccahill/docker-rstudio
+#    - sudo docker logout gitlab-registry.oit.duke.edu 
+#  environment:
+#    name: production
+#  when: manual
+#  only:
+#  - master
 

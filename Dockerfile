@@ -6,7 +6,7 @@ FROM   ubuntu:16.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 
 # get R from a CRAN archive 
-RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" >>  /etc/apt/sources.list
+RUN echo  "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" >>  /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  E084DAB9
 
 RUN apt-get update ; \
@@ -53,13 +53,13 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    gdebi-core \
    libapparmor1
    
-#RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/rstudio-server-1.0.44-amd64.deb
-#RUN DEBIAN_FRONTEND=noninteractive gdebi -n rstudio-server-1.0.44-amd64.deb
-#RUN rm rstudio-server-1.0.44-amd64.deb
+#RUN DEBIAN_FRONTEND=noninteractive wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-server-1.0.143-amd64.deb
+#RUN DEBIAN_FRONTEND=noninteractive gdebi -n rstudio-server-1.0.143-amd64.deb
+#RUN rm rstudio-server-1.0.143-amd64.deb
 
-RUN DEBIAN_FRONTEND=noninteractive wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-server-1.0.143-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi -n rstudio-server-1.0.143-amd64.deb
-RUN rm rstudio-server-1.0.143-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-server-1.1.345-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi -n rstudio-server-1.1.345-amd64.deb
+RUN rm rstudio-server-1.1.345-amd64.deb
 
 # update the R packages we will need for knitr
 RUN DEBIAN_FRONTEND=noninteractive wget \
