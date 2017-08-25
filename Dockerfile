@@ -388,7 +388,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/mnormt_1.5-5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/psych_1.7.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/broom_0.4.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/reshape_0.8.6.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/reshape_0.8.7.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/progress_1.1.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.3.2.tar.gz \
@@ -408,7 +408,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    mnormt_1.5-5.tar.gz \
    psych_1.7.5.tar.gz \
    broom_0.4.2.tar.gz \
-   reshape_0.8.6.tar.gz \
+   reshape_0.8.7.tar.gz \
    prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
    GGally_1.3.2.tar.gz \
@@ -428,7 +428,7 @@ RUN rm \
    mnormt_1.5-5.tar.gz \
    psych_1.7.5.tar.gz \
    broom_0.4.2.tar.gz \
-   reshape_0.8.6.tar.gz \
+   reshape_0.8.7.tar.gz \
    prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
    GGally_1.3.2.tar.gz \
