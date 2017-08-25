@@ -1,1 +1,2 @@
+sudo docker tag r-studio r-studio-old
 sudo docker build -t="r-studio" .

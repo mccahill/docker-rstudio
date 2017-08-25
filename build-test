@@ -1,1 +1,3 @@
+sudo docker rmi r-studio-test-old --force
+sudo docker tag r-studio-test r-studio-test-old
 sudo docker build --tag r-studio-test .
