@@ -465,7 +465,7 @@ ADD ./conf /r-studio
 RUN R CMD BATCH /r-studio/install-rmarkdown.R
 RUN rm /install-rmarkdown.Rout 
 
-# CLiburn also wanted these
+# Cliburn also wanted these
 # dendextend
 # igraph
 # but they have mega-dependencies, so intall them the other way
@@ -492,6 +492,22 @@ RUN rm \
   
 RUN R CMD BATCH /r-studio/install-reed.R
 RUN rm /install-reed.Rout 
+
+
+# a couple dependencies for Eric Greene's tidycensus
+RUN apt-get update 
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
+    libgdal1-dev \
+	libproj-dev
+
+RUN DEBIAN_FRONTEND=noninteractive wget \
+   https://mirrors.nics.utk.edu/cran/src/contrib/tidycensus_0.2.tar.gz 
+
+RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
+   tidycensus_0.2.tar.gz 
+
+RUN rm \
+   tidycensus_0.2.tar.gz
 
 
 # Supervisord
