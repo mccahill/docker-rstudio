@@ -502,6 +502,13 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 	libproj-dev \
 	libudunits2-dev
  
+# we need gdal > 2
+RUN sudo add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable ; \
+    sudo apt update ; \
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
+    gdal-bin 
+
+	
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/tidycensus_0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/udunits2_0.13.tar.gz \
