@@ -499,7 +499,8 @@ RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
     libgdal1i \
     libgdal1-dev \
-	libproj-dev
+	libproj-dev \
+	libudunits2-dev
  
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/tidycensus_0.2.tar.gz \
