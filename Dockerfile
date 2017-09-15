@@ -502,12 +502,14 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
  
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/tidycensus_0.2.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/udunits2_0.13.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/sf_0.5-4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/tigris_0.5.3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rappdirs_0.3.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/units_0.4-6.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
+   udunits2_0.13.tar.gz
    units_0.4-6.tar.gz \
    sf_0.5-4.tar.gz \
    tigris_0.5.3.tar.gz \
@@ -515,6 +517,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    tidycensus_0.2.tar.gz 
 
 RUN rm \
+   udunits2_0.13.tar.gz \
    tidycensus_0.2.tar.gz \
    sf_0.5-4.tar.gz \
    tigris_0.5.3.tar.gz \
