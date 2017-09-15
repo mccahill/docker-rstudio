@@ -500,7 +500,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 #    libgdal1i \
 #    libgdal-dev \
 	libproj-dev \
-	libudunits2 \
+	libudunits2-0 \
 	libudunits2-dev \
 	software-properties-common
  
