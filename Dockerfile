@@ -503,8 +503,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 	libudunits2-dev
  
 # we need gdal > 2
-RUN sudo add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable ; \
-    sudo apt update ; \
+RUN sudo add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
+RUN sudo apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
     gdal-bin 
 
