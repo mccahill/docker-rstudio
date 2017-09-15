@@ -497,7 +497,7 @@ RUN rm /install-reed.Rout
 # a couple dependencies for Eric Greene's tidycensus
 RUN apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
-    libgdal1 \
+    libgdal1i \
     libgdal1-dev \
 	libproj-dev
  
