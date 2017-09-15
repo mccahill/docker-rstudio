@@ -531,7 +531,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    rgdal_1.2-8.tar.gz \
    rgeos_0.3-23.tar.gz \
    maptools_0.9-2.tar.gz \
-   uuid_0.1-2.tar.gz \
+   uuid_0.1-2.tar.gz 
 
 RUN rm \
    sf_0.5-4.tar.gz \
