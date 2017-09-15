@@ -497,7 +497,7 @@ RUN rm /install-reed.Rout
 # a couple dependencies for Eric Greene's tidycensus
 RUN apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
-    libgdal1i \
+#    libgdal1i \
 #    libgdal-dev \
 	libproj-dev \
 	libudunits2-dev \
@@ -507,7 +507,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 RUN  add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
 RUN  apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
-    gdal
+    gdal-bin \
+    python-gdal
 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
