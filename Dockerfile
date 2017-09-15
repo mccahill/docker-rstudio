@@ -508,7 +508,8 @@ RUN  add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
 RUN  apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
     gdal-bin \
-    python-gdal
+    python-gdal \
+    libgdal-dev
 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
