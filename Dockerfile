@@ -510,8 +510,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/units_0.4-6.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   udunits2_0.13.tar.gz \
-   units_0.4-6.tar.gz 
+   udunits2_0.13.tar.gz 
+#   units_0.4-6.tar.gz 
 #   sf_0.5-4.tar.gz \
 #   tigris_0.5.3.tar.gz \
 #   rappdirs_0.3.1.tar.gz \
