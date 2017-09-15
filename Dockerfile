@@ -500,7 +500,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
     libgdal1i \
     libgdal-dev \
 	libproj-dev \
-	libudunits2-dev
+	libudunits2-dev \
+	software-properties-common
  
 # we need gdal > 2
 RUN  add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
