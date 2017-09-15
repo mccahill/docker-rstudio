@@ -514,7 +514,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/sf_0.5-4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rgdal_1.2-8.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rgeos_0.3-23.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/maptools_0.9-2.tar.gz \
@@ -523,7 +522,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
  
  
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   sf_0.5-4.tar.gz \
    sp_1.2-5.tar.gz  \
    rgdal_1.2-8.tar.gz \
    rgeos_0.3-23.tar.gz \
@@ -531,7 +529,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    uuid_0.1-2.tar.gz 
 
 RUN rm \
-   sf_0.5-4.tar.gz \
    sp_1.2-5.tar.gz \
    rgdal_1.2-8.tar.gz \
    rgeos_0.3-23.tar.gz \
