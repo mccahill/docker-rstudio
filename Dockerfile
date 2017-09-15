@@ -498,7 +498,7 @@ RUN rm /install-reed.Rout
 RUN apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
     libgdal1i \
-    libgdal-dev \
+#    libgdal-dev \
 	libproj-dev \
 	libudunits2-dev \
 	software-properties-common
@@ -507,7 +507,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 RUN  add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
 RUN  apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
-    gdal-bin 
+    gdal
 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
