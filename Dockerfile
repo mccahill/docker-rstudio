@@ -531,11 +531,11 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    udunits2_0.13.tar.gz \
    units_0.4-6.tar.gz \
    sf_0.5-4.tar.gz \
+   sp_1.2-5.tar.gz  \
    rgdal_1.2-8.tar.gz \
    rgeos_0.3-23.tar.gz \
    maptools_0.9-2.tar.gz \
    uuid_0.1-2.tar.gz \
-   sp_1.2-5.tar.gz  \
    rappdirs_0.3.1.tar.gz \
    tigris_0.5.3.tar.gz \
    rappdirs_0.3.tar.gz \
