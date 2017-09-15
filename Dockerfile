@@ -498,7 +498,7 @@ RUN rm /install-reed.Rout
 RUN apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
     libgdal1i \
-    libgdal1-dev \
+    libgdal-dev \
 	libproj-dev \
 	libudunits2-dev
  
