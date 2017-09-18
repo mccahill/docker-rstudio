@@ -62,11 +62,11 @@ deploy_staging_04:
     - labs-az-04r
   <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
 
-#deploy_staging_08:
-#  tags: 
-#    - rstudio
-#    - labs-az-08r
-#  <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
+deploy_staging_08:
+  tags: 
+    - rstudio
+    - labs-az-08r
+  <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
 
 #
 ############# deploy_production ##############
@@ -109,11 +109,11 @@ deploy_production_04:
     - labs-az-04r
   <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
 
-#deploy_production_08:
-#  tags: 
-#    - rstudio
-#    - labs-az-08r
-#  <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
+deploy_production_08:
+  tags: 
+    - rstudio
+    - labs-az-08r
+  <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
 
 
 #push_to_gitlab_registry:
