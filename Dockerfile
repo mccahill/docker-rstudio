@@ -138,7 +138,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.13.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/BH_1.65.0-1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/xml2_1.1.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/curl_2.8.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/curl_3.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/jsonlite_1.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.12.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/downloader_0.4.tar.gz \
@@ -158,7 +158,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    Rcpp_0.12.13.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.2.2.tar.gz \
-   curl_2.8.1.tar.gz \
+   curl_3.0.tar.gz \
    openssl_0.9.9.tar.gz \
    mime_0.5.tar.gz \
    httr_1.3.1.tar.gz \
@@ -200,7 +200,7 @@ RUN rm \
    BH_1.65.0-1.tar.gz \
    XML_3.98-1.9.tar.gz \
    xml2_1.1.1.tar.gz \
-   curl_2.8.1.tar.gz \
+   curl_3.0.tar.gz \
    rversions_1.0.3.tar.gz \
    git2r_0.19.0.tar.gz \
    devtools_1.13.4.tar.gz \
