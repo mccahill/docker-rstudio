@@ -331,7 +331,7 @@ RUN rm \
    dplyr_0.7.4.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/chron_2.3-50.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/chron_2.3-51.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/data.table_1.10.4-3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rematch_1.0.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/cellranger_1.1.0.tar.gz \
@@ -346,7 +346,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/pbkrtest_0.4-7.tar.gz 
 	
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   chron_2.3-50.tar.gz \
+   chron_2.3-51.tar.gz \
    data.table_1.10.4-3.tar.gz \
    rematch_1.0.1.tar.gz \
    cellranger_1.1.0.tar.gz \
@@ -361,7 +361,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    pbkrtest_0.4-7.tar.gz 
 
 RUN rm \
-   chron_2.3-50.tar.gz \
+   chron_2.3-51.tar.gz \
    data.table_1.10.4-3.tar.gz \
    rematch_1.0.1.tar.gz \
    cellranger_1.1.0.tar.gz \
