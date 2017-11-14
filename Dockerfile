@@ -228,6 +228,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/colorspace_1.3-2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/munsell_0.4.3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/labeling_0.3.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/viridisLite_0.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/scales_0.5.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/stargazer_5.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/reshape2_1.4.2.tar.gz \
@@ -245,6 +246,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    colorspace_1.3-2.tar.gz \
    munsell_0.4.3.tar.gz \
    labeling_0.3.tar.gz \
+   viridisLite_0.2.0.tar.gz \
    scales_0.5.0.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.2.tar.gz \
@@ -266,6 +268,7 @@ RUN rm \
    colorspace_1.3-2.tar.gz \
    munsell_0.4.3.tar.gz \
    labeling_0.3.tar.gz \
+   viridisLite_0.2.0.tar.gz \
    scales_0.5.0.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.2.tar.gz \
