@@ -54,7 +54,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    libapparmor1
    
 RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/rstudio-server-1.1.383-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi rstudio-server-1.1.383-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.1.383-amd64.deb
 RUN rm rstudio-server-1.1.383-amd64.deb
 
 # update the R packages we will need for knitr
