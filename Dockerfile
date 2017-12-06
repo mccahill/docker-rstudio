@@ -548,7 +548,7 @@ RUN rm \
     tidycensus_0.3.1.tar.gz 
 	
 	
-# somemore TeX for so that papaja can be installed and students can create APA templates in Rmarkdown
+# some more TeX so that papaja can be installed and students can create APA templates in Rmarkdown
 RUN apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    texlive \
@@ -557,7 +557,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    texlive-latex-extra \
    texlive-humanities \
    lmodern 
-
 
 	
 # Supervisord
