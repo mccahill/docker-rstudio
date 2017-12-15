@@ -6,7 +6,7 @@ FROM   ubuntu:16.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 
 # get R from a CRAN archive 
-RUN echo  "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" >>  /etc/apt/sources.list
+RUN echo   "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" >>  /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  E084DAB9
 
 RUN apt-get  update ; \
@@ -479,6 +479,19 @@ RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.3.838-amd64.deb
 RUN rm shiny-server-1.5.3.838-amd64.deb
 RUN R CMD BATCH /r-studio/install-Shiny.R
 
+# some more TeX so that papaja can be installed and students can create APA templates in Rmarkdown
+RUN apt-get update 
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
+   texlive \
+   texlive-publishers \
+   texlive-fonts-extra \
+   texlive-latex-extra \
+   texlive-humanities \
+   lmodern 
+# papaja
+RUN R CMD BATCH /r-studio/install-papaja.R
+
+
 # install templates and examples from Reed and the Tufte package
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/BHH2_2016.05.31.tar.gz
@@ -547,17 +560,6 @@ RUN rm \
     tigris_0.5.3.tar.gz  \
     tidycensus_0.3.1.tar.gz 
 	
-	
-# some more TeX so that papaja can be installed and students can create APA templates in Rmarkdown
-RUN apt-get update 
-RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
-   texlive \
-   texlive-publishers \
-   texlive-fonts-extra \
-   texlive-latex-extra \
-   texlive-humanities \
-   lmodern 
-
 	
 # Supervisord
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y supervisor && \
