@@ -40,13 +40,14 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    libcurl4-openssl-dev \
    libxml2-dev 
 
-# we need TeX for the rmarkdown package in RStudio 
+# we need TeX for the rmarkdown package in RStudio, and pandoc is also useful 
 RUN apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    texlive \ 
    texlive-base \ 
    texlive-latex-extra \ 
-   texlive-pstricks 
+   texlive-pstricks \ 
+   pandoc
 
 # R-Studio
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
