@@ -541,19 +541,19 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/rgdal_1.2-16.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rgeos_0.3-26.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/maptools_0.9-2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/sp_1.2-5.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/sp_1.2-7.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/uuid_0.1-2.tar.gz
  
  
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   sp_1.2-5.tar.gz  \
+   sp_1.2-7.tar.gz  \
    rgdal_1.2-16.tar.gz \
    rgeos_0.3-26.tar.gz \
    maptools_0.9-2.tar.gz \
    uuid_0.1-2.tar.gz 
 
 RUN rm \
-   sp_1.2-5.tar.gz \
+   sp_1.2-7.tar.gz \
    rgdal_1.2-16.tar.gz \
    rgeos_0.3-26.tar.gz \
    maptools_0.9-2.tar.gz \
