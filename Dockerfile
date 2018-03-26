@@ -1,12 +1,12 @@
 # mccahill/r-studio
 #
-# VERSION 1.2
+# VERSION 1.3
 
 FROM  ubuntu:16.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 
 # get R from a CRAN archive 
-RUN  echo   "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" >>   /etc/apt/sources.list
+RUN  echo    "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" >>    /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  E084DAB9
 
 RUN apt-get  update ; \
@@ -449,13 +449,14 @@ RUN rm \
    ggformula_0.6.1.tar.gz \
    mosaic_1.1.1.tar.gz 
 
-# Cliburn Chan requested these:
+# Cliburn Chan requested these + sparklyr for mccahill:
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/maps_3.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/zoo_1.8-1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/gcookbook_1.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/corrplot_0.84.tar.gz 
+   https://mirrors.nics.utk.edu/cran/src/contrib/corrplot_0.84.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/sparklyr_0.7.0.tar.gz
 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -463,7 +464,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    maps_3.2.0.tar.gz \
    zoo_1.8-1.tar.gz \
    gcookbook_1.0.tar.gz \
-   corrplot_0.84.tar.gz 
+   corrplot_0.84.tar.gz \
+   sparklyr_0.7.0.tar.gz
 
 
 RUN rm \
@@ -471,7 +473,9 @@ RUN rm \
    maps_3.2.0.tar.gz \
    zoo_1.8-1.tar.gz \
    gcookbook_1.0.tar.gz \
-   corrplot_0.84.tar.gz 
+   corrplot_0.84.tar.gz \
+   sparklyr_0.7.0.tar.gz
+   
 
 # install rmarkdown
 ADD ./conf /r-studio
