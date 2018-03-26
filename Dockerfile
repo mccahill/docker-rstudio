@@ -244,7 +244,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/gtable_0.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/proto_1.0.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/minqa_1.2.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/RcppEigen_0.3.3.3.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/RcppEigen_0.3.3.4.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/lme4_1.1-15.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -270,7 +270,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    ggplot2_2.2.1.tar.gz \
    stargazer_5.2.1.tar.gz \
    minqa_1.2.4.tar.gz \
-   RcppEigen_0.3.3.3.1.tar.gz \
+   RcppEigen_0.3.3.4.0.tar.gz \
    lme4_1.1-15.tar.gz
 
 RUN rm \
@@ -296,7 +296,7 @@ RUN rm \
    ggplot2_2.2.1.tar.gz \
    stargazer_5.2.1.tar.gz \
    minqa_1.2.4.tar.gz \
-   RcppEigen_0.3.3.3.1.tar.gz \
+   RcppEigen_0.3.3.4.0.tar.gz \
    lme4_1.1-15.tar.gz
   
 # more libraries Mine Cetinakya-Rundel asked for
