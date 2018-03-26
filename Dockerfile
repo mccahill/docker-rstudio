@@ -141,7 +141,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/httr_1.3.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/RCurl_1.95-4.10.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.16.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/BH_1.65.0-1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/BH_1.66.0-1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/xml2_1.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/curl_3.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/jsonlite_1.5.tar.gz \
@@ -177,7 +177,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    stringr_1.3.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.10.tar.gz \
-   BH_1.65.0-1.tar.gz \
+   BH_1.66.0-1.tar.gz \
    xml2_1.2.0.tar.gz \
    rversions_1.0.3.tar.gz \
    downloader_0.4.tar.gz
@@ -202,7 +202,7 @@ RUN rm \
    magrittr_1.5.tar.gz \
    stringr_1.3.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
-   BH_1.65.0-1.tar.gz \
+   BH_1.66.0-1.tar.gz \
    XML_3.98-1.10.tar.gz \
    xml2_1.2.0.tar.gz \
    curl_3.1.tar.gz \
