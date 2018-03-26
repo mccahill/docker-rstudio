@@ -67,6 +67,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/caTools_1.17.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bitops_1.0-6.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.15.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/glue_1.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/stringr_1.3.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/markdown_0.8.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/highr_0.6.tar.gz \
@@ -87,6 +88,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    stringi_1.1.7.tar.gz \
    magrittr_1.5.tar.gz \
    mime_0.5.tar.gz \
+   glue_1.2.0.tar.gz \
    stringr_1.3.0.tar.gz \
    highr_0.6.tar.gz \
    formatR_1.5.tar.gz \
@@ -102,6 +104,7 @@ RUN rm \
    markdown_0.8.tar.gz \
    stringi_1.1.7.tar.gz \
    magrittr_1.5.tar.gz \
+   glue_1.2.0.tar.gz \
    stringr_1.3.0.tar.gz \
    knitr_1.20.tar.gz \
    yaml_2.1.18.tar.gz \
