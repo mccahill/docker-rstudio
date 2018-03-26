@@ -395,9 +395,9 @@ RUN rm \
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/SparseM_1.77.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/MatrixModels_0.4-1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/quantreg_5.34.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/quantreg_5.35.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/car_2.1-6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/mosaicData_0.14.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/mosaicData_0.16.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/latticeExtra_0.6-28.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/gridExtra_2.3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/ggdendro_0.1-20.tar.gz \
@@ -408,16 +408,16 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/progress_1.1.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.3.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/ggformula_0.6.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/ggformula_0.6.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mosaicCore_0.4.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mosaic_1.1.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    SparseM_1.77.tar.gz \
    MatrixModels_0.4-1.tar.gz \
-   quantreg_5.34.tar.gz \
+   quantreg_5.35.tar.gz \
    car_2.1-6.tar.gz \
-   mosaicData_0.14.0.tar.gz \
+   mosaicData_0.16.0.tar.gz \
    latticeExtra_0.6-28.tar.gz \
    gridExtra_2.3.tar.gz \
    ggdendro_0.1-20.tar.gz \
@@ -429,15 +429,15 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    progress_1.1.2.tar.gz \
    GGally_1.3.2.tar.gz \
    mosaicCore_0.4.2.tar.gz \
-   ggformula_0.6.1.tar.gz \
+   ggformula_0.6.2.tar.gz \
    mosaic_1.1.1.tar.gz 
 
 RUN rm \
    SparseM_1.77.tar.gz \
    MatrixModels_0.4-1.tar.gz \
-   quantreg_5.34.tar.gz \
+   quantreg_5.35.tar.gz \
    car_2.1-6.tar.gz \
-   mosaicData_0.14.0.tar.gz \
+   mosaicData_0.16.0.tar.gz \
    latticeExtra_0.6-28.tar.gz \
    gridExtra_2.3.tar.gz \
    ggdendro_0.1-20.tar.gz \
@@ -449,7 +449,7 @@ RUN rm \
    progress_1.1.2.tar.gz \
    GGally_1.3.2.tar.gz \
    mosaicCore_0.4.2.tar.gz \
-   ggformula_0.6.1.tar.gz \
+   ggformula_0.6.2.tar.gz \
    mosaic_1.1.1.tar.gz 
 
 # Cliburn Chan requested these + sparklyr for mccahill:
