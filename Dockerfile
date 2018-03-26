@@ -500,12 +500,21 @@ RUN R CMD BATCH /r-studio/install-Shiny.R
 
 # install sparklyr so we can do Spark via Livy
 RUN DEBIAN_FRONTEND=noninteractive wget \
+   https://mirrors.nics.utk.edu/cran/src/contrib/config_0.2.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/dbplyr_1.2.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/rappdirs_0.3.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/sparklyr_0.7.0.tar.gz
    
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
+   config_0.2.tar.gz \
+   dbplyr_1.2.1.tar.gz \
+   rappdirs_0.3.1.tar.gz \
    sparklyr_0.7.0.tar.gz
    
 RUN rm \
+  config_0.2.tar.gz \
+  dbplyr_1.2.1.tar.gz \
+  rappdirs_0.3.1.tar.gz \
   sparklyr_0.7.0.tar.gz
 
 
