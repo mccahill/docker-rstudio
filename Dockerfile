@@ -222,22 +222,22 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 # libraries Eric Green wanted
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/lubridate_1.7.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/lubridate_1.7.3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/lazyeval_0.2.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rlang_0.1.6.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/rlang_0.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/cli_1.0.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/utf8_1.1.3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/crayon_1.3.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/pillar_1.1.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/tibble_1.4.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/pillar_1.2.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/ggplot2_2.2.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/colorspace_1.3-2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/munsell_0.4.3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/labeling_0.3.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/viridisLite_0.2.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/viridisLite_0.3.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/scales_0.5.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/stargazer_5.2.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/reshape2_1.4.3.tar.gz \
@@ -248,25 +248,25 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/lme4_1.1-15.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   lubridate_1.7.1.tar.gz  \
+   lubridate_1.7.3.tar.gz  \
    gtable_0.2.0.tar.gz \
    RColorBrewer_1.1-2.tar.gz \
    dichromat_2.0-0.tar.gz \
    colorspace_1.3-2.tar.gz \
    munsell_0.4.3.tar.gz \
    labeling_0.3.tar.gz \
-   viridisLite_0.2.0.tar.gz \
+   viridisLite_0.3.0.tar.gz \
    scales_0.5.0.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.3.tar.gz \
    assertthat_0.2.0.tar.gz \
    lazyeval_0.2.1.tar.gz \
-   rlang_0.1.6.tar.gz \
+   rlang_0.2.0.tar.gz \
    utf8_1.1.3.tar.gz \
    crayon_1.3.4.tar.gz \
    cli_1.0.0.tar.gz \
-   pillar_1.1.0.tar.gz \
-   tibble_1.4.1.tar.gz \
+   pillar_1.2.1.tar.gz \
+   tibble_1.4.2.tar.gz \
    ggplot2_2.2.1.tar.gz \
    stargazer_5.2.1.tar.gz \
    minqa_1.2.4.tar.gz \
@@ -274,25 +274,25 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lme4_1.1-15.tar.gz
 
 RUN rm \
-   lubridate_1.7.1.tar.gz  \
+   lubridate_1.7.3.tar.gz  \
    gtable_0.2.0.tar.gz \
    RColorBrewer_1.1-2.tar.gz \
    dichromat_2.0-0.tar.gz \
    colorspace_1.3-2.tar.gz \
    munsell_0.4.3.tar.gz \
    labeling_0.3.tar.gz \
-   viridisLite_0.2.0.tar.gz \
+   viridisLite_0.3.0.tar.gz \
    scales_0.5.0.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.3.tar.gz \
    assertthat_0.2.0.tar.gz \
    lazyeval_0.2.1.tar.gz \
-   rlang_0.1.6.tar.gz \
+   rlang_0.2.0.tar.gz \
    cli_1.0.0.tar.gz \
    utf8_1.1.3.tar.gz \
    crayon_1.3.4.tar.gz \
-   pillar_1.1.0.tar.gz \
-   tibble_1.4.1.tar.gz \
+   pillar_1.2.1.tar.gz \
+   tibble_1.4.2.tar.gz \
    ggplot2_2.2.1.tar.gz \
    stargazer_5.2.1.tar.gz \
    minqa_1.2.4.tar.gz \
@@ -302,7 +302,7 @@ RUN rm \
 # more libraries Mine Cetinakya-Rundel asked for
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/openintro_1.7.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/tibble_1.4.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bindr_0.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bindrcpp_0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/glue_1.2.0.tar.gz \
@@ -324,7 +324,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.1.tar.gz \
    DBI_0.7.tar.gz \
-   tibble_1.4.1.tar.gz \
+   tibble_1.4.2.tar.gz \
    glue_1.2.0.tar.gz \
    pkgconfig_2.0.1.tar.gz \
    plogr_0.1-1.tar.gz \
@@ -339,7 +339,7 @@ RUN rm \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.1.tar.gz \
    DBI_0.7.tar.gz \
-   tibble_1.4.1.tar.gz \
+   tibble_1.4.2.tar.gz \
    bindr_0.1.tar.gz \
    bindrcpp_0.2.tar.gz \
    glue_1.2.0.tar.gz \
