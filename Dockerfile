@@ -126,8 +126,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/rstudioapi_0.7.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/openssl_0.9.9.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/withr_2.1.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/openssl_1.0.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/withr_2.1.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/brew_1.0-6.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/stringi_1.1.7.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/magrittr_1.5.tar.gz \
@@ -135,21 +135,21 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/git2r_0.21.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/devtools_1.13.4.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/devtools_1.13.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/R6_2.2.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mime_0.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/httr_1.3.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/RCurl_1.95-4.10.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.16.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/BH_1.65.0-1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/xml2_1.1.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/xml2_1.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/curl_3.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/jsonlite_1.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.15.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/downloader_0.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/memoise_1.1.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/plyr_1.8.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/XML_3.98-1.9.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/XML_3.98-1.10.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/whisker_0.3-2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bitops_1.0-6.tar.gz
 
@@ -164,21 +164,21 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    plyr_1.8.4.tar.gz \
    R6_2.2.2.tar.gz \
    curl_3.1.tar.gz \
-   openssl_0.9.9.tar.gz \
+   openssl_1.0.1.tar.gz \
    mime_0.5.tar.gz \
    httr_1.3.1.tar.gz \
    rstudioapi_0.7.tar.gz \
-   withr_2.1.1.tar.gz \
+   withr_2.1.2.tar.gz \
    git2r_0.21.0.tar.gz \
-   devtools_1.13.4.tar.gz \
+   devtools_1.13.5.tar.gz \
    brew_1.0-6.tar.gz \
    stringi_1.1.7.tar.gz \
    magrittr_1.5.tar.gz \
    stringr_1.3.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
-   XML_3.98-1.9.tar.gz \
+   XML_3.98-1.10.tar.gz \
    BH_1.65.0-1.tar.gz \
-   xml2_1.1.1.tar.gz \
+   xml2_1.2.0.tar.gz \
    rversions_1.0.3.tar.gz \
    downloader_0.4.tar.gz
 
@@ -195,20 +195,20 @@ RUN rm \
    mime_0.5.tar.gz \
    httr_1.3.1.tar.gz \
    rstudioapi_0.7.tar.gz \
-   openssl_0.9.9.tar.gz \
-   withr_2.1.1.tar.gz \
+   openssl_1.0.1.tar.gz \
+   withr_2.1.2.tar.gz \
    brew_1.0-6.tar.gz \
    stringi_1.1.7.tar.gz \
    magrittr_1.5.tar.gz \
    stringr_1.3.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
    BH_1.65.0-1.tar.gz \
-   XML_3.98-1.9.tar.gz \
-   xml2_1.1.1.tar.gz \
+   XML_3.98-1.10.tar.gz \
+   xml2_1.2.0.tar.gz \
    curl_3.1.tar.gz \
    rversions_1.0.3.tar.gz \
    git2r_0.21.0.tar.gz \
-   devtools_1.13.4.tar.gz \
+   devtools_1.13.5.tar.gz \
    downloader_0.4.tar.gz
 
 
