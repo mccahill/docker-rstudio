@@ -452,14 +452,13 @@ RUN rm \
    ggformula_0.6.2.tar.gz \
    mosaic_1.1.1.tar.gz 
 
-# Cliburn Chan requested these + sparklyr for mccahill:
+# Cliburn Chan requested these:
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/maps_3.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/zoo_1.8-1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/gcookbook_1.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/corrplot_0.84.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/sparklyr_0.7.0.tar.gz
+   https://mirrors.nics.utk.edu/cran/src/contrib/corrplot_0.84.tar.gz 
 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -467,8 +466,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    maps_3.2.0.tar.gz \
    zoo_1.8-1.tar.gz \
    gcookbook_1.0.tar.gz \
-   corrplot_0.84.tar.gz \
-   sparklyr_0.7.0.tar.gz
+   corrplot_0.84.tar.gz 
 
 
 RUN rm \
@@ -476,8 +474,7 @@ RUN rm \
    maps_3.2.0.tar.gz \
    zoo_1.8-1.tar.gz \
    gcookbook_1.0.tar.gz \
-   corrplot_0.84.tar.gz \
-   sparklyr_0.7.0.tar.gz
+   corrplot_0.84.tar.gz 
    
 
 # install rmarkdown
@@ -499,6 +496,18 @@ RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.3.83
 RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.3.838-amd64.deb
 RUN rm shiny-server-1.5.3.838-amd64.deb
 RUN R CMD BATCH /r-studio/install-Shiny.R
+
+
+# install sparklyr so we can do Spark via Livy
+RUN DEBIAN_FRONTEND=noninteractive wget \
+   https://mirrors.nics.utk.edu/cran/src/contrib/sparklyr_0.7.0.tar.gz
+   
+RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
+   sparklyr_0.7.0.tar.gz
+   
+RUN rm \
+  sparklyr_0.7.0.tar.gz
+
 
 # some more TeX so that papaja can be installed and students can create APA templates in Rmarkdown
 RUN apt-get update 
