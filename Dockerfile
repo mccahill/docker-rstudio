@@ -149,7 +149,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/downloader_0.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/memoise_1.1.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/plyr_1.8.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/XML_3.98-1.10.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/XML_3.98-1.11.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/whisker_0.3-2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bitops_1.0-6.tar.gz
 
