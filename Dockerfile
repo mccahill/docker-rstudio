@@ -143,7 +143,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.16.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/BH_1.66.0-1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/xml2_1.2.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/curl_3.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/curl_3.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/jsonlite_1.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.15.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/downloader_0.4.tar.gz \
