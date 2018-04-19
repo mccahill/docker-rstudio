@@ -163,7 +163,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    Rcpp_0.12.16.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.2.2.tar.gz \
-   curl_3.1.tar.gz \
+   curl_3.2.tar.gz \
    openssl_1.0.1.tar.gz \
    mime_0.5.tar.gz \
    httr_1.3.1.tar.gz \
@@ -176,7 +176,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    magrittr_1.5.tar.gz \
    stringr_1.3.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
-   XML_3.98-1.10.tar.gz \
+   XML_3.98-1.11.tar.gz \
    BH_1.66.0-1.tar.gz \
    xml2_1.2.0.tar.gz \
    rversions_1.0.3.tar.gz \
@@ -203,9 +203,9 @@ RUN rm \
    stringr_1.3.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
    BH_1.66.0-1.tar.gz \
-   XML_3.98-1.10.tar.gz \
+   XML_3.98-1.11.tar.gz \
    xml2_1.2.0.tar.gz \
-   curl_3.1.tar.gz \
+   curl_3.2.tar.gz \
    rversions_1.0.3.tar.gz \
    git2r_0.21.0.tar.gz \
    devtools_1.13.5.tar.gz \
