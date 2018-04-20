@@ -399,6 +399,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/sp_1.2-7.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/maptools_0.9-2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/haven_1.1.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/forcats_0.3.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/readxl_1.1.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/openxlsx_4.0.17.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rio_0.5.10.tar.gz \
@@ -426,6 +427,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    quantreg_5.35.tar.gz \
    sp_1.2-7.tar.gz \
    maptools_0.9-2.tar.gz \
+   forcats_0.3.0.tar.gz \
    haven_1.1.1.tar.gz \
    readxl_1.1.0.tar.gz \
    openxlsx_4.0.17.tar.gz \
@@ -454,6 +456,7 @@ RUN rm \
    quantreg_5.35.tar.gz \
    sp_1.2-7.tar.gz \
    maptools_0.9-2.tar.gz \
+   forcats_0.3.0.tar.gz \
    haven_1.1.1.tar.gz \
    readxl_1.1.0.tar.gz \
    openxlsx_4.0.17.tar.gz \
