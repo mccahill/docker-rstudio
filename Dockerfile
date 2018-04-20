@@ -613,15 +613,15 @@ RUN rm /install-rappdirs.Rout
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/tigris_0.7.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tidycensus_0.4.1.tar.gz 
+    https://mirrors.nics.utk.edu/cran/src/contrib/tidycensus_0.4.6.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     tigris_0.7.tar.gz \
-    tidycensus_0.4.1.tar.gz 
+    tidycensus_0.4.6.tar.gz 
 
 RUN rm \
     tigris_0.7.tar.gz  \
-    tidycensus_0.4.1.tar.gz 
+    tidycensus_0.4.6.tar.gz 
 	
 	
 # Supervisord
