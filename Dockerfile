@@ -398,6 +398,9 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/quantreg_5.35.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/sp_1.2-7.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/maptools_0.9-2.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/haven_1.1.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/readxl_1.1.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/openxlsx_4.0.17.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rio_0.5.10.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/abind_1.4-5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/carData_3.0-1.tar.gz \
@@ -423,6 +426,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    quantreg_5.35.tar.gz \
    sp_1.2-7.tar.gz \
    maptools_0.9-2.tar.gz \
+   haven_1.1.1.tar.gz \
+   readxl_1.1.0.tar.gz \
+   openxlsx_4.0.17.tar.gz \
    rio_0.5.10.tar.gz \
    abind_1.4-5.tar.gz \
    carData_3.0-1.tar.gz \
@@ -448,6 +454,9 @@ RUN rm \
    quantreg_5.35.tar.gz \
    sp_1.2-7.tar.gz \
    maptools_0.9-2.tar.gz \
+   haven_1.1.1.tar.gz \
+   readxl_1.1.0.tar.gz \
+   openxlsx_4.0.17.tar.gz \
    rio_0.5.10.tar.gz \
    abind_1.4-5.tar.gz \
    carData_3.0-1.tar.gz \
