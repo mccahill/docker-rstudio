@@ -304,10 +304,10 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/openintro_1.7.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bindr_0.1.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/bindrcpp_0.2.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/glue_1.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/pkgconfig_2.0.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/plogr_0.1-1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/plogr_0.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/dplyr_0.7.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/R6_2.2.2.tar.gz \
@@ -327,9 +327,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    tibble_1.4.2.tar.gz \
    glue_1.2.0.tar.gz \
    pkgconfig_2.0.1.tar.gz \
-   plogr_0.1-1.tar.gz \
+   plogr_0.2.0.tar.gz \
    bindr_0.1.1.tar.gz \
-   bindrcpp_0.2.tar.gz \
+   bindrcpp_0.2.2.tar.gz \
    dplyr_0.7.4.tar.gz 
 
 RUN rm \
@@ -341,10 +341,10 @@ RUN rm \
    DBI_0.8.tar.gz \
    tibble_1.4.2.tar.gz \
    bindr_0.1.1.tar.gz \
-   bindrcpp_0.2.tar.gz \
+   bindrcpp_0.2.2.tar.gz \
    glue_1.2.0.tar.gz \
    pkgconfig_2.0.1.tar.gz \
-   plogr_0.1-1.tar.gz \
+   plogr_0.2.0.tar.gz \
    dplyr_0.7.4.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
