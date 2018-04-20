@@ -396,6 +396,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/SparseM_1.77.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/MatrixModels_0.4-1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/quantreg_5.35.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/sp_1.2-7.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/maptools_0.9-2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rio_0.5.10.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/abind_1.4-5.tar.gz \
@@ -420,6 +421,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    SparseM_1.77.tar.gz \
    MatrixModels_0.4-1.tar.gz \
    quantreg_5.35.tar.gz \
+   sp_1.2-7.tar.gz \
    maptools_0.9-2.tar.gz \
    rio_0.5.10.tar.gz \
    abind_1.4-5.tar.gz \
@@ -444,6 +446,7 @@ RUN rm \
    SparseM_1.77.tar.gz \
    MatrixModels_0.4-1.tar.gz \
    quantreg_5.35.tar.gz \
+   sp_1.2-7.tar.gz \
    maptools_0.9-2.tar.gz \
    rio_0.5.10.tar.gz \
    abind_1.4-5.tar.gz \
