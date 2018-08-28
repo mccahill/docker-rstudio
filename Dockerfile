@@ -384,89 +384,89 @@ RUN rm \
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/SparseM_1.77.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/MatrixModels_0.4-1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/quantreg_5.35.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/sp_1.2-7.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/maptools_0.9-2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/haven_1.1.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/quantreg_5.36.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/sp_1.3-1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/maptools_0.9-3.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/haven_1.1.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/forcats_0.3.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/readxl_1.1.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/openxlsx_4.0.17.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/openxlsx_4.1.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rio_0.5.10.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/abind_1.4-5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/carData_3.0-1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/car_3.0-0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/mosaicData_0.16.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/car_3.0-2.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/mosaicData_0.17.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/latticeExtra_0.6-28.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/gridExtra_2.3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/ggdendro_0.1-20.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mnormt_1.5-5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/psych_1.8.3.3.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/broom_0.4.4.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/psych_1.8.4.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/broom_0.5.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/reshape_0.8.7.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/progress_1.1.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.3.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/ggformula_0.6.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/mosaicCore_0.4.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/mosaic_1.1.1.tar.gz 
+   https://mirrors.nics.utk.edu/cran/src/contrib/progress_1.2.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.4.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/ggformula_0.9.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/mosaicCore_0.6.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/mosaic_1.4.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    SparseM_1.77.tar.gz \
    MatrixModels_0.4-1.tar.gz \
-   quantreg_5.35.tar.gz \
-   sp_1.2-7.tar.gz \
-   maptools_0.9-2.tar.gz \
+   quantreg_5.36.tar.gz \
+   sp_1.3-1.tar.gz \
+   maptools_0.9-3.tar.gz \
    forcats_0.3.0.tar.gz \
-   haven_1.1.1.tar.gz \
+   haven_1.1.2.tar.gz \
    readxl_1.1.0.tar.gz \
-   openxlsx_4.0.17.tar.gz \
+   openxlsx_4.1.0.tar.gz \
    rio_0.5.10.tar.gz \
    abind_1.4-5.tar.gz \
    carData_3.0-1.tar.gz \
-   car_3.0-0.tar.gz \
-   mosaicData_0.16.0.tar.gz \
+   car_3.0-2.tar.gz \
+   mosaicData_0.17.0.tar.gz \
    latticeExtra_0.6-28.tar.gz \
    gridExtra_2.3.tar.gz \
    ggdendro_0.1-20.tar.gz \
    mnormt_1.5-5.tar.gz \
-   psych_1.8.3.3.tar.gz \
-   broom_0.4.4.tar.gz \
+   psych_1.8.4.tar.gz \
+   broom_0.5.0.tar.gz \
    reshape_0.8.7.tar.gz \
    prettyunits_1.0.2.tar.gz \
-   progress_1.1.2.tar.gz \
-   GGally_1.3.2.tar.gz \
-   mosaicCore_0.4.2.tar.gz \
-   ggformula_0.6.2.tar.gz \
-   mosaic_1.1.1.tar.gz 
+   progress_1.2.0.tar.gz \
+   GGally_1.4.0.tar.gz \
+   mosaicCore_0.6.0.tar.gz \
+   ggformula_0.9.0.tar.gz \
+   mosaic_1.4.0.tar.gz 
 
 RUN rm \
    SparseM_1.77.tar.gz \
    MatrixModels_0.4-1.tar.gz \
-   quantreg_5.35.tar.gz \
-   sp_1.2-7.tar.gz \
-   maptools_0.9-2.tar.gz \
+   quantreg_5.36.tar.gz \
+   sp_1.3-1.tar.gz \
+   maptools_0.9-3.tar.gz \
    forcats_0.3.0.tar.gz \
-   haven_1.1.1.tar.gz \
+   haven_1.1.2.tar.gz \
    readxl_1.1.0.tar.gz \
-   openxlsx_4.0.17.tar.gz \
+   openxlsx_4.1.0.tar.gz \
    rio_0.5.10.tar.gz \
    abind_1.4-5.tar.gz \
    carData_3.0-1.tar.gz \
-   car_3.0-0.tar.gz \
-   mosaicData_0.16.0.tar.gz \
+   car_3.0-2.tar.gz \
+   mosaicData_0.17.0.tar.gz \
    latticeExtra_0.6-28.tar.gz \
    gridExtra_2.3.tar.gz \
    ggdendro_0.1-20.tar.gz \
    mnormt_1.5-5.tar.gz \
-   psych_1.8.3.3.tar.gz \
-   broom_0.4.4.tar.gz \
+   psych_1.8.4.tar.gz \
+   broom_0.5.0.tar.gz \
    reshape_0.8.7.tar.gz \
    prettyunits_1.0.2.tar.gz \
-   progress_1.1.2.tar.gz \
-   GGally_1.3.2.tar.gz \
-   mosaicCore_0.4.2.tar.gz \
-   ggformula_0.6.2.tar.gz \
-   mosaic_1.1.1.tar.gz 
+   progress_1.2.0.tar.gz \
+   GGally_1.4.0.tar.gz \
+   mosaicCore_0.6.0.tar.gz \
+   ggformula_0.9.0.tar.gz \
+   mosaic_1.4.0.tar.gz 
 
 # Cliburn Chan requested these:
 RUN DEBIAN_FRONTEND=noninteractive wget \
@@ -581,18 +581,15 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/rgdal_1.2-18.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rgeos_0.3-26.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/sp_1.2-7.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/uuid_0.1-2.tar.gz
  
  
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   sp_1.2-7.tar.gz  \
    rgdal_1.2-18.tar.gz \
    rgeos_0.3-26.tar.gz \
    uuid_0.1-2.tar.gz 
 
 RUN rm \
-   sp_1.2-7.tar.gz \
    rgdal_1.2-18.tar.gz \
    rgeos_0.3-26.tar.gz \
    uuid_0.1-2.tar.gz
