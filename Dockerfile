@@ -402,6 +402,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/ggdendro_0.1-20.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mnormt_1.5-5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/psych_1.8.4.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/backports_1.1.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/broom_0.5.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/reshape_0.8.7.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
@@ -432,6 +433,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    ggdendro_0.1-20.tar.gz \
    mnormt_1.5-5.tar.gz \
    psych_1.8.4.tar.gz \
+   backports_1.1.2.tar.gz \
    broom_0.5.0.tar.gz \
    reshape_0.8.7.tar.gz \
    prettyunits_1.0.2.tar.gz \
@@ -462,6 +464,7 @@ RUN rm \
    ggdendro_0.1-20.tar.gz \
    mnormt_1.5-5.tar.gz \
    psych_1.8.4.tar.gz \
+   backports_1.1.2.tar.gz \
    broom_0.5.0.tar.gz \
    reshape_0.8.7.tar.gz \
    prettyunits_1.0.2.tar.gz \
@@ -475,7 +478,7 @@ RUN rm \
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/maps_3.3.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/zoo_1.8-1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/zoo_1.8-3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/gcookbook_1.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/corrplot_0.84.tar.gz 
 
@@ -483,7 +486,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    RColorBrewer_1.1-2.tar.gz \
    maps_3.3.0.tar.gz \
-   zoo_1.8-1.tar.gz \
+   zoo_1.8-3.tar.gz \
    gcookbook_1.0.tar.gz \
    corrplot_0.84.tar.gz 
 
@@ -491,7 +494,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
    RColorBrewer_1.1-2.tar.gz \
    maps_3.3.0.tar.gz \
-   zoo_1.8-1.tar.gz \
+   zoo_1.8-3.tar.gz \
    gcookbook_1.0.tar.gz \
    corrplot_0.84.tar.gz 
    
@@ -511,9 +514,10 @@ RUN R CMD BATCH /r-studio/install-igraph.R
 RUN rm /install-igraph.Rout 
 
 # Shiny
-RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.3.838-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.3.838-amd64.deb
-RUN rm shiny-server-1.5.3.838-amd64.deb
+#RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.3.838-amd64.deb
+RUN wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.7.907-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.7.907-amd64.deb
+RUN rm shiny-server-1.5.7.907-amd64.deb
 RUN R CMD BATCH /r-studio/install-Shiny.R
 
 
