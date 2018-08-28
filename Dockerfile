@@ -299,6 +299,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/pkgconfig_2.0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/plogr_0.2.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/tidyselect_0.2.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/dplyr_0.7.6.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/R6_2.2.2.tar.gz \
@@ -320,6 +321,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    plogr_0.2.0.tar.gz \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
+   tidyselect_0.2.4.tar.gz \
    dplyr_0.7.6.tar.gz 
 
 RUN rm \
@@ -334,6 +336,7 @@ RUN rm \
    bindrcpp_0.2.2.tar.gz \
    pkgconfig_2.0.2.tar.gz \
    plogr_0.2.0.tar.gz \
+   tidyselect_0.2.4.tar.gz \
    dplyr_0.7.6.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
@@ -346,7 +349,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/hms_0.4.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/readr_1.1.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/purrr_0.2.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/tidyselect_0.2.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/selectr_0.4-1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rvest_0.3.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/pbkrtest_0.4-7.tar.gz 
@@ -357,7 +359,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    rematch_1.0.1.tar.gz \
    cellranger_1.1.0.tar.gz \
    purrr_0.2.4.tar.gz \
-   tidyselect_0.2.4.tar.gz \
    tidyr_0.8.0.tar.gz \
    hms_0.4.2.tar.gz \
    readr_1.1.1.tar.gz \
@@ -376,7 +377,6 @@ RUN rm \
    hms_0.4.2.tar.gz \
    readr_1.1.1.tar.gz \
    purrr_0.2.4.tar.gz \
-   tidyselect_0.2.4.tar.gz \
    selectr_0.4-1.tar.gz \
    rvest_0.3.2.tar.gz \
    pbkrtest_0.4-7.tar.gz 
