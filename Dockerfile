@@ -408,6 +408,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/progress_1.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.4.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/ggstance_0.3.1.tar.gz
    https://mirrors.nics.utk.edu/cran/src/contrib/ggformula_0.9.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mosaicCore_0.6.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mosaic_1.4.0.tar.gz 
@@ -440,6 +441,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    progress_1.2.0.tar.gz \
    GGally_1.4.0.tar.gz \
    mosaicCore_0.6.0.tar.gz \
+   ggstance_0.3.1.tar.gz \
    ggformula_0.9.0.tar.gz \
    mosaic_1.4.0.tar.gz 
 
@@ -471,6 +473,7 @@ RUN rm \
    progress_1.2.0.tar.gz \
    GGally_1.4.0.tar.gz \
    mosaicCore_0.6.0.tar.gz \
+   ggstance_0.3.1.tar.gz \
    ggformula_0.9.0.tar.gz \
    mosaic_1.4.0.tar.gz 
 
@@ -524,21 +527,21 @@ RUN R CMD BATCH /r-studio/install-Shiny.R
 # install sparklyr so we can do Spark via Livy
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/config_0.3.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/dbplyr_1.2.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/dbplyr_1.2.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rappdirs_0.3.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/sparklyr_0.7.0.tar.gz
+   https://mirrors.nics.utk.edu/cran/src/contrib/sparklyr_0.8.4.tar.gz
    
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    config_0.3.tar.gz \
-   dbplyr_1.2.1.tar.gz \
+   dbplyr_1.2.2.tar.gz \
    rappdirs_0.3.1.tar.gz \
-   sparklyr_0.7.0.tar.gz
+   sparklyr_0.8.4.tar.gz
    
 RUN rm \
   config_0.3.tar.gz \
-  dbplyr_1.2.1.tar.gz \
+  dbplyr_1.2.2.tar.gz \
   rappdirs_0.3.1.tar.gz \
-  sparklyr_0.7.0.tar.gz
+  sparklyr_0.8.4.tar.gz
 
 
 # some more TeX so that papaja can be installed and students can create APA templates in Rmarkdown
@@ -586,19 +589,19 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rgdal_1.2-18.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rgeos_0.3-26.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/rgdal_1.3-4.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/rgeos_0.3-28.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/uuid_0.1-2.tar.gz
  
  
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   rgdal_1.2-18.tar.gz \
-   rgeos_0.3-26.tar.gz \
+   rgdal_1.3-4.tar.gz \
+   rgeos_0.3-28.tar.gz \
    uuid_0.1-2.tar.gz 
 
 RUN rm \
-   rgdal_1.2-18.tar.gz \
-   rgeos_0.3-26.tar.gz \
+   rgdal_1.3-4.tar.gz \
+   rgeos_0.3-28.tar.gz \
    uuid_0.1-2.tar.gz
 
 RUN R CMD BATCH /r-studio/install-rappdirs.R
