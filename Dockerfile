@@ -299,7 +299,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/pkgconfig_2.0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/plogr_0.2.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/purrr_0.2.4.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/purrr_0.2.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/tidyselect_0.2.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/dplyr_0.7.6.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
@@ -322,7 +322,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    plogr_0.2.0.tar.gz \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
-   purrr_0.2.4.tar.gz \
+   purrr_0.2.5.tar.gz \
    tidyselect_0.2.4.tar.gz \
    dplyr_0.7.6.tar.gz 
 
@@ -338,7 +338,7 @@ RUN rm \
    bindrcpp_0.2.2.tar.gz \
    pkgconfig_2.0.2.tar.gz \
    plogr_0.2.0.tar.gz \
-   purrr_0.2.4.tar.gz \
+   purrr_0.2.5.tar.gz \
    tidyselect_0.2.4.tar.gz \
    dplyr_0.7.6.tar.gz 
 
