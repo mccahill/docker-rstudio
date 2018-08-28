@@ -408,7 +408,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/progress_1.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.4.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/ggstance_0.3.1.tar.gz
+   https://mirrors.nics.utk.edu/cran/src/contrib/ggstance_0.3.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/ggformula_0.9.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mosaicCore_0.6.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mosaic_1.4.0.tar.gz 
