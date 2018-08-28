@@ -297,14 +297,14 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bindr_0.1.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/pkgconfig_2.0.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/pkgconfig_2.0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/plogr_0.2.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/dplyr_0.7.4.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/dplyr_0.7.6.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/R6_2.2.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/lazyeval_0.2.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/DBI_0.8.tar.gz 
+   https://mirrors.nics.utk.edu/cran/src/contrib/DBI_1.0.0.tar.gz 
 
 
 
@@ -314,13 +314,13 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    R6_2.2.2.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.1.tar.gz \
-   DBI_0.8.tar.gz \
+   DBI_1.0.0.tar.gz \
    tibble_1.4.2.tar.gz \
-   pkgconfig_2.0.1.tar.gz \
+   pkgconfig_2.0.2.tar.gz \
    plogr_0.2.0.tar.gz \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
-   dplyr_0.7.4.tar.gz 
+   dplyr_0.7.6.tar.gz 
 
 RUN rm \
    openintro_1.7.1.tar.gz \
@@ -328,13 +328,13 @@ RUN rm \
    R6_2.2.2.tar.gz \
    magrittr_1.5.tar.gz \
    lazyeval_0.2.1.tar.gz \
-   DBI_0.8.tar.gz \
+   DBI_1.0.0.tar.gz \
    tibble_1.4.2.tar.gz \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
-   pkgconfig_2.0.1.tar.gz \
+   pkgconfig_2.0.2.tar.gz \
    plogr_0.2.0.tar.gz \
-   dplyr_0.7.4.tar.gz 
+   dplyr_0.7.6.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/chron_2.3-52.tar.gz \
