@@ -62,7 +62,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/yaml_2.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.18.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/htmltools_0.3.6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/caTools_1.17.1.1tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/caTools_1.17.1.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bitops_1.0-6.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.16.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/glue_1.3.0.tar.gz \
@@ -78,7 +78,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    bitops_1.0-6.tar.gz \
-   caTools_1.17.1.1tar.gz \
+   caTools_1.17.1.1.tar.gz \
    digest_0.6.16.tar.gz \
    Rcpp_0.12.18.tar.gz \
    htmltools_0.3.6.tar.gz \
@@ -108,7 +108,7 @@ RUN rm \
    yaml_2.2.0.tar.gz \
    Rcpp_0.12.18.tar.gz \
    htmltools_0.3.6.tar.gz \
-   caTools_1.17.1.1tar.gz \
+   caTools_1.17.1.1.tar.gz \
    bitops_1.0-6.tar.gz \
    digest_0.6.16.tar.gz \
    mime_0.5.tar.gz
