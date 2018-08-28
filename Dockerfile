@@ -486,6 +486,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/maps_3.3.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/zoo_1.8-3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/gcookbook_1.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/rprojroot_1.3-2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/corrplot_0.84.tar.gz 
 
 
@@ -494,6 +495,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    maps_3.3.0.tar.gz \
    zoo_1.8-3.tar.gz \
    gcookbook_1.0.tar.gz \
+   rprojroot_1.3-2.tar.gz \
    corrplot_0.84.tar.gz 
 
 
@@ -502,6 +504,7 @@ RUN rm \
    maps_3.3.0.tar.gz \
    zoo_1.8-3.tar.gz \
    gcookbook_1.0.tar.gz \
+   rprojroot_1.3-2.tar.gz \
    corrplot_0.84.tar.gz 
    
 
