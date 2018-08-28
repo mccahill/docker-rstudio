@@ -218,6 +218,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/cli_1.0.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/utf8_1.1.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/crayon_1.3.4.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/fansi_0.3.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/pillar_1.3.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/ggplot2_3.0.0.tar.gz \
@@ -254,6 +255,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    utf8_1.1.4.tar.gz \
    crayon_1.3.4.tar.gz \
    cli_1.0.0.tar.gz \
+   fansi_0.3.0.tar.gz \
    pillar_1.3.0.tar.gz \
    tibble_1.4.2.tar.gz \
    ggplot2_3.0.0.tar.gz \
@@ -280,6 +282,7 @@ RUN rm \
    cli_1.0.0.tar.gz \
    utf8_1.1.4.tar.gz \
    crayon_1.3.4.tar.gz \
+   fansi_0.3.0.tar.gz \
    pillar_1.3.0.tar.gz \
    tibble_1.4.2.tar.gz \
    ggplot2_3.0.0.tar.gz \
