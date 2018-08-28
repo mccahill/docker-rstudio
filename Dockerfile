@@ -411,6 +411,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/ggstance_0.3.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/ggformula_0.9.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mosaicCore_0.6.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/ggrepel_0.8.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mosaic_1.4.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -443,6 +444,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    mosaicCore_0.6.0.tar.gz \
    ggstance_0.3.1.tar.gz \
    ggformula_0.9.0.tar.gz \
+   ggrepel_0.8.0.tar.gz \
    mosaic_1.4.0.tar.gz 
 
 RUN rm \
@@ -475,6 +477,7 @@ RUN rm \
    mosaicCore_0.6.0.tar.gz \
    ggstance_0.3.1.tar.gz \
    ggformula_0.9.0.tar.gz \
+   ggrepel_0.8.0.tar.gz \
    mosaic_1.4.0.tar.gz 
 
 # Cliburn Chan requested these:
