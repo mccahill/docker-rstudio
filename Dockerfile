@@ -59,58 +59,58 @@ RUN rm rstudio-server-1.2.907-amd64.deb
 # update the R packages we will need for knitr
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/knitr_1.20.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/yaml_2.1.18.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.16.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/yaml_2.2.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.18.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/htmltools_0.3.6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/caTools_1.17.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/caTools_1.17.1.1tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bitops_1.0-6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.15.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/glue_1.2.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/stringr_1.3.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.16.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/glue_1.3.0.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/stringr_1.3.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/markdown_0.8.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/highr_0.6.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/highr_0.7.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/formatR_1.5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/evaluate_0.10.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/evaluate_0.11.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mime_0.5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/stringi_1.1.7.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/stringi_1.2.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/magrittr_1.5.tar.gz
 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    bitops_1.0-6.tar.gz \
-   caTools_1.17.1.tar.gz \
-   digest_0.6.15.tar.gz \
-   Rcpp_0.12.16.tar.gz \
+   caTools_1.17.1.1tar.gz \
+   digest_0.6.16.tar.gz \
+   Rcpp_0.12.18.tar.gz \
    htmltools_0.3.6.tar.gz \
-   yaml_2.1.18.tar.gz \
-   stringi_1.1.7.tar.gz \
+   yaml_2.2.0.tar.gz \
+   stringi_1.2.4.tar.gz \
    magrittr_1.5.tar.gz \
    mime_0.5.tar.gz \
-   glue_1.2.0.tar.gz \
-   stringr_1.3.0.tar.gz \
-   highr_0.6.tar.gz \
+   glue_1.3.0.tar.gz \
+   stringr_1.3.1.tar.gz \
+   highr_0.7.tar.gz \
    formatR_1.5.tar.gz \
-   evaluate_0.10.1.tar.gz \
+   evaluate_0.11.tar.gz \
    markdown_0.8.tar.gz \
    knitr_1.20.tar.gz
  
 
 RUN rm \
-   evaluate_0.10.1.tar.gz \
+   evaluate_0.11.tar.gz \
    formatR_1.5.tar.gz \
-   highr_0.6.tar.gz \
+   highr_0.7.tar.gz \
    markdown_0.8.tar.gz \
-   stringi_1.1.7.tar.gz \
+   stringi_1.2.4.tar.gz \
    magrittr_1.5.tar.gz \
-   glue_1.2.0.tar.gz \
-   stringr_1.3.0.tar.gz \
+   glue_1.3.0.tar.gz \
+   stringr_1.3.1.tar.gz \
    knitr_1.20.tar.gz \
-   yaml_2.1.18.tar.gz \
-   Rcpp_0.12.16.tar.gz \
+   yaml_2.2.0.tar.gz \
+   Rcpp_0.12.18.tar.gz \
    htmltools_0.3.6.tar.gz \
-   caTools_1.17.1.tar.gz \
+   caTools_1.17.1.1tar.gz \
    bitops_1.0-6.tar.gz \
-   digest_0.6.15.tar.gz \
+   digest_0.6.16.tar.gz \
    mime_0.5.tar.gz
 
 # dependency for R XML library
@@ -127,9 +127,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/openssl_1.0.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/withr_2.1.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/brew_1.0-6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/stringi_1.1.7.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/magrittr_1.5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/stringr_1.3.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/git2r_0.21.0.tar.gz \
@@ -138,12 +136,11 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/mime_0.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/httr_1.3.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/RCurl_1.95-4.10.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.16.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/BH_1.66.0-1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/xml2_1.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/curl_3.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/jsonlite_1.5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.15.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.16.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/downloader_0.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/memoise_1.1.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/plyr_1.8.4.tar.gz \
@@ -153,12 +150,11 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    jsonlite_1.5.tar.gz \
-   digest_0.6.15.tar.gz \
+   digest_0.6.16.tar.gz \
    memoise_1.1.0.tar.gz \
    whisker_0.3-2.tar.gz \
    bitops_1.0-6.tar.gz \
    RCurl_1.95-4.10.tar.gz \
-   Rcpp_0.12.16.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.2.2.tar.gz \
    curl_3.2.tar.gz \
@@ -170,9 +166,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    git2r_0.21.0.tar.gz \
    devtools_1.13.5.tar.gz \
    brew_1.0-6.tar.gz \
-   stringi_1.1.7.tar.gz \
    magrittr_1.5.tar.gz \
-   stringr_1.3.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.11.tar.gz \
    BH_1.66.0-1.tar.gz \
@@ -182,12 +176,11 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 
 RUN rm \
    jsonlite_1.5.tar.gz \
-   digest_0.6.15.tar.gz \
+   digest_0.6.16.tar.gz \
    memoise_1.1.0.tar.gz \
    whisker_0.3-2.tar.gz \
    bitops_1.0-6.tar.gz \
    RCurl_1.95-4.10.tar.gz \
-   Rcpp_0.12.16.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.2.2.tar.gz \
    mime_0.5.tar.gz \
@@ -196,9 +189,7 @@ RUN rm \
    openssl_1.0.1.tar.gz \
    withr_2.1.2.tar.gz \
    brew_1.0-6.tar.gz \
-   stringi_1.1.7.tar.gz \
    magrittr_1.5.tar.gz \
-   stringr_1.3.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
    BH_1.66.0-1.tar.gz \
    XML_3.98-1.11.tar.gz \
@@ -303,7 +294,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bindr_0.1.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/glue_1.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/pkgconfig_2.0.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/plogr_0.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/dplyr_0.7.4.tar.gz \
@@ -323,7 +313,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lazyeval_0.2.1.tar.gz \
    DBI_0.8.tar.gz \
    tibble_1.4.2.tar.gz \
-   glue_1.2.0.tar.gz \
    pkgconfig_2.0.1.tar.gz \
    plogr_0.2.0.tar.gz \
    bindr_0.1.1.tar.gz \
@@ -340,7 +329,6 @@ RUN rm \
    tibble_1.4.2.tar.gz \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
-   glue_1.2.0.tar.gz \
    pkgconfig_2.0.1.tar.gz \
    plogr_0.2.0.tar.gz \
    dplyr_0.7.4.tar.gz 
