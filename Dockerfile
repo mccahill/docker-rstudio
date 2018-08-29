@@ -984,12 +984,12 @@ RUN rm \
 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://mirrors.nics.utk.edu/cran/src/bayesplot_1.6.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/loo_2.0.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/rstan_2.17.3.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/rstantools_1.5.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/shinystan_2.5.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/StanHeaders_2.17.2.tar.gz \	
+    https://mirrors.nics.utk.edu/cran/src/contrib/bayesplot_1.6.0.tar.gz
+    https://mirrors.nics.utk.edu/cran/src/contrib/loo_2.0.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/rstan_2.17.3.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/rstantools_1.5.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/shinystan_2.5.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/StanHeaders_2.17.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/rstanarm_2.17.4.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidyposterior_0.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/yardstick_0.0.1.tar.gz \
