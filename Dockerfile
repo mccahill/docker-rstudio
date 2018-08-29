@@ -946,6 +946,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/recipes_0.1.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/rsample_0.0.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/hunspell_2.9.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/SnowballC_0.5.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tokenizers_0.2.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/stopwords_0.9.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidytext_0.1.9.tar.gz \
@@ -975,6 +976,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     recipes_0.1.3.tar.gz \
     rsample_0.0.2.tar.gz \
     hunspell_2.9.tar.gz \
+    SnowballC_0.5.1.tar.gz \
     tokenizers_0.2.1.tar.gz \
     stopwords_0.9.0.tar.gz \
     tidytext_0.1.9.tar.gz \
@@ -1004,6 +1006,7 @@ RUN rm \
     recipes_0.1.3.tar.gz \
     rsample_0.0.2.tar.gz \
     hunspell_2.9.tar.gz \
+    SnowballC_0.5.1.tar.gz \
     tokenizers_0.2.1.tar.gz \
     stopwords_0.9.0.tar.gz \
     tidytext_0.1.9.tar.gz \
