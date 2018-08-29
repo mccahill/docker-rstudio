@@ -892,8 +892,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/DRR_0.0.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/dimRed_0.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/timeDate_3043.102.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tsfsmisc_1.1-2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tgeometry_0.3-6.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/sfsmisc_1.1-2.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/geometry_0.3-6.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ddalpha_1.3.4.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
