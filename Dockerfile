@@ -660,6 +660,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/listenv_0.7.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/foreach_1.4.4.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/iterators_1.0.10.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/enc_0.2.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/rematch2_2.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/bench_1.0.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -683,6 +685,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     tidygraph_1.1.0.tar.gz \
     here_0.1.tar.gz \
     rticles_0.5.tar.gz \
+    enc_0.2.0.tar.gz \
+    rematch2_2.0.1.tar.gz \
     styler_1.0.2.tar.gz \
     lintr_1.0.2.tar.gz \
     testthat_2.0.0.tar.gz \
@@ -699,6 +703,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 
 RUN rm \
     modelr_0.1.2.tar.gz \
+    enc_0.2.0.tar.gz \
+    rematch2_2.0.1.tar.gz \
     ps_1.1.0.tar.gz \
     globals_0.12.2.tar.gz \
     foreach_1.4.4.tar.gz \
