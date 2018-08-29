@@ -1028,6 +1028,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/fields_9.6.tar.gz \
 #    https://mirrors.nics.utk.edu/cran/src/contrib/forecast_8.4.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ROCR_1.0-7.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/reticulate_1.10.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/tfruns_1.4.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tensorflow_1.9.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/keras_2.2.0.tar.gz \
 #    https://mirrors.nics.utk.edu/cran/src/contrib/rstan_2.17.3.tar.gz  \
@@ -1057,6 +1059,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     spam_2.2-0.tar.gz \
     fields_9.6.tar.gz \
 #    forecast_8.4.tar.gz \
+    reticulate_1.10.tar.gz \
+    tfruns_1.4.tar.gz \ 
     tensorflow_1.9.tar.gz \
     keras_2.2.0.tar.gz \
 #    rstan_2.17.3.tar.gz  \
@@ -1086,6 +1090,8 @@ RUN rm \
     fields_9.6.tar.gz \
 #    forecast_8.4.tar.gz \
     ROCR_1.0-7.tar.gz \
+    reticulate_1.10.tar.gz \
+    tfruns_1.4.tar.gz \ 
     tensorflow_1.9.tar.gz \
     keras_2.2.0.tar.gz \
 #    rstan_2.17.3.tar.gz  \
