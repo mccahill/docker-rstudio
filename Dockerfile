@@ -882,6 +882,13 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/janeaustenr_0.1.5.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/NHANES_2.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/repurrrsive_0.1.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/infer_0.3.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/recipes_0.1.3.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/rsample_0.0.2.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/tidytext_0.1.9.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/tidypredict_0.2.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/tidyposterior_0.0.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/yardstick_0.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidymodels_0.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/xgboost_0.71.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/caret_6.0-80.tar.gz \
@@ -904,6 +911,13 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     janeaustenr_0.1.5.tar.gz \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
+    infer_0.3.1.tar.gz \
+    recipes_0.1.3.tar.gz \
+    rsample_0.0.2.tar.gz \
+    tidytext_0.1.9.tar.gz \
+    tidypredict_0.2.0.tar.gz \
+    tidyposterior_0.0.1.tar.gz \
+    yardstick_0.0.1.tar.gz \
     tidymodels_0.0.1.tar.gz \
     xgboost_0.71.2.tar.gz \
     caret_6.0-80.tar.gz \
@@ -926,6 +940,13 @@ RUN rm \
     janeaustenr_0.1.5.tar.gz \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
+    infer_0.3.1.tar.gz \
+    recipes_0.1.3.tar.gz \
+    rsample_0.0.2.tar.gz \
+    tidytext_0.1.9.tar.gz \
+    tidypredict_0.2.0.tar.gz \
+    tidyposterior_0.0.1.tar.gz \
+    yardstick_0.0.1.tar.gz \
     tidymodels_0.0.1.tar.gz \
     xgboost_0.71.2.tar.gz \
     caret_6.0-80.tar.gz \
