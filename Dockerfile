@@ -793,10 +793,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/viridis_0.5.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/shiny_1.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/shinyjs_1.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/shinythemes_1.1.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/shinydashboard_0.7.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/flexdashboard_0.5.1.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/miniUI_0.1.1.1.tar.gz 
+    https://mirrors.nics.utk.edu/cran/src/contrib/flexdashboard_0.5.1.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     pryr_0.1.4.tar.gz \
@@ -832,10 +829,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     ggraph_1.0.2.tar.gz \
     shiny_1.1.0.tar.gz \
     shinyjs_1.0.tar.gz \
-#    shinythemes_1.1.1.tar.gz \
-#    shinydashboard_0.7.0.tar.gz \
     flexdashboard_0.5.1.1.tar.gz 
-#    miniUI_0.1.1.1.tar.gz 
 
 RUN rm \
     pryr_0.1.4.tar.gz \
@@ -871,10 +865,7 @@ RUN rm \
     viridis_0.5.1.tar.gz \
     shiny_1.1.0.tar.gz \
     shinyjs_1.0.tar.gz \
-    shinythemes_1.1.1.tar.gz \
-    shinydashboard_0.7.0.tar.gz \
-    flexdashboard_0.5.1.1.tar.gz \
-    miniUI_0.1.1.1.tar.gz 
+    flexdashboard_0.5.1.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/nycflights13_1.0.0.tar.gz \
@@ -1009,16 +1000,12 @@ RUN rm \
 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-#    https://mirrors.nics.utk.edu/cran/src/contrib/shinystan_2.5.0.tar.gz \
-#    https://mirrors.nics.utk.edu/cran/src/contrib/rstanarm_2.17.4.tar.gz \
-#    https://mirrors.nics.utk.edu/cran/src/contrib/tidyposterior_0.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/pROC_1.12.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/gtools_3.8.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/gdata_2.18.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/gplots_3.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/MLmetrics_1.1.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/yardstick_0.0.1.tar.gz \
-#    https://mirrors.nics.utk.edu/cran/src/contrib/tidymodels_0.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/xgboost_0.71.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ModelMetrics_1.2.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/caret_6.0-80.tar.gz \
@@ -1026,24 +1013,16 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/dotCall64_1.0-0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/spam_2.2-0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/fields_9.6.tar.gz \
-#    https://mirrors.nics.utk.edu/cran/src/contrib/forecast_8.4.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ROCR_1.0-7.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/reticulate_1.10.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tfruns_1.4.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tensorflow_1.9.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/zeallot_0.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/keras_2.2.0.tar.gz \
-#    https://mirrors.nics.utk.edu/cran/src/contrib/rstan_2.17.3.tar.gz  \
-#    https://mirrors.nics.utk.edu/cran/src/contrib/tidybayes_1.0.1.tar.gz  \
     https://mirrors.nics.utk.edu/cran/src/contrib/coda_0.19-1.tar.gz \
-#    https://mirrors.nics.utk.edu/cran/src/contrib/brms_2.4.0.tar.gz  \
-#    https://mirrors.nics.utk.edu/cran/src/contrib/BAS_1.5.1.tar.gz  \
     https://mirrors.nics.utk.edu/cran/src/contrib/greta_0.2.3.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-#    shinystan_2.5.0.tar.gz \
-#    rstanarm_2.17.4.tar.gz \
-#    tidyposterior_0.0.1.tar.gz \ 
     pROC_1.12.1.tar.gz \
     gtools_3.8.1.tar.gz \
     gdata_2.18.0.tar.gz \
@@ -1051,7 +1030,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     ROCR_1.0-7.tar.gz \
     MLmetrics_1.1.1.tar.gz \
     yardstick_0.0.1.tar.gz \
-#    tidymodels_0.0.1.tar.gz \
     xgboost_0.71.2.tar.gz \
     ModelMetrics_1.2.0.tar.gz \
     caret_6.0-80.tar.gz \
@@ -1059,30 +1037,21 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     dotCall64_1.0-0.tar.gz \
     spam_2.2-0.tar.gz \
     fields_9.6.tar.gz \
-#    forecast_8.4.tar.gz \
     reticulate_1.10.tar.gz \
     tfruns_1.4.tar.gz \
     tensorflow_1.9.tar.gz \
     zeallot_0.1.0.tar.gz \
     keras_2.2.0.tar.gz \
-#    rstan_2.17.3.tar.gz  \
-#    tidybayes_1.0.1.tar.gz  \
     coda_0.19-1.tar.gz \
-#    brms_2.4.0.tar.gz  \
-#    BAS_1.5.1.tar.gz  \
     greta_0.2.3.tar.gz 
 
 RUN rm \
-#    shinystan_2.5.0.tar.gz \
-#    rstanarm_2.17.4.tar.gz \
-#    tidyposterior_0.0.1.tar.gz \
     pROC_1.12.1.tar.gz \
     gtools_3.8.1.tar.gz \
     gdata_2.18.0.tar.gz \
     gplots_3.0.1.tar.gz \
     MLmetrics_1.1.1.tar.gz \
     yardstick_0.0.1.tar.gz \
-#    tidymodels_0.0.1.tar.gz \
     xgboost_0.71.2.tar.gz \
     ModelMetrics_1.2.0.tar.gz \
     caret_6.0-80.tar.gz \
@@ -1090,20 +1059,31 @@ RUN rm \
     dotCall64_1.0-0.tar.gz \
     spam_2.2-0.tar.gz \
     fields_9.6.tar.gz \
-#    forecast_8.4.tar.gz \
     ROCR_1.0-7.tar.gz \
     reticulate_1.10.tar.gz \
     tfruns_1.4.tar.gz \
     tensorflow_1.9.tar.gz \
     zeallot_0.1.0.tar.gz \
     keras_2.2.0.tar.gz \
-#    rstan_2.17.3.tar.gz  \
-#    tidybayes_1.0.1.tar.gz  \
     coda_0.19-1.tar.gz \
-#    brms_2.4.0.tar.gz  \
-#    BAS_1.5.1.tar.gz  \
     greta_0.2.3.tar.gz 
 
+
+    # shinythemes_1.1.1.tar.gz \
+	#    shinydashboard_0.7.0.tar.gz \
+#    miniUI_0.1.1.1.tar.gz 
+	#    shinystan_2.5.0.tar.gz \
+	#    rstanarm_2.17.4.tar.gz \
+	#    tidyposterior_0.0.1.tar.gz \
+	#    tidymodels_0.0.1.tar.gz \
+	#    forecast_8.4.tar.gz \
+	#    rstan_2.17.3.tar.gz  \
+	#    tidybayes_1.0.1.tar.gz  \
+	#    brms_2.4.0.tar.gz  \
+	#    BAS_1.5.1.tar.gz  \
+
+RUN R CMD BATCH /r-studio/install-reed.R
+RUN rm /install-reed.Rout 
 
 	
 # Supervisord
