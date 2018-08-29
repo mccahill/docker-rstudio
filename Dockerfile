@@ -984,7 +984,7 @@ RUN rm \
 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://mirrors.nics.utk.edu/cran/src/contrib/bayesplot_1.6.0.tar.gz
+    https://mirrors.nics.utk.edu/cran/src/contrib/bayesplot_1.6.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/loo_2.0.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/rstan_2.17.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/rstantools_1.5.1.tar.gz \
