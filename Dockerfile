@@ -709,7 +709,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     ini_0.3.1.tar.gz \
     gh_1.0.1.tar.gz \
     usethis_1.4.0.tar.gz \
-    glue_1.3.0.tar.gz \
     microbenchmark_1.4-4.tar.gz \
     bench_1.0.1.tar.gz 
 
