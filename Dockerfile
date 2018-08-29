@@ -892,7 +892,51 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/DRR_0.0.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/dimRed_0.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/timeDate_3043.102.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ddalpha_1.3.4.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/tsfsmisc_1.1-2.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/tgeometry_0.3-6.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/ddalpha_1.3.4.tar.gz 
+
+RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
+    nycflights13_1.0.0.tar.gz \
+    babynames_0.3.0.tar.gz \
+    janeaustenr_0.1.5.tar.gz \
+    NHANES_2.1.0.tar.gz \
+    repurrrsive_0.1.0.tar.gz \
+    infer_0.3.1.tar.gz \
+    numDeriv_2016.8-1.tar.gz \
+    SQUAREM_2017.10-1.tar.gz \
+    lava_1.6.3.tar.gz \
+    prodlim_2018.04.18.tar.gz \
+    ipred_0.9-7.tar.gz \
+    CVST_0.2-2.tar.gz \
+    DRR_0.0.3.tar.gz \
+    dimRed_0.1.0.tar.gz \
+    timeDate_3043.102.tar.gz \
+    sfsmisc_1.1-2.tar.gz \
+    geometry_0.3-6.tar.gz \
+    ddalpha_1.3.4.tar.gz 
+	
+RUN rm \
+    nycflights13_1.0.0.tar.gz \
+    babynames_0.3.0.tar.gz \
+    janeaustenr_0.1.5.tar.gz \
+    NHANES_2.1.0.tar.gz \
+    repurrrsive_0.1.0.tar.gz \
+    infer_0.3.1.tar.gz \
+    numDeriv_2016.8-1.tar.gz \
+    SQUAREM_2017.10-1.tar.gz \
+    lava_1.6.3.tar.gz \
+    prodlim_2018.04.18.tar.gz \
+    ipred_0.9-7.tar.gz \
+    CVST_0.2-2.tar.gz \
+    DRR_0.0.3.tar.gz \
+    dimRed_0.1.0.tar.gz \
+    timeDate_3043.102.tar.gz \
+    sfsmisc_1.1-2.tar.gz \
+    geometry_0.3-6.tar.gz \
+    ddalpha_1.3.4.tar.gz 
+	
+RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/gower_0.1.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/RcppRoll_0.3.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/pls_2.7-0.tar.gz \
@@ -919,22 +963,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/greta_0.2.3.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-    nycflights13_1.0.0.tar.gz \
-    babynames_0.3.0.tar.gz \
-    janeaustenr_0.1.5.tar.gz \
-    NHANES_2.1.0.tar.gz \
-    repurrrsive_0.1.0.tar.gz \
-    infer_0.3.1.tar.gz \
-    numDeriv_2016.8-1.tar.gz \
-    SQUAREM_2017.10-1.tar.gz \
-    lava_1.6.3.tar.gz \
-    prodlim_2018.04.18.tar.gz \
-    ipred_0.9-7.tar.gz \
-    CVST_0.2-2.tar.gz \
-    DRR_0.0.3.tar.gz \
-    dimRed_0.1.0.tar.gz \
-    timeDate_3043.102.tar.gz \
-    ddalpha_1.3.4.tar.gz \
     gower_0.1.2.tar.gz \
     RcppRoll_0.3.0.tar.gz \
     pls_2.7-0.tar.gz \
@@ -961,22 +989,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     greta_0.2.3.tar.gz 
 
 RUN rm \
-    nycflights13_1.0.0.tar.gz \
-    babynames_0.3.0.tar.gz \
-    janeaustenr_0.1.5.tar.gz \
-    NHANES_2.1.0.tar.gz \
-    repurrrsive_0.1.0.tar.gz \
-    infer_0.3.1.tar.gz \
-    numDeriv_2016.8-1.tar.gz \
-    SQUAREM_2017.10-1.tar.gz \
-    lava_1.6.3.tar.gz \
-    prodlim_2018.04.18.tar.gz \
-    ipred_0.9-7.tar.gz \
-    CVST_0.2-2.tar.gz \
-    DRR_0.0.3.tar.gz \
-    dimRed_0.1.0.tar.gz \
-    timeDate_3043.102.tar.gz \
-    ddalpha_1.3.4.tar.gz \
     gower_0.1.2.tar.gz \
     RcppRoll_0.3.0.tar.gz \
     pls_2.7-0.tar.gz \
