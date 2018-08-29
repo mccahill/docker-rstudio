@@ -704,9 +704,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     clisymbols_1.2.0.tar.gz \
     rcmdcheck_1.2.1.tar.gz \
     sessioninfo_1.0.0.tar.gz \
-    usethis_1.4.0.tar.gz \
     fs_1.2.6.tar.gz \
     gh_1.0.1.tar.gz \
+    usethis_1.4.0.tar.gz \
     glue_1.3.0.tar.gz \
     microbenchmark_1.4-4.tar.gz \
     bench_1.0.1.tar.gz 
