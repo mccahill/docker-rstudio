@@ -951,6 +951,13 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/ISOcodes_2018.06.29.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/stopwords_0.9.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidytext_0.1.9.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/ggridges_0.5.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/bayesplot_1.6.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/matrixStats_0.54.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/loo_2.0.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/inline_0.3.15.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/rstan_2.17.3.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/rstantools_1.5.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidypredict_0.2.0.tar.gz 
 	
 
@@ -966,7 +973,16 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     ISOcodes_2018.06.29.tar.gz \
     stopwords_0.9.0.tar.gz \
     tidytext_0.1.9.tar.gz \
-    tidypredict_0.2.0.tar.gz 
+    tidypredict_0.2.0.tar.gz \
+    ggridges_0.5.0.tar.gz \
+    bayesplot_1.6.0.tar.gz \
+    matrixStats_0.54.0.tar.gz \
+    loo_2.0.0.tar.gz \
+    StanHeaders_2.17.2.tar.gz \
+    inline_0.3.15.tar.gz \
+    rstan_2.17.3.tar.gz \
+    rstantools_1.5.1.tar.gz 
+	
 	
 RUN rm \
     gower_0.1.2.tar.gz \
@@ -980,17 +996,17 @@ RUN rm \
     ISOcodes_2018.06.29.tar.gz \
     stopwords_0.9.0.tar.gz \
     tidytext_0.1.9.tar.gz \
+    ggridges_0.5.0.tar.gz \
+    bayesplot_1.6.0.tar.gz \
+    matrixStats_0.54.0.tar.gz \
+    loo_2.0.0.tar.gz \
+    inline_0.3.15.tar.gz \
+    rstan_2.17.3.tar.gz \
+    rstantools_1.5.1.tar.gz \
     tidypredict_0.2.0.tar.gz 
 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ggridges_0.5.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/bayesplot_1.6.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/matrixStats_0.54.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/loo_2.0.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/inline_0.3.15.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rstan_2.17.3.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rstantools_1.5.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/shinystan_2.5.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/StanHeaders_2.17.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/rstanarm_2.17.4.tar.gz \
@@ -1013,15 +1029,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/greta_0.2.3.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-    ggridges_0.5.0.tar.gz \
-    bayesplot_1.6.0.tar.gz \
-    matrixStats_0.54.0.tar.gz \
-    loo_2.0.0.tar.gz \
-    StanHeaders_2.17.2.tar.gz \
-    inline_0.3.15.tar.gz \
-    rstan_2.17.3.tar.gz \
-    rstantools_1.5.1.tar.gz \
-    shinystan_2.5.0.tar.gz \
+#    shinystan_2.5.0.tar.gz \
     rstanarm_2.17.4.tar.gz \
     tidyposterior_0.0.1.tar.gz \
     yardstick_0.0.1.tar.gz \
@@ -1042,13 +1050,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     greta_0.2.3.tar.gz 
 
 RUN rm \
-    ggridges_0.5.0.tar.gz \
-    bayesplot_1.6.0.tar.gz \
-    matrixStats_0.54.0.tar.gz \
-    loo_2.0.0.tar.gz \
-    inline_0.3.15.tar.gz \
-    rstan_2.17.3.tar.gz \
-    rstantools_1.5.1.tar.gz \
     shinystan_2.5.0.tar.gz \
     StanHeaders_2.17.2.tar.gz \
     rstanarm_2.17.4.tar.gz \
