@@ -658,6 +658,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/ps_1.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/globals_0.12.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/listenv_0.7.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/foreach_1.4.4.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/iterators_1.0.10.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/bench_1.0.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -672,8 +674,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     globals_0.12.2.tar.gz \
     listenv_0.7.0.tar.gz \
     future_1.9.0.tar.gz \
-    doMC_1.3.5.tar.gz \
     foreach_1.4.4.tar.gz \
+    iterators_1.0.10.tar.gz \
+    doMC_1.3.5.tar.gz \
     doParallel_1.0.11.tar.gz \
     furrr_0.1.0.tar.gz \
     drat_0.1.4.tar.gz \
@@ -698,6 +701,8 @@ RUN rm \
     modelr_0.1.2.tar.gz \
     ps_1.1.0.tar.gz \
     globals_0.12.2.tar.gz \
+    foreach_1.4.4.tar.gz \
+    iterators_1.0.10.tar.gz \
     listenv_0.7.0.tar.gz \
     processx_3.2.0.tar.gz \
     clipr_0.4.1.tar.gz \
