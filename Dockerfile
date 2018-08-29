@@ -782,6 +782,12 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/DiagrammeR_1.0.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tweenr_0.1.5.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ggforce_0.1.3.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/RgoogleMaps_1.4.2.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/png_0.1-7.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/rjson_0.2.20.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/mapproj_1.2.6.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/jpeg_0.1-8.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/geosphere_1.5-7.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ggmap_2.6.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ggraph_1.0.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/gridExtra_2.3.tar.gz \
@@ -816,6 +822,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     DiagrammeR_1.0.0.tar.gz \
     tweenr_0.1.5.tar.gz \
     ggforce_0.1.3.tar.gz \
+    RgoogleMaps_1.4.2.tar.gz \
+    png_0.1-7.tar.gz \
+    rjson_0.2.20.tar.gz \
+    mapproj_1.2.6.tar.gz \
+    jpeg_0.1-8.tar.gz \
+    geosphere_1.5-7.tar.gz \
     ggmap_2.6.1.tar.gz \
     ggraph_1.0.2.tar.gz \
     gridExtra_2.3.tar.gz \
@@ -850,6 +862,12 @@ RUN rm \
     DiagrammeR_1.0.0.tar.gz \
     tweenr_0.1.5.tar.gz \
     ggforce_0.1.3.tar.gz \
+    RgoogleMaps_1.4.2.tar.gz \
+    png_0.1-7.tar.gz \
+    rjson_0.2.20.tar.gz \
+    mapproj_1.2.6.tar.gz \
+    jpeg_0.1-8.tar.gz \
+    geosphere_1.5-7.tar.gz \
     ggmap_2.6.1.tar.gz \
     ggraph_1.0.2.tar.gz \
     gridExtra_2.3.tar.gz \
