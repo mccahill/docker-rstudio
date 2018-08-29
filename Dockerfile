@@ -1018,7 +1018,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/gplots_3.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/MLmetrics_1.1.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/yardstick_0.0.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tidymodels_0.0.1.tar.gz \
+#    https://mirrors.nics.utk.edu/cran/src/contrib/tidymodels_0.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/xgboost_0.71.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/caret_6.0-80.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/e1071_1.7-0.tar.gz \
@@ -1045,7 +1045,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     ROCR_1.0-7.tar.gz \
     MLmetrics_1.1.1.tar.gz \
     yardstick_0.0.1.tar.gz \
-    tidymodels_0.0.1.tar.gz \
+#    tidymodels_0.0.1.tar.gz \
     xgboost_0.71.2.tar.gz \
     caret_6.0-80.tar.gz \
     e1071_1.7-0.tar.gz \
@@ -1070,7 +1070,7 @@ RUN rm \
     gplots_3.0.1.tar.gz \
     MLmetrics_1.1.1.tar.gz \
     yardstick_0.0.1.tar.gz \
-    tidymodels_0.0.1.tar.gz \
+#    tidymodels_0.0.1.tar.gz \
     xgboost_0.71.2.tar.gz \
     caret_6.0-80.tar.gz \
     e1071_1.7-0.tar.gz \
