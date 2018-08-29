@@ -655,10 +655,12 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/clipr_0.4.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/callr_3.0.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/processx_3.2.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/ps_1.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/bench_1.0.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     clipr_0.4.1.tar.gz \
+    ps_1.1.0.tar.gz \
     processx_3.2.0.tar.gz \
     callr_3.0.0.tar.gz \
     modelr_0.1.2.tar.gz \
@@ -690,6 +692,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 
 RUN rm \
     modelr_0.1.2.tar.gz \
+    ps_1.1.0.tar.gz \
     processx_3.2.0.tar.gz \
     clipr_0.4.1.tar.gz \
     callr_3.0.0.tar.gz \
