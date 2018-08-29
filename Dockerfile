@@ -878,7 +878,7 @@ RUN rm \
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/nycflights13_1.0.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/abynames_0.3.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/babynames_0.3.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/janeaustenr_0.1.5.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/NHANES_2.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/repurrrsive_0.1.0.tar.gz \
@@ -900,7 +900,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     nycflights13_1.0.0.tar.gz \
-    abynames_0.3.0.tar.gz \
+    babynames_0.3.0.tar.gz \
     janeaustenr_0.1.5.tar.gz \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
@@ -922,7 +922,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 
 RUN rm \
     nycflights13_1.0.0.tar.gz \
-    abynames_0.3.0.tar.gz \
+    babynames_0.3.0.tar.gz \
     janeaustenr_0.1.5.tar.gz \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
