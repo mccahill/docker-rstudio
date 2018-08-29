@@ -668,6 +668,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/desc_1.2.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/clisymbols_1.2.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ini_0.3.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/profmem_0.5.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/bench_1.0.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -709,11 +710,13 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     ini_0.3.1.tar.gz \
     gh_1.0.1.tar.gz \
     usethis_1.4.0.tar.gz \
+    profmem_0.5.0.tar.gz \
     microbenchmark_1.4-4.tar.gz \
     bench_1.0.1.tar.gz 
 
 RUN rm \
     modelr_0.1.2.tar.gz \
+    profmem_0.5.0.tar.gz \
     ini_0.3.1.tar.gz \
     clisymbols_1.2.0.tar.gz \
     desc_1.2.0.tar.gz \
