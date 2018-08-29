@@ -780,6 +780,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/rgexf_0.15.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/visNetwork_2.0.4.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/DiagrammeR_1.0.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/tweenr_0.1.5.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ggforce_0.1.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ggmap_2.6.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ggraph_1.0.2.tar.gz \
@@ -813,6 +814,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     rgexf_0.15.3.tar.gz \
     visNetwork_2.0.4.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
+    tweenr_0.1.5.tar.gz \
     ggforce_0.1.3.tar.gz \
     ggmap_2.6.1.tar.gz \
     ggraph_1.0.2.tar.gz \
@@ -846,6 +848,7 @@ RUN rm \
     rgexf_0.15.3.tar.gz \
     visNetwork_2.0.4.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
+    tweenr_0.1.5.tar.gz \
     ggforce_0.1.3.tar.gz \
     ggmap_2.6.1.tar.gz \
     ggraph_1.0.2.tar.gz \
