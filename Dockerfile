@@ -615,15 +615,15 @@ RUN rm /install-rappdirs.Rout
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/tigris_0.7.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tidycensus_0.4.6.tar.gz 
+    https://mirrors.nics.utk.edu/cran/src/contrib/tidycensus_0.8.1.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     tigris_0.7.tar.gz \
-    tidycensus_0.4.6.tar.gz 
+    tidycensus_0.8.1.tar.gz 
 
 RUN rm \
     tigris_0.7.tar.gz  \
-    tidycensus_0.4.6.tar.gz 
+    tidycensus_0.8.1.tar.gz 
 	
 # new packages for fall 2018
 RUN DEBIAN_FRONTEND=noninteractive wget \
@@ -1069,21 +1069,8 @@ RUN rm \
     greta_0.2.3.tar.gz 
 
 
-    # shinythemes_1.1.1.tar.gz \
-	#    shinydashboard_0.7.0.tar.gz \
-#    miniUI_0.1.1.1.tar.gz 
-	#    shinystan_2.5.0.tar.gz \
-	#    rstanarm_2.17.4.tar.gz \
-	#    tidyposterior_0.0.1.tar.gz \
-	#    tidymodels_0.0.1.tar.gz \
-	#    forecast_8.4.tar.gz \
-	#    rstan_2.17.3.tar.gz  \
-	#    tidybayes_1.0.1.tar.gz  \
-	#    brms_2.4.0.tar.gz  \
-	#    BAS_1.5.1.tar.gz  \
-
-RUN R CMD BATCH /r-studio/install-reed.R
-RUN rm /install-reed.Rout 
+RUN R CMD BATCH /r-studio/install-2018-packages
+RUN rm /install-2018-packages.Rout 
 
 	
 # Supervisord
