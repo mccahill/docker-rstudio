@@ -1023,6 +1023,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/ModelMetrics_1.2.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/caret_6.0-80.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/e1071_1.7-0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/spam_2.2-0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/fields_9.6.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/forecast_8.4.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ROCR_1.0-7.tar.gz \
@@ -1051,6 +1052,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     ModelMetrics_1.2.0.tar.gz \
     caret_6.0-80.tar.gz \
     e1071_1.7-0.tar.gz \
+    spam_2.2-0.tar.gz \
     fields_9.6.tar.gz \
     forecast_8.4.tar.gz \
     tensorflow_1.9.tar.gz \
@@ -1077,6 +1079,7 @@ RUN rm \
     ModelMetrics_1.2.0.tar.gz \
     caret_6.0-80.tar.gz \
     e1071_1.7-0.tar.gz \
+    spam_2.2-0.tar.gz \
     fields_9.6.tar.gz \
     forecast_8.4.tar.gz \
     ROCR_1.0-7.tar.gz \
