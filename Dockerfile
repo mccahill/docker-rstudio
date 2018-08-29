@@ -1002,7 +1002,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/ROCR_1.0-7.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tensorflow_1.9.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/keras_2.2.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rstan_2.17.3.tar.gz  \
+#    https://mirrors.nics.utk.edu/cran/src/contrib/rstan_2.17.3.tar.gz  \
+    https://cran.r-project.org/src/contrib/Archive/rstan/rstan_2.17.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidybayes_1.0.1.tar.gz  \
     https://mirrors.nics.utk.edu/cran/src/contrib/coda_0.19-1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/brms_2.4.0.tar.gz  \
@@ -1028,7 +1029,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     ROCR_1.0-7.tar.gz \
     tensorflow_1.9.tar.gz \
     keras_2.2.0.tar.gz \
-    rstan_2.17.3.tar.gz  \
+#    rstan_2.17.3.tar.gz  \
+    rstan_2.17.2.tar.gz \
     tidybayes_1.0.1.tar.gz  \
     coda_0.19-1.tar.gz \
     brms_2.4.0.tar.gz  \
@@ -1054,7 +1056,8 @@ RUN rm \
     ROCR_1.0-7.tar.gz \
     tensorflow_1.9.tar.gz \
     keras_2.2.0.tar.gz \
-    rstan_2.17.3.tar.gz  \
+#    rstan_2.17.3.tar.gz  \
+    rstan_2.17.2.tar.gz \
     tidybayes_1.0.1.tar.gz  \
     coda_0.19-1.tar.gz \
     brms_2.4.0.tar.gz  \
