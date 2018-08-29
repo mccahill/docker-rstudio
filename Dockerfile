@@ -888,6 +888,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/SQUAREM_2017.10-1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/lava_1.6.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/prodlim_2018.04.18.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/CVST_0.2-2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/DRR_0.0.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/dimRed_0.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/timeDate_3043.102.tar.gz \
@@ -929,6 +930,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     lava_1.6.3.tar.gz \
     prodlim_2018.04.18.tar.gz \
     ipred_0.9-7.tar.gz \
+    CVST_0.2-2.tar.gz \
     DRR_0.0.3.tar.gz \
     dimRed_0.1.0.tar.gz \
     timeDate_3043.102.tar.gz \
@@ -970,6 +972,7 @@ RUN rm \
     lava_1.6.3.tar.gz \
     prodlim_2018.04.18.tar.gz \
     ipred_0.9-7.tar.gz \
+    CVST_0.2-2.tar.gz \
     DRR_0.0.3.tar.gz \
     dimRed_0.1.0.tar.gz \
     timeDate_3043.102.tar.gz \
