@@ -1036,8 +1036,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 #    https://mirrors.nics.utk.edu/cran/src/contrib/rstan_2.17.3.tar.gz  \
 #    https://mirrors.nics.utk.edu/cran/src/contrib/tidybayes_1.0.1.tar.gz  \
     https://mirrors.nics.utk.edu/cran/src/contrib/coda_0.19-1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/brms_2.4.0.tar.gz  \
-    https://mirrors.nics.utk.edu/cran/src/contrib/BAS_1.5.1.tar.gz  \
+#    https://mirrors.nics.utk.edu/cran/src/contrib/brms_2.4.0.tar.gz  \
+#    https://mirrors.nics.utk.edu/cran/src/contrib/BAS_1.5.1.tar.gz  \
     https://mirrors.nics.utk.edu/cran/src/contrib/greta_0.2.3.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -1068,8 +1068,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 #    rstan_2.17.3.tar.gz  \
 #    tidybayes_1.0.1.tar.gz  \
     coda_0.19-1.tar.gz \
-    brms_2.4.0.tar.gz  \
-    BAS_1.5.1.tar.gz  \
+#    brms_2.4.0.tar.gz  \
+#    BAS_1.5.1.tar.gz  \
     greta_0.2.3.tar.gz 
 
 RUN rm \
@@ -1100,8 +1100,8 @@ RUN rm \
 #    rstan_2.17.3.tar.gz  \
 #    tidybayes_1.0.1.tar.gz  \
     coda_0.19-1.tar.gz \
-    brms_2.4.0.tar.gz  \
-    BAS_1.5.1.tar.gz  \
+#    brms_2.4.0.tar.gz  \
+#    BAS_1.5.1.tar.gz  \
     greta_0.2.3.tar.gz 
 
 
