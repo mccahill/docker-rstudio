@@ -884,6 +884,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/repurrrsive_0.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/infer_0.3.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ipred_0.9-7.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/numDeriv_2016.8-1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/SQUAREM_2017.10-1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/lava_1.6.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/prodlim_2018.04.18.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/dimRed_0.1.0.tar.gz \
@@ -921,6 +923,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
     infer_0.3.1.tar.gz \
+    numDeriv_2016.8-1.tar.gz \
+    SQUAREM_2017.10-1.tar.gz \
     lava_1.6.3.tar.gz \
     prodlim_2018.04.18.tar.gz \
     ipred_0.9-7.tar.gz \
@@ -959,6 +963,8 @@ RUN rm \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
     infer_0.3.1.tar.gz \
+    numDeriv_2016.8-1.tar.gz \
+    SQUAREM_2017.10-1.tar.gz \
     lava_1.6.3.tar.gz \
     prodlim_2018.04.18.tar.gz \
     ipred_0.9-7.tar.gz \
