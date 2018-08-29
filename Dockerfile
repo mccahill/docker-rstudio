@@ -771,7 +771,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/cowplot_0.9.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/DiagrammeR_1.0.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ggforce_0.1.3.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/gmap_2.6.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/ggmap_2.6.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ggraph_1.0.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/gridExtra_2.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/viridis_0.5.1.tar.gz \
@@ -794,7 +794,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     cowplot_0.9.3.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
     ggforce_0.1.3.tar.gz \
-    gmap_2.6.1.tar.gz \
+    ggmap_2.6.1.tar.gz \
     ggraph_1.0.2.tar.gz \
     gridExtra_2.3.tar.gz \
     viridis_0.5.1.tar.gz \
@@ -817,7 +817,7 @@ RUN rm \
     cowplot_0.9.3.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
     ggforce_0.1.3.tar.gz \
-    gmap_2.6.1.tar.gz \
+    ggmap_2.6.1.tar.gz \
     ggraph_1.0.2.tar.gz \
     gridExtra_2.3.tar.gz \
     viridis_0.5.1.tar.gz \
