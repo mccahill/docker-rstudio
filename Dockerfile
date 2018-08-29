@@ -770,6 +770,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/PKI_0.1-5.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/RJSONIO_1.3-0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/packrat_0.4.9-3.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/highlight_0.4.7.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/pkgdown_1.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/bookdown_0.7.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/blogdown_0.8.tar.gz \
@@ -798,6 +799,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     RJSONIO_1.3-0.tar.gz \
     packrat_0.4.9-3.tar.gz \
     rsconnect_0.8.8.tar.gz \
+    highlight_0.4.7.2.tar.gz \
     pkgdown_1.1.0.tar.gz \
     bookdown_0.7.tar.gz \
     blogdown_0.8.tar.gz \
@@ -826,6 +828,7 @@ RUN rm \
     RJSONIO_1.3-0.tar.gz \
     packrat_0.4.9-3.tar.gz \
     rsconnect_0.8.8.tar.gz \
+    highlight_0.4.7.2.tar.gz \
     pkgdown_1.1.0.tar.gz \
     bookdown_0.7.tar.gz \
     blogdown_0.8.tar.gz \
