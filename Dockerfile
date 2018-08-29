@@ -775,6 +775,9 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/bookdown_0.7.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/blogdown_0.8.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/cowplot_0.9.3.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/influenceR_0.1.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/rgexf_0.15.3.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/visNetwork_2.0.4.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/DiagrammeR_1.0.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ggforce_0.1.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ggmap_2.6.1.tar.gz \
@@ -804,6 +807,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     bookdown_0.7.tar.gz \
     blogdown_0.8.tar.gz \
     cowplot_0.9.3.tar.gz \
+    influenceR_0.1.0.tar.gz \
+    rgexf_0.15.3.tar.gz \
+    visNetwork_2.0.4.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
     ggforce_0.1.3.tar.gz \
     ggmap_2.6.1.tar.gz \
@@ -833,6 +839,9 @@ RUN rm \
     bookdown_0.7.tar.gz \
     blogdown_0.8.tar.gz \
     cowplot_0.9.3.tar.gz \
+    influenceR_0.1.0.tar.gz \
+    rgexf_0.15.3.tar.gz \
+    visNetwork_2.0.4.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
     ggforce_0.1.3.tar.gz \
     ggmap_2.6.1.tar.gz \
