@@ -1009,8 +1009,8 @@ RUN rm \
 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://mirrors.nics.utk.edu/cran/src/contrib/shinystan_2.5.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rstanarm_2.17.4.tar.gz \
+#    https://mirrors.nics.utk.edu/cran/src/contrib/shinystan_2.5.0.tar.gz \
+#    https://mirrors.nics.utk.edu/cran/src/contrib/rstanarm_2.17.4.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidyposterior_0.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/yardstick_0.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidymodels_0.0.1.tar.gz \
@@ -1031,7 +1031,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 #    shinystan_2.5.0.tar.gz \
-    rstanarm_2.17.4.tar.gz \
+#    rstanarm_2.17.4.tar.gz \
     tidyposterior_0.0.1.tar.gz \
     yardstick_0.0.1.tar.gz \
     tidymodels_0.0.1.tar.gz \
@@ -1051,8 +1051,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     greta_0.2.3.tar.gz 
 
 RUN rm \
-    shinystan_2.5.0.tar.gz \
-    rstanarm_2.17.4.tar.gz \
+#    shinystan_2.5.0.tar.gz \
+#    rstanarm_2.17.4.tar.gz \
     tidyposterior_0.0.1.tar.gz \
     yardstick_0.0.1.tar.gz \
     tidymodels_0.0.1.tar.gz \
