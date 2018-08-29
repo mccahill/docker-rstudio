@@ -833,7 +833,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     shiny_1.1.0.tar.gz \
     shinyjs_1.0.tar.gz \
 #    shinythemes_1.1.1.tar.gz \
-    shinydashboard_0.7.0.tar.gz \
+#    shinydashboard_0.7.0.tar.gz \
     flexdashboard_0.5.1.1.tar.gz \
     miniUI_0.1.1.1.tar.gz 
 
