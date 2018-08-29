@@ -674,8 +674,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     globals_0.12.2.tar.gz \
     listenv_0.7.0.tar.gz \
     future_1.9.0.tar.gz \
-    foreach_1.4.4.tar.gz \
     iterators_1.0.10.tar.gz \
+    foreach_1.4.4.tar.gz \
     doMC_1.3.5.tar.gz \
     doParallel_1.0.11.tar.gz \
     furrr_0.1.0.tar.gz \
