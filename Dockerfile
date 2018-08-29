@@ -822,11 +822,11 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     DiagrammeR_1.0.0.tar.gz \
     tweenr_0.1.5.tar.gz \
     ggforce_0.1.3.tar.gz \
-    RgoogleMaps_1.4.2.tar.gz \
     png_0.1-7.tar.gz \
+    jpeg_0.1-8.tar.gz \
+    RgoogleMaps_1.4.2.tar.gz \
     rjson_0.2.20.tar.gz \
     mapproj_1.2.6.tar.gz \
-    jpeg_0.1-8.tar.gz \
     geosphere_1.5-7.tar.gz \
     ggmap_2.6.1.tar.gz \
     ggraph_1.0.2.tar.gz \
