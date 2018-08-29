@@ -826,7 +826,7 @@ RUN rm \
     shinythemes_1.1.1.tar.gz \
     shinydashboard_0.7.0.tar.gz \
     flexdashboard_0.5.1.1.tar.gz \
-    miniUI_0.1.1.1.tar.gz \
+    miniUI_0.1.1.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/htmlwidgets_1.2.tar.gz \
