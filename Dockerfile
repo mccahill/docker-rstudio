@@ -666,6 +666,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/stringdist_0.9.5.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/praise_1.0.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/desc_1.2.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/clisymbols_1.2.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/bench_1.0.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -700,6 +701,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     desc_1.2.0.tar.gz \
     pkgbuild_1.0.0.tar.gz \
     pkgload_1.0.0.tar.gz \
+    clisymbols_1.2.0.tar.gz \
     rcmdcheck_1.2.1.tar.gz \
     sessioninfo_1.0.0.tar.gz \
     usethis_1.4.0.tar.gz \
@@ -711,6 +713,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 
 RUN rm \
     modelr_0.1.2.tar.gz \
+    clisymbols_1.2.0.tar.gz \
     desc_1.2.0.tar.gz \
     praise_1.0.0.tar.gz \
     rex_1.1.2.tar.gz \
