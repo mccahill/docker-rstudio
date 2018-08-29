@@ -1020,6 +1020,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/yardstick_0.0.1.tar.gz \
 #    https://mirrors.nics.utk.edu/cran/src/contrib/tidymodels_0.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/xgboost_0.71.2.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/ModelMetrics_1.2.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/caret_6.0-80.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/e1071_1.7-0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/fields_9.6.tar.gz \
@@ -1047,6 +1048,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     yardstick_0.0.1.tar.gz \
 #    tidymodels_0.0.1.tar.gz \
     xgboost_0.71.2.tar.gz \
+    ModelMetrics_1.2.0.tar.gz \
     caret_6.0-80.tar.gz \
     e1071_1.7-0.tar.gz \
     fields_9.6.tar.gz \
@@ -1072,6 +1074,7 @@ RUN rm \
     yardstick_0.0.1.tar.gz \
 #    tidymodels_0.0.1.tar.gz \
     xgboost_0.71.2.tar.gz \
+    ModelMetrics_1.2.0.tar.gz \
     caret_6.0-80.tar.gz \
     e1071_1.7-0.tar.gz \
     fields_9.6.tar.gz \
