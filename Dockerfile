@@ -664,6 +664,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/rematch2_2.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/rex_1.1.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/stringdist_0.9.5.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/praise_1.0.0.tar.gz
     https://mirrors.nics.utk.edu/cran/src/contrib/bench_1.0.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -692,6 +693,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     styler_1.0.2.tar.gz \
     rex_1.1.2.tar.gz \
     stringdist_0.9.5.1.tar.gz \
+    praise_1.0.0.tar.gz \
     testthat_2.0.0.tar.gz \
     lintr_1.0.2.tar.gz \
     pkgbuild_1.0.0.tar.gz \
@@ -707,6 +709,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 
 RUN rm \
     modelr_0.1.2.tar.gz \
+    praise_1.0.0.tar.gz \
     rex_1.1.2.tar.gz \
     stringdist_0.9.5.1.tar.gz \
     enc_0.2.0.tar.gz \
