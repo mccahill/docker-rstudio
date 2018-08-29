@@ -884,6 +884,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/repurrrsive_0.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/infer_0.3.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ipred_0.9-7.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/prodlim_2018.04.18.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/dimRed_0.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/timeDate_3043.102.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ddalpha_1.3.4.tar.gz \
@@ -919,6 +920,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
     infer_0.3.1.tar.gz \
+    prodlim_2018.04.18.tar.gz \
     ipred_0.9-7.tar.gz \
     dimRed_0.1.0.tar.gz \
     timeDate_3043.102.tar.gz \
@@ -955,6 +957,7 @@ RUN rm \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
     infer_0.3.1.tar.gz \
+    prodlim_2018.04.18.tar.gz \
     ipred_0.9-7.tar.gz \
     dimRed_0.1.0.tar.gz \
     timeDate_3043.102.tar.gz \
