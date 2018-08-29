@@ -1069,8 +1069,8 @@ RUN rm \
     greta_0.2.3.tar.gz 
 
 
-RUN R CMD BATCH /r-studio/install-2018-packages
-RUN rm /install-2018-packages.Rout 
+#RUN R CMD BATCH /r-studio/install-2018-packages
+#RUN rm /install-2018-packages.Rout 
 
 	
 # Supervisord
@@ -1081,7 +1081,7 @@ CMD ["/usr/bin/supervisord", "-n"]
 # Config files
 RUN cd /r-studio && \
     cp supervisord-RStudio.conf /etc/supervisor/conf.d/supervisord-RStudio.conf
-RUN rm /r-studio/*
+#RUN rm /r-studio/*
 
 # the default packages for everyone running R
 RUN echo "" >> /etc/R/Rprofile.site && \
