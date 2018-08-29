@@ -1013,6 +1013,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 #    https://mirrors.nics.utk.edu/cran/src/contrib/rstanarm_2.17.4.tar.gz \
 #    https://mirrors.nics.utk.edu/cran/src/contrib/tidyposterior_0.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/pROC_1.12.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/gtools_3.8.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/gdata_2.18.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/gplots_3.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/MLmetrics_1.1.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/yardstick_0.0.1.tar.gz \
@@ -1037,6 +1039,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 #    rstanarm_2.17.4.tar.gz \
 #    tidyposterior_0.0.1.tar.gz \ 
     pROC_1.12.1.tar.gz \
+    gtools_3.8.1.tar.gz \
+    gdata_2.18.0.tar.gz \
     gplots_3.0.1.tar.gz \
     ROCR_1.0-7.tar.gz \
     MLmetrics_1.1.1.tar.gz \
@@ -1061,6 +1065,8 @@ RUN rm \
 #    rstanarm_2.17.4.tar.gz \
 #    tidyposterior_0.0.1.tar.gz \
     pROC_1.12.1.tar.gz \
+    gtools_3.8.1.tar.gz \
+    gdata_2.18.0.tar.gz \
     gplots_3.0.1.tar.gz \
     MLmetrics_1.1.1.tar.gz \
     yardstick_0.0.1.tar.gz \
