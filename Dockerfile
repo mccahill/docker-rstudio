@@ -883,6 +883,13 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/NHANES_2.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/repurrrsive_0.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/infer_0.3.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/ipred_0.9-7.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/dimRed_0.1.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/timeDate_3043.102.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/ddalpha_1.3.4.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/gower_0.1.2.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/RcppRoll_0.3.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/pls_2.7-0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/recipes_0.1.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/rsample_0.0.2.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidytext_0.1.9.tar.gz \
@@ -912,6 +919,13 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
     infer_0.3.1.tar.gz \
+    ipred_0.9-7.tar.gz \
+    dimRed_0.1.0.tar.gz \
+    timeDate_3043.102.tar.gz \
+    ddalpha_1.3.4.tar.gz \
+    gower_0.1.2.tar.gz \
+    RcppRoll_0.3.0.tar.gz \
+    pls_2.7-0.tar.gz \
     recipes_0.1.3.tar.gz \
     rsample_0.0.2.tar.gz \
     tidytext_0.1.9.tar.gz \
@@ -941,6 +955,13 @@ RUN rm \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
     infer_0.3.1.tar.gz \
+    ipred_0.9-7.tar.gz \
+    dimRed_0.1.0.tar.gz \
+    timeDate_3043.102.tar.gz \
+    ddalpha_1.3.4.tar.gz \
+    gower_0.1.2.tar.gz \
+    RcppRoll_0.3.0.tar.gz \
+    pls_2.7-0.tar.gz \
     recipes_0.1.3.tar.gz \
     rsample_0.0.2.tar.gz \
     tidytext_0.1.9.tar.gz \
