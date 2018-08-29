@@ -776,6 +776,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/blogdown_0.8.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/cowplot_0.9.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/influenceR_0.1.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/Rook_1.1-1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/rgexf_0.15.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/visNetwork_2.0.4.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/DiagrammeR_1.0.0.tar.gz \
@@ -808,6 +809,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     blogdown_0.8.tar.gz \
     cowplot_0.9.3.tar.gz \
     influenceR_0.1.0.tar.gz \
+    Rook_1.1-1.tar.gz \
     rgexf_0.15.3.tar.gz \
     visNetwork_2.0.4.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
@@ -840,6 +842,7 @@ RUN rm \
     blogdown_0.8.tar.gz \
     cowplot_0.9.3.tar.gz \
     influenceR_0.1.0.tar.gz \
+    Rook_1.1-1.tar.gz \
     rgexf_0.15.3.tar.gz \
     visNetwork_2.0.4.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
