@@ -764,7 +764,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/profvis_0.3.5.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/RcppArmadillo_0.9.100.5.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/xaringan_0.7.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/sconnect_0.8.8.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/rsconnect_0.8.8.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/pkgdown_1.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/bookdown_0.7.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/blogdown_0.8.tar.gz \
@@ -787,7 +787,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     profvis_0.3.5.tar.gz \
     RcppArmadillo_0.9.100.5.0.tar.gz \
     xaringan_0.7.tar.gz \
-    sconnect_0.8.8.tar.gz \
+    rsconnect_0.8.8.tar.gz \
     pkgdown_1.1.0.tar.gz \
     bookdown_0.7.tar.gz \
     blogdown_0.8.tar.gz \
@@ -810,7 +810,7 @@ RUN rm \
     profvis_0.3.5.tar.gz \
     RcppArmadillo_0.9.100.5.0.tar.gz \
     xaringan_0.7.tar.gz \
-    sconnect_0.8.8.tar.gz \
+    rsconnect_0.8.8.tar.gz \
     pkgdown_1.1.0.tar.gz \
     bookdown_0.7.tar.gz \
     blogdown_0.8.tar.gz \
