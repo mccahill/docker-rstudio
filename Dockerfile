@@ -951,7 +951,45 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/ISOcodes_2018.06.29.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/stopwords_0.9.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidytext_0.1.9.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tidypredict_0.2.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/tidypredict_0.2.0.tar.gz 
+	
+
+RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
+    gower_0.1.2.tar.gz \
+    RcppRoll_0.3.0.tar.gz \
+    pls_2.7-0.tar.gz \
+    recipes_0.1.3.tar.gz \
+    rsample_0.0.2.tar.gz \
+    hunspell_2.9.tar.gz \
+    SnowballC_0.5.1.tar.gz \
+    tokenizers_0.2.1.tar.gz \
+    ISOcodes_2018.06.29.tar.gz \
+    stopwords_0.9.0.tar.gz \
+    tidytext_0.1.9.tar.gz \
+    tidypredict_0.2.0.tar.gz 
+	
+RUN rm \
+    gower_0.1.2.tar.gz \
+    RcppRoll_0.3.0.tar.gz \
+    pls_2.7-0.tar.gz \
+    recipes_0.1.3.tar.gz \
+    rsample_0.0.2.tar.gz \
+    hunspell_2.9.tar.gz \
+    SnowballC_0.5.1.tar.gz \
+    tokenizers_0.2.1.tar.gz \
+    ISOcodes_2018.06.29.tar.gz \
+    stopwords_0.9.0.tar.gz \
+    tidytext_0.1.9.tar.gz \
+    tidypredict_0.2.0.tar.gz 
+
+
+RUN DEBIAN_FRONTEND=noninteractive wget \
+    https://mirrors.nics.utk.edu/cran/src/bayesplot_1.6.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/loo_2.0.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/rstan_2.17.3.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/rstantools_1.5.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/shinystan_2.5.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/StanHeaders_2.17.2.tar.gz \	
     https://mirrors.nics.utk.edu/cran/src/contrib/rstanarm_2.17.4.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidyposterior_0.0.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/yardstick_0.0.1.tar.gz \
@@ -972,18 +1010,12 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/greta_0.2.3.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-    gower_0.1.2.tar.gz \
-    RcppRoll_0.3.0.tar.gz \
-    pls_2.7-0.tar.gz \
-    recipes_0.1.3.tar.gz \
-    rsample_0.0.2.tar.gz \
-    hunspell_2.9.tar.gz \
-    SnowballC_0.5.1.tar.gz \
-    tokenizers_0.2.1.tar.gz \
-    ISOcodes_2018.06.29.tar.gz \
-    stopwords_0.9.0.tar.gz \
-    tidytext_0.1.9.tar.gz \
-    tidypredict_0.2.0.tar.gz \
+    bayesplot_1.6.0.tar.gz \
+    loo_2.0.0.tar.gz \
+    rstan_2.17.3.tar.gz \
+    rstantools_1.5.1.tar.gz \
+    shinystan_2.5.0.tar.gz \
+    StanHeaders_2.17.2.tar.gz \
     rstanarm_2.17.4.tar.gz \
     tidyposterior_0.0.1.tar.gz \
     yardstick_0.0.1.tar.gz \
@@ -1003,19 +1035,13 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     BAS_1.5.1.tar.gz  \
     greta_0.2.3.tar.gz 
 
-RUN rm \
-    gower_0.1.2.tar.gz \
-    RcppRoll_0.3.0.tar.gz \
-    pls_2.7-0.tar.gz \
-    recipes_0.1.3.tar.gz \
-    rsample_0.0.2.tar.gz \
-    hunspell_2.9.tar.gz \
-    SnowballC_0.5.1.tar.gz \
-    tokenizers_0.2.1.tar.gz \
-    ISOcodes_2018.06.29.tar.gz \
-    stopwords_0.9.0.tar.gz \
-    tidytext_0.1.9.tar.gz \
-    tidypredict_0.2.0.tar.gz \
+RUN rm \	
+    bayesplot_1.6.0.tar.gz \
+    loo_2.0.0.tar.gz \
+    rstan_2.17.3.tar.gz \
+    rstantools_1.5.1.tar.gz \
+    shinystan_2.5.0.tar.gz \
+    StanHeaders_2.17.2.tar.gz \
     rstanarm_2.17.4.tar.gz \
     tidyposterior_0.0.1.tar.gz \
     yardstick_0.0.1.tar.gz \
