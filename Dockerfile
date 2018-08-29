@@ -948,6 +948,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/hunspell_2.9.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/SnowballC_0.5.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tokenizers_0.2.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/ISOcodes_2018.06.29.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/stopwords_0.9.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidytext_0.1.9.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidypredict_0.2.0.tar.gz \
@@ -978,6 +979,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     hunspell_2.9.tar.gz \
     SnowballC_0.5.1.tar.gz \
     tokenizers_0.2.1.tar.gz \
+    ISOcodes_2018.06.29.tar.gz \
     stopwords_0.9.0.tar.gz \
     tidytext_0.1.9.tar.gz \
     tidypredict_0.2.0.tar.gz \
@@ -1008,6 +1010,7 @@ RUN rm \
     hunspell_2.9.tar.gz \
     SnowballC_0.5.1.tar.gz \
     tokenizers_0.2.1.tar.gz \
+    ISOcodes_2018.06.29.tar.gz \
     stopwords_0.9.0.tar.gz \
     tidytext_0.1.9.tar.gz \
     tidypredict_0.2.0.tar.gz \
