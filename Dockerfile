@@ -1036,6 +1036,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 #    rstanarm_2.17.4.tar.gz \
 #    tidyposterior_0.0.1.tar.gz \ 
     pROC_1.12.1.tar.gz \
+    ROCR_1.0-7.tar.gz \
     MLmetrics_1.1.1.tar.gz \
     yardstick_0.0.1.tar.gz \
     tidymodels_0.0.1.tar.gz \
@@ -1044,7 +1045,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     e1071_1.7-0.tar.gz \
     fields_9.6.tar.gz \
     forecast_8.4.tar.gz \
-    ROCR_1.0-7.tar.gz \
     tensorflow_1.9.tar.gz \
     keras_2.2.0.tar.gz \
 #    rstan_2.17.3.tar.gz  \
