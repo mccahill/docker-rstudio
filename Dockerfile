@@ -988,6 +988,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/bayesplot_1.6.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/matrixStats_0.54.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/loo_2.0.0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/inline_0.3.15.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/rstan_2.17.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/rstantools_1.5.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/shinystan_2.5.0.tar.gz \
@@ -1017,6 +1018,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     matrixStats_0.54.0.tar.gz \
     loo_2.0.0.tar.gz \
     StanHeaders_2.17.2.tar.gz \
+    inline_0.3.15.tar.gz \
     rstan_2.17.3.tar.gz \
     rstantools_1.5.1.tar.gz \
     shinystan_2.5.0.tar.gz \
@@ -1044,6 +1046,7 @@ RUN rm \
     bayesplot_1.6.0.tar.gz \
     matrixStats_0.54.0.tar.gz \
     loo_2.0.0.tar.gz \
+    inline_0.3.15.tar.gz \
     rstan_2.17.3.tar.gz \
     rstantools_1.5.1.tar.gz \
     shinystan_2.5.0.tar.gz \
