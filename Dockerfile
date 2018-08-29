@@ -790,7 +790,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/geosphere_1.5-7.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ggmap_2.6.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/ggraph_1.0.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/gridExtra_2.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/viridis_0.5.1.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/shiny_1.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/shinyjs_1.0.tar.gz \
@@ -829,7 +828,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     mapproj_1.2.6.tar.gz \
     geosphere_1.5-7.tar.gz \
     ggmap_2.6.1.tar.gz \
-    gridExtra_2.3.tar.gz \
     viridis_0.5.1.tar.gz \
     ggraph_1.0.2.tar.gz \
     shiny_1.1.0.tar.gz \
@@ -870,7 +868,6 @@ RUN rm \
     geosphere_1.5-7.tar.gz \
     ggmap_2.6.1.tar.gz \
     ggraph_1.0.2.tar.gz \
-    gridExtra_2.3.tar.gz \
     viridis_0.5.1.tar.gz \
     shiny_1.1.0.tar.gz \
     shinyjs_1.0.tar.gz \
