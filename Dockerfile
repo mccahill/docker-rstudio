@@ -945,6 +945,9 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/pls_2.7-0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/recipes_0.1.3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/rsample_0.0.2.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/hunspell_2.9.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/okenizers_0.2.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/stopwords_0.9.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidytext_0.1.9.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidypredict_0.2.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/tidyposterior_0.0.1.tar.gz \
@@ -971,6 +974,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     pls_2.7-0.tar.gz \
     recipes_0.1.3.tar.gz \
     rsample_0.0.2.tar.gz \
+    hunspell_2.9.tar.gz \
+    okenizers_0.2.1.tar.gz \
+    stopwords_0.9.0.tar.gz \
     tidytext_0.1.9.tar.gz \
     tidypredict_0.2.0.tar.gz \
     tidyposterior_0.0.1.tar.gz \
@@ -997,6 +1003,9 @@ RUN rm \
     pls_2.7-0.tar.gz \
     recipes_0.1.3.tar.gz \
     rsample_0.0.2.tar.gz \
+    hunspell_2.9.tar.gz \
+    okenizers_0.2.1.tar.gz \
+    stopwords_0.9.0.tar.gz \
     tidytext_0.1.9.tar.gz \
     tidypredict_0.2.0.tar.gz \
     tidyposterior_0.0.1.tar.gz \
