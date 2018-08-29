@@ -767,6 +767,9 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://mirrors.nics.utk.edu/cran/src/contrib/servr_0.10.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/xaringan_0.7.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/rsconnect_0.8.8.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/PKI_0.1-5.1.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/RJSONIO_1.3-0.tar.gz \
+    https://mirrors.nics.utk.edu/cran/src/contrib/packrat_0.4.9-3.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/pkgdown_1.1.0.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/bookdown_0.7.tar.gz \
     https://mirrors.nics.utk.edu/cran/src/contrib/blogdown_0.8.tar.gz \
@@ -791,6 +794,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     RcppArmadillo_0.9.100.5.0.tar.gz \
     servr_0.10.tar.gz \
     xaringan_0.7.tar.gz \
+    PKI_0.1-5.1.tar.gz \
+    RJSONIO_1.3-0.tar.gz \
+    packrat_0.4.9-3.tar.gz \
     rsconnect_0.8.8.tar.gz \
     pkgdown_1.1.0.tar.gz \
     bookdown_0.7.tar.gz \
@@ -816,6 +822,9 @@ RUN rm \
     RcppArmadillo_0.9.100.5.0.tar.gz \
     servr_0.10.tar.gz \
     xaringan_0.7.tar.gz \
+    PKI_0.1-5.1.tar.gz \
+    RJSONIO_1.3-0.tar.gz \
+    packrat_0.4.9-3.tar.gz \
     rsconnect_0.8.8.tar.gz \
     pkgdown_1.1.0.tar.gz \
     bookdown_0.7.tar.gz \
