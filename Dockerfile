@@ -1016,10 +1016,10 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     bayesplot_1.6.0.tar.gz \
     matrixStats_0.54.0.tar.gz \
     loo_2.0.0.tar.gz \
+    StanHeaders_2.17.2.tar.gz \
     rstan_2.17.3.tar.gz \
     rstantools_1.5.1.tar.gz \
     shinystan_2.5.0.tar.gz \
-    StanHeaders_2.17.2.tar.gz \
     rstanarm_2.17.4.tar.gz \
     tidyposterior_0.0.1.tar.gz \
     yardstick_0.0.1.tar.gz \
