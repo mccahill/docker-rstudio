@@ -514,8 +514,6 @@ RUN R CMD BATCH /r-studio/install-rmarkdown.R
 RUN rm /install-rmarkdown.Rout 
 
 # Cliburn also wanted these
-# dendextend
-# igraph
 # but they have mega-dependencies, so intall them the other way
 RUN R CMD BATCH /r-studio/install-dendextend.R
 RUN rm /install-dendextend.Rout 
@@ -528,7 +526,7 @@ RUN wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.7.90
 RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.7.907-amd64.deb
 RUN rm shiny-server-1.5.7.907-amd64.deb
 RUN R CMD BATCH /r-studio/install-Shiny.R
-
+RUN rm /install-Shiny.Rout
 
 # install sparklyr so we can do Spark via Livy
 RUN DEBIAN_FRONTEND=noninteractive wget \
@@ -561,7 +559,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    lmodern 
 # papaja
 RUN R CMD BATCH /r-studio/install-papaja.R
-
+RUN rm /install-papaja.Rout
 
 # install templates and examples from Reed and the Tufte package
 RUN DEBIAN_FRONTEND=noninteractive wget \
@@ -1075,8 +1073,6 @@ RUN R CMD BATCH /r-studio/install-2018-packages-4.R
 
 # remove install Rout files
 RUN rm \
-   /install-papaja.Rout \
-   /install-Shiny.Rout \
    /install-2018-packages-1.Rout \
    /install-2018-packages-2.Rout \
    /install-2018-packages-3.Rout \
