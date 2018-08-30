@@ -1070,13 +1070,13 @@ RUN rm \
 
 
 RUN R CMD BATCH /r-studio/install-2018-packages-1.R
-RUN rm /install-2018-packages1.Rout 
+#RUN rm /install-2018-packages1.Rout 
 RUN R CMD BATCH /r-studio/install-2018-packages-2.R
-RUN rm /install-2018-packages2.Rout 
+#RUN rm /install-2018-packages2.Rout 
 RUN R CMD BATCH /r-studio/install-2018-packages-3.R
-RUN rm /install-2018-packages3.Rout 
+#RUN rm /install-2018-packages3.Rout 
 RUN R CMD BATCH /r-studio/install-2018-packages-4.R
-RUN rm /install-2018-packages4.Rout 
+#RUN rm /install-2018-packages4.Rout 
 
 	
 # Supervisord
