@@ -5,8 +5,8 @@
 FROM  ubuntu:16.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 
-# get R from a CRAN archive 
-RUN  echo    "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/"    >>    /etc/apt/sources.list
+# get R from a CRAN archive (we want the 3.5 version of R)
+RUN  echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial-cran35/" >> /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv  --keyserver keyserver.ubuntu.com --recv-keys  E084DAB9
 
 RUN apt-get  update ; \
@@ -16,7 +16,6 @@ RUN apt-get  update ; \
 RUN apt-get install  -y \
    apt-utils \
    libopenblas-base
-
 
 RUN apt-get update ; \
    DEBIAN_FRONTEND=noninteractive apt-get  install -y  \
