@@ -206,7 +206,7 @@ ADD ./conf /r-studio
 #RUN rm /install-nloptr.Rout
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    nloptr_1.0.4.tar.gz
+    https://mirrors.nics.utk.edu/cran/src/contrib/nloptr_1.0.4.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     nloptr_1.0.4.tar.gz
