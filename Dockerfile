@@ -199,13 +199,20 @@ RUN rm \
    devtools_1.13.6.tar.gz \
    downloader_0.4.tar.gz
 
-
 # the CRAN install from source fails because a server at MIT will not respond
-# maybe e can use the Ubuntu distro
-#    https://mirrors.nics.utk.edu/cran/src/contrib/nloptr_1.0.4.tar.gz \
-RUN apt-get update 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
-   r-cran-nloptr
+# install from source
+ADD ./conf /r-studio
+#RUN R CMD BATCH /r-studio/install-nloptr.R
+#RUN rm /install-nloptr.Rout
+
+RUN DEBIAN_FRONTEND=noninteractive wget \
+    nloptr_1.0.4.tar.gz
+
+RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
+    nloptr_1.0.4.tar.gz
+
+RUN rm \
+    nloptr_1.0.4.tar.gz
 
 
 # libraries Eric Green wanted
@@ -508,7 +515,6 @@ RUN rm \
    
 
 # install rmarkdown
-ADD ./conf /r-studio
 RUN R CMD BATCH /r-studio/install-rmarkdown.R
 RUN rm /install-rmarkdown.Rout 
 
