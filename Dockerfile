@@ -1,8 +1,8 @@
 # mccahill/r-studio
 #
-# VERSION 1.3
+# VERSION 1.4
 
-FROM  ubuntu:16.04
+FROM     ubuntu:16.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 
 # get R from a CRAN archive (we want the 3.5 version of R)
