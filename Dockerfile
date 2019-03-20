@@ -674,19 +674,19 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://archive.linux.duke.edu/cran/src/contrib/rgdal_1.3-4.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/rgeos_0.3-28.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rgdal_1.4-3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rgeos_0.4-2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/uuid_0.1-2.tar.gz
  
  
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   rgdal_1.3-4.tar.gz \
-   rgeos_0.3-28.tar.gz \
+   rgdal_1.4-3.tar.gz \
+   rgeos_0.4-2.tar.gz \
    uuid_0.1-2.tar.gz 
 
 RUN rm \
-   rgdal_1.3-4.tar.gz \
-   rgeos_0.3-28.tar.gz \
+   rgdal_1.4-3.tar.gz \
+   rgeos_0.4-2.tar.gz \
    uuid_0.1-2.tar.gz
 
 RUN R CMD BATCH /r-studio/install-rappdirs.R
@@ -719,11 +719,11 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/rticles_0.7.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/styler_1.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/lintr_1.0.3.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/testthat_2.0.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/reprex_0.2.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/microbenchmark_1.4-4.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/modelr_0.1.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/globals_0.12.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/testthat_2.0.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/reprex_0.2.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/microbenchmark_1.4-6.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/modelr_0.1.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/globals_0.12.4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/listenv_0.7.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/iterators_1.0.10.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/enc_0.2.0.tar.gz \
@@ -735,11 +735,11 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/bench_1.0.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-    modelr_0.1.2.tar.gz \
+    modelr_0.1.4.tar.gz \
     prex_0.2.0.tar.gz \
     tidyverse_1.2.1.tar.gz \
     promises_1.0.1.tar.gz \
-    globals_0.12.2.tar.gz \
+    globals_0.12.4.tar.gz \
     listenv_0.7.0.tar.gz \
     future_1.12.0.tar.gz \
     iterators_1.0.10.tar.gz \
@@ -757,21 +757,21 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     rex_1.1.2.tar.gz \
     stringdist_0.9.5.1.tar.gz \
     praise_1.0.0.tar.gz \
-    testthat_2.0.0.tar.gz \
+    testthat_2.0.1.tar.gz \
     lintr_1.0.3.tar.gz \
     profmem_0.5.0.tar.gz \
-    microbenchmark_1.4-4.tar.gz \
+    microbenchmark_1.4-6.tar.gz \
     bench_1.0.1.tar.gz 
 
 RUN rm \
-    modelr_0.1.2.tar.gz \
+    modelr_0.1.4.tar.gz \
     profmem_0.5.0.tar.gz \
     praise_1.0.0.tar.gz \
     rex_1.1.2.tar.gz \
     stringdist_0.9.5.1.tar.gz \
     enc_0.2.0.tar.gz \
     rematch2_2.0.1.tar.gz \
-    globals_0.12.2.tar.gz \
+    globals_0.12.4.tar.gz \
     iterators_1.0.10.tar.gz \
     listenv_0.7.0.tar.gz \
     tidyverse_1.2.1.tar.gz \
@@ -787,26 +787,26 @@ RUN rm \
     rticles_0.7.tar.gz \
     styler_1.1.0.tar.gz \
     lintr_1.0.3.tar.gz \
-    testthat_2.0.0.tar.gz \
-    reprex_0.2.0.tar.gz \
-    microbenchmark_1.4-4.tar.gz \
+    testthat_2.0.1.tar.gz \
+    reprex_0.2.1.tar.gz \
+    microbenchmark_1.4-6.tar.gz \
     bench_1.0.1.tar.gz 
 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/pryr_0.1.4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/profvis_0.3.5.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/RcppArmadillo_0.9.100.5.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/servr_0.10.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/xaringan_0.7.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/RcppArmadillo_0.9.200.7.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/servr_0.13.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/xaringan_0.9.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rsconnect_0.8.8.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/PKI_0.1-5.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/RJSONIO_1.3-0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/packrat_0.4.9-3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/RJSONIO_1.3-1.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/packrat_0.5.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/highlight_0.4.7.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/pkgdown_1.1.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/bookdown_0.7.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/blogdown_0.8.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/pkgdown_1.3.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/bookdown_0.9.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/blogdown_0.11.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/cowplot_0.9.3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/influenceR_0.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/Rook_1.1-1.tar.gz \
@@ -829,17 +829,17 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     pryr_0.1.4.tar.gz \
     profvis_0.3.5.tar.gz \
-    RcppArmadillo_0.9.100.5.0.tar.gz \
-    servr_0.10.tar.gz \
-    xaringan_0.7.tar.gz \
+    RcppArmadillo_0.9.200.7.1.tar.gz \
+    servr_0.13.tar.gz \
+    xaringan_0.9.tar.gz \
     PKI_0.1-5.1.tar.gz \
-    RJSONIO_1.3-0.tar.gz \
-    packrat_0.4.9-3.tar.gz \
+    RJSONIO_1.3-1.1.tar.gz \
+    packrat_0.5.0.tar.gz \
     rsconnect_0.8.8.tar.gz \
     highlight_0.4.7.2.tar.gz \
-    pkgdown_1.1.0.tar.gz \
-    bookdown_0.7.tar.gz \
-    blogdown_0.8.tar.gz \
+    pkgdown_1.3.0.tar.gz \
+    bookdown_0.9.tar.gz \
+    blogdown_0.11.tar.gz \
     cowplot_0.9.3.tar.gz \
     influenceR_0.1.0.tar.gz \
     Rook_1.1-1.tar.gz \
@@ -862,17 +862,17 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
     pryr_0.1.4.tar.gz \
     profvis_0.3.5.tar.gz \
-    RcppArmadillo_0.9.100.5.0.tar.gz \
-    servr_0.10.tar.gz \
-    xaringan_0.7.tar.gz \
+    RcppArmadillo_0.9.200.7.1.tar.gz \
+    servr_0.13.tar.gz \
+    xaringan_0.9.tar.gz \
     PKI_0.1-5.1.tar.gz \
-    RJSONIO_1.3-0.tar.gz \
-    packrat_0.4.9-3.tar.gz \
+    RJSONIO_1.3-1.1.tar.gz \
+    packrat_0.5.0.tar.gz \
     rsconnect_0.8.8.tar.gz \
     highlight_0.4.7.2.tar.gz \
-    pkgdown_1.1.0.tar.gz \
-    bookdown_0.7.tar.gz \
-    blogdown_0.8.tar.gz \
+    pkgdown_1.3.0.tar.gz \
+    bookdown_0.9.tar.gz \
+    blogdown_0.11.tar.gz \
     cowplot_0.9.3.tar.gz \
     influenceR_0.1.0.tar.gz \
     Rook_1.1-1.tar.gz \
