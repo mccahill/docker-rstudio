@@ -445,6 +445,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/sp_1.3-1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/maptools_0.9-5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/haven_2.1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/ellipsis_0.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/forcats_0.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/readxl_1.3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/zip_2.0.1.tar.gz \
@@ -475,6 +476,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    quantreg_5.38.tar.gz \
    sp_1.3-1.tar.gz \
    maptools_0.9-5.tar.gz \
+   ellipsis_0.1.0.tar.gz \
    forcats_0.4.0.tar.gz \
    haven_2.1.0.tar.gz \
    readxl_1.3.1.tar.gz \
@@ -506,6 +508,7 @@ RUN rm \
    quantreg_5.38.tar.gz \
    sp_1.3-1.tar.gz \
    maptools_0.9-5.tar.gz \
+   ellipsis_0.1.0.tar.gz \
    forcats_0.4.0.tar.gz \
    haven_2.1.0.tar.gz \
    readxl_1.3.1.tar.gz \
