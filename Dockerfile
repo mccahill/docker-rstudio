@@ -37,8 +37,17 @@ RUN apt-get update ; \
    wget \
    sudo \
    libcurl4-openssl-dev \
-   libxml2-dev \
-   libgit2-dev
+   libxml2-dev 
+
+RUN apt-get update ; \
+   DEBIAN_FRONTEND=noninteractive apt-get  install -y  -f \
+   libcurl4-openssl-dev \
+   libgit2-dev \
+   ibxml2-dev \
+   libssl-dev \
+   libudunits2-dev \
+   libpoppler-cpp-dev
+
 
 # we need TeX for the rmarkdown package in RStudio, and pandoc is also useful 
 RUN apt-get update 
