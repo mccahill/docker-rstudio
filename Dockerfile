@@ -339,7 +339,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    ggplot2_3.1.0.tar.gz \
    stargazer_5.2.2.tar.gz \
    minqa_1.2.4.tar.gz \
-   RcppEigen_0.3.3.5.0.tar.gz0.3.3.4.0.tar.gz \
+   RcppEigen_0.3.3.5.0.tar.gz \
    lme4_1.1-21.tar.gz
 
 RUN rm \
@@ -363,7 +363,7 @@ RUN rm \
    ggplot2_3.1.0.tar.gz \
    stargazer_5.2.2.tar.gz \
    minqa_1.2.4.tar.gz \
-   RcppEigen_0.3.3.5.0.tar.gz0.3.3.4.0.tar.gz \
+   RcppEigen_0.3.3.5.0.tar.gz \
    lme4_1.1-21.tar.gz
   
 # more libraries Mine Cetinakya-Rundel asked for
