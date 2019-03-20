@@ -145,6 +145,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/pkgload_1.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rcmdcheck_1.3.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/remotes_2.0.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/xopen_1.0.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/sessioninfo_1.1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/usethis_1.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/sys_3.1.tar.gz \
@@ -188,9 +189,10 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    rlang_0.3.1.tar.gz \
    rstudioapi_0.10.tar.gz \
    pkgload_1.0.2.tar.gz \
+   xopen_1.0.0.tar.gz \
+   sessioninfo_1.1.1.tar.gz \
    rcmdcheck_1.3.2.tar.gz \
    remotes_2.0.2.tar.gz \
-   sessioninfo_1.1.1.tar.gz \
    usethis_1.4.0.tar.gz \
    jsonlite_1.6.tar.gz \
    memoise_1.1.0.tar.gz \
@@ -231,9 +233,10 @@ RUN rm \
    rlang_0.3.1.tar.gz \
    rstudioapi_0.10.tar.gz \
    pkgload_1.0.2.tar.gz \
+   sessioninfo_1.1.1.tar.gz \
+   xopen_1.0.0.tar.gz \
    rcmdcheck_1.3.2.tar.gz \
    remotes_2.0.2.tar.gz \
-   sessioninfo_1.1.1.tar.gz \
    usethis_1.4.0.tar.gz \
    jsonlite_1.6.tar.gz \
    memoise_1.1.0.tar.gz \
