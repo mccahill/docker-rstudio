@@ -129,6 +129,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/processx_3.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/ps_1.3.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/callr_3.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/cli_1.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgbuild_1.0.2.tar.gz \
@@ -164,6 +165,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
+   ps_1.3.0.tar.gz \
    processx_3.3.0.tar.gz \
    R6_2.4.0.tar.gz \
    callr_3.2.0.tar.gz \
@@ -199,7 +201,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    downloader_0.4.tar.gz
 
 RUN rm \
+   ps_1.3.0.tar.gz \
    callr_3.2.0.tar.gz \
+   R6_2.4.0.tar.gz \
    processx_3.3.0.tar.gz \
    cli_1.1.0.tar.gz \
    pkgbuild_1.0.2.tar.gz \
@@ -214,7 +218,6 @@ RUN rm \
    bitops_1.0-6.tar.gz \
    RCurl_1.95-4.12.tar.gz \
    plyr_1.8.4.tar.gz \
-   R6_2.4.0.tar.gz \
    httr_1.4.0.tar.gz \
    rstudioapi_0.10.tar.gz \
    sys_3.1.tar.gz \
@@ -678,7 +681,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/microbenchmark_1.4-4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/modelr_0.1.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/clipr_0.4.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/ps_1.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/globals_0.12.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/listenv_0.7.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/iterators_1.0.10.tar.gz \
@@ -695,7 +697,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     clipr_0.4.1.tar.gz \
-    ps_1.1.0.tar.gz \
     modelr_0.1.2.tar.gz \
     reprex_0.2.0.tar.gz \
     tidyverse_1.2.1.tar.gz \
@@ -740,7 +741,6 @@ RUN rm \
     stringdist_0.9.5.1.tar.gz \
     enc_0.2.0.tar.gz \
     rematch2_2.0.1.tar.gz \
-    ps_1.1.0.tar.gz \
     globals_0.12.2.tar.gz \
     iterators_1.0.10.tar.gz \
     listenv_0.7.0.tar.gz \
