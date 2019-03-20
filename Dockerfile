@@ -134,6 +134,10 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/crayon_1.3.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/cli_1.1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/desc_1.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rprojroot_1.3-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/withr_2.1.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgbuild_1.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgload_1.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rcmdcheck_1.3.2.tar.gz \
@@ -144,7 +148,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/sys_3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/askpass_1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/openssl_1.2.2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/withr_2.1.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/brew_1.0-6.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
@@ -174,6 +177,10 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    crayon_1.3.4.tar.gz \
    assertthat_0.2.0.tar.gz \
    cli_1.1.0.tar.gz \
+   desc_1.2.0.tar.gz \
+   prettyunits_1.0.2.tar.gz \
+   rprojroot_1.3-2.tar.gz \
+   withr_2.1.2.tar.gz \
    pkgbuild_1.0.2.tar.gz \
    pkgload_1.0.2.tar.gz \
    rcmdcheck_1.3.2.tar.gz \
@@ -192,7 +199,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    openssl_1.2.2.tar.gz \
    httr_1.4.0.tar.gz \
    rstudioapi_0.10.tar.gz \
-   withr_2.1.2.tar.gz \
    git2r_0.25.2.tar.gz \
    devtools_2.0.1.tar.gz \
    brew_1.0-6.tar.gz \
@@ -212,6 +218,10 @@ RUN rm \
    crayon_1.3.4.tar.gz \
    assertthat_0.2.0.tar.gz \
    cli_1.1.0.tar.gz \
+   desc_1.2.0.tar.gz \
+   prettyunits_1.0.2.tar.gz \
+   rprojroot_1.3-2.tar.gz \
+   withr_2.1.2.tar.gz \
    pkgbuild_1.0.2.tar.gz \
    pkgload_1.0.2.tar.gz \
    rcmdcheck_1.3.2.tar.gz \
@@ -229,7 +239,6 @@ RUN rm \
    sys_3.1.tar.gz \
    askpass_1.1.tar.gz \
    openssl_1.2.2.tar.gz \
-   withr_2.1.2.tar.gz \
    brew_1.0-6.tar.gz \
    magrittr_1.5.tar.gz \
    roxygen2_5.0.1.tar.gz \
@@ -442,7 +451,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/backports_1.1.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/broom_0.5.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/reshape_0.8.7.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/progress_1.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/GGally_1.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/ggstance_0.3.1.tar.gz \
@@ -475,7 +483,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    backports_1.1.2.tar.gz \
    broom_0.5.0.tar.gz \
    reshape_0.8.7.tar.gz \
-   prettyunits_1.0.2.tar.gz \
    progress_1.2.0.tar.gz \
    GGally_1.4.0.tar.gz \
    mosaicCore_0.6.0.tar.gz \
@@ -508,7 +515,6 @@ RUN rm \
    backports_1.1.2.tar.gz \
    broom_0.5.0.tar.gz \
    reshape_0.8.7.tar.gz \
-   prettyunits_1.0.2.tar.gz \
    progress_1.2.0.tar.gz \
    GGally_1.4.0.tar.gz \
    mosaicCore_0.6.0.tar.gz \
@@ -523,7 +529,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/maps_3.3.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/zoo_1.8-3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/gcookbook_1.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/rprojroot_1.3-2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/corrplot_0.84.tar.gz 
 
 
@@ -532,7 +537,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    maps_3.3.0.tar.gz \
    zoo_1.8-3.tar.gz \
    gcookbook_1.0.tar.gz \
-   rprojroot_1.3-2.tar.gz \
    corrplot_0.84.tar.gz 
 
 
@@ -541,7 +545,6 @@ RUN rm \
    maps_3.3.0.tar.gz \
    zoo_1.8-3.tar.gz \
    gcookbook_1.0.tar.gz \
-   rprojroot_1.3-2.tar.gz \
    corrplot_0.84.tar.gz 
    
 
@@ -689,7 +692,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/rex_1.1.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/stringdist_0.9.5.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/praise_1.0.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/desc_1.2.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/clisymbols_1.2.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ini_0.3.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/profmem_0.5.0.tar.gz \
@@ -721,7 +723,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     praise_1.0.0.tar.gz \
     testthat_2.0.0.tar.gz \
     lintr_1.0.2.tar.gz \
-    desc_1.2.0.tar.gz \
     clisymbols_1.2.0.tar.gz \
     fs_1.2.6.tar.gz \
     ini_0.3.1.tar.gz \
@@ -735,7 +736,6 @@ RUN rm \
     profmem_0.5.0.tar.gz \
     ini_0.3.1.tar.gz \
     clisymbols_1.2.0.tar.gz \
-    desc_1.2.0.tar.gz \
     praise_1.0.0.tar.gz \
     rex_1.1.2.tar.gz \
     stringdist_0.9.5.1.tar.gz \
