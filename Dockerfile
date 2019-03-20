@@ -162,7 +162,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/askpass_1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/openssl_1.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/brew_1.0-6.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/fs_1.2.7.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/gh_1.0.1.tar.gz \
@@ -195,7 +194,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    backports_1.1.3.tar.gz \
    rprojroot_1.3-2.tar.gz \
    desc_1.2.0.tar.gz \
-   magrittr_1.5.tar.gz \
    prettyunits_1.0.2.tar.gz \
    withr_2.1.2.tar.gz \
    pkgbuild_1.0.2.tar.gz \
@@ -269,7 +267,6 @@ RUN rm \
    askpass_1.1.tar.gz \
    openssl_1.2.2.tar.gz \
    brew_1.0-6.tar.gz \
-   magrittr_1.5.tar.gz \
    roxygen2_5.0.1.tar.gz \
    BH_1.69.0-1.tar.gz \
    XML_3.98-1.19.tar.gz \
@@ -299,15 +296,15 @@ RUN rm \
 # libraries Eric Green wanted
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/lubridate_1.7.4.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.20.2.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/utf8_1.1.4.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/fansi_0.3.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/pillar_1.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/fansi_0.4.00.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/pillar_1.3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/ggplot2_3.0.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/ggplot2_3.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/colorspace_1.3-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/colorspace_1.4-1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/munsell_0.5.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/labeling_0.3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/viridisLite_0.3.0.tar.gz \
@@ -317,59 +314,58 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/gtable_0.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/proto_1.0.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/minqa_1.2.4.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/RcppEigen_0.3.3.4.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/lme4_1.1-18-1.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/RcppEigen_0.3.3.5.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/lme4_1.1-21.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lubridate_1.7.4.tar.gz  \
    gtable_0.2.0.tar.gz \
    RColorBrewer_1.1-2.tar.gz \
    dichromat_2.0-0.tar.gz \
-   colorspace_1.3-2.tar.gz \
+   colorspace_1.4-1.tar.gz \
    munsell_0.5.0.tar.gz \
    labeling_0.3.tar.gz \
    viridisLite_0.3.0.tar.gz \
    scales_1.0.0.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.3.tar.gz \
-   lazyeval_0.2.1.tar.gz \
+   lazyeval_0.2.20.2.1.tar.gz \
    utf8_1.1.4.tar.gz \
-   fansi_0.3.0.tar.gz \
-   pillar_1.3.0.tar.gz \
+   fansi_0.4.00.3.0.tar.gz \
+   pillar_1.3.1.tar.gz \
    tibble_1.4.2.tar.gz \
-   ggplot2_3.0.0.tar.gz \
+   ggplot2_3.1.0.tar.gz \
    stargazer_5.2.2.tar.gz \
    minqa_1.2.4.tar.gz \
-   RcppEigen_0.3.3.4.0.tar.gz \
-   lme4_1.1-18-1.tar.gz
+   RcppEigen_0.3.3.5.0.tar.gz0.3.3.4.0.tar.gz \
+   lme4_1.1-21.tar.gz
 
 RUN rm \
    lubridate_1.7.4.tar.gz  \
    gtable_0.2.0.tar.gz \
    RColorBrewer_1.1-2.tar.gz \
    dichromat_2.0-0.tar.gz \
-   colorspace_1.3-2.tar.gz \
+   colorspace_1.4-1.tar.gz \
    munsell_0.5.0.tar.gz \
    labeling_0.3.tar.gz \
    viridisLite_0.3.0.tar.gz \
    scales_1.0.0.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.3.tar.gz \
-   lazyeval_0.2.1.tar.gz \
+   lazyeval_0.2.20.2.1.tar.gz \
    utf8_1.1.4.tar.gz \
-   fansi_0.3.0.tar.gz \
-   pillar_1.3.0.tar.gz \
+   fansi_0.4.00.3.0.tar.gz \
+   pillar_1.3.1.tar.gz \
    tibble_1.4.2.tar.gz \
-   ggplot2_3.0.0.tar.gz \
+   ggplot2_3.1.0.tar.gz \
    stargazer_5.2.2.tar.gz \
    minqa_1.2.4.tar.gz \
-   RcppEigen_0.3.3.4.0.tar.gz \
-   lme4_1.1-18-1.tar.gz
+   RcppEigen_0.3.3.5.0.tar.gz0.3.3.4.0.tar.gz \
+   lme4_1.1-21.tar.gz
   
 # more libraries Mine Cetinakya-Rundel asked for
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/openintro_1.7.1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/bindr_0.1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgconfig_2.0.2.tar.gz \
@@ -378,8 +374,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/tidyselect_0.2.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/dplyr_0.7.6.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/DBI_1.0.0.tar.gz 
 
 
@@ -387,10 +381,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    openintro_1.7.1.tar.gz \
    assertthat_0.2.0.tar.gz \
-   magrittr_1.5.tar.gz \
-   lazyeval_0.2.1.tar.gz \
    DBI_1.0.0.tar.gz \
-   tibble_1.4.2.tar.gz \
    pkgconfig_2.0.2.tar.gz \
    plogr_0.2.0.tar.gz \
    bindr_0.1.1.tar.gz \
@@ -402,10 +393,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
    openintro_1.7.1.tar.gz \
    assertthat_0.2.0.tar.gz \
-   magrittr_1.5.tar.gz \
-   lazyeval_0.2.1.tar.gz \
    DBI_1.0.0.tar.gz \
-   tibble_1.4.2.tar.gz \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
    pkgconfig_2.0.2.tar.gz \
