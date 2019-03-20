@@ -373,7 +373,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/plogr_0.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/purrr_0.3.2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/tidyselect_0.2.5tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/tidyselect_0.2.5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/dplyr_0.8.0.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/DBI_1.0.0.tar.gz 
 
