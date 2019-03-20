@@ -300,6 +300,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/utf8_1.1.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/fansi_0.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pillar_1.3.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/pkgconfig_2.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/tibble_2.1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/ggplot2_3.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
@@ -333,6 +334,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    utf8_1.1.4.tar.gz \
    fansi_0.4.0.tar.gz \
    pillar_1.3.1.tar.gz \
+   pkgconfig_2.0.2.tar.gz
    tibble_2.1.1.tar.gz \
    ggplot2_3.1.0.tar.gz \
    stargazer_5.2.2.tar.gz \
@@ -356,6 +358,7 @@ RUN rm \
    utf8_1.1.4.tar.gz \
    fansi_0.4.0.tar.gz \
    pillar_1.3.1.tar.gz \
+   pkgconfig_2.0.2.tar.gz
    tibble_2.1.1.tar.gz \
    ggplot2_3.1.0.tar.gz \
    stargazer_5.2.2.tar.gz \
@@ -368,7 +371,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/openintro_1.7.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/bindr_0.1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/pkgconfig_2.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/plogr_0.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/purrr_0.2.5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/tidyselect_0.2.4.tar.gz \
@@ -382,7 +384,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    openintro_1.7.1.tar.gz \
    assertthat_0.2.0.tar.gz \
    DBI_1.0.0.tar.gz \
-   pkgconfig_2.0.2.tar.gz \
    plogr_0.2.0.tar.gz \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
@@ -396,7 +397,6 @@ RUN rm \
    DBI_1.0.0.tar.gz \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
-   pkgconfig_2.0.2.tar.gz \
    plogr_0.2.0.tar.gz \
    purrr_0.2.5.tar.gz \
    tidyselect_0.2.4.tar.gz \
