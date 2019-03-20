@@ -40,6 +40,7 @@ RUN apt-get update ; \
 RUN apt-get update ; \
    DEBIAN_FRONTEND=noninteractive apt-get  install -y  -f \
    libcurl4-openssl-dev \
+   libcurl4-gnutls-dev \
    libgit2-dev \
    libxml2-dev \
    libssl-dev \
