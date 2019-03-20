@@ -296,11 +296,11 @@ RUN rm \
 # libraries Eric Green wanted
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/lubridate_1.7.4.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.20.2.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/utf8_1.1.4.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/fansi_0.4.00.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/fansi_0.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pillar_1.3.1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/tibble_2.1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/ggplot2_3.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
@@ -329,11 +329,11 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    scales_1.0.0.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.3.tar.gz \
-   lazyeval_0.2.20.2.1.tar.gz \
+   lazyeval_0.2.2.tar.gz \
    utf8_1.1.4.tar.gz \
-   fansi_0.4.00.3.0.tar.gz \
+   fansi_0.4.0.tar.gz \
    pillar_1.3.1.tar.gz \
-   tibble_1.4.2.tar.gz \
+   tibble_2.1.1.tar.gz \
    ggplot2_3.1.0.tar.gz \
    stargazer_5.2.2.tar.gz \
    minqa_1.2.4.tar.gz \
@@ -352,11 +352,11 @@ RUN rm \
    scales_1.0.0.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.3.tar.gz \
-   lazyeval_0.2.20.2.1.tar.gz \
+   lazyeval_0.2.2.tar.gz \
    utf8_1.1.4.tar.gz \
-   fansi_0.4.00.3.0.tar.gz \
+   fansi_0.4.0.tar.gz \
    pillar_1.3.1.tar.gz \
-   tibble_1.4.2.tar.gz \
+   tibble_2.1.1.tar.gz \
    ggplot2_3.1.0.tar.gz \
    stargazer_5.2.2.tar.gz \
    minqa_1.2.4.tar.gz \
