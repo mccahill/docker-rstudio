@@ -917,6 +917,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/timeDate_3043.102.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/sfsmisc_1.1-3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/magic_1.5-9.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/lpSolve_5.6.13.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/RcppProgress_0.4.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/geometry_0.4.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ddalpha_1.3.8.tar.gz 
 
@@ -938,6 +940,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     timeDate_3043.102.tar.gz \
     sfsmisc_1.1-3.tar.gz \
     magic_1.5-9.tar.gz \
+    lpSolve_5.6.13.tar.gz \
+    RcppProgress_0.4.1.tar.gz \
     geometry_0.4.0.tar.gz \
     ddalpha_1.3.8.tar.gz 
 	
@@ -959,6 +963,8 @@ RUN rm \
     timeDate_3043.102.tar.gz \
     sfsmisc_1.1-3.tar.gz \
     magic_1.5-9.tar.gz \
+    lpSolve_5.6.13.tar.gz \
+    RcppProgress_0.4.1.tar.gz \
     geometry_0.4.0.tar.gz \
     ddalpha_1.3.8.tar.gz 
 	
