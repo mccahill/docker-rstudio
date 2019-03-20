@@ -210,9 +210,10 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    fs_1.2.7.tar.gz \
    ini_0.3.1.tar.gz \
    jsonlite_1.6.tar.gz \
+   openssl_1.2.2.tar.gz \
+   curl_3.3.tar.gz \
    httr_1.4.0.tar.gz \
    gh_1.0.1.tar.gz \
-   curl_3.3.tar.gz \
    clipr_0.5.0.tar.gz \
    clisymbols_1.2.0.tar.gz \   
    usethis_1.4.0.tar.gz \
@@ -222,7 +223,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    plyr_1.8.4.tar.gz \
    sys_3.1.tar.gz \
    askpass_1.1.tar.gz \
-   openssl_1.2.2.tar.gz \
    devtools_2.0.1.tar.gz \
    brew_1.0-6.tar.gz \
    magrittr_1.5.tar.gz \
