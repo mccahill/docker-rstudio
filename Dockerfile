@@ -606,21 +606,21 @@ RUN rm /install-igraph.Rout
 # install sparklyr so we can do Spark via Livy
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/config_0.3.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/dbplyr_1.2.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/dbplyr_1.3.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rappdirs_0.3.1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/sparklyr_0.8.4.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/sparklyr_1.0.0.tar.gz
    
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    config_0.3.tar.gz \
-   dbplyr_1.2.2.tar.gz \
+   dbplyr_1.3.0.tar.gz \
    rappdirs_0.3.1.tar.gz \
-   sparklyr_0.8.4.tar.gz
+   sparklyr_1.0.0.tar.gz
    
 RUN rm \
   config_0.3.tar.gz \
-  dbplyr_1.2.2.tar.gz \
+  dbplyr_1.3.0.tar.gz \
   rappdirs_0.3.1.tar.gz \
-  sparklyr_0.8.4.tar.gz
+  sparklyr_1.0.0.tar.gz
 
 
 # some more TeX so that papaja can be installed and students can create APA templates in Rmarkdown
@@ -688,15 +688,15 @@ RUN rm /install-rappdirs.Rout
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/tigris_0.7.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/tidycensus_0.8.1.tar.gz
+    https://archive.linux.duke.edu/cran/src/contrib/tidycensus_0.9.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     tigris_0.7.tar.gz \
-    tidycensus_0.8.1.tar.gz 
+    tidycensus_0.9.tar.gz 
 
 RUN rm \
     tigris_0.7.tar.gz  \
-    tidycensus_0.8.1.tar.gz 
+    tidycensus_0.9.tar.gz 
 	
 # new packages for fall 2018
 RUN DEBIAN_FRONTEND=noninteractive wget \
