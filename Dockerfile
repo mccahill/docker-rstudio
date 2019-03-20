@@ -479,6 +479,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    ellipsis_0.1.0.tar.gz \
    forcats_0.4.0.tar.gz \
    haven_2.1.0.tar.gz \
+   progress_1.2.0.tar.gz \
    readxl_1.3.1.tar.gz \
    zip_2.0.1.tar.gz \
    openxlsx_4.1.0.tar.gz \
@@ -494,7 +495,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    psych_1.8.12.tar.gz \
    broom_0.5.1.tar.gz \
    reshape_0.8.8.tar.gz \
-   progress_1.2.0.tar.gz \
    GGally_1.4.0.tar.gz \
    mosaicCore_0.6.0.tar.gz \
    ggstance_0.3.1.tar.gz \
