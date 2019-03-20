@@ -675,18 +675,18 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/rgdal_1.4-3.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/rgeos_0.4-2.tar.gz \
+   https://cran.r-project.org/src/contrib/Archive/rgeos/rgeos_0.4-1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/uuid_0.1-2.tar.gz
  
  
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    rgdal_1.4-3.tar.gz \
-   rgeos_0.4-2.tar.gz \
+   rgeos_0.4-1.tar.gz \
    uuid_0.1-2.tar.gz 
 
 RUN rm \
    rgdal_1.4-3.tar.gz \
-   rgeos_0.4-2.tar.gz \
+   rgeos_0.4-1.tar.gz \
    uuid_0.1-2.tar.gz
 
 RUN R CMD BATCH /r-studio/install-rappdirs.R
