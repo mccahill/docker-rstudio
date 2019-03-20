@@ -800,7 +800,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/RcppArmadillo_0.9.200.7.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/servr_0.13.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/xaringan_0.9.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/rsconnect_0.8.8.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rsconnect_0.8.13.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/PKI_0.1-5.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RJSONIO_1.3-1.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/packrat_0.5.0.tar.gz \
@@ -836,7 +836,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     PKI_0.1-5.1.tar.gz \
     RJSONIO_1.3-1.1.tar.gz \
     packrat_0.5.0.tar.gz \
-    rsconnect_0.8.8.tar.gz \
+    rsconnect_0.8.13.tar.gz \
     highlight_0.4.7.2.tar.gz \
     pkgdown_1.3.0.tar.gz \
     bookdown_0.9.tar.gz \
@@ -869,7 +869,7 @@ RUN rm \
     PKI_0.1-5.1.tar.gz \
     RJSONIO_1.3-1.1.tar.gz \
     packrat_0.5.0.tar.gz \
-    rsconnect_0.8.8.tar.gz \
+    rsconnect_0.8.13.tar.gz \
     highlight_0.4.7.2.tar.gz \
     pkgdown_1.3.0.tar.gz \
     bookdown_0.9.tar.gz \
@@ -907,12 +907,12 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/prodlim_2018.04.18.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/CVST_0.2-2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/DRR_0.0.3.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/dimRed_0.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/dimRed_0.2.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/timeDate_3043.102.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/sfsmisc_1.1-2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/magic_1.5-8.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/geometry_0.3-6.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/ddalpha_1.3.4.tar.gz 
+    https://archive.linux.duke.edu/cran/src/contrib/sfsmisc_1.1-3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/magic_1.5-9.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/geometry_0.4.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ddalpha_1.3.8.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     nycflights13_1.0.0.tar.gz \
@@ -928,12 +928,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     ipred_0.9-8.tar.gz \
     CVST_0.2-2.tar.gz \
     DRR_0.0.3.tar.gz \
-    dimRed_0.1.0.tar.gz \
+    dimRed_0.2.2.tar.gz \
     timeDate_3043.102.tar.gz \
-    sfsmisc_1.1-2.tar.gz \
-    magic_1.5-8.tar.gz \
-    geometry_0.3-6.tar.gz \
-    ddalpha_1.3.4.tar.gz 
+    sfsmisc_1.1-3.tar.gz \
+    magic_1.5-9.tar.gz \
+    geometry_0.4.0.tar.gz \
+    ddalpha_1.3.8.tar.gz 
 	
 RUN rm \
     nycflights13_1.0.0.tar.gz \
@@ -949,12 +949,12 @@ RUN rm \
     ipred_0.9-8.tar.gz \
     CVST_0.2-2.tar.gz \
     DRR_0.0.3.tar.gz \
-    dimRed_0.1.0.tar.gz \
+    dimRed_0.2.2.tar.gz \
     timeDate_3043.102.tar.gz \
-    sfsmisc_1.1-2.tar.gz \
-    magic_1.5-8.tar.gz \
-    geometry_0.3-6.tar.gz \
-    ddalpha_1.3.4.tar.gz 
+    sfsmisc_1.1-3.tar.gz \
+    magic_1.5-9.tar.gz \
+    geometry_0.4.0.tar.gz \
+    ddalpha_1.3.8.tar.gz 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/gower_0.1.2.tar.gz \
