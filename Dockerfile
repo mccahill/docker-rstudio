@@ -469,6 +469,12 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/ggformula_0.9.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/mosaicCore_0.6.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/ggrepel_0.8.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/base64enc_0.1-3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/crosstalk_1.0.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/htmlwidgets_1.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/png_0.1-7.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/raster_2.8-19.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/viridis_0.5.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/leaflet_2.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/mosaic_1.5.0.tar.gz 
 
@@ -503,6 +509,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    ggstance_0.3.1.tar.gz \
    ggformula_0.9.1.tar.gz \
    ggrepel_0.8.0.tar.gz \
+   base64enc_0.1-3.tar.gz \
+   crosstalk_1.0.0.tar.gz \
+   htmlwidgets_1.3.tar.gz \
+   png_0.1-7.tar.gz \
+   raster_2.8-19.tar.gz \
+   viridis_0.5.1.tar.gz \
    leaflet_2.0.2.tar.gz \
    mosaic_1.5.0.tar.gz 
 
@@ -537,7 +549,13 @@ RUN rm \
    ggstance_0.3.1.tar.gz \
    ggformula_0.9.1.tar.gz \
    ggrepel_0.8.0.tar.gz \
+   base64enc_0.1-3.tar.gz \
+   crosstalk_1.0.0.tar.gz \
+   htmlwidgets_1.3.tar.gz \
+   png_0.1-7.tar.gz \
+   raster_2.8-19.tar.gz \
    leaflet_2.0.2.tar.gz \
+   viridis_0.5.1.tar.gz \
    mosaic_1.5.0.tar.gz 
 
 # Cliburn Chan requested these:
@@ -770,7 +788,6 @@ RUN rm \
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/pryr_0.1.4.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/htmlwidgets_1.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/profvis_0.3.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RcppArmadillo_0.9.100.5.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/servr_0.10.tar.gz \
@@ -792,21 +809,18 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/tweenr_0.1.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ggforce_0.1.3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RgoogleMaps_1.4.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/png_0.1-7.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rjson_0.2.20.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/mapproj_1.2.6.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/jpeg_0.1-8.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/geosphere_1.5-7.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ggmap_2.6.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ggraph_1.0.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/viridis_0.5.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/shiny_1.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/shinyjs_1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/flexdashboard_0.5.1.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     pryr_0.1.4.tar.gz \
-    htmlwidgets_1.2.tar.gz \
     profvis_0.3.5.tar.gz \
     RcppArmadillo_0.9.100.5.0.tar.gz \
     servr_0.10.tar.gz \
@@ -827,14 +841,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     DiagrammeR_1.0.0.tar.gz \
     tweenr_0.1.5.tar.gz \
     ggforce_0.1.3.tar.gz \
-    png_0.1-7.tar.gz \
     jpeg_0.1-8.tar.gz \
     RgoogleMaps_1.4.2.tar.gz \
     rjson_0.2.20.tar.gz \
     mapproj_1.2.6.tar.gz \
     geosphere_1.5-7.tar.gz \
     ggmap_2.6.1.tar.gz \
-    viridis_0.5.1.tar.gz \
     ggraph_1.0.2.tar.gz \
     shiny_1.1.0.tar.gz \
     shinyjs_1.0.tar.gz \
@@ -842,7 +854,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 
 RUN rm \
     pryr_0.1.4.tar.gz \
-    htmlwidgets_1.2.tar.gz \
     profvis_0.3.5.tar.gz \
     RcppArmadillo_0.9.100.5.0.tar.gz \
     servr_0.10.tar.gz \
@@ -864,14 +875,12 @@ RUN rm \
     tweenr_0.1.5.tar.gz \
     ggforce_0.1.3.tar.gz \
     RgoogleMaps_1.4.2.tar.gz \
-    png_0.1-7.tar.gz \
     rjson_0.2.20.tar.gz \
     mapproj_1.2.6.tar.gz \
     jpeg_0.1-8.tar.gz \
     geosphere_1.5-7.tar.gz \
     ggmap_2.6.1.tar.gz \
     ggraph_1.0.2.tar.gz \
-    viridis_0.5.1.tar.gz \
     shiny_1.1.0.tar.gz \
     shinyjs_1.0.tar.gz \
     flexdashboard_0.5.1.1.tar.gz 
