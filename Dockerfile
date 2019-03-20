@@ -136,6 +136,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/cli_1.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/desc_1.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/backports_1.1.3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rprojroot_1.3-2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/withr_2.1.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgbuild_1.0.2.tar.gz \
@@ -177,6 +178,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    crayon_1.3.4.tar.gz \
    assertthat_0.2.0.tar.gz \
    cli_1.1.0.tar.gz \
+   backports_1.1.3.tar.gz \
    rprojroot_1.3-2.tar.gz \
    desc_1.2.0.tar.gz \
    prettyunits_1.0.2.tar.gz \
@@ -220,6 +222,7 @@ RUN rm \
    cli_1.1.0.tar.gz \
    desc_1.2.0.tar.gz \
    prettyunits_1.0.2.tar.gz \
+   backports_1.1.3.tar.gz \
    rprojroot_1.3-2.tar.gz \
    withr_2.1.2.tar.gz \
    pkgbuild_1.0.2.tar.gz \
@@ -448,7 +451,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/ggdendro_0.1-20.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/mnormt_1.5-5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/psych_1.8.4.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/backports_1.1.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/broom_0.5.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/reshape_0.8.7.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/progress_1.2.0.tar.gz \
@@ -480,7 +482,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    ggdendro_0.1-20.tar.gz \
    mnormt_1.5-5.tar.gz \
    psych_1.8.4.tar.gz \
-   backports_1.1.2.tar.gz \
    broom_0.5.0.tar.gz \
    reshape_0.8.7.tar.gz \
    progress_1.2.0.tar.gz \
@@ -512,7 +513,6 @@ RUN rm \
    ggdendro_0.1-20.tar.gz \
    mnormt_1.5-5.tar.gz \
    psych_1.8.4.tar.gz \
-   backports_1.1.2.tar.gz \
    broom_0.5.0.tar.gz \
    reshape_0.8.7.tar.gz \
    progress_1.2.0.tar.gz \
