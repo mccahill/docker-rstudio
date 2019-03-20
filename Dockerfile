@@ -129,6 +129,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/rstudioapi_0.10.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/sys_3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/askpass_1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/openssl_1.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/withr_2.1.2.tar.gz \
@@ -161,6 +162,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    plyr_1.8.4.tar.gz \
    R6_2.4.0.tar.gz \
    curl_3.3.tar.gz \
+   sys_3.1.tar.gz \
    askpass_1.1.tar.gz \
    openssl_1.2.2.tar.gz \
    httr_1.4.0.tar.gz \
@@ -187,6 +189,7 @@ RUN rm \
    R6_2.4.0.tar.gz \
    httr_1.4.0.tar.gz \
    rstudioapi_0.10.tar.gz \
+   sys_3.1.tar.gz \
    askpass_1.1.tar.gz \
    openssl_1.2.2.tar.gz \
    withr_2.1.2.tar.gz \
