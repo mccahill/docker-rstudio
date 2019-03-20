@@ -128,7 +128,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rstudioapi_0.7.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/rstudioapi_0.10.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/openssl_1.0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/withr_2.1.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/brew_1.0-6.tar.gz \
@@ -162,7 +162,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    curl_3.2.tar.gz \
    openssl_1.0.2.tar.gz \
    httr_1.3.1.tar.gz \
-   rstudioapi_0.7.tar.gz \
+   rstudioapi_0.10.tar.gz \
    withr_2.1.2.tar.gz \
    git2r_0.23.0.tar.gz \
    devtools_1.13.6.tar.gz \
@@ -184,7 +184,7 @@ RUN rm \
    plyr_1.8.4.tar.gz \
    R6_2.2.2.tar.gz \
    httr_1.3.1.tar.gz \
-   rstudioapi_0.7.tar.gz \
+   rstudioapi_0.10.tar.gz \
    openssl_1.0.2.tar.gz \
    withr_2.1.2.tar.gz \
    brew_1.0-6.tar.gz \
