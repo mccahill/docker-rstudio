@@ -60,23 +60,23 @@ RUN rm rstudio-server-1.2.907-amd64.deb
 
 # update the R packages we will need for knitr
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/xfun_0.5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/knitr_1.22.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/yaml_2.2.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_1.0.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/htmltools_0.3.6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/caTools_1.17.1.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/bitops_1.0-6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.18.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/glue_1.3.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/stringr_1.4.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/markdown_0.9.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/highr_0.7.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/formatR_1.6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/evaluate_0.13.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/mime_0.6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/stringi_1.4.3.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/magrittr_1.5.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/xfun_0.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/knitr_1.22.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/yaml_2.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/Rcpp_1.0.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/htmltools_0.3.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/caTools_1.17.1.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/digest_0.6.18.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/glue_1.3.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/stringr_1.4.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/markdown_0.9.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/highr_0.7.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/formatR_1.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/evaluate_0.13.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/mime_0.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/stringi_1.4.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz
 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -128,28 +128,28 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rstudioapi_0.10.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/openssl_1.0.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/withr_2.1.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/brew_1.0-6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/magrittr_1.5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/git2r_0.23.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/devtools_1.13.6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/R6_2.2.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/httr_1.3.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/RCurl_1.95-4.11.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/BH_1.66.0-1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/xml2_1.2.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/curl_3.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/jsonlite_1.5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/downloader_0.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/memoise_1.1.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/plyr_1.8.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/XML_3.98-1.16.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/whisker_0.3-2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/bitops_1.0-6.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/rstudioapi_0.10.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/openssl_1.0.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/withr_2.1.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/brew_1.0-6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/git2r_0.23.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/devtools_1.13.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/R6_2.2.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/httr_1.3.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/RCurl_1.95-4.11.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/BH_1.66.0-1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/xml2_1.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/curl_3.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/jsonlite_1.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/downloader_0.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/memoise_1.1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/plyr_1.8.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/XML_3.98-1.16.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/whisker_0.3-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    jsonlite_1.5.tar.gz \
@@ -206,7 +206,7 @@ ADD ./conf /r-studio
 #RUN rm /install-nloptr.Rout
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://mirrors.nics.utk.edu/cran/src/contrib/nloptr_1.0.4.tar.gz
+    https://archive.linux.duke.edu/cran/src/contrib/nloptr_1.0.4.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     nloptr_1.0.4.tar.gz
@@ -217,31 +217,31 @@ RUN rm \
 
 # libraries Eric Green wanted
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/lubridate_1.7.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/lazyeval_0.2.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rlang_0.2.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/cli_1.0.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/utf8_1.1.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/crayon_1.3.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/fansi_0.3.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/pillar_1.3.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/ggplot2_3.0.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/colorspace_1.3-2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/munsell_0.5.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/labeling_0.3.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/viridisLite_0.3.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/scales_1.0.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/stargazer_5.2.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/reshape2_1.4.3.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/gtable_0.2.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/proto_1.0.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/minqa_1.2.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/RcppEigen_0.3.3.4.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/lme4_1.1-18-1.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/lubridate_1.7.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rlang_0.2.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/cli_1.0.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/utf8_1.1.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/crayon_1.3.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/fansi_0.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/pillar_1.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/ggplot2_3.0.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/colorspace_1.3-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/munsell_0.5.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/labeling_0.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/viridisLite_0.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/scales_1.0.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/stargazer_5.2.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/reshape2_1.4.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/gtable_0.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/proto_1.0.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/minqa_1.2.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/RcppEigen_0.3.3.4.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/lme4_1.1-18-1.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lubridate_1.7.4.tar.gz  \
@@ -299,20 +299,20 @@ RUN rm \
   
 # more libraries Mine Cetinakya-Rundel asked for
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/openintro_1.7.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/bindr_0.1.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/pkgconfig_2.0.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/plogr_0.2.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/purrr_0.2.5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/tidyselect_0.2.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/dplyr_0.7.6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/R6_2.2.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/magrittr_1.5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/lazyeval_0.2.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/DBI_1.0.0.tar.gz 
+   https://archive.linux.duke.edu/cran/src/contrib/openintro_1.7.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/bindr_0.1.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/pkgconfig_2.0.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/plogr_0.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/purrr_0.2.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/tidyselect_0.2.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/dplyr_0.7.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/R6_2.2.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/DBI_1.0.0.tar.gz 
 
 
 
@@ -349,17 +349,17 @@ RUN rm \
    dplyr_0.7.6.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/chron_2.3-52.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/data.table_1.11.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rematch_1.0.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/cellranger_1.1.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/tidyr_0.8.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/googlesheets_0.3.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/hms_0.4.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/readr_1.1.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/selectr_0.4-1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rvest_0.3.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/pbkrtest_0.4-7.tar.gz 
+   https://archive.linux.duke.edu/cran/src/contrib/chron_2.3-52.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/data.table_1.11.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rematch_1.0.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/cellranger_1.1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/tidyr_0.8.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/googlesheets_0.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/hms_0.4.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/readr_1.1.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/selectr_0.4-1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rvest_0.3.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/pbkrtest_0.4-7.tar.gz 
 	
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    chron_2.3-52.tar.gz \
@@ -388,37 +388,37 @@ RUN rm \
    pbkrtest_0.4-7.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/SparseM_1.77.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/MatrixModels_0.4-1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/quantreg_5.36.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/sp_1.3-1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/maptools_0.9-3.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/haven_1.1.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/forcats_0.3.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/readxl_1.1.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/zip_1.0.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/openxlsx_4.1.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rio_0.5.10.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/abind_1.4-5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/carData_3.0-1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/car_3.0-2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/mosaicData_0.17.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/latticeExtra_0.6-28.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/gridExtra_2.3.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/ggdendro_0.1-20.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/mnormt_1.5-5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/psych_1.8.4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/backports_1.1.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/broom_0.5.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/reshape_0.8.7.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/progress_1.2.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.4.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/ggstance_0.3.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/ggformula_0.9.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/mosaicCore_0.6.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/ggrepel_0.8.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/mosaic_1.4.0.tar.gz 
+   https://archive.linux.duke.edu/cran/src/contrib/SparseM_1.77.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/MatrixModels_0.4-1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/quantreg_5.36.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/sp_1.3-1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/maptools_0.9-3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/haven_1.1.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/forcats_0.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/readxl_1.1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/zip_1.0.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/openxlsx_4.1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rio_0.5.10.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/abind_1.4-5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/carData_3.0-1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/car_3.0-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/mosaicData_0.17.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/latticeExtra_0.6-28.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/gridExtra_2.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/ggdendro_0.1-20.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/mnormt_1.5-5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/psych_1.8.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/backports_1.1.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/broom_0.5.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/reshape_0.8.7.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/progress_1.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/GGally_1.4.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/ggstance_0.3.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/ggformula_0.9.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/mosaicCore_0.6.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/ggrepel_0.8.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/mosaic_1.4.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    SparseM_1.77.tar.gz \
@@ -488,12 +488,12 @@ RUN rm \
 
 # Cliburn Chan requested these:
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/maps_3.3.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/zoo_1.8-3.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/gcookbook_1.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rprojroot_1.3-2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/corrplot_0.84.tar.gz 
+   https://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/maps_3.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/zoo_1.8-3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/gcookbook_1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rprojroot_1.3-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/corrplot_0.84.tar.gz 
 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -535,10 +535,10 @@ RUN rm /install-Shiny.Rout
 
 # install sparklyr so we can do Spark via Livy
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/config_0.3.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/dbplyr_1.2.2.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rappdirs_0.3.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/sparklyr_0.8.4.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/config_0.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/dbplyr_1.2.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rappdirs_0.3.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/sparklyr_0.8.4.tar.gz
    
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    config_0.3.tar.gz \
@@ -568,7 +568,7 @@ RUN rm /install-papaja.Rout
 
 # install templates and examples from Reed and the Tufte package
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/BHH2_2016.05.31.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/BHH2_2016.05.31.tar.gz
    
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    BHH2_2016.05.31.tar.gz
@@ -598,9 +598,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rgdal_1.3-4.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rgeos_0.3-28.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/uuid_0.1-2.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/rgdal_1.3-4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rgeos_0.3-28.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/uuid_0.1-2.tar.gz
  
  
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -617,8 +617,8 @@ RUN R CMD BATCH /r-studio/install-rappdirs.R
 RUN rm /install-rappdirs.Rout 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tigris_0.7.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tidycensus_0.8.1.tar.gz
+    https://archive.linux.duke.edu/cran/src/contrib/tigris_0.7.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tidycensus_0.8.1.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     tigris_0.7.tar.gz \
@@ -630,47 +630,47 @@ RUN rm \
 	
 # new packages for fall 2018
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tidyverse_1.2.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/promises_1.0.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/future_1.9.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/doMC_1.3.5.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/foreach_1.4.4.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/doParallel_1.0.11.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/furrr_0.1.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/drat_0.1.4.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tidygraph_1.1.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/here_0.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rticles_0.5.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/styler_1.0.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/lintr_1.0.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/testthat_2.0.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/pkgbuild_1.0.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/pkgload_1.0.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rcmdcheck_1.2.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/sessioninfo_1.0.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/usethis_1.4.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/fs_1.2.6.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/reprex_0.2.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/gh_1.0.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/microbenchmark_1.4-4.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/modelr_0.1.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/clipr_0.4.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/callr_3.0.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/processx_3.2.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ps_1.1.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/globals_0.12.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/listenv_0.7.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/iterators_1.0.10.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/enc_0.2.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rematch2_2.0.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rex_1.1.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/stringdist_0.9.5.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/praise_1.0.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/desc_1.2.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/clisymbols_1.2.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ini_0.3.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/profmem_0.5.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/bench_1.0.1.tar.gz 
+    https://archive.linux.duke.edu/cran/src/contrib/tidyverse_1.2.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/promises_1.0.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/future_1.9.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/doMC_1.3.5.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/foreach_1.4.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/doParallel_1.0.11.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/furrr_0.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/drat_0.1.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tidygraph_1.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/here_0.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rticles_0.5.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/styler_1.0.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/lintr_1.0.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/testthat_2.0.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/pkgbuild_1.0.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/pkgload_1.0.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rcmdcheck_1.2.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/sessioninfo_1.0.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/usethis_1.4.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/fs_1.2.6.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/reprex_0.2.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/gh_1.0.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/microbenchmark_1.4-4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/modelr_0.1.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/clipr_0.4.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/callr_3.0.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/processx_3.2.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ps_1.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/globals_0.12.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/listenv_0.7.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/iterators_1.0.10.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/enc_0.2.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rematch2_2.0.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rex_1.1.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/stringdist_0.9.5.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/praise_1.0.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/desc_1.2.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/clisymbols_1.2.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ini_0.3.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/profmem_0.5.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/bench_1.0.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     clipr_0.4.1.tar.gz \
@@ -760,40 +760,40 @@ RUN rm \
 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://mirrors.nics.utk.edu/cran/src/contrib/pryr_0.1.4.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/htmlwidgets_1.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/profvis_0.3.5.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/RcppArmadillo_0.9.100.5.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/servr_0.10.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/xaringan_0.7.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rsconnect_0.8.8.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/PKI_0.1-5.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/RJSONIO_1.3-0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/packrat_0.4.9-3.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/highlight_0.4.7.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/pkgdown_1.1.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/bookdown_0.7.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/blogdown_0.8.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/cowplot_0.9.3.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/influenceR_0.1.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/Rook_1.1-1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rgexf_0.15.3.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/visNetwork_2.0.4.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/DiagrammeR_1.0.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tweenr_0.1.5.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ggforce_0.1.3.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/RgoogleMaps_1.4.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/png_0.1-7.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rjson_0.2.20.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/mapproj_1.2.6.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/jpeg_0.1-8.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/geosphere_1.5-7.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ggmap_2.6.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ggraph_1.0.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/viridis_0.5.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/shiny_1.1.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/shinyjs_1.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/flexdashboard_0.5.1.1.tar.gz 
+    https://archive.linux.duke.edu/cran/src/contrib/pryr_0.1.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/htmlwidgets_1.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/profvis_0.3.5.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/RcppArmadillo_0.9.100.5.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/servr_0.10.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/xaringan_0.7.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rsconnect_0.8.8.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/PKI_0.1-5.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/RJSONIO_1.3-0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/packrat_0.4.9-3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/highlight_0.4.7.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/pkgdown_1.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/bookdown_0.7.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/blogdown_0.8.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/cowplot_0.9.3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/influenceR_0.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/Rook_1.1-1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rgexf_0.15.3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/visNetwork_2.0.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/DiagrammeR_1.0.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tweenr_0.1.5.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ggforce_0.1.3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/RgoogleMaps_1.4.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/png_0.1-7.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rjson_0.2.20.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/mapproj_1.2.6.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/jpeg_0.1-8.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/geosphere_1.5-7.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ggmap_2.6.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ggraph_1.0.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/viridis_0.5.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/shiny_1.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/shinyjs_1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/flexdashboard_0.5.1.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     pryr_0.1.4.tar.gz \
@@ -868,25 +868,25 @@ RUN rm \
     flexdashboard_0.5.1.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://mirrors.nics.utk.edu/cran/src/contrib/nycflights13_1.0.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/babynames_0.3.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/janeaustenr_0.1.5.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/NHANES_2.1.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/repurrrsive_0.1.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/infer_0.3.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ipred_0.9-7.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/numDeriv_2016.8-1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/SQUAREM_2017.10-1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/lava_1.6.3.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/prodlim_2018.04.18.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/CVST_0.2-2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/DRR_0.0.3.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/dimRed_0.1.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/timeDate_3043.102.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/sfsmisc_1.1-2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/magic_1.5-8.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/geometry_0.3-6.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ddalpha_1.3.4.tar.gz 
+    https://archive.linux.duke.edu/cran/src/contrib/nycflights13_1.0.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/babynames_0.3.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/janeaustenr_0.1.5.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/NHANES_2.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/repurrrsive_0.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/infer_0.3.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ipred_0.9-7.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/numDeriv_2016.8-1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/SQUAREM_2017.10-1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/lava_1.6.3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/prodlim_2018.04.18.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/CVST_0.2-2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/DRR_0.0.3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/dimRed_0.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/timeDate_3043.102.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/sfsmisc_1.1-2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/magic_1.5-8.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/geometry_0.3-6.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ddalpha_1.3.4.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     nycflights13_1.0.0.tar.gz \
@@ -931,26 +931,26 @@ RUN rm \
     ddalpha_1.3.4.tar.gz 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://mirrors.nics.utk.edu/cran/src/contrib/gower_0.1.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/RcppRoll_0.3.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/pls_2.7-0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/recipes_0.1.3.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rsample_0.0.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/hunspell_2.9.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/SnowballC_0.5.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tokenizers_0.2.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ISOcodes_2018.06.29.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/stopwords_0.9.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tidytext_0.1.9.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ggridges_0.5.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/bayesplot_1.6.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/matrixStats_0.54.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/loo_2.0.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/StanHeaders_2.17.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/inline_0.3.15.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rstan_2.17.3.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/rstantools_1.5.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tidypredict_0.2.0.tar.gz 
+    https://archive.linux.duke.edu/cran/src/contrib/gower_0.1.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/RcppRoll_0.3.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/pls_2.7-0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/recipes_0.1.3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rsample_0.0.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/hunspell_2.9.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/SnowballC_0.5.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tokenizers_0.2.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ISOcodes_2018.06.29.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/stopwords_0.9.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tidytext_0.1.9.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ggridges_0.5.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/bayesplot_1.6.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/matrixStats_0.54.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/loo_2.0.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/StanHeaders_2.17.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/inline_0.3.15.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rstan_2.17.3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rstantools_1.5.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tidypredict_0.2.0.tar.gz 
 	
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -1000,27 +1000,27 @@ RUN rm \
 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://mirrors.nics.utk.edu/cran/src/contrib/pROC_1.12.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/gtools_3.8.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/gdata_2.18.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/gplots_3.0.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/MLmetrics_1.1.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/yardstick_0.0.1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/xgboost_0.71.2.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ModelMetrics_1.2.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/caret_6.0-80.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/e1071_1.7-0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/dotCall64_1.0-0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/spam_2.2-0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/fields_9.6.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/ROCR_1.0-7.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/reticulate_1.10.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tfruns_1.4.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/tensorflow_1.9.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/zeallot_0.1.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/keras_2.2.0.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/coda_0.19-1.tar.gz \
-    https://mirrors.nics.utk.edu/cran/src/contrib/greta_0.2.3.tar.gz 
+    https://archive.linux.duke.edu/cran/src/contrib/pROC_1.12.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/gtools_3.8.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/gdata_2.18.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/gplots_3.0.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/MLmetrics_1.1.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/yardstick_0.0.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/xgboost_0.71.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ModelMetrics_1.2.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/caret_6.0-80.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/e1071_1.7-0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/dotCall64_1.0-0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/spam_2.2-0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/fields_9.6.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ROCR_1.0-7.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/reticulate_1.10.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tfruns_1.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tensorflow_1.9.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/zeallot_0.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/keras_2.2.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/coda_0.19-1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/greta_0.2.3.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     pROC_1.12.1.tar.gz \
