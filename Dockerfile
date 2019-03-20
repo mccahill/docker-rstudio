@@ -37,7 +37,8 @@ RUN apt-get update ; \
    wget \
    sudo \
    libcurl4-openssl-dev \
-   libxml2-dev 
+   libxml2-dev \
+   libgit2-dev
 
 # we need TeX for the rmarkdown package in RStudio, and pandoc is also useful 
 RUN apt-get update 
@@ -156,9 +157,10 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/brew_1.0-6.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/fs_1.2.7.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/gh_1.0.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/git2r_0.25.2.tar.gz \
-   
    https://archive.linux.duke.edu/cran/src/contrib/devtools_2.0.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/R6_2.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/httr_1.4.0.tar.gz \
@@ -692,7 +694,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/reprex_0.2.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/microbenchmark_1.4-4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/modelr_0.1.2.tar.gz \
-  fs_1.2.7.tar.gzps://archive.linux.duke.edu/cran/src/contrib/globals_0.12.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/globals_0.12.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/listenv_0.7.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/iterators_1.0.10.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/enc_0.2.0.tar.gz \
@@ -706,7 +708,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     modelr_0.1.2.tar.gz \
- fs_1.2.7.tar.gzprex_0.2.0.tar.gz \
+    prex_0.2.0.tar.gz \
     tidyverse_1.2.1.tar.gz \
     promises_1.0.1.tar.gz \
     globals_0.12.2.tar.gz \
@@ -747,7 +749,8 @@ RUN rm \
     iterators_1.0.10.tar.gz \
     listenv_0.7.0.tar.gz \
     tidyverse_1.2.1.tar.gz \
-    promises_1.0.1.tar.fs_1.2.7.tar.gz    future_1.9.0.tar.gz \
+    promises_1.0.1.tar.
+    future_1.9.0.tar.gz \
     doMC_1.3.5.tar.gz \
     foreach_1.4.4.tar.gz \
     doParallel_1.0.11.tar.gz \
