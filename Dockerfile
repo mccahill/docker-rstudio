@@ -131,6 +131,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/processx_3.3.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/ps_1.3.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/callr_3.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/crayon_1.3.4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/cli_1.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgbuild_1.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgload_1.0.2.tar.gz \
@@ -169,6 +171,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    R6_2.4.0.tar.gz \
    processx_3.3.0.tar.gz \
    callr_3.2.0.tar.gz \
+   crayon_1.3.4.tar.gz \
+   assertthat_0.2.0.tar.gz \
    cli_1.1.0.tar.gz \
    pkgbuild_1.0.2.tar.gz \
    pkgload_1.0.2.tar.gz \
@@ -205,6 +209,8 @@ RUN rm \
    callr_3.2.0.tar.gz \
    R6_2.4.0.tar.gz \
    processx_3.3.0.tar.gz \
+   crayon_1.3.4.tar.gz \
+   assertthat_0.2.0.tar.gz \
    cli_1.1.0.tar.gz \
    pkgbuild_1.0.2.tar.gz \
    pkgload_1.0.2.tar.gz \
@@ -255,11 +261,9 @@ RUN rm \
 # libraries Eric Green wanted
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/lubridate_1.7.4.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rlang_0.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/utf8_1.1.4.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/crayon_1.3.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/fansi_0.3.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pillar_1.3.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/tibble_1.4.2.tar.gz \
@@ -291,11 +295,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    scales_1.0.0.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.3.tar.gz \
-   assertthat_0.2.0.tar.gz \
    lazyeval_0.2.1.tar.gz \
    rlang_0.2.2.tar.gz \
    utf8_1.1.4.tar.gz \
-   crayon_1.3.4.tar.gz \
    fansi_0.3.0.tar.gz \
    pillar_1.3.0.tar.gz \
    tibble_1.4.2.tar.gz \
@@ -317,11 +319,9 @@ RUN rm \
    scales_1.0.0.tar.gz \
    proto_1.0.0.tar.gz \
    reshape2_1.4.3.tar.gz \
-   assertthat_0.2.0.tar.gz \
    lazyeval_0.2.1.tar.gz \
    rlang_0.2.2.tar.gz \
    utf8_1.1.4.tar.gz \
-   crayon_1.3.4.tar.gz \
    fansi_0.3.0.tar.gz \
    pillar_1.3.0.tar.gz \
    tibble_1.4.2.tar.gz \
