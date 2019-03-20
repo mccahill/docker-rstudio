@@ -60,6 +60,7 @@ RUN rm rstudio-server-1.2.907-amd64.deb
 
 # update the R packages we will need for knitr
 RUN DEBIAN_FRONTEND=noninteractive wget \
+   https://mirrors.nics.utk.edu/cran/src/contrib/xfun_0.5.tar.gz
    https://mirrors.nics.utk.edu/cran/src/contrib/knitr_1.22.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/yaml_2.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_1.0.1.tar.gz \
@@ -94,6 +95,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    formatR_1.6.tar.gz \
    evaluate_0.13.tar.gz \
    markdown_0.9.tar.gz \
+   xfun_0.5.tar.gz \
    knitr_1.22.tar.gz
  
 
@@ -106,6 +108,7 @@ RUN rm \
    magrittr_1.5.tar.gz \
    glue_1.3.1.tar.gz \
    stringr_1.4.0.tar.gz \
+   xfun_0.5.tar.gz \
    knitr_1.22.tar.gz \
    yaml_2.2.0.tar.gz \
    Rcpp_1.0.1.tar.gz \
