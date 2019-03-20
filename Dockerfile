@@ -608,18 +608,24 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/config_0.3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/dbplyr_1.3.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rappdirs_0.3.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/r2d3_0.2.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/forge_0.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/sparklyr_1.0.0.tar.gz
    
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    config_0.3.tar.gz \
    dbplyr_1.3.0.tar.gz \
    rappdirs_0.3.1.tar.gz \
+   r2d3_0.2.3.tar.gz \
+   forge_0.2.0.tar.gz \
    sparklyr_1.0.0.tar.gz
    
 RUN rm \
   config_0.3.tar.gz \
   dbplyr_1.3.0.tar.gz \
   rappdirs_0.3.1.tar.gz \
+  r2d3_0.2.3.tar.gz \
+  forge_0.2.0.tar.gz \
   sparklyr_1.0.0.tar.gz
 
 
@@ -702,17 +708,17 @@ RUN rm \
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/tidyverse_1.2.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/promises_1.0.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/future_1.9.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/future_1.12.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/doMC_1.3.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/foreach_1.4.4.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/doParallel_1.0.11.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/doParallel_1.0.14.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/furrr_0.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/drat_0.1.4.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/tidygraph_1.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tidygraph_1.1.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/here_0.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/rticles_0.5.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/styler_1.0.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/lintr_1.0.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rticles_0.7.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/styler_1.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/lintr_1.0.3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/testthat_2.0.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/reprex_0.2.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/microbenchmark_1.4-4.tar.gz \
@@ -735,24 +741,24 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     promises_1.0.1.tar.gz \
     globals_0.12.2.tar.gz \
     listenv_0.7.0.tar.gz \
-    future_1.9.0.tar.gz \
+    future_1.12.0.tar.gz \
     iterators_1.0.10.tar.gz \
     foreach_1.4.4.tar.gz \
     doMC_1.3.5.tar.gz \
-    doParallel_1.0.11.tar.gz \
+    doParallel_1.0.14.tar.gz \
     furrr_0.1.0.tar.gz \
     drat_0.1.4.tar.gz \
-    tidygraph_1.1.0.tar.gz \
+    tidygraph_1.1.2.tar.gz \
     here_0.1.tar.gz \
-    rticles_0.5.tar.gz \
+    rticles_0.7.tar.gz \
     enc_0.2.0.tar.gz \
     rematch2_2.0.1.tar.gz \
-    styler_1.0.2.tar.gz \
+    styler_1.1.0.tar.gz \
     rex_1.1.2.tar.gz \
     stringdist_0.9.5.1.tar.gz \
     praise_1.0.0.tar.gz \
     testthat_2.0.0.tar.gz \
-    lintr_1.0.2.tar.gz \
+    lintr_1.0.3.tar.gz \
     profmem_0.5.0.tar.gz \
     microbenchmark_1.4-4.tar.gz \
     bench_1.0.1.tar.gz 
@@ -770,17 +776,17 @@ RUN rm \
     listenv_0.7.0.tar.gz \
     tidyverse_1.2.1.tar.gz \
     promises_1.0.1.tar.gz \
-    future_1.9.0.tar.gz \
+    future_1.12.0.tar.gz \
     doMC_1.3.5.tar.gz \
     foreach_1.4.4.tar.gz \
-    doParallel_1.0.11.tar.gz \
+    doParallel_1.0.14.tar.gz \
     furrr_0.1.0.tar.gz \
     drat_0.1.4.tar.gz \
-    tidygraph_1.1.0.tar.gz \
+    tidygraph_1.1.2.tar.gz \
     here_0.1.tar.gz \
-    rticles_0.5.tar.gz \
-    styler_1.0.2.tar.gz \
-    lintr_1.0.2.tar.gz \
+    rticles_0.7.tar.gz \
+    styler_1.1.0.tar.gz \
+    lintr_1.0.3.tar.gz \
     testthat_2.0.0.tar.gz \
     reprex_0.2.0.tar.gz \
     microbenchmark_1.4-4.tar.gz \
