@@ -35,15 +35,13 @@ RUN apt-get update ; \
    socat \
    software-properties-common \
    wget \
-   sudo \
-   libcurl4-openssl-dev \
-   libxml2-dev 
+   sudo 
 
 RUN apt-get update ; \
    DEBIAN_FRONTEND=noninteractive apt-get  install -y  -f \
    libcurl4-openssl-dev \
    libgit2-dev \
-   ibxml2-dev \
+   libxml2-dev \
    libssl-dev \
    libudunits2-dev \
    libpoppler-cpp-dev
