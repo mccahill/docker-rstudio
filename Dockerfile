@@ -372,35 +372,32 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/bindr_0.1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/plogr_0.2.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/purrr_0.2.5.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/tidyselect_0.2.4.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/dplyr_0.7.6.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/purrr_0.3.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/tidyselect_0.2.5tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/dplyr_0.8.0.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/DBI_1.0.0.tar.gz 
 
 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    openintro_1.7.1.tar.gz \
-   assertthat_0.2.0.tar.gz \
    DBI_1.0.0.tar.gz \
    plogr_0.2.0.tar.gz \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
-   purrr_0.2.5.tar.gz \
-   tidyselect_0.2.4.tar.gz \
-   dplyr_0.7.6.tar.gz 
+   purrr_0.3.2.tar.gz \
+   tidyselect_0.2.5.tar.gz \
+   dplyr_0.8.0.1.tar.gz 
 
 RUN rm \
    openintro_1.7.1.tar.gz \
-   assertthat_0.2.0.tar.gz \
    DBI_1.0.0.tar.gz \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
    plogr_0.2.0.tar.gz \
-   purrr_0.2.5.tar.gz \
-   tidyselect_0.2.4.tar.gz \
-   dplyr_0.7.6.tar.gz 
+   purrr_0.3.2.tar.gz \
+   tidyselect_0.2.5.tar.gz \
+   dplyr_0.8.0.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/chron_2.3-52.tar.gz \
