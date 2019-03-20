@@ -287,13 +287,13 @@ ADD ./conf /r-studio
 #RUN rm /install-nloptr.Rout
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://archive.linux.duke.edu/cran/src/contrib/nloptr_1.0.4.tar.gz
+    https://archive.linux.duke.edu/cran/src/contrib/nloptr_1.2.1.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-    nloptr_1.0.4.tar.gz
+    nloptr_1.2.1.tar.gz
 
 RUN rm \
-    nloptr_1.0.4.tar.gz
+    nloptr_1.2.1.tar.gz
 
 
 # libraries Eric Green wanted
