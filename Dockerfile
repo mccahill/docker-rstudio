@@ -168,8 +168,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    pkgbuild_1.0.2.tar.gz \
    pkgload_1.0.2.tar.gz \
    rcmdcheck_1.3.2.tar.gz \
-   remotes_2.0.2.tar.gz
-   sessioninfo_1.1.1.tar.gz
+   remotes_2.0.2.tar.gz \
+   sessioninfo_1.1.1.tar.gz \
    usethis_1.4.0.tar.gz \
    jsonlite_1.6.tar.gz \
    memoise_1.1.0.tar.gz \
@@ -202,8 +202,8 @@ RUN rm \
    pkgbuild_1.0.2.tar.gz \
    pkgload_1.0.2.tar.gz \
    rcmdcheck_1.3.2.tar.gz \
-   remotes_2.0.2.tar.gz
-   sessioninfo_1.1.1.tar.gz
+   remotes_2.0.2.tar.gz \
+   sessioninfo_1.1.1.tar.gz \
    usethis_1.4.0.tar.gz \
    jsonlite_1.6.tar.gz \
    memoise_1.1.0.tar.gz \
