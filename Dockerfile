@@ -5,6 +5,9 @@
 FROM ubuntu:18.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 
+RUN apt-get  update ; \
+    apt-get  install gnupg2 -y
+	
 # get R from a CRAN archive (we want the 3.5 version of R)
 RUN echo  "deb http://cran.rstudio.com/bin/linux/ubuntu bionic-cran35/"  >>  /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv  --keyserver keyserver.ubuntu.com --recv-keys  E084DAB9
