@@ -166,8 +166,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    ps_1.3.0.tar.gz \
-   processx_3.3.0.tar.gz \
    R6_2.4.0.tar.gz \
+   processx_3.3.0.tar.gz \
    callr_3.2.0.tar.gz \
    cli_1.1.0.tar.gz \
    pkgbuild_1.0.2.tar.gz \
