@@ -816,6 +816,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/DiagrammeR_1.0.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/farver_1.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/tweenr_1.0.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/polyclip_1.10-0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ggforce_0.2.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RgoogleMaps_1.4.3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rjson_0.2.20.tar.gz \
@@ -850,6 +851,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     DiagrammeR_1.0.0.tar.gz \
     farver_1.1.0.tar.gz \
     tweenr_1.0.1.tar.gz \
+    polyclip_1.10-0.tar.gz \
     ggforce_0.2.1.tar.gz \
     jpeg_0.1-8.tar.gz \
     RgoogleMaps_1.4.3.tar.gz \
@@ -884,6 +886,7 @@ RUN rm \
     DiagrammeR_1.0.0.tar.gz \
     farver_1.1.0.tar.gz \
     tweenr_1.0.1.tar.gz \
+    polyclip_1.10-0.tar.gz \
     ggforce_0.2.1.tar.gz \
     RgoogleMaps_1.4.3.tar.gz \
     rjson_0.2.20.tar.gz \
@@ -960,72 +963,72 @@ RUN rm \
     ddalpha_1.3.8.tar.gz 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://archive.linux.duke.edu/cran/src/contrib/gower_0.1.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/gower_0.2.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RcppRoll_0.3.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/pls_2.7-0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/recipes_0.1.3.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/rsample_0.0.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/hunspell_2.9.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/SnowballC_0.5.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/recipes_0.1.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rsample_0.0.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/hunspell_3.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/SnowballC_0.6.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/tokenizers_0.2.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/ISOcodes_2018.06.29.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ISOcodes_2019.02.13.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/stopwords_0.9.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/tidytext_0.1.9.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/ggridges_0.5.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tidytext_0.2.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ggridges_0.5.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/bayesplot_1.6.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/matrixStats_0.54.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/loo_2.0.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/StanHeaders_2.17.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/loo_2.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/StanHeaders_2.18.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/inline_0.3.15.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/rstan_2.17.3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rstan_2.18.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rstantools_1.5.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/tidypredict_0.2.0.tar.gz 
+    https://archive.linux.duke.edu/cran/src/contrib/tidypredict_0.3.0.tar.gz 
 	
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-    gower_0.1.2.tar.gz \
+    gower_0.2.0.tar.gz \
     RcppRoll_0.3.0.tar.gz \
     pls_2.7-0.tar.gz \
-    recipes_0.1.3.tar.gz \
-    rsample_0.0.2.tar.gz \
-    hunspell_2.9.tar.gz \
-    SnowballC_0.5.1.tar.gz \
+    recipes_0.1.4.tar.gz \
+    rsample_0.0.4.tar.gz \
+    hunspell_3.0.tar.gz \
+    SnowballC_0.6.0.tar.gz \
     tokenizers_0.2.1.tar.gz \
-    ISOcodes_2018.06.29.tar.gz \
+    ISOcodes_2019.02.13.tar.gz \
     stopwords_0.9.0.tar.gz \
-    tidytext_0.1.9.tar.gz \
-    tidypredict_0.2.0.tar.gz \
-    ggridges_0.5.0.tar.gz \
+    tidytext_0.2.0.tar.gz \
+    tidypredict_0.3.0.tar.gz \
+    ggridges_0.5.1.tar.gz \
     bayesplot_1.6.0.tar.gz \
     matrixStats_0.54.0.tar.gz \
-    loo_2.0.0.tar.gz \
-    StanHeaders_2.17.2.tar.gz \
+    loo_2.1.0.tar.gz \
+    StanHeaders_2.18.1.tar.gz \
     inline_0.3.15.tar.gz \
-    rstan_2.17.3.tar.gz \
+    rstan_2.18.2.tar.gz \
     rstantools_1.5.1.tar.gz 
 	
 	
 RUN rm \
-    gower_0.1.2.tar.gz \
+    gower_0.2.0.tar.gz \
     RcppRoll_0.3.0.tar.gz \
     pls_2.7-0.tar.gz \
-    recipes_0.1.3.tar.gz \
-    rsample_0.0.2.tar.gz \
-    hunspell_2.9.tar.gz \
-    SnowballC_0.5.1.tar.gz \
+    recipes_0.1.4.tar.gz \
+    rsample_0.0.4.tar.gz \
+    hunspell_3.0.tar.gz \
+    SnowballC_0.6.0.tar.gz \
     tokenizers_0.2.1.tar.gz \
-    ISOcodes_2018.06.29.tar.gz \
+    ISOcodes_2019.02.13.tar.gz \
     stopwords_0.9.0.tar.gz \
-    tidytext_0.1.9.tar.gz \
-    ggridges_0.5.0.tar.gz \
+    tidytext_0.2.0.tar.gz \
+    ggridges_0.5.1.tar.gz \
     bayesplot_1.6.0.tar.gz \
     matrixStats_0.54.0.tar.gz \
-    loo_2.0.0.tar.gz \
-    StanHeaders_2.17.2.tar.gz \
+    loo_2.1.0.tar.gz \
+    StanHeaders_2.18.1.tar.gz \
     inline_0.3.15.tar.gz \
-    rstan_2.17.3.tar.gz \
+    rstan_2.18.2.tar.gz \
     rstantools_1.5.1.tar.gz \
-    tidypredict_0.2.0.tar.gz 
+    tidypredict_0.3.0.tar.gz 
 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
