@@ -146,6 +146,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/rcmdcheck_1.3.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/remotes_2.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/xopen_1.0.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/clipr_0.5.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/clisymbols_1.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/sessioninfo_1.1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/usethis_1.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/sys_3.1.tar.gz \
@@ -192,20 +194,24 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    xopen_1.0.0.tar.gz \
    sessioninfo_1.1.1.tar.gz \
    rcmdcheck_1.3.2.tar.gz \
-   remotes_2.0.2.tar.gz \
+   remotes_2.0.2.tar.gz \   
+   whisker_0.3-2.tar.gz \
+   git2r_0.25.2.tar.gz \
+   fs_1.2.7.tar.gz \
+   gh_1.0.1.tar.gz \
+   curl_3.3.tar.gz \
+   clipr_0.5.0.tar.gz \
+   clisymbols_1.2.0.tar.gz \   
    usethis_1.4.0.tar.gz \
    jsonlite_1.6.tar.gz \
    memoise_1.1.0.tar.gz \
-   whisker_0.3-2.tar.gz \
    bitops_1.0-6.tar.gz \
    RCurl_1.95-4.12.tar.gz \
    plyr_1.8.4.tar.gz \
-   curl_3.3.tar.gz \
    sys_3.1.tar.gz \
    askpass_1.1.tar.gz \
    openssl_1.2.2.tar.gz \
    httr_1.4.0.tar.gz \
-   git2r_0.25.2.tar.gz \
    devtools_2.0.1.tar.gz \
    brew_1.0-6.tar.gz \
    magrittr_1.5.tar.gz \
@@ -232,6 +238,8 @@ RUN rm \
    pkgbuild_1.0.2.tar.gz \
    rlang_0.3.1.tar.gz \
    rstudioapi_0.10.tar.gz \
+   clipr_0.5.0.tar.gz \
+   clisymbols_1.2.0.tar.gz \
    pkgload_1.0.2.tar.gz \
    sessioninfo_1.1.1.tar.gz \
    xopen_1.0.0.tar.gz \
@@ -681,13 +689,10 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/styler_1.0.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/lintr_1.0.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/testthat_2.0.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/fs_1.2.6.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/reprex_0.2.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/gh_1.0.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/microbenchmark_1.4-4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/modelr_0.1.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/clipr_0.4.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/globals_0.12.2.tar.gz \
+  fs_1.2.7.tar.gzps://archive.linux.duke.edu/cran/src/contrib/globals_0.12.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/listenv_0.7.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/iterators_1.0.10.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/enc_0.2.0.tar.gz \
@@ -695,15 +700,13 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/rex_1.1.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/stringdist_0.9.5.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/praise_1.0.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/clisymbols_1.2.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ini_0.3.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/profmem_0.5.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/bench_1.0.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-    clipr_0.4.1.tar.gz \
     modelr_0.1.2.tar.gz \
-    reprex_0.2.0.tar.gz \
+ fs_1.2.7.tar.gzprex_0.2.0.tar.gz \
     tidyverse_1.2.1.tar.gz \
     promises_1.0.1.tar.gz \
     globals_0.12.2.tar.gz \
@@ -726,10 +729,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     praise_1.0.0.tar.gz \
     testthat_2.0.0.tar.gz \
     lintr_1.0.2.tar.gz \
-    clisymbols_1.2.0.tar.gz \
-    fs_1.2.6.tar.gz \
     ini_0.3.1.tar.gz \
-    gh_1.0.1.tar.gz \
     profmem_0.5.0.tar.gz \
     microbenchmark_1.4-4.tar.gz \
     bench_1.0.1.tar.gz 
@@ -738,7 +738,6 @@ RUN rm \
     modelr_0.1.2.tar.gz \
     profmem_0.5.0.tar.gz \
     ini_0.3.1.tar.gz \
-    clisymbols_1.2.0.tar.gz \
     praise_1.0.0.tar.gz \
     rex_1.1.2.tar.gz \
     stringdist_0.9.5.1.tar.gz \
@@ -747,10 +746,8 @@ RUN rm \
     globals_0.12.2.tar.gz \
     iterators_1.0.10.tar.gz \
     listenv_0.7.0.tar.gz \
-    clipr_0.4.1.tar.gz \
     tidyverse_1.2.1.tar.gz \
-    promises_1.0.1.tar.gz \
-    future_1.9.0.tar.gz \
+    promises_1.0.1.tar.fs_1.2.7.tar.gz    future_1.9.0.tar.gz \
     doMC_1.3.5.tar.gz \
     foreach_1.4.4.tar.gz \
     doParallel_1.0.11.tar.gz \
@@ -762,9 +759,7 @@ RUN rm \
     styler_1.0.2.tar.gz \
     lintr_1.0.2.tar.gz \
     testthat_2.0.0.tar.gz \
-    fs_1.2.6.tar.gz \
     reprex_0.2.0.tar.gz \
-    gh_1.0.1.tar.gz \
     microbenchmark_1.4-4.tar.gz \
     bench_1.0.1.tar.gz 
 
