@@ -163,7 +163,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   callr_3.2.0.tar.gz
+   callr_3.2.0.tar.gz \
    cli_1.1.0.tar.gz \
    pkgbuild_1.0.2.tar.gz \
    pkgload_1.0.2.tar.gz \
@@ -197,7 +197,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    downloader_0.4.tar.gz
 
 RUN rm \
-   callr_3.2.0.tar.gz
+   callr_3.2.0.tar.gz \
    cli_1.1.0.tar.gz \
    pkgbuild_1.0.2.tar.gz \
    pkgload_1.0.2.tar.gz \
