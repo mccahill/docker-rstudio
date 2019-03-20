@@ -38,8 +38,7 @@ RUN apt-get update ; \
    sudo 
 
 RUN apt-get update ; \
-   DEBIAN_FRONTEND=noninteractive apt-get  install -y  -f \
-   libcurl4-openssl-dev \
+   DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    libcurl4-gnutls-dev \
    libgit2-dev \
    libxml2-dev \
