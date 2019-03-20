@@ -33,7 +33,7 @@ RUN apt-get update ; \
    telnet \
    nmap \
    socat \
-   python-software-properties \
+   software-properties-common \
    wget \
    sudo \
    libcurl4-openssl-dev \
