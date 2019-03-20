@@ -438,6 +438,15 @@ RUN rm \
    rvest_0.3.2.tar.gz \
    pbkrtest_0.4-7.tar.gz 
 
+# Shiny
+#RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.3.838-amd64.deb
+RUN wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.7.907-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.7.907-amd64.deb
+RUN rm shiny-server-1.5.7.907-amd64.deb
+RUN R CMD BATCH /r-studio/install-Shiny.R
+RUN rm /install-Shiny.Rout
+
+
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/SparseM_1.77.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/MatrixModels_0.4-1.tar.gz \
@@ -593,14 +602,6 @@ RUN R CMD BATCH /r-studio/install-dendextend.R
 RUN rm /install-dendextend.Rout 
 RUN R CMD BATCH /r-studio/install-igraph.R
 RUN rm /install-igraph.Rout 
-
-# Shiny
-#RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.3.838-amd64.deb
-RUN wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.7.907-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.7.907-amd64.deb
-RUN rm shiny-server-1.5.7.907-amd64.deb
-RUN R CMD BATCH /r-studio/install-Shiny.R
-RUN rm /install-Shiny.Rout
 
 # install sparklyr so we can do Spark via Livy
 RUN DEBIAN_FRONTEND=noninteractive wget \
