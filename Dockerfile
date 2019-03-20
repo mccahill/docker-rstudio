@@ -195,6 +195,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    backports_1.1.3.tar.gz \
    rprojroot_1.3-2.tar.gz \
    desc_1.2.0.tar.gz \
+   magrittr_1.5.tar.gz \
    prettyunits_1.0.2.tar.gz \
    withr_2.1.2.tar.gz \
    pkgbuild_1.0.2.tar.gz \
@@ -225,7 +226,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    plyr_1.8.4.tar.gz \
    devtools_2.0.1.tar.gz \
    brew_1.0-6.tar.gz \
-   magrittr_1.5.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.19.tar.gz \
    BH_1.69.0-1.tar.gz \
