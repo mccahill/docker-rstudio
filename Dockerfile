@@ -749,7 +749,7 @@ RUN rm \
     iterators_1.0.10.tar.gz \
     listenv_0.7.0.tar.gz \
     tidyverse_1.2.1.tar.gz \
-    promises_1.0.1.tar.
+    promises_1.0.1.tar.gz \
     future_1.9.0.tar.gz \
     doMC_1.3.5.tar.gz \
     foreach_1.4.4.tar.gz \
