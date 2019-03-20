@@ -469,6 +469,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/ggformula_0.9.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/mosaicCore_0.6.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/ggrepel_0.8.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/leaflet_2.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/mosaic_1.5.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -502,6 +503,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    ggstance_0.3.1.tar.gz \
    ggformula_0.9.1.tar.gz \
    ggrepel_0.8.0.tar.gz \
+   leaflet_2.0.2.tar.gz \
    mosaic_1.5.0.tar.gz 
 
 RUN rm \
@@ -535,6 +537,7 @@ RUN rm \
    ggstance_0.3.1.tar.gz \
    ggformula_0.9.1.tar.gz \
    ggrepel_0.8.0.tar.gz \
+   leaflet_2.0.2.tar.gz \
    mosaic_1.5.0.tar.gz 
 
 # Cliburn Chan requested these:
