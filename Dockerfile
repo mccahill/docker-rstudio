@@ -737,6 +737,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     modelr_0.1.4.tar.gz \
     prex_0.2.0.tar.gz \
+    reprex_0.2.1.tar.gz \
     tidyverse_1.2.1.tar.gz \
     promises_1.0.1.tar.gz \
     globals_0.12.4.tar.gz \
@@ -807,22 +808,22 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/pkgdown_1.3.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/bookdown_0.9.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/blogdown_0.11.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/cowplot_0.9.3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/cowplot_0.9.4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/influenceR_0.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/Rook_1.1-1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rgexf_0.15.3.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/visNetwork_2.0.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/visNetwork_2.0.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/DiagrammeR_1.0.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/tweenr_0.1.5.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/ggforce_0.1.3.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/RgoogleMaps_1.4.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tweenr_1.0.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ggforce_0.2.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/RgoogleMaps_1.4.3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rjson_0.2.20.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/mapproj_1.2.6.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/jpeg_0.1-8.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/geosphere_1.5-7.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/ggmap_2.6.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ggmap_3.0.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ggraph_1.0.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/shiny_1.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/shiny_1.2.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/shinyjs_1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/flexdashboard_0.5.1.1.tar.gz 
 
@@ -840,22 +841,22 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     pkgdown_1.3.0.tar.gz \
     bookdown_0.9.tar.gz \
     blogdown_0.11.tar.gz \
-    cowplot_0.9.3.tar.gz \
+    cowplot_0.9.4.tar.gz \
     influenceR_0.1.0.tar.gz \
     Rook_1.1-1.tar.gz \
     rgexf_0.15.3.tar.gz \
-    visNetwork_2.0.4.tar.gz \
+    visNetwork_2.0.5.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
-    tweenr_0.1.5.tar.gz \
-    ggforce_0.1.3.tar.gz \
+    tweenr_1.0.1.tar.gz \
+    ggforce_0.2.1.tar.gz \
     jpeg_0.1-8.tar.gz \
-    RgoogleMaps_1.4.2.tar.gz \
+    RgoogleMaps_1.4.3.tar.gz \
     rjson_0.2.20.tar.gz \
     mapproj_1.2.6.tar.gz \
     geosphere_1.5-7.tar.gz \
-    ggmap_2.6.1.tar.gz \
+    ggmap_3.0.0.tar.gz \
     ggraph_1.0.2.tar.gz \
-    shiny_1.1.0.tar.gz \
+    shiny_1.2.0.tar.gz \
     shinyjs_1.0.tar.gz \
     flexdashboard_0.5.1.1.tar.gz 
 
@@ -873,22 +874,22 @@ RUN rm \
     pkgdown_1.3.0.tar.gz \
     bookdown_0.9.tar.gz \
     blogdown_0.11.tar.gz \
-    cowplot_0.9.3.tar.gz \
+    cowplot_0.9.4.tar.gz \
     influenceR_0.1.0.tar.gz \
     Rook_1.1-1.tar.gz \
     rgexf_0.15.3.tar.gz \
-    visNetwork_2.0.4.tar.gz \
+    visNetwork_2.0.5.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
-    tweenr_0.1.5.tar.gz \
-    ggforce_0.1.3.tar.gz \
-    RgoogleMaps_1.4.2.tar.gz \
+    tweenr_1.0.1.tar.gz \
+    ggforce_0.2.1.tar.gz \
+    RgoogleMaps_1.4.3.tar.gz \
     rjson_0.2.20.tar.gz \
     mapproj_1.2.6.tar.gz \
     jpeg_0.1-8.tar.gz \
     geosphere_1.5-7.tar.gz \
-    ggmap_2.6.1.tar.gz \
+    ggmap_3.0.0.tar.gz \
     ggraph_1.0.2.tar.gz \
-    shiny_1.1.0.tar.gz \
+    shiny_1.2.0.tar.gz \
     shinyjs_1.0.tar.gz \
     flexdashboard_0.5.1.1.tar.gz 
 
@@ -898,11 +899,11 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/janeaustenr_0.1.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/NHANES_2.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/repurrrsive_0.1.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/infer_0.3.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/ipred_0.9-7.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/infer_0.4.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ipred_0.9-8.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/numDeriv_2016.8-1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/SQUAREM_2017.10-1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/lava_1.6.3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/lava_1.6.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/prodlim_2018.04.18.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/CVST_0.2-2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/DRR_0.0.3.tar.gz \
@@ -919,12 +920,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     janeaustenr_0.1.5.tar.gz \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
-    infer_0.3.1.tar.gz \
+    infer_0.4.0.tar.gz \
     numDeriv_2016.8-1.tar.gz \
     SQUAREM_2017.10-1.tar.gz \
-    lava_1.6.3.tar.gz \
+    lava_1.6.5.tar.gz \
     prodlim_2018.04.18.tar.gz \
-    ipred_0.9-7.tar.gz \
+    ipred_0.9-8.tar.gz \
     CVST_0.2-2.tar.gz \
     DRR_0.0.3.tar.gz \
     dimRed_0.1.0.tar.gz \
@@ -940,12 +941,12 @@ RUN rm \
     janeaustenr_0.1.5.tar.gz \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
-    infer_0.3.1.tar.gz \
+    infer_0.4.0.tar.gz \
     numDeriv_2016.8-1.tar.gz \
     SQUAREM_2017.10-1.tar.gz \
-    lava_1.6.3.tar.gz \
+    lava_1.6.5.tar.gz \
     prodlim_2018.04.18.tar.gz \
-    ipred_0.9-7.tar.gz \
+    ipred_0.9-8.tar.gz \
     CVST_0.2-2.tar.gz \
     DRR_0.0.3.tar.gz \
     dimRed_0.1.0.tar.gz \
