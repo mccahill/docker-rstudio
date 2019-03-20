@@ -177,9 +177,9 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    crayon_1.3.4.tar.gz \
    assertthat_0.2.0.tar.gz \
    cli_1.1.0.tar.gz \
+   rprojroot_1.3-2.tar.gz \
    desc_1.2.0.tar.gz \
    prettyunits_1.0.2.tar.gz \
-   rprojroot_1.3-2.tar.gz \
    withr_2.1.2.tar.gz \
    pkgbuild_1.0.2.tar.gz \
    pkgload_1.0.2.tar.gz \
