@@ -334,7 +334,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    utf8_1.1.4.tar.gz \
    fansi_0.4.0.tar.gz \
    pillar_1.3.1.tar.gz \
-   pkgconfig_2.0.2.tar.gz
+   pkgconfig_2.0.2.tar.gz \
    tibble_2.1.1.tar.gz \
    ggplot2_3.1.0.tar.gz \
    stargazer_5.2.2.tar.gz \
@@ -358,7 +358,7 @@ RUN rm \
    utf8_1.1.4.tar.gz \
    fansi_0.4.0.tar.gz \
    pillar_1.3.1.tar.gz \
-   pkgconfig_2.0.2.tar.gz
+   pkgconfig_2.0.2.tar.gz \
    tibble_2.1.1.tar.gz \
    ggplot2_3.1.0.tar.gz \
    stargazer_5.2.2.tar.gz \
