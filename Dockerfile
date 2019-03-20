@@ -814,6 +814,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/rgexf_0.15.3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/visNetwork_2.0.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/DiagrammeR_1.0.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/farver_1.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/tweenr_1.0.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ggforce_0.2.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RgoogleMaps_1.4.3.tar.gz \
@@ -847,6 +848,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     rgexf_0.15.3.tar.gz \
     visNetwork_2.0.5.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
+    farver_1.1.0.tar.gz \
     tweenr_1.0.1.tar.gz \
     ggforce_0.2.1.tar.gz \
     jpeg_0.1-8.tar.gz \
@@ -880,6 +882,7 @@ RUN rm \
     rgexf_0.15.3.tar.gz \
     visNetwork_2.0.5.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
+    farver_1.1.0.tar.gz \
     tweenr_1.0.1.tar.gz \
     ggforce_0.2.1.tar.gz \
     RgoogleMaps_1.4.3.tar.gz \
@@ -1026,73 +1029,73 @@ RUN rm \
 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://archive.linux.duke.edu/cran/src/contrib/pROC_1.12.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/pROC_1.14.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/gtools_3.8.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/gdata_2.18.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/gplots_3.0.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/gplots_3.0.1.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/MLmetrics_1.1.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/yardstick_0.0.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/xgboost_0.71.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/ModelMetrics_1.2.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/caret_6.0-80.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/e1071_1.7-0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/yardstick_0.0.3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/xgboost_0.82.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ModelMetrics_1.2.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/caret_6.0-81.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/e1071_1.7-1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/dotCall64_1.0-0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/spam_2.2-0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/spam_2.2-2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/fields_9.6.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ROCR_1.0-7.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/reticulate_1.10.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/reticulate_1.11.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/tfruns_1.4.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/tensorflow_1.9.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tensorflow_1.10.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/zeallot_0.1.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/keras_2.2.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/coda_0.19-1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/greta_0.2.3.tar.gz 
+    https://archive.linux.duke.edu/cran/src/contrib/keras_2.2.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/coda_0.19-2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/greta_0.3.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-    pROC_1.12.1.tar.gz \
+    pROC_1.14.0.tar.gz \
     gtools_3.8.1.tar.gz \
     gdata_2.18.0.tar.gz \
-    gplots_3.0.1.tar.gz \
+    gplots_3.0.1.1.tar.gz \
     ROCR_1.0-7.tar.gz \
     MLmetrics_1.1.1.tar.gz \
-    yardstick_0.0.1.tar.gz \
-    xgboost_0.71.2.tar.gz \
-    ModelMetrics_1.2.0.tar.gz \
-    caret_6.0-80.tar.gz \
-    e1071_1.7-0.tar.gz \
+    yardstick_0.0.3.tar.gz \
+    xgboost_0.82.1.tar.gz \
+    ModelMetrics_1.2.2.tar.gz \
+    caret_6.0-81.tar.gz \
+    e1071_1.7-1.tar.gz \
     dotCall64_1.0-0.tar.gz \
-    spam_2.2-0.tar.gz \
+    spam_2.2-2.tar.gz \
     fields_9.6.tar.gz \
-    reticulate_1.10.tar.gz \
+    reticulate_1.11.1.tar.gz \
     tfruns_1.4.tar.gz \
-    tensorflow_1.9.tar.gz \
+    tensorflow_1.10.tar.gz \
     zeallot_0.1.0.tar.gz \
-    keras_2.2.0.tar.gz \
-    coda_0.19-1.tar.gz \
-    greta_0.2.3.tar.gz 
+    keras_2.2.4.tar.gz \
+    coda_0.19-2.tar.gz \
+    greta_0.3.0.tar.gz 
 
 RUN rm \
-    pROC_1.12.1.tar.gz \
+    pROC_1.14.0.tar.gz \
     gtools_3.8.1.tar.gz \
     gdata_2.18.0.tar.gz \
-    gplots_3.0.1.tar.gz \
+    gplots_3.0.1.1.tar.gz \
     MLmetrics_1.1.1.tar.gz \
-    yardstick_0.0.1.tar.gz \
-    xgboost_0.71.2.tar.gz \
-    ModelMetrics_1.2.0.tar.gz \
-    caret_6.0-80.tar.gz \
-    e1071_1.7-0.tar.gz \
+    yardstick_0.0.3.tar.gz \
+    xgboost_0.82.1.tar.gz \
+    ModelMetrics_1.2.2.tar.gz \
+    caret_6.0-81.tar.gz \
+    e1071_1.7-1.tar.gz \
     dotCall64_1.0-0.tar.gz \
-    spam_2.2-0.tar.gz \
+    spam_2.2-2.tar.gz \
     fields_9.6.tar.gz \
     ROCR_1.0-7.tar.gz \
-    reticulate_1.10.tar.gz \
+    reticulate_1.11.1.tar.gz \
     tfruns_1.4.tar.gz \
-    tensorflow_1.9.tar.gz \
+    tensorflow_1.10.tar.gz \
     zeallot_0.1.0.tar.gz \
-    keras_2.2.0.tar.gz \
-    coda_0.19-1.tar.gz \
-    greta_0.2.3.tar.gz 
+    keras_2.2.4.tar.gz \
+    coda_0.19-2.tar.gz \
+    greta_0.3.0.tar.gz 
 
 
 RUN R CMD BATCH /r-studio/install-2018-packages-1.R
