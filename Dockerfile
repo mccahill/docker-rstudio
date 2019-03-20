@@ -140,12 +140,13 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/rprojroot_1.3-2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/withr_2.1.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgbuild_1.0.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rlang_0.3.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rstudioapi_0.10.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgload_1.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rcmdcheck_1.3.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/remotes_2.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/sessioninfo_1.1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/usethis_1.4.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/rstudioapi_0.10.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/sys_3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/askpass_1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/openssl_1.2.2.tar.gz \
@@ -184,6 +185,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    prettyunits_1.0.2.tar.gz \
    withr_2.1.2.tar.gz \
    pkgbuild_1.0.2.tar.gz \
+   rlang_0.3.1.tar.gz \
+   rstudioapi_0.10.tar.gz \
    pkgload_1.0.2.tar.gz \
    rcmdcheck_1.3.2.tar.gz \
    remotes_2.0.2.tar.gz \
@@ -200,7 +203,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    askpass_1.1.tar.gz \
    openssl_1.2.2.tar.gz \
    httr_1.4.0.tar.gz \
-   rstudioapi_0.10.tar.gz \
    git2r_0.25.2.tar.gz \
    devtools_2.0.1.tar.gz \
    brew_1.0-6.tar.gz \
@@ -226,6 +228,8 @@ RUN rm \
    rprojroot_1.3-2.tar.gz \
    withr_2.1.2.tar.gz \
    pkgbuild_1.0.2.tar.gz \
+   rlang_0.3.1.tar.gz \
+   rstudioapi_0.10.tar.gz \
    pkgload_1.0.2.tar.gz \
    rcmdcheck_1.3.2.tar.gz \
    remotes_2.0.2.tar.gz \
@@ -238,7 +242,6 @@ RUN rm \
    RCurl_1.95-4.12.tar.gz \
    plyr_1.8.4.tar.gz \
    httr_1.4.0.tar.gz \
-   rstudioapi_0.10.tar.gz \
    sys_3.1.tar.gz \
    askpass_1.1.tar.gz \
    openssl_1.2.2.tar.gz \
@@ -274,7 +277,6 @@ RUN rm \
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/lubridate_1.7.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/rlang_0.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/utf8_1.1.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/fansi_0.3.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pillar_1.3.0.tar.gz \
@@ -308,7 +310,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    proto_1.0.0.tar.gz \
    reshape2_1.4.3.tar.gz \
    lazyeval_0.2.1.tar.gz \
-   rlang_0.2.2.tar.gz \
    utf8_1.1.4.tar.gz \
    fansi_0.3.0.tar.gz \
    pillar_1.3.0.tar.gz \
@@ -332,7 +333,6 @@ RUN rm \
    proto_1.0.0.tar.gz \
    reshape2_1.4.3.tar.gz \
    lazyeval_0.2.1.tar.gz \
-   rlang_0.2.2.tar.gz \
    utf8_1.1.4.tar.gz \
    fansi_0.3.0.tar.gz \
    pillar_1.3.0.tar.gz \
