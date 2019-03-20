@@ -2,11 +2,11 @@
 #
 # VERSION 1.4
 
-FROM     ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 
 # get R from a CRAN archive (we want the 3.5 version of R)
-RUN  echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial-cran35/" >> /etc/apt/sources.list
+RUN echo  "deb http://cran.rstudio.com/bin/linux/ubuntu bionic-cran35/"  >>  /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv  --keyserver keyserver.ubuntu.com --recv-keys  E084DAB9
 
 RUN apt-get  update ; \
