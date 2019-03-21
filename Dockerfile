@@ -983,6 +983,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/ggridges_0.5.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/bayesplot_1.6.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/matrixStats_0.54.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/checkmate_1.9.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/loo_2.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/StanHeaders_2.18.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/inline_0.3.15.tar.gz \
@@ -1007,6 +1008,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     ggridges_0.5.1.tar.gz \
     bayesplot_1.6.0.tar.gz \
     matrixStats_0.54.0.tar.gz \
+    checkmate_1.9.1.tar.gz \
     loo_2.1.0.tar.gz \
     StanHeaders_2.18.1.tar.gz \
     inline_0.3.15.tar.gz \
@@ -1029,6 +1031,7 @@ RUN rm \
     ggridges_0.5.1.tar.gz \
     bayesplot_1.6.0.tar.gz \
     matrixStats_0.54.0.tar.gz \
+    checkmate_1.9.1.tar.gz \
     loo_2.1.0.tar.gz \
     StanHeaders_2.18.1.tar.gz \
     inline_0.3.15.tar.gz \
