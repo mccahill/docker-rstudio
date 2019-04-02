@@ -571,7 +571,7 @@ RUN rm \
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/maps_3.3.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/zoo_1.8-4.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/zoo_1.8-5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/gcookbook_2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/corrplot_0.84.tar.gz 
 
@@ -579,7 +579,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    RColorBrewer_1.1-2.tar.gz \
    maps_3.3.0.tar.gz \
-   zoo_1.8-4.tar.gz \
+   zoo_1.8-5.tar.gz \
    gcookbook_2.0.tar.gz \
    corrplot_0.84.tar.gz 
 
@@ -587,7 +587,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
    RColorBrewer_1.1-2.tar.gz \
    maps_3.3.0.tar.gz \
-   zoo_1.8-4.tar.gz \
+   zoo_1.8-5.tar.gz \
    gcookbook_2.0.tar.gz \
    corrplot_0.84.tar.gz 
    
