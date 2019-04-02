@@ -919,7 +919,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/magic_1.5-9.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/lpSolve_5.6.13.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RcppProgress_0.4.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/geometry_0.4.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/geometry_0.4.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ddalpha_1.3.8.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
@@ -942,7 +942,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     magic_1.5-9.tar.gz \
     lpSolve_5.6.13.tar.gz \
     RcppProgress_0.4.1.tar.gz \
-    geometry_0.4.0.tar.gz \
+    geometry_0.4.1.tar.gz \
     ddalpha_1.3.8.tar.gz 
 	
 RUN rm \
@@ -965,14 +965,14 @@ RUN rm \
     magic_1.5-9.tar.gz \
     lpSolve_5.6.13.tar.gz \
     RcppProgress_0.4.1.tar.gz \
-    geometry_0.4.0.tar.gz \
+    geometry_0.4.1.tar.gz \
     ddalpha_1.3.8.tar.gz 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/gower_0.2.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RcppRoll_0.3.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/pls_2.7-0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/recipes_0.1.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/pls_2.7-1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/recipes_0.1.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rsample_0.0.4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/hunspell_3.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/SnowballC_0.6.0.tar.gz \
@@ -995,8 +995,8 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     gower_0.2.0.tar.gz \
     RcppRoll_0.3.0.tar.gz \
-    pls_2.7-0.tar.gz \
-    recipes_0.1.4.tar.gz \
+    pls_2.7-1.tar.gz \
+    recipes_0.1.5.tar.gz \
     rsample_0.0.4.tar.gz \
     hunspell_3.0.tar.gz \
     SnowballC_0.6.0.tar.gz \
@@ -1019,8 +1019,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
     gower_0.2.0.tar.gz \
     RcppRoll_0.3.0.tar.gz \
-    pls_2.7-0.tar.gz \
-    recipes_0.1.4.tar.gz \
+    pls_2.7-1.tar.gz \
+    recipes_0.1.5.tar.gz \
     rsample_0.0.4.tar.gz \
     hunspell_3.0.tar.gz \
     SnowballC_0.6.0.tar.gz \
