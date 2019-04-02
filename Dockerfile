@@ -713,7 +713,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/foreach_1.4.4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/doParallel_1.0.14.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/furrr_0.1.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/drat_0.1.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/drat_0.1.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/tidygraph_1.1.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/here_0.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rticles_0.7.tar.gz \
@@ -748,7 +748,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     doMC_1.3.5.tar.gz \
     doParallel_1.0.14.tar.gz \
     furrr_0.1.0.tar.gz \
-    drat_0.1.4.tar.gz \
+    drat_0.1.5.tar.gz \
     tidygraph_1.1.2.tar.gz \
     here_0.1.tar.gz \
     rticles_0.7.tar.gz \
@@ -782,7 +782,7 @@ RUN rm \
     foreach_1.4.4.tar.gz \
     doParallel_1.0.14.tar.gz \
     furrr_0.1.0.tar.gz \
-    drat_0.1.4.tar.gz \
+    drat_0.1.5.tar.gz \
     tidygraph_1.1.2.tar.gz \
     here_0.1.tar.gz \
     rticles_0.7.tar.gz \
@@ -797,7 +797,7 @@ RUN rm \
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/pryr_0.1.4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/profvis_0.3.5.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/RcppArmadillo_0.9.200.7.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/RcppArmadillo_0.9.300.2.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/servr_0.13.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/xaringan_0.9.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rsconnect_0.8.13.tar.gz \
@@ -812,7 +812,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/influenceR_0.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/Rook_1.1-1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rgexf_0.15.3.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/visNetwork_2.0.5.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/visNetwork_2.0.6.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/DiagrammeR_1.0.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/farver_1.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/tweenr_1.0.1.tar.gz \
@@ -832,7 +832,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     pryr_0.1.4.tar.gz \
     profvis_0.3.5.tar.gz \
-    RcppArmadillo_0.9.200.7.1.tar.gz \
+    RcppArmadillo_0.9.300.2.0.tar.gz \
     servr_0.13.tar.gz \
     xaringan_0.9.tar.gz \
     PKI_0.1-5.1.tar.gz \
@@ -847,7 +847,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     influenceR_0.1.0.tar.gz \
     Rook_1.1-1.tar.gz \
     rgexf_0.15.3.tar.gz \
-    visNetwork_2.0.5.tar.gz \
+    visNetwork_2.0.6.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
     farver_1.1.0.tar.gz \
     tweenr_1.0.1.tar.gz \
@@ -867,7 +867,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
     pryr_0.1.4.tar.gz \
     profvis_0.3.5.tar.gz \
-    RcppArmadillo_0.9.200.7.1.tar.gz \
+    RcppArmadillo_0.9.300.2.0.tar.gz \
     servr_0.13.tar.gz \
     xaringan_0.9.tar.gz \
     PKI_0.1-5.1.tar.gz \
@@ -882,7 +882,7 @@ RUN rm \
     influenceR_0.1.0.tar.gz \
     Rook_1.1-1.tar.gz \
     rgexf_0.15.3.tar.gz \
-    visNetwork_2.0.5.tar.gz \
+    visNetwork_2.0.6.tar.gz \
     DiagrammeR_1.0.0.tar.gz \
     farver_1.1.0.tar.gz \
     tweenr_1.0.1.tar.gz \
