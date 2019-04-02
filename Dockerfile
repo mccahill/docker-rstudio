@@ -79,7 +79,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/glue_1.3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/stringr_1.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/markdown_0.9.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/highr_0.7.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/highr_0.8.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/formatR_1.6.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/evaluate_0.13.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/mime_0.6.tar.gz \
@@ -99,7 +99,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    mime_0.6.tar.gz \
    glue_1.3.1.tar.gz \
    stringr_1.4.0.tar.gz \
-   highr_0.7.tar.gz \
+   highr_0.8.tar.gz \
    formatR_1.6.tar.gz \
    evaluate_0.13.tar.gz \
    markdown_0.9.tar.gz \
@@ -110,7 +110,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
    evaluate_0.13.tar.gz \
    formatR_1.6.tar.gz \
-   highr_0.7.tar.gz \
+   highr_0.8.tar.gz \
    markdown_0.9.tar.gz \
    stringi_1.4.3.tar.gz \
    magrittr_1.5.tar.gz \
