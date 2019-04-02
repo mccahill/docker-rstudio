@@ -14,7 +14,8 @@ stages:
 build:
   tags: 
     - rstudio
-    - labs-az-01r
+#    - labs-az-01r
+    - datafest-01
   stage: build
   script: 
     - echo "Building the app in staging"
@@ -37,6 +38,37 @@ build:
     name: staging
   only:
   - staging
+
+deploy_datafest-01:
+  tags: 
+    - rstudio
+    - datafest-01
+  <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
+
+deploy_datafest-02:
+  tags: 
+    - rstudio
+    - datafest-02
+  <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
+
+deploy_datafest-03:
+  tags: 
+    - rstudio
+    - datafest-03
+  <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
+
+deploy_datafest-04:
+  tags: 
+    - rstudio
+    - datafest-04
+  <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
+
+deploy_datafest-05:
+  tags: 
+    - rstudio
+    - datafest-05
+  <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
+
 
 deploy_staging_01:
   tags: 
