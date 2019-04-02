@@ -312,7 +312,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/scales_1.0.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/stargazer_5.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/reshape2_1.4.3.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/gtable_0.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/gtable_0.3.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/proto_1.0.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/minqa_1.2.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/RcppEigen_0.3.3.5.0.tar.gz \
@@ -320,7 +320,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lubridate_1.7.4.tar.gz  \
-   gtable_0.2.0.tar.gz \
+   gtable_0.3.0.tar.gz \
    RColorBrewer_1.1-2.tar.gz \
    dichromat_2.0-0.tar.gz \
    colorspace_1.4-1.tar.gz \
@@ -344,7 +344,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 
 RUN rm \
    lubridate_1.7.4.tar.gz  \
-   gtable_0.2.0.tar.gz \
+   gtable_0.3.0.tar.gz \
    RColorBrewer_1.1-2.tar.gz \
    dichromat_2.0-0.tar.gz \
    colorspace_1.4-1.tar.gz \
