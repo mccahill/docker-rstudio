@@ -140,15 +140,15 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/ps_1.3.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/callr_3.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/crayon_1.3.4.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/assertthat_0.2.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/cli_1.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/desc_1.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/backports_1.1.3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rprojroot_1.3-2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/withr_2.1.2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/pkgbuild_1.0.2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/rlang_0.3.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/pkgbuild_1.0.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rlang_0.3.3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rstudioapi_0.10.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgload_1.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rcmdcheck_1.3.2.tar.gz \
@@ -160,7 +160,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/usethis_1.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/sys_3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/askpass_1.1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/openssl_1.2.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/openssl_1.3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/brew_1.0-6.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/fs_1.2.7.tar.gz \
@@ -189,15 +189,15 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    processx_3.3.0.tar.gz \
    callr_3.2.0.tar.gz \
    crayon_1.3.4.tar.gz \
-   assertthat_0.2.0.tar.gz \
+   assertthat_0.2.1.tar.gz \
    cli_1.1.0.tar.gz \
    backports_1.1.3.tar.gz \
    rprojroot_1.3-2.tar.gz \
    desc_1.2.0.tar.gz \
    prettyunits_1.0.2.tar.gz \
    withr_2.1.2.tar.gz \
-   pkgbuild_1.0.2.tar.gz \
-   rlang_0.3.1.tar.gz \
+   pkgbuild_1.0.3.tar.gz \
+   rlang_0.3.3.tar.gz \
    rstudioapi_0.10.tar.gz \
    pkgload_1.0.2.tar.gz \
    xopen_1.0.0.tar.gz \
@@ -211,7 +211,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    jsonlite_1.6.tar.gz \
    sys_3.1.tar.gz \
    askpass_1.1.tar.gz \
-   openssl_1.2.2.tar.gz \
+   openssl_1.3.tar.gz \
    curl_3.3.tar.gz \
    httr_1.4.0.tar.gz \
    gh_1.0.1.tar.gz \
@@ -237,15 +237,15 @@ RUN rm \
    R6_2.4.0.tar.gz \
    processx_3.3.0.tar.gz \
    crayon_1.3.4.tar.gz \
-   assertthat_0.2.0.tar.gz \
+   assertthat_0.2.1.tar.gz \
    cli_1.1.0.tar.gz \
    desc_1.2.0.tar.gz \
    prettyunits_1.0.2.tar.gz \
    backports_1.1.3.tar.gz \
    rprojroot_1.3-2.tar.gz \
    withr_2.1.2.tar.gz \
-   pkgbuild_1.0.2.tar.gz \
-   rlang_0.3.1.tar.gz \
+   pkgbuild_1.0.3.tar.gz \
+   rlang_0.3.3.tar.gz \
    rstudioapi_0.10.tar.gz \
    clipr_0.5.0.tar.gz \
    clisymbols_1.2.0.tar.gz \
@@ -265,7 +265,7 @@ RUN rm \
    httr_1.4.0.tar.gz \
    sys_3.1.tar.gz \
    askpass_1.1.tar.gz \
-   openssl_1.2.2.tar.gz \
+   openssl_1.3.tar.gz \
    brew_1.0-6.tar.gz \
    roxygen2_5.0.1.tar.gz \
    BH_1.69.0-1.tar.gz \
