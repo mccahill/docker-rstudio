@@ -1049,7 +1049,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/yardstick_0.0.3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/xgboost_0.82.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ModelMetrics_1.2.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/caret_6.0-81.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/caret_6.0-82.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/e1071_1.7-1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/dotCall64_1.0-0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/spam_2.2-2.tar.gz \
@@ -1073,7 +1073,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     yardstick_0.0.3.tar.gz \
     xgboost_0.82.1.tar.gz \
     ModelMetrics_1.2.2.tar.gz \
-    caret_6.0-81.tar.gz \
+    caret_6.0-82.tar.gz \
     e1071_1.7-1.tar.gz \
     dotCall64_1.0-0.tar.gz \
     spam_2.2-2.tar.gz \
@@ -1095,7 +1095,7 @@ RUN rm \
     yardstick_0.0.3.tar.gz \
     xgboost_0.82.1.tar.gz \
     ModelMetrics_1.2.2.tar.gz \
-    caret_6.0-81.tar.gz \
+    caret_6.0-82.tar.gz \
     e1071_1.7-1.tar.gz \
     dotCall64_1.0-0.tar.gz \
     spam_2.2-2.tar.gz \
