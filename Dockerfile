@@ -136,7 +136,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://archive.linux.duke.edu/cran/src/contrib/processx_3.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/processx_3.3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/ps_1.3.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/callr_3.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/crayon_1.3.4.tar.gz \
@@ -144,30 +144,30 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/cli_1.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/desc_1.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/backports_1.1.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/backports_1.1.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rprojroot_1.3-2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/withr_2.1.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgbuild_1.0.3.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/rlang_0.3.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rlang_0.3.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rstudioapi_0.10.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgload_1.0.2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/rcmdcheck_1.3.2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/remotes_2.0.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rcmdcheck_1.3.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/remotes_2.0.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/xopen_1.0.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/clipr_0.5.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/clipr_0.6.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/clisymbols_1.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/sessioninfo_1.1.1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/usethis_1.4.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/sys_3.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/usethis_1.5.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/sys_3.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/askpass_1.1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/openssl_1.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/openssl_1.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/brew_1.0-6.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/fs_1.2.7.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/fs_1.3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/gh_1.0.1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/rversions_1.0.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rversions_2.0.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/git2r_0.25.2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/devtools_2.0.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/devtools_2.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/R6_2.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/httr_1.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/RCurl_1.95-4.12.tar.gz \
@@ -179,82 +179,82 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/downloader_0.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/memoise_1.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/plyr_1.8.4.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/XML_3.98-1.19.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/XML_3.98-1.20.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/whisker_0.3-2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    ps_1.3.0.tar.gz \
    R6_2.4.0.tar.gz \
-   processx_3.3.0.tar.gz \
+   processx_3.3.1.tar.gz \
    callr_3.2.0.tar.gz \
    crayon_1.3.4.tar.gz \
    assertthat_0.2.1.tar.gz \
    cli_1.1.0.tar.gz \
-   backports_1.1.3.tar.gz \
+   backports_1.1.4.tar.gz \
    rprojroot_1.3-2.tar.gz \
    desc_1.2.0.tar.gz \
    prettyunits_1.0.2.tar.gz \
    withr_2.1.2.tar.gz \
    pkgbuild_1.0.3.tar.gz \
-   rlang_0.3.3.tar.gz \
+   rlang_0.3.4.tar.gz \
    rstudioapi_0.10.tar.gz \
    pkgload_1.0.2.tar.gz \
    xopen_1.0.0.tar.gz \
    sessioninfo_1.1.1.tar.gz \
-   rcmdcheck_1.3.2.tar.gz \
-   remotes_2.0.2.tar.gz \   
+   rcmdcheck_1.3.3.tar.gz \
+   remotes_2.0.4.tar.gz \   
    whisker_0.3-2.tar.gz \
    git2r_0.25.2.tar.gz \
-   fs_1.2.7.tar.gz \
+   fs_1.3.1.tar.gz \
    ini_0.3.1.tar.gz \
    jsonlite_1.6.tar.gz \
-   sys_3.1.tar.gz \
+   sys_3.2.tar.gz \
    askpass_1.1.tar.gz \
-   openssl_1.3.tar.gz \
+   openssl_1.4.tar.gz \
    curl_3.3.tar.gz \
    httr_1.4.0.tar.gz \
    gh_1.0.1.tar.gz \
-   clipr_0.5.0.tar.gz \
+   clipr_0.6.0.tar.gz \
    clisymbols_1.2.0.tar.gz \   
-   usethis_1.4.0.tar.gz \
+   usethis_1.5.0.tar.gz \
    memoise_1.1.0.tar.gz \
    bitops_1.0-6.tar.gz \
    RCurl_1.95-4.12.tar.gz \
    plyr_1.8.4.tar.gz \
-   devtools_2.0.1.tar.gz \
+   devtools_2.0.2.tar.gz \
    brew_1.0-6.tar.gz \
    roxygen2_5.0.1.tar.gz \
-   XML_3.98-1.19.tar.gz \
+   XML_3.98-1.20.tar.gz \
    BH_1.69.0-1.tar.gz \
    xml2_1.2.0.tar.gz \
-   rversions_1.0.3.tar.gz \
+   rversions_2.0.0.tar.gz \
    downloader_0.4.tar.gz
 
 RUN rm \
    ps_1.3.0.tar.gz \
    callr_3.2.0.tar.gz \
    R6_2.4.0.tar.gz \
-   processx_3.3.0.tar.gz \
+   processx_3.3.1.tar.gz \
    crayon_1.3.4.tar.gz \
    assertthat_0.2.1.tar.gz \
    cli_1.1.0.tar.gz \
    desc_1.2.0.tar.gz \
    prettyunits_1.0.2.tar.gz \
-   backports_1.1.3.tar.gz \
+   backports_1.1.4.tar.gz \
    rprojroot_1.3-2.tar.gz \
    withr_2.1.2.tar.gz \
    pkgbuild_1.0.3.tar.gz \
-   rlang_0.3.3.tar.gz \
+   rlang_0.3.4.tar.gz \
    rstudioapi_0.10.tar.gz \
-   clipr_0.5.0.tar.gz \
+   clipr_0.6.0.tar.gz \
    clisymbols_1.2.0.tar.gz \
    pkgload_1.0.2.tar.gz \
    sessioninfo_1.1.1.tar.gz \
    xopen_1.0.0.tar.gz \
-   rcmdcheck_1.3.2.tar.gz \
-   remotes_2.0.2.tar.gz \
-   usethis_1.4.0.tar.gz \
+   rcmdcheck_1.3.3.tar.gz \
+   remotes_2.0.4.tar.gz \
+   usethis_1.5.0.tar.gz \
    ini_0.3.1.tar.gz \
    jsonlite_1.6.tar.gz \
    memoise_1.1.0.tar.gz \
@@ -263,18 +263,18 @@ RUN rm \
    RCurl_1.95-4.12.tar.gz \
    plyr_1.8.4.tar.gz \
    httr_1.4.0.tar.gz \
-   sys_3.1.tar.gz \
+   sys_3.2.tar.gz \
    askpass_1.1.tar.gz \
-   openssl_1.3.tar.gz \
+   openssl_1.4.tar.gz \
    brew_1.0-6.tar.gz \
    roxygen2_5.0.1.tar.gz \
    BH_1.69.0-1.tar.gz \
-   XML_3.98-1.19.tar.gz \
+   XML_3.98-1.20.tar.gz \
    xml2_1.2.0.tar.gz \
    curl_3.3.tar.gz \
-   rversions_1.0.3.tar.gz \
+   rversions_2.0.0.tar.gz \
    git2r_0.25.2.tar.gz \
-   devtools_2.0.1.tar.gz \
+   devtools_2.0.2.tar.gz \
    downloader_0.4.tar.gz
 
 # the CRAN install from source fails because a server at MIT will not respond
