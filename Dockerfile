@@ -927,6 +927,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/lpSolve_5.6.13.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RcppProgress_0.4.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/geometry_0.4.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/DEoptimR_1.0-8.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/robustbase_0.93-5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ddalpha_1.3.9.tar.gz 
 
@@ -952,6 +953,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     lpSolve_5.6.13.1.tar.gz \
     RcppProgress_0.4.1.tar.gz \
     geometry_0.4.1.tar.gz \
+    DEoptimR_1.0-8.tar.gz \
     robustbase_0.93-5.tar.gz \
     ddalpha_1.3.9.tar.gz 
 	
@@ -977,6 +979,7 @@ RUN rm \
     lpSolve_5.6.13.1.tar.gz \
     RcppProgress_0.4.1.tar.gz \
     geometry_0.4.1.tar.gz \
+    DEoptimR_1.0-8.tar.gz \
     robustbase_0.93-5.tar.gz \
     ddalpha_1.3.9.tar.gz 
 	
