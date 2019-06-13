@@ -802,106 +802,106 @@ RUN rm \
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/pryr_0.1.4.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/profvis_0.3.5.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/RcppArmadillo_0.9.300.2.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/profvis_0.3.6.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/RcppArmadillo_0.9.500.2.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/servr_0.13.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/xaringan_0.9.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/xaringan_0.10.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rsconnect_0.8.13.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/PKI_0.1-5.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/RJSONIO_1.3-1.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/RJSONIO_1.3-1.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/packrat_0.5.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/highlight_0.4.7.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/pkgdown_1.3.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/bookdown_0.9.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/blogdown_0.11.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/bookdown_0.11.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/blogdown_0.13.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/cowplot_0.9.4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/influenceR_0.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/Rook_1.1-1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rgexf_0.15.3.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/visNetwork_2.0.6.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/DiagrammeR_1.0.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/visNetwork_2.0.7.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/DiagrammeR_1.0.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/farver_1.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/tweenr_1.0.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/polyclip_1.10-0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/ggforce_0.2.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ggforce_0.2.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RgoogleMaps_1.4.3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rjson_0.2.20.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/mapproj_1.2.6.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/jpeg_0.1-8.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/geosphere_1.5-7.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/geosphere_1.5-10.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ggmap_3.0.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ggraph_1.0.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/shiny_1.2.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/shiny_1.3.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/shinyjs_1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/flexdashboard_0.5.1.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     pryr_0.1.4.tar.gz \
-    profvis_0.3.5.tar.gz \
-    RcppArmadillo_0.9.300.2.0.tar.gz \
+    profvis_0.3.6.tar.gz \
+    RcppArmadillo_0.9.500.2.0.tar.gz \
     servr_0.13.tar.gz \
-    xaringan_0.9.tar.gz \
+    xaringan_0.10.tar.gz \
     PKI_0.1-5.1.tar.gz \
-    RJSONIO_1.3-1.1.tar.gz \
+    RJSONIO_1.3-1.2.tar.gz \
     packrat_0.5.0.tar.gz \
     rsconnect_0.8.13.tar.gz \
     highlight_0.4.7.2.tar.gz \
     pkgdown_1.3.0.tar.gz \
-    bookdown_0.9.tar.gz \
-    blogdown_0.11.tar.gz \
+    bookdown_0.11.tar.gz \
+    blogdown_0.13.tar.gz \
     cowplot_0.9.4.tar.gz \
     influenceR_0.1.0.tar.gz \
     Rook_1.1-1.tar.gz \
     rgexf_0.15.3.tar.gz \
-    visNetwork_2.0.6.tar.gz \
-    DiagrammeR_1.0.0.tar.gz \
+    visNetwork_2.0.7.tar.gz \
+    DiagrammeR_1.0.1.tar.gz \
     farver_1.1.0.tar.gz \
     tweenr_1.0.1.tar.gz \
     polyclip_1.10-0.tar.gz \
-    ggforce_0.2.1.tar.gz \
+    ggforce_0.2.2.tar.gz \
     jpeg_0.1-8.tar.gz \
     RgoogleMaps_1.4.3.tar.gz \
     rjson_0.2.20.tar.gz \
     mapproj_1.2.6.tar.gz \
-    geosphere_1.5-7.tar.gz \
+    geosphere_1.5-10.tar.gz \
     ggmap_3.0.0.tar.gz \
     ggraph_1.0.2.tar.gz \
-    shiny_1.2.0.tar.gz \
+    shiny_1.3.2.tar.gz \
     shinyjs_1.0.tar.gz \
     flexdashboard_0.5.1.1.tar.gz 
 
 RUN rm \
     pryr_0.1.4.tar.gz \
-    profvis_0.3.5.tar.gz \
-    RcppArmadillo_0.9.300.2.0.tar.gz \
+    profvis_0.3.6.tar.gz \
+    RcppArmadillo_0.9.500.2.0.tar.gz \
     servr_0.13.tar.gz \
-    xaringan_0.9.tar.gz \
+    xaringan_0.10.tar.gz \
     PKI_0.1-5.1.tar.gz \
-    RJSONIO_1.3-1.1.tar.gz \
+    RJSONIO_1.3-1.2.tar.gz \
     packrat_0.5.0.tar.gz \
     rsconnect_0.8.13.tar.gz \
     highlight_0.4.7.2.tar.gz \
     pkgdown_1.3.0.tar.gz \
-    bookdown_0.9.tar.gz \
-    blogdown_0.11.tar.gz \
+    bookdown_0.11.tar.gz \
+    blogdown_0.13.tar.gz \
     cowplot_0.9.4.tar.gz \
     influenceR_0.1.0.tar.gz \
     Rook_1.1-1.tar.gz \
     rgexf_0.15.3.tar.gz \
-    visNetwork_2.0.6.tar.gz \
-    DiagrammeR_1.0.0.tar.gz \
+    visNetwork_2.0.7.tar.gz \
+    DiagrammeR_1.0.1.tar.gz \
     farver_1.1.0.tar.gz \
     tweenr_1.0.1.tar.gz \
     polyclip_1.10-0.tar.gz \
-    ggforce_0.2.1.tar.gz \
+    ggforce_0.2.2.tar.gz \
     RgoogleMaps_1.4.3.tar.gz \
     rjson_0.2.20.tar.gz \
     mapproj_1.2.6.tar.gz \
     jpeg_0.1-8.tar.gz \
-    geosphere_1.5-7.tar.gz \
+    geosphere_1.5-10.tar.gz \
     ggmap_3.0.0.tar.gz \
     ggraph_1.0.2.tar.gz \
-    shiny_1.2.0.tar.gz \
+    shiny_1.3.2.tar.gz \
     shinyjs_1.0.tar.gz \
     flexdashboard_0.5.1.1.tar.gz 
 
@@ -911,22 +911,22 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/janeaustenr_0.1.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/NHANES_2.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/repurrrsive_0.1.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/infer_0.4.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/ipred_0.9-8.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/numDeriv_2016.8-1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/infer_0.4.0.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ipred_0.9-9.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/numDeriv_2016.8-1.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/SQUAREM_2017.10-1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/lava_1.6.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/prodlim_2018.04.18.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/CVST_0.2-2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/DRR_0.0.3.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/dimRed_0.2.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/dimRed_0.2.3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/timeDate_3043.102.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/sfsmisc_1.1-3.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/sfsmisc_1.1-4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/magic_1.5-9.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/lpSolve_5.6.13.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/lpSolve_5.6.13.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RcppProgress_0.4.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/geometry_0.4.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/ddalpha_1.3.8.tar.gz 
+    https://archive.linux.duke.edu/cran/src/contrib/ddalpha_1.3.9.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     nycflights13_1.0.0.tar.gz \
@@ -934,22 +934,22 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     janeaustenr_0.1.5.tar.gz \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
-    infer_0.4.0.tar.gz \
-    numDeriv_2016.8-1.tar.gz \
+    infer_0.4.0.1.tar.gz \
+    numDeriv_2016.8-1.1.tar.gz \
     SQUAREM_2017.10-1.tar.gz \
     lava_1.6.5.tar.gz \
     prodlim_2018.04.18.tar.gz \
-    ipred_0.9-8.tar.gz \
+    ipred_0.9-9.tar.gz \
     CVST_0.2-2.tar.gz \
     DRR_0.0.3.tar.gz \
-    dimRed_0.2.2.tar.gz \
+    dimRed_0.2.3.tar.gz \
     timeDate_3043.102.tar.gz \
-    sfsmisc_1.1-3.tar.gz \
+    sfsmisc_1.1-4.tar.gz \
     magic_1.5-9.tar.gz \
-    lpSolve_5.6.13.tar.gz \
+    lpSolve_5.6.13.1.tar.gz \
     RcppProgress_0.4.1.tar.gz \
     geometry_0.4.1.tar.gz \
-    ddalpha_1.3.8.tar.gz 
+    ddalpha_1.3.9.tar.gz 
 	
 RUN rm \
     nycflights13_1.0.0.tar.gz \
@@ -957,25 +957,25 @@ RUN rm \
     janeaustenr_0.1.5.tar.gz \
     NHANES_2.1.0.tar.gz \
     repurrrsive_0.1.0.tar.gz \
-    infer_0.4.0.tar.gz \
-    numDeriv_2016.8-1.tar.gz \
+    infer_0.4.0.1.tar.gz \
+    numDeriv_2016.8-1.1.tar.gz \
     SQUAREM_2017.10-1.tar.gz \
     lava_1.6.5.tar.gz \
     prodlim_2018.04.18.tar.gz \
-    ipred_0.9-8.tar.gz \
+    ipred_0.9-9.tar.gz \
     CVST_0.2-2.tar.gz \
     DRR_0.0.3.tar.gz \
-    dimRed_0.2.2.tar.gz \
+    dimRed_0.2.3.tar.gz \
     timeDate_3043.102.tar.gz \
-    sfsmisc_1.1-3.tar.gz \
+    sfsmisc_1.1-4.tar.gz \
     magic_1.5-9.tar.gz \
-    lpSolve_5.6.13.tar.gz \
+    lpSolve_5.6.13.1.tar.gz \
     RcppProgress_0.4.1.tar.gz \
     geometry_0.4.1.tar.gz \
-    ddalpha_1.3.8.tar.gz 
+    ddalpha_1.3.9.tar.gz 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://archive.linux.duke.edu/cran/src/contrib/gower_0.2.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/gower_0.2.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RcppRoll_0.3.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/pls_2.7-1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/recipes_0.1.5.tar.gz \
@@ -983,13 +983,13 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/hunspell_3.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/SnowballC_0.6.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/tokenizers_0.2.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/ISOcodes_2019.02.13.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/ISOcodes_2019.04.22.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/stopwords_0.9.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/tidytext_0.2.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ggridges_0.5.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/bayesplot_1.6.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/bayesplot_1.7.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/matrixStats_0.54.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/checkmate_1.9.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/checkmate_1.9.3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/loo_2.1.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/StanHeaders_2.18.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/inline_0.3.15.tar.gz \
@@ -999,7 +999,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 	
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-    gower_0.2.0.tar.gz \
+    gower_0.2.1.tar.gz \
     RcppRoll_0.3.0.tar.gz \
     pls_2.7-1.tar.gz \
     recipes_0.1.5.tar.gz \
@@ -1007,14 +1007,14 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     hunspell_3.0.tar.gz \
     SnowballC_0.6.0.tar.gz \
     tokenizers_0.2.1.tar.gz \
-    ISOcodes_2019.02.13.tar.gz \
+    ISOcodes_2019.04.22.tar.gz \
     stopwords_0.9.0.tar.gz \
     tidytext_0.2.0.tar.gz \
     tidypredict_0.3.0.tar.gz \
     ggridges_0.5.1.tar.gz \
-    bayesplot_1.6.0.tar.gz \
+    bayesplot_1.7.0.tar.gz \
     matrixStats_0.54.0.tar.gz \
-    checkmate_1.9.1.tar.gz \
+    checkmate_1.9.3.tar.gz \
     loo_2.1.0.tar.gz \
     StanHeaders_2.18.1.tar.gz \
     inline_0.3.15.tar.gz \
@@ -1023,7 +1023,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 	
 	
 RUN rm \
-    gower_0.2.0.tar.gz \
+    gower_0.2.1.tar.gz \
     RcppRoll_0.3.0.tar.gz \
     pls_2.7-1.tar.gz \
     recipes_0.1.5.tar.gz \
@@ -1031,13 +1031,13 @@ RUN rm \
     hunspell_3.0.tar.gz \
     SnowballC_0.6.0.tar.gz \
     tokenizers_0.2.1.tar.gz \
-    ISOcodes_2019.02.13.tar.gz \
+    ISOcodes_2019.04.22.tar.gz \
     stopwords_0.9.0.tar.gz \
     tidytext_0.2.0.tar.gz \
     ggridges_0.5.1.tar.gz \
-    bayesplot_1.6.0.tar.gz \
+    bayesplot_1.7.0.tar.gz \
     matrixStats_0.54.0.tar.gz \
-    checkmate_1.9.1.tar.gz \
+    checkmate_1.9.3.tar.gz \
     loo_2.1.0.tar.gz \
     StanHeaders_2.18.1.tar.gz \
     inline_0.3.15.tar.gz \
@@ -1047,7 +1047,7 @@ RUN rm \
 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://archive.linux.duke.edu/cran/src/contrib/pROC_1.14.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/pROC_1.15.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/gtools_3.8.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/gdata_2.18.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/gplots_3.0.1.1.tar.gz \
@@ -1055,22 +1055,22 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/yardstick_0.0.3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/xgboost_0.82.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ModelMetrics_1.2.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/caret_6.0-82.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/e1071_1.7-1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/caret_6.0-84.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/e1071_1.7-2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/dotCall64_1.0-0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/spam_2.2-2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/fields_9.6.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/fields_9.8-3.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/ROCR_1.0-7.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/reticulate_1.11.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/reticulate_1.12.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/tfruns_1.4.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/tensorflow_1.10.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tensorflow_1.13.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/zeallot_0.1.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/keras_2.2.4.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/keras_2.2.4.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/coda_0.19-2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/greta_0.3.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-    pROC_1.14.0.tar.gz \
+    pROC_1.15.0.tar.gz \
     gtools_3.8.1.tar.gz \
     gdata_2.18.0.tar.gz \
     gplots_3.0.1.1.tar.gz \
@@ -1079,21 +1079,21 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     yardstick_0.0.3.tar.gz \
     xgboost_0.82.1.tar.gz \
     ModelMetrics_1.2.2.tar.gz \
-    caret_6.0-82.tar.gz \
-    e1071_1.7-1.tar.gz \
+    caret_6.0-84.tar.gz \
+    e1071_1.7-2.tar.gz \
     dotCall64_1.0-0.tar.gz \
     spam_2.2-2.tar.gz \
-    fields_9.6.tar.gz \
-    reticulate_1.11.1.tar.gz \
+    fields_9.8-3.tar.gz \
+    reticulate_1.12.tar.gz \
     tfruns_1.4.tar.gz \
-    tensorflow_1.10.tar.gz \
+    tensorflow_1.13.1.tar.gz \
     zeallot_0.1.0.tar.gz \
-    keras_2.2.4.tar.gz \
+    keras_2.2.4.1.tar.gz \
     coda_0.19-2.tar.gz \
     greta_0.3.0.tar.gz 
 
 RUN rm \
-    pROC_1.14.0.tar.gz \
+    pROC_1.15.0.tar.gz \
     gtools_3.8.1.tar.gz \
     gdata_2.18.0.tar.gz \
     gplots_3.0.1.1.tar.gz \
@@ -1101,17 +1101,17 @@ RUN rm \
     yardstick_0.0.3.tar.gz \
     xgboost_0.82.1.tar.gz \
     ModelMetrics_1.2.2.tar.gz \
-    caret_6.0-82.tar.gz \
-    e1071_1.7-1.tar.gz \
+    caret_6.0-84.tar.gz \
+    e1071_1.7-2.tar.gz \
     dotCall64_1.0-0.tar.gz \
     spam_2.2-2.tar.gz \
-    fields_9.6.tar.gz \
+    fields_9.8-3.tar.gz \
     ROCR_1.0-7.tar.gz \
-    reticulate_1.11.1.tar.gz \
+    reticulate_1.12.tar.gz \
     tfruns_1.4.tar.gz \
-    tensorflow_1.10.tar.gz \
+    tensorflow_1.13.1.tar.gz \
     zeallot_0.1.0.tar.gz \
-    keras_2.2.4.tar.gz \
+    keras_2.2.4.1.tar.gz \
     coda_0.19-2.tar.gz \
     greta_0.3.0.tar.gz 
 
