@@ -68,20 +68,20 @@ RUN rm rstudio-server-1.2.907-amd64.deb
 
 # update the R packages we will need for knitr
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://archive.linux.duke.edu/cran/src/contrib/xfun_0.5.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/knitr_1.22.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/xfun_0.7.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/knitr_1.23.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/yaml_2.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/Rcpp_1.0.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/htmltools_0.3.6.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/caTools_1.17.1.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/bitops_1.0-6.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/digest_0.6.18.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/digest_0.6.19.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/glue_1.3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/stringr_1.4.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/markdown_0.9.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/markdown_1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/highr_0.8.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/formatR_1.6.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/evaluate_0.13.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/evaluate_0.14.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/mime_0.6.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/stringi_1.4.3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz
@@ -90,7 +90,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    bitops_1.0-6.tar.gz \
    caTools_1.17.1.2.tar.gz \
-   digest_0.6.18.tar.gz \
+   digest_0.6.19.tar.gz \
    Rcpp_1.0.1.tar.gz \
    htmltools_0.3.6.tar.gz \
    yaml_2.2.0.tar.gz \
@@ -101,29 +101,29 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    stringr_1.4.0.tar.gz \
    highr_0.8.tar.gz \
    formatR_1.6.tar.gz \
-   evaluate_0.13.tar.gz \
-   markdown_0.9.tar.gz \
-   xfun_0.5.tar.gz \
-   knitr_1.22.tar.gz
+   evaluate_0.14.tar.gz \
+   markdown_1.0.tar.gz \
+   xfun_0.7.tar.gz \
+   knitr_1.23.tar.gz
  
 
 RUN rm \
-   evaluate_0.13.tar.gz \
+   evaluate_0.14.tar.gz \
    formatR_1.6.tar.gz \
    highr_0.8.tar.gz \
-   markdown_0.9.tar.gz \
+   markdown_1.0.tar.gz \
    stringi_1.4.3.tar.gz \
    magrittr_1.5.tar.gz \
    glue_1.3.1.tar.gz \
    stringr_1.4.0.tar.gz \
-   xfun_0.5.tar.gz \
-   knitr_1.22.tar.gz \
+   xfun_0.7.tar.gz \
+   knitr_1.23.tar.gz \
    yaml_2.2.0.tar.gz \
    Rcpp_1.0.1.tar.gz \
    htmltools_0.3.6.tar.gz \
    caTools_1.17.1.2.tar.gz \
    bitops_1.0-6.tar.gz \
-   digest_0.6.18.tar.gz \
+   digest_0.6.19.tar.gz \
    mime_0.6.tar.gz
 
 # dependency for R XML library
