@@ -302,6 +302,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/utf8_1.1.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/fansi_0.4.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/zeallot_0.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/vctrs_0.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pillar_1.4.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgconfig_2.0.2.tar.gz \
@@ -337,6 +338,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lazyeval_0.2.2.tar.gz \
    utf8_1.1.4.tar.gz \
    fansi_0.4.0.tar.gz \
+   zeallot_0.1.0.tar.gz \
    vctrs_0.1.0.tar.gz \
    pillar_1.4.1.tar.gz \
    pkgconfig_2.0.2.tar.gz \
@@ -362,6 +364,7 @@ RUN rm \
    lazyeval_0.2.2.tar.gz \
    utf8_1.1.4.tar.gz \
    fansi_0.4.0.tar.gz \
+   zeallot_0.1.0.tar.gz \
    vctrs_0.1.0.tar.gz \
    pillar_1.4.1.tar.gz \
    pkgconfig_2.0.2.tar.gz \
@@ -574,7 +577,7 @@ RUN rm \
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/maps_3.3.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/zoo_1.8-5.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/zoo_1.8-6.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/gcookbook_2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/corrplot_0.84.tar.gz 
 
@@ -582,7 +585,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    RColorBrewer_1.1-2.tar.gz \
    maps_3.3.0.tar.gz \
-   zoo_1.8-5.tar.gz \
+   zoo_1.8-6.tar.gz \
    gcookbook_2.0.tar.gz \
    corrplot_0.84.tar.gz 
 
@@ -590,7 +593,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
    RColorBrewer_1.1-2.tar.gz \
    maps_3.3.0.tar.gz \
-   zoo_1.8-5.tar.gz \
+   zoo_1.8-6.tar.gz \
    gcookbook_2.0.tar.gz \
    corrplot_0.84.tar.gz 
    
@@ -609,27 +612,27 @@ RUN rm /install-igraph.Rout
 # install sparklyr so we can do Spark via Livy
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/config_0.3.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/dbplyr_1.3.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/dbplyr_1.4.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rappdirs_0.3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/r2d3_0.2.3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/forge_0.2.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/sparklyr_1.0.0.tar.gz
+   https://archive.linux.duke.edu/cran/src/contrib/sparklyr_1.0.1.tar.gz
    
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    config_0.3.tar.gz \
-   dbplyr_1.3.0.tar.gz \
+   dbplyr_1.4.1.tar.gz \
    rappdirs_0.3.1.tar.gz \
    r2d3_0.2.3.tar.gz \
    forge_0.2.0.tar.gz \
-   sparklyr_1.0.0.tar.gz
+   sparklyr_1.0.1.tar.gz
    
 RUN rm \
   config_0.3.tar.gz \
-  dbplyr_1.3.0.tar.gz \
+  dbplyr_1.4.1.tar.gz \
   rappdirs_0.3.1.tar.gz \
   r2d3_0.2.3.tar.gz \
   forge_0.2.0.tar.gz \
-  sparklyr_1.0.0.tar.gz
+  sparklyr_1.0.1.tar.gz
 
 
 # some more TeX so that papaja can be installed and students can create APA templates in Rmarkdown
@@ -677,18 +680,18 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 
 	
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://archive.linux.duke.edu/cran/src/contrib/rgdal_1.4-3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rgdal_1.4-4.tar.gz \
    https://cran.r-project.org/src/contrib/Archive/rgeos/rgeos_0.3-28.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/uuid_0.1-2.tar.gz
  
  
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   rgdal_1.4-3.tar.gz \
+   rgdal_1.4-4.tar.gz \
    rgeos_0.3-28.tar.gz \
    uuid_0.1-2.tar.gz 
 
 RUN rm \
-   rgdal_1.4-3.tar.gz \
+   rgdal_1.4-4.tar.gz \
    rgeos_0.3-28.tar.gz \
    uuid_0.1-2.tar.gz
 
@@ -711,7 +714,7 @@ RUN rm \
 RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/tidyverse_1.2.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/promises_1.0.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/future_1.12.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/future_1.13.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/doMC_1.3.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/foreach_1.4.4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/doParallel_1.0.14.tar.gz \
@@ -719,11 +722,11 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/drat_0.1.5.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/tidygraph_1.1.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/here_0.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/rticles_0.7.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/styler_1.1.0.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/rticles_0.8.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/styler_1.1.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/lintr_1.0.3.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/testthat_2.0.1.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/reprex_0.2.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/testthat_2.1.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/reprex_0.3.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/microbenchmark_1.4-6.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/modelr_0.1.4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/globals_0.12.4.tar.gz \
@@ -732,20 +735,20 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/enc_0.2.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rematch2_2.0.1.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rex_1.1.2.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/stringdist_0.9.5.1.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/stringdist_0.9.5.2.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/praise_1.0.0.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/profmem_0.5.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/bench_1.0.1.tar.gz 
+    https://archive.linux.duke.edu/cran/src/contrib/bench_1.0.2.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     modelr_0.1.4.tar.gz \
     prex_0.2.0.tar.gz \
-    reprex_0.2.1.tar.gz \
+    reprex_0.3.0.tar.gz \
     tidyverse_1.2.1.tar.gz \
     promises_1.0.1.tar.gz \
     globals_0.12.4.tar.gz \
     listenv_0.7.0.tar.gz \
-    future_1.12.0.tar.gz \
+    future_1.13.0.tar.gz \
     iterators_1.0.10.tar.gz \
     foreach_1.4.4.tar.gz \
     doMC_1.3.5.tar.gz \
@@ -754,25 +757,25 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     drat_0.1.5.tar.gz \
     tidygraph_1.1.2.tar.gz \
     here_0.1.tar.gz \
-    rticles_0.7.tar.gz \
+    rticles_0.8.tar.gz \
     enc_0.2.0.tar.gz \
     rematch2_2.0.1.tar.gz \
-    styler_1.1.0.tar.gz \
+    styler_1.1.1.tar.gz \
     rex_1.1.2.tar.gz \
-    stringdist_0.9.5.1.tar.gz \
+    stringdist_0.9.5.2.tar.gz \
     praise_1.0.0.tar.gz \
-    testthat_2.0.1.tar.gz \
+    testthat_2.1.1.tar.gz \
     lintr_1.0.3.tar.gz \
     profmem_0.5.0.tar.gz \
     microbenchmark_1.4-6.tar.gz \
-    bench_1.0.1.tar.gz 
+    bench_1.0.2.tar.gz 
 
 RUN rm \
     modelr_0.1.4.tar.gz \
     profmem_0.5.0.tar.gz \
     praise_1.0.0.tar.gz \
     rex_1.1.2.tar.gz \
-    stringdist_0.9.5.1.tar.gz \
+    stringdist_0.9.5.2.tar.gz \
     enc_0.2.0.tar.gz \
     rematch2_2.0.1.tar.gz \
     globals_0.12.4.tar.gz \
@@ -780,7 +783,7 @@ RUN rm \
     listenv_0.7.0.tar.gz \
     tidyverse_1.2.1.tar.gz \
     promises_1.0.1.tar.gz \
-    future_1.12.0.tar.gz \
+    future_1.13.0.tar.gz \
     doMC_1.3.5.tar.gz \
     foreach_1.4.4.tar.gz \
     doParallel_1.0.14.tar.gz \
@@ -788,13 +791,13 @@ RUN rm \
     drat_0.1.5.tar.gz \
     tidygraph_1.1.2.tar.gz \
     here_0.1.tar.gz \
-    rticles_0.7.tar.gz \
-    styler_1.1.0.tar.gz \
+    rticles_0.8.tar.gz \
+    styler_1.1.1.tar.gz \
     lintr_1.0.3.tar.gz \
-    testthat_2.0.1.tar.gz \
-    reprex_0.2.1.tar.gz \
+    testthat_2.1.1.tar.gz \
+    reprex_0.3.0.tar.gz \
     microbenchmark_1.4-6.tar.gz \
-    bench_1.0.1.tar.gz 
+    bench_1.0.2.tar.gz 
 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
