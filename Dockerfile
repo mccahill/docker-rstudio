@@ -302,6 +302,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/utf8_1.1.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/fansi_0.4.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/vctrs_0.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pillar_1.4.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgconfig_2.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/tibble_2.1.3.tar.gz \
@@ -336,6 +337,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lazyeval_0.2.2.tar.gz \
    utf8_1.1.4.tar.gz \
    fansi_0.4.0.tar.gz \
+   vctrs_0.1.0.tar.gz \
    pillar_1.4.1.tar.gz \
    pkgconfig_2.0.2.tar.gz \
    tibble_2.1.3.tar.gz \
@@ -360,6 +362,7 @@ RUN rm \
    lazyeval_0.2.2.tar.gz \
    utf8_1.1.4.tar.gz \
    fansi_0.4.0.tar.gz \
+   vctrs_0.1.0.tar.gz \
    pillar_1.4.1.tar.gz \
    pkgconfig_2.0.2.tar.gz \
    tibble_2.1.3.tar.gz \
@@ -376,7 +379,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/plogr_0.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/tidyselect_0.2.5.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/dplyr_0.8.0.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/dplyr_0.8.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/DBI_1.0.0.tar.gz 
 
 
@@ -388,7 +391,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
    tidyselect_0.2.5.tar.gz \
-   dplyr_0.8.0.1.tar.gz 
+   dplyr_0.8.1.tar.gz 
 
 RUN rm \
    openintro_1.7.1.tar.gz \
@@ -397,11 +400,11 @@ RUN rm \
    bindrcpp_0.2.2.tar.gz \
    plogr_0.2.0.tar.gz \
    tidyselect_0.2.5.tar.gz \
-   dplyr_0.8.0.1.tar.gz 
+   dplyr_0.8.1.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/chron_2.3-53.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/data.table_1.12.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/data.table_1.12.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rematch_1.0.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/cellranger_1.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/tidyr_0.8.3.tar.gz \
@@ -409,12 +412,12 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/hms_0.4.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/readr_1.3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/selectr_0.4-1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/rvest_0.3.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/rvest_0.3.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pbkrtest_0.4-7.tar.gz 
 	
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    chron_2.3-53.tar.gz \
-   data.table_1.12.0.tar.gz \
+   data.table_1.12.2.tar.gz \
    rematch_1.0.1.tar.gz \
    cellranger_1.1.0.tar.gz \
    tidyr_0.8.3.tar.gz \
@@ -422,12 +425,12 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    readr_1.3.1.tar.gz \
    googlesheets_0.3.0.tar.gz \
    selectr_0.4-1.tar.gz \
-   rvest_0.3.2.tar.gz \
+   rvest_0.3.4.tar.gz \
    pbkrtest_0.4-7.tar.gz 
 
 RUN rm \
    chron_2.3-53.tar.gz \
-   data.table_1.12.0.tar.gz \
+   data.table_1.12.2.tar.gz \
    rematch_1.0.1.tar.gz \
    cellranger_1.1.0.tar.gz \
    tidyr_0.8.3.tar.gz \
@@ -435,7 +438,7 @@ RUN rm \
    hms_0.4.2.tar.gz \
    readr_1.3.1.tar.gz \
    selectr_0.4-1.tar.gz \
-   rvest_0.3.2.tar.gz \
+   rvest_0.3.4.tar.gz \
    pbkrtest_0.4-7.tar.gz 
 
 # Shiny
@@ -450,19 +453,19 @@ RUN rm /install-Shiny.Rout
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/SparseM_1.77.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/MatrixModels_0.4-1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/quantreg_5.38.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/quantreg_5.40.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/sp_1.3-1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/maptools_0.9-5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/haven_2.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/ellipsis_0.1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/forcats_0.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/readxl_1.3.1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/zip_2.0.1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/openxlsx_4.1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/zip_2.0.2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/openxlsx_4.1.0.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/rio_0.5.16.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/abind_1.4-5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/carData_3.0-2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/car_3.0-2.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/car_3.0-3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/mosaicData_0.17.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/latticeExtra_0.6-28.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/gridExtra_2.3.tar.gz \
@@ -470,19 +473,19 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/mnormt_1.5-5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/psych_1.8.12.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/generics_0.0.2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/broom_0.5.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/broom_0.5.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/reshape_0.8.8.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/progress_1.2.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/progress_1.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/GGally_1.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/ggstance_0.3.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/ggformula_0.9.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/mosaicCore_0.6.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/ggrepel_0.8.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/ggrepel_0.8.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/base64enc_0.1-3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/crosstalk_1.0.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/htmlwidgets_1.3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/png_0.1-7.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/raster_2.8-19.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/raster_2.9-5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/viridis_0.5.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/leaflet_2.0.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/mosaic_1.5.0.tar.gz 
@@ -490,20 +493,20 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    SparseM_1.77.tar.gz \
    MatrixModels_0.4-1.tar.gz \
-   quantreg_5.38.tar.gz \
+   quantreg_5.40.tar.gz \
    sp_1.3-1.tar.gz \
    maptools_0.9-5.tar.gz \
    ellipsis_0.1.0.tar.gz \
    forcats_0.4.0.tar.gz \
    haven_2.1.0.tar.gz \
-   progress_1.2.0.tar.gz \
+   progress_1.2.2.tar.gz \
    readxl_1.3.1.tar.gz \
-   zip_2.0.1.tar.gz \
-   openxlsx_4.1.0.tar.gz \
+   zip_2.0.2.tar.gz \
+   openxlsx_4.1.0.1.tar.gz \
    rio_0.5.16.tar.gz \
    abind_1.4-5.tar.gz \
    carData_3.0-2.tar.gz \
-   car_3.0-2.tar.gz \
+   car_3.0-3.tar.gz \
    mosaicData_0.17.0.tar.gz \
    latticeExtra_0.6-28.tar.gz \
    gridExtra_2.3.tar.gz \
@@ -511,18 +514,18 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    mnormt_1.5-5.tar.gz \
    psych_1.8.12.tar.gz \
    generics_0.0.2.tar.gz \
-   broom_0.5.1.tar.gz \
+   broom_0.5.2.tar.gz \
    reshape_0.8.8.tar.gz \
    GGally_1.4.0.tar.gz \
    mosaicCore_0.6.0.tar.gz \
    ggstance_0.3.1.tar.gz \
    ggformula_0.9.1.tar.gz \
-   ggrepel_0.8.0.tar.gz \
+   ggrepel_0.8.1.tar.gz \
    base64enc_0.1-3.tar.gz \
    crosstalk_1.0.0.tar.gz \
    htmlwidgets_1.3.tar.gz \
    png_0.1-7.tar.gz \
-   raster_2.8-19.tar.gz \
+   raster_2.9-5.tar.gz \
    viridis_0.5.1.tar.gz \
    leaflet_2.0.2.tar.gz \
    mosaic_1.5.0.tar.gz 
@@ -530,19 +533,19 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 RUN rm \
    SparseM_1.77.tar.gz \
    MatrixModels_0.4-1.tar.gz \
-   quantreg_5.38.tar.gz \
+   quantreg_5.40.tar.gz \
    sp_1.3-1.tar.gz \
    maptools_0.9-5.tar.gz \
    ellipsis_0.1.0.tar.gz \
    forcats_0.4.0.tar.gz \
    haven_2.1.0.tar.gz \
    readxl_1.3.1.tar.gz \
-   zip_2.0.1.tar.gz \
-   openxlsx_4.1.0.tar.gz \
+   zip_2.0.2.tar.gz \
+   openxlsx_4.1.0.1.tar.gz \
    rio_0.5.16.tar.gz \
    abind_1.4-5.tar.gz \
    carData_3.0-2.tar.gz \
-   car_3.0-2.tar.gz \
+   car_3.0-3.tar.gz \
    mosaicData_0.17.0.tar.gz \
    latticeExtra_0.6-28.tar.gz \
    gridExtra_2.3.tar.gz \
@@ -550,19 +553,19 @@ RUN rm \
    mnormt_1.5-5.tar.gz \
    psych_1.8.12.tar.gz \
    generics_0.0.2.tar.gz \
-   broom_0.5.1.tar.gz \
+   broom_0.5.2.tar.gz \
    reshape_0.8.8.tar.gz \
-   progress_1.2.0.tar.gz \
+   progress_1.2.2.tar.gz \
    GGally_1.4.0.tar.gz \
    mosaicCore_0.6.0.tar.gz \
    ggstance_0.3.1.tar.gz \
    ggformula_0.9.1.tar.gz \
-   ggrepel_0.8.0.tar.gz \
+   ggrepel_0.8.1.tar.gz \
    base64enc_0.1-3.tar.gz \
    crosstalk_1.0.0.tar.gz \
    htmlwidgets_1.3.tar.gz \
    png_0.1-7.tar.gz \
-   raster_2.8-19.tar.gz \
+   raster_2.9-5.tar.gz \
    leaflet_2.0.2.tar.gz \
    viridis_0.5.1.tar.gz \
    mosaic_1.5.0.tar.gz 
