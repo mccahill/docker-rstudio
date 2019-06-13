@@ -157,6 +157,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/clipr_0.6.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/clisymbols_1.2.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/sessioninfo_1.1.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/purrr_0.3.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/usethis_1.5.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/sys_3.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/askpass_1.1.tar.gz \
@@ -216,7 +217,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    httr_1.4.0.tar.gz \
    gh_1.0.1.tar.gz \
    clipr_0.6.0.tar.gz \
-   clisymbols_1.2.0.tar.gz \   
+   clisymbols_1.2.0.tar.gz \
+   purrr_0.3.2.tar.gz \
    usethis_1.5.0.tar.gz \
    memoise_1.1.0.tar.gz \
    bitops_1.0-6.tar.gz \
@@ -254,6 +256,7 @@ RUN rm \
    xopen_1.0.0.tar.gz \
    rcmdcheck_1.3.3.tar.gz \
    remotes_2.0.4.tar.gz \
+   purrr_0.3.2.tar.gz \
    usethis_1.5.0.tar.gz \
    ini_0.3.1.tar.gz \
    jsonlite_1.6.tar.gz \
@@ -299,10 +302,10 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/lazyeval_0.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/utf8_1.1.4.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/fansi_0.4.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/pillar_1.3.1.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/pillar_1.4.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/pkgconfig_2.0.2.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/tibble_2.1.1.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/ggplot2_3.1.0.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/tibble_2.1.3.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/ggplot2_3.1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/RColorBrewer_1.1-2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/dichromat_2.0-0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/colorspace_1.4-1.tar.gz \
@@ -333,10 +336,10 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    lazyeval_0.2.2.tar.gz \
    utf8_1.1.4.tar.gz \
    fansi_0.4.0.tar.gz \
-   pillar_1.3.1.tar.gz \
+   pillar_1.4.1.tar.gz \
    pkgconfig_2.0.2.tar.gz \
-   tibble_2.1.1.tar.gz \
-   ggplot2_3.1.0.tar.gz \
+   tibble_2.1.3.tar.gz \
+   ggplot2_3.1.1.tar.gz \
    stargazer_5.2.2.tar.gz \
    minqa_1.2.4.tar.gz \
    RcppEigen_0.3.3.5.0.tar.gz \
@@ -357,10 +360,10 @@ RUN rm \
    lazyeval_0.2.2.tar.gz \
    utf8_1.1.4.tar.gz \
    fansi_0.4.0.tar.gz \
-   pillar_1.3.1.tar.gz \
+   pillar_1.4.1.tar.gz \
    pkgconfig_2.0.2.tar.gz \
-   tibble_2.1.1.tar.gz \
-   ggplot2_3.1.0.tar.gz \
+   tibble_2.1.3.tar.gz \
+   ggplot2_3.1.1.tar.gz \
    stargazer_5.2.2.tar.gz \
    minqa_1.2.4.tar.gz \
    RcppEigen_0.3.3.5.0.tar.gz \
@@ -372,7 +375,6 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/bindr_0.1.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/bindrcpp_0.2.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/plogr_0.2.0.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/purrr_0.3.2.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/tidyselect_0.2.5.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/dplyr_0.8.0.1.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/DBI_1.0.0.tar.gz 
@@ -385,7 +387,6 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    plogr_0.2.0.tar.gz \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
-   purrr_0.3.2.tar.gz \
    tidyselect_0.2.5.tar.gz \
    dplyr_0.8.0.1.tar.gz 
 
@@ -395,7 +396,6 @@ RUN rm \
    bindr_0.1.1.tar.gz \
    bindrcpp_0.2.2.tar.gz \
    plogr_0.2.0.tar.gz \
-   purrr_0.3.2.tar.gz \
    tidyselect_0.2.5.tar.gz \
    dplyr_0.8.0.1.tar.gz 
 
