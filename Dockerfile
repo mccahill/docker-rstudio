@@ -699,16 +699,16 @@ RUN R CMD BATCH /r-studio/install-rappdirs.R
 RUN rm /install-rappdirs.Rout 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
-    https://archive.linux.duke.edu/cran/src/contrib/tigris_0.7.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/tidycensus_0.9.tar.gz
+    https://archive.linux.duke.edu/cran/src/contrib/tigris_0.8.2.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/tidycensus_0.9.2.tar.gz
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-    tigris_0.7.tar.gz \
-    tidycensus_0.9.tar.gz 
+    tigris_0.8.2.tar.gz \
+    tidycensus_0.9.2.tar.gz 
 
 RUN rm \
-    tigris_0.7.tar.gz  \
-    tidycensus_0.9.tar.gz 
+    tigris_0.8.2.tar.gz  \
+    tidycensus_0.9.2.tar.gz 
 	
 # new packages for fall 2018
 RUN DEBIAN_FRONTEND=noninteractive wget \
@@ -1151,9 +1151,9 @@ RUN rm /r-studio/*
 # the default packages for everyone running R
 RUN echo "" >> /etc/R/Rprofile.site && \
     echo "# add the downloader package to the default libraries" >> /etc/R/Rprofile.site && \
-    echo ".First <- function(){" >> /etc/R/Rprofile.site && \ 
+    echo ".First <- function(){" >> /etc/R/Rprofile.site && \
     echo "library(downloader)" >> /etc/R/Rprofile.site && \
-    echo "library(knitr)" >> /etc/R/Rprofile.site && \ 
+    echo "library(knitr)" >> /etc/R/Rprofile.site && \
     echo "library(rmarkdown)" >> /etc/R/Rprofile.site && \
     echo "library(ggplot2)" >> /etc/R/Rprofile.site && \
     echo "library(googlesheets)" >> /etc/R/Rprofile.site && \
