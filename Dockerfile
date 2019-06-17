@@ -804,7 +804,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
     https://archive.linux.duke.edu/cran/src/contrib/pryr_0.1.4.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/profvis_0.3.6.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/RcppArmadillo_0.9.500.2.0.tar.gz \
-    https://archive.linux.duke.edu/cran/src/contrib/servr_0.13.tar.gz \
+    https://archive.linux.duke.edu/cran/src/contrib/servr_0.14.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/xaringan_0.10.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/rsconnect_0.8.13.tar.gz \
     https://archive.linux.duke.edu/cran/src/contrib/PKI_0.1-5.1.tar.gz \
@@ -839,7 +839,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
     pryr_0.1.4.tar.gz \
     profvis_0.3.6.tar.gz \
     RcppArmadillo_0.9.500.2.0.tar.gz \
-    servr_0.13.tar.gz \
+    servr_0.14.tar.gz \
     xaringan_0.10.tar.gz \
     PKI_0.1-5.1.tar.gz \
     RJSONIO_1.3-1.2.tar.gz \
@@ -874,7 +874,7 @@ RUN rm \
     pryr_0.1.4.tar.gz \
     profvis_0.3.6.tar.gz \
     RcppArmadillo_0.9.500.2.0.tar.gz \
-    servr_0.13.tar.gz \
+    servr_0.14.tar.gz \
     xaringan_0.10.tar.gz \
     PKI_0.1-5.1.tar.gz \
     RJSONIO_1.3-1.2.tar.gz \
