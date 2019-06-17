@@ -50,10 +50,10 @@ RUN apt-get update ; \
 # we need TeX for the rmarkdown package in RStudio, and pandoc is also useful 
 RUN apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
-   texlive \ 
-   texlive-base \ 
-   texlive-latex-extra \ 
-   texlive-pstricks \ 
+   texlive \
+   texlive-base \
+   texlive-latex-extra \
+   texlive-pstricks \
    pandoc
 
 # R-Studio
@@ -80,9 +80,9 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://archive.linux.duke.edu/cran/src/contrib/stringr_1.4.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/markdown_1.0.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/highr_0.8.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/formatR_1.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/formatR_1.7.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/evaluate_0.14.tar.gz \
-   https://archive.linux.duke.edu/cran/src/contrib/mime_0.6.tar.gz \
+   https://archive.linux.duke.edu/cran/src/contrib/mime_0.7.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/stringi_1.4.3.tar.gz \
    https://archive.linux.duke.edu/cran/src/contrib/magrittr_1.5.tar.gz
 
@@ -96,11 +96,11 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    yaml_2.2.0.tar.gz \
    stringi_1.4.3.tar.gz \
    magrittr_1.5.tar.gz \
-   mime_0.6.tar.gz \
+   mime_0.7.tar.gz \
    glue_1.3.1.tar.gz \
    stringr_1.4.0.tar.gz \
    highr_0.8.tar.gz \
-   formatR_1.6.tar.gz \
+   formatR_1.7.tar.gz \
    evaluate_0.14.tar.gz \
    markdown_1.0.tar.gz \
    xfun_0.7.tar.gz \
@@ -109,7 +109,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
 
 RUN rm \
    evaluate_0.14.tar.gz \
-   formatR_1.6.tar.gz \
+   formatR_1.7.tar.gz \
    highr_0.8.tar.gz \
    markdown_1.0.tar.gz \
    stringi_1.4.3.tar.gz \
@@ -124,12 +124,12 @@ RUN rm \
    caTools_1.17.1.2.tar.gz \
    bitops_1.0-6.tar.gz \
    digest_0.6.19.tar.gz \
-   mime_0.6.tar.gz
+   mime_0.7.tar.gz
 
 # dependency for R XML library
 RUN apt-get update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
-   libxml2 \ 
+   libxml2 \
    libxml2-dev \
    libssl-dev
 
@@ -204,7 +204,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    xopen_1.0.0.tar.gz \
    sessioninfo_1.1.1.tar.gz \
    rcmdcheck_1.3.3.tar.gz \
-   remotes_2.0.4.tar.gz \   
+   remotes_2.0.4.tar.gz \
    whisker_0.3-2.tar.gz \
    git2r_0.25.2.tar.gz \
    fs_1.3.1.tar.gz \
