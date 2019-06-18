@@ -99,7 +99,7 @@ RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("
 RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("chron", "data.table", "rematch", "cellranger", "tidyr", "googlesheets", "hms", "readr", "selectr", "rvest", "pbkrtest"), repos="http://cran.us.r-project.org",quiet=TRUE)'
 
 # Shiny
-#RUN wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.3.838-amd64.deb
+ADD ./conf /r-studio
 RUN wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.7.907-amd64.deb
 RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.7.907-amd64.deb
 RUN rm shiny-server-1.5.7.907-amd64.deb
@@ -145,9 +145,9 @@ RUN R CMD BATCH /r-studio/install-rappdirs.R
 RUN rm /install-rappdirs.Rout 
 	
 # new packages for fall 2018
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("tigris", "tidycensus", "tidyverse", "promises", "future", "doMC", "foreach", "doParallel", "furrr", "drat", "tidygraph", "here", "rticles", "styler", "lintr", "testthat", "reprex", "microbenchmark", "modelr", "globals", "listenv", "iterators", "enc", "rematch2", "rex", "stringdist", "praise", "profmem", "bench" ), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("tigris", "tidycensus", "tidyverse", "future", "doMC", "foreach", "doParallel", "furrr", "drat", "tidygraph", "here", "rticles", "styler", "lintr", "testthat", "reprex", "microbenchmark", "modelr", "globals", "listenv", "iterators", "enc", "rematch2", "rex", "stringdist", "praise", "profmem", "bench" ), repos="http://cran.us.r-project.org",quiet=TRUE)'
 
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("pryr", "profvis", "RcppArmadillo", "servr", "xaringan", "rsconnect", "PKI", "RJSONIO", "packrat", "highlight", "pkgdown", "bookdown", "blogdown", "cowplot", "influenceR", "Rook", "rgexf", "visNetwork", "DiagrammeR", "farver", "tweenr", "polyclip", "ggforce", "RgoogleMaps", "rjson", "mapproj", "jpeg", "geosphere", "ggmap", "ggraph", "shiny", "shinyjs", "flexdashboard"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("pryr", "profvis", "RcppArmadillo", "servr", "xaringan", "rsconnect", "PKI", "RJSONIO", "packrat", "highlight", "pkgdown", "bookdown", "blogdown", "cowplot", "influenceR", "Rook", "rgexf", "visNetwork", "DiagrammeR", "farver", "tweenr", "polyclip", "ggforce", "RgoogleMaps", "rjson", "mapproj", "jpeg", "geosphere", "ggmap", "ggraph", "shinyjs", "flexdashboard"), repos="http://cran.us.r-project.org",quiet=TRUE)'
 
 RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("nycflights13", "babynames", "janeaustenr", "NHANES", "repurrrsive", "infer", "ipred", "numDeriv", "SQUAREM", "lava", "prodlim", "kernlab", "CVST", "DRR", "dimRed", "timeDate", "sfsmisc", "magic", "lpSolve", "RcppProgress", "geometry", "DEoptimR", "robustbase", "ddalpha"), repos="http://cran.us.r-project.org",quiet=TRUE)'
 	
