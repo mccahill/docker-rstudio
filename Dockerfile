@@ -7,7 +7,7 @@ MAINTAINER Mark McCahill "mark.mccahill@duke.edu"
 
 RUN apt-get  update 
 RUN apt-get dist-upgrade -y 	
-RUN  apt-get install -y \
+RUN apt-get install -y \
     gnupg2 \
     apt-utils \
     libopenblas-base \
@@ -40,7 +40,7 @@ RUN apt-get  update ; \
 RUN add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
 RUN apt-get update
 
-DEBIAN_FRONTEND=noninteractive apt-get install -y \
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
   r-base \
   r-base-dev \
   libcurl4-gnutls-dev \
