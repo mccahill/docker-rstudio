@@ -25,7 +25,7 @@ RUN apt-get install -y \
     locales
 
 # Configure default locale
-RUN locale-gen en_US en_US.UTF-8 ; \
+RUN locale-gen en_US en_US.UTF-8 
 RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 
 	
