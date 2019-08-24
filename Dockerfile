@@ -37,6 +37,7 @@ RUN apt-get  update ; \
     apt-get  dist-upgrade -y 
 
 RUN  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 
+RUN  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
 # we need gdal > 2
 RUN add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
 RUN apt-get update
