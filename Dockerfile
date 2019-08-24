@@ -221,4 +221,6 @@ EXPOSE 8787
 # expose the port for the shiny server
 #EXPOSE 3838
 
+RUN echo 'auth-stay-signed-in=0' >> /etc/rstudio/rserver.conf
+
 CMD ["/usr/bin/supervisord"]
