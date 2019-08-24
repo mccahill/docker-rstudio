@@ -32,7 +32,7 @@ build:
     - ./build-test
     - echo "Deploy to staging server"
     - pwd; ls -la
-    - ./run-test-instance
+    - cd /srv/persistent-data/docker-scripts; ./run-test-instance
   environment:
     name: staging
   only:
