@@ -36,6 +36,8 @@ RUN  DEBIAN_FRONTEND=noninteractive apt-key adv   --keyserver keyserver.ubuntu.c
 RUN apt-get  update ; \
     apt-get  dist-upgrade -y 
 
+RUN  apt-key adv –keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+
 # we need gdal > 2
 RUN add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
 RUN apt-get update
@@ -80,7 +82,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 # R-Studio   
 # RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/rstudio-server-1.1.383-amd64.deb
-RUN  apt-key adv –keyserver keyserver.ubuntu.com --recv-keys E084DAB9
  
 RUN DEBIAN_FRONTEND=noninteractive wget https://s3.amazonaws.com/rstudio-ide-build/server/trusty/amd64/rstudio-server-1.2.1335-amd64.deb
 RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.2.1335-amd64.deb
