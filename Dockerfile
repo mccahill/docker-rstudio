@@ -44,7 +44,8 @@ RUN apt-get  update ; \
 RUN  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 
 RUN  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
 # we need gdal > 2
-RUN add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
+#RUN add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
+RUN  add-apt-repository ppa:ubuntugis/ppa
 RUN apt-get update
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
