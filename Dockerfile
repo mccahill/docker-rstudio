@@ -5,6 +5,11 @@
 FROM  ubuntu:18.04
 MAINTAINER  Mark McCahill "mark.mccahill@duke.edu"
 
+# use local repositories 
+RUN sed -i 's/archive.ubuntu.com/archive.linux.duke.edu/' /etc/apt/sources.list
+RUN sed -i 's/security.ubuntu.com/archive.linux.duke.edu/' /etc/apt/sources.list
+
+
 RUN apt-get    update 
 RUN apt-get  dist-upgrade -y 	
 RUN apt-get  install -y \
@@ -81,11 +86,13 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
   libudunits2-dev 
 
 # R-Studio   
-# RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/rstudio-server-1.1.383-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/rstudio-server-1.1.383-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.1.383-amd64.deb
+RUN rm rstudio-server-1.1.383-amd64.deb
  
-RUN DEBIAN_FRONTEND=noninteractive wget https://s3.amazonaws.com/rstudio-ide-build/server/trusty/amd64/rstudio-server-1.2.1335-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.2.1335-amd64.deb
-RUN rm rstudio-server-1.2.1335-amd64.deb
+#RUN DEBIAN_FRONTEND=noninteractive wget https://s3.amazonaws.com/rstudio-ide-build/server/trusty/amd64/rstudio-server-1.2.1335-amd64.deb
+#RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.2.1335-amd64.deb
+#RUN rm rstudio-server-1.2.1335-amd64.deb
 
 # update the R packages we will need for knitr
 RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("xfun", "knitr", "yaml", "Rcpp", "htmltools", "caTools", "bitops", "digest", "glue", "stringr", "markdown", "highr", "formatR", "evaluate", "mime", "stringi", "magrittr"), repos="http://cran.us.r-project.org",quiet=TRUE)'
