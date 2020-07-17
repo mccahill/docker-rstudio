@@ -117,7 +117,17 @@ ADD ./conf /r-studio
 RUN wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.14.948-amd64.deb
 RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.14.948-amd64.deb
 RUN rm shiny-server-1.5.14.948-amd64.deb
+
+# need these shiny packages
+RUN apt-get install -y \
+    libcairo2-dev \
+    libgtk2.0-dev \
+    xvfb \
+    libxt-dev \
+    libv8-dev
+
 RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R repos=github rstudio/shiny daattali/shinyjs
+
 
 RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R SparseM MatrixModels quantreg sp maptools haven ellipsis forcats readxl \
     zip openxlsx rio abind carData car mosaicData latticeExtra gridExtra ggdendro mnormt psych generics broom reshape \
