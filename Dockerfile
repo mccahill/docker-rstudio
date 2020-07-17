@@ -30,15 +30,16 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 
 	
 # get R from a CRAN archive (we want the 3.5 version of R)
-RUN  echo  "deb http://cran.rstudio.com/bin/linux/ubuntu bionic-cran35/"  >>  /etc/apt/sources.list
-RUN  DEBIAN_FRONTEND=noninteractive apt-key adv   --keyserver keyserver.ubuntu.com   --recv-keys  E084DAB9
+RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+# RUN add-apt-repository  "deb http://cran.rstudio.com/bin/linux/ubuntu bionic-cran40/"
+RUN add-apt-repository  "deb http://cran.rstudio.com/bin/linux/ubuntu bionic-cran35/"
 
 RUN apt-get  update ; \
     apt-get  dist-upgrade -y 
 
 # we need gdal > 2
-RUN add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
-RUN apt-get update
+# RUN add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
+# RUN apt-get update
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
   r-base \
@@ -80,52 +81,73 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 # R-Studio   
 # RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/rstudio-server-1.1.383-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive wget https://s3.amazonaws.com/rstudio-ide-build/server/trusty/amd64/rstudio-server-1.2.907-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.2.907-amd64.deb
-RUN rm rstudio-server-1.2.907-amd64.deb
+# RUN DEBIAN_FRONTEND=noninteractive wget https://s3.amazonaws.com/rstudio-ide-build/server/trusty/amd64/rstudio-server-1.2.907-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/server/xenial/amd64/rstudio-server-1.3.959-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.3.959-amd64.deb
+RUN rm rstudio-server-1.3.959-amd64.deb
+
+
+# install R packages
+ADD pkgInstall.R /usr/local/bin/
 
 # update the R packages we will need for knitr
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("xfun", "knitr", "yaml", "Rcpp", "htmltools", "caTools", "bitops", "digest", "glue", "stringr", "markdown", "highr", "formatR", "evaluate", "mime", "stringi", "magrittr"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R xfun knitr yaml Rcpp htmltools caTools bitops digest glue stringr \
+    markdown highr formatR evaluate mime stringi magrittr
 
- # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("processx", "ps", "callr", "crayon", "assertthat", "cli", "desc", "prettyunits", "backports", "rprojroot", "withr", "pkgbuild", "rlang", "rstudioapi", "pkgload", "rcmdcheck", "remotes", "xopen", "clipr", "clisymbols", "sessioninfo", "purrr", "usethis", "sys", "askpass", "openssl", "brew", "roxygen2", "fs", "gh", "rversions", "git2r", "devtools", "R6", "httr", "RCurl", "BH", "xml2", "curl", "jsonlite", "ini", "downloader", "memoise", "plyr", "XML", "whisker", "bitops", "nloptr"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+# R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R processx ps callr crayon assertthat cli desc prettyunits backports \
+    rprojroot withr pkgbuild rlang rstudioapi pkgload rcmdcheck remotes xopen clipr clisymbols sessioninfo purrr \
+    usethis sys askpass openssl brew roxygen2 fs gh rversions git2r devtools R6 httr RCurl BH xml2 curl jsonlite \
+    ini downloader memoise plyr XML whisker bitops nloptr
 
 # libraries Eric Green wanted
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("lubridate", "lazyeval", "utf8", "fansi", "zeallot", "vctrs", "pillar", "pkgconfig", "tibble", "ggplot2", "RColorBrewer", "dichromat", "colorspace", "munsell", "labeling", "viridisLite", "scales", "stargazer", "reshape2", "gtable", "proto", "minqa","RcppEigen","lme4"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R lubridate lazyeval utf8 fansi zeallot vctrs pillar pkgconfig tibble \
+    ggplot2 RColorBrewer dichromat colorspace munsell labeling viridisLite scales stargazer reshape2 gtable proto \
+    minqa RcppEigen lme4
 
 # more libraries Mine Cetinakya-Rundel asked for
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("openintro", "bindr", "bindrcpp", "plogr", "tidyselect", "dplyr", "DBI"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R openintro bindr bindrcpp plogr tidyselect dplyr DBI
   
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("chron", "data.table", "rematch", "cellranger", "tidyr", "googlesheets", "hms", "readr", "selectr", "rvest", "pbkrtest"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R chron data.table rematch cellranger tidyr googlesheets hms readr \
+    selectr rvest pbkrtest
 
 # Shiny
 ADD ./conf /r-studio
-RUN wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.7.907-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.7.907-amd64.deb
-RUN rm shiny-server-1.5.7.907-amd64.deb
-RUN R CMD BATCH /r-studio/install-Shiny.R
-RUN rm /install-Shiny.Rout
+# RUN wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.7.907-amd64.deb
+RUN wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.14.948-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.14.948-amd64.deb
+RUN rm shiny-server-1.5.14.948-amd64.deb
 
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("SparseM", "MatrixModels", "quantreg", "sp", "maptools", "haven", "ellipsis", "forcats", "readxl", "zip", "openxlsx", "rio", "abind", "carData", "car", "mosaicData", "latticeExtra", "gridExtra", "ggdendro", "mnormt", "psych", "generics", "broom", "reshape", "progress", "GGally", "ggstance", "ggformula", "mosaicCore", "ggrepel", "base64enc", "crosstalk", "htmlwidgets", "png", "raster", "viridis", "leaflet", "mosaic"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+# need these shiny packages
+RUN apt-get install -y \
+    libcairo2-dev \
+    libgtk2.0-dev \
+    xvfb \
+    libxt-dev \
+    libv8-dev
+
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R repos=github rstudio/shiny daattali/shinyjs
+
+
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R SparseM MatrixModels quantreg sp maptools haven ellipsis forcats readxl \
+    zip openxlsx rio abind carData car mosaicData latticeExtra gridExtra ggdendro mnormt psych generics broom reshape \
+    progress GGally ggstance ggformula mosaicCore ggrepel base64enc crosstalk htmlwidgets png raster viridis leaflet mosaic
 
 # Cliburn Chan requested these:
-RUN  DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("maps", "zoo", "gcookbook", "corrplot", "grepel", "base64enc", "crosstalk", "htmlwidgets", "png", "raster", "viridis", "leaflet", "mosaic"), repos="http://cran.us.r-project.org",quiet=TRUE)'
-   
+RUN  DEBIAN_FRONTEND=noninteractive pkgInstall.R maps zoo gcookbook corrplot grepel base64enc crosstalk htmlwidgets png \
+    raster viridis leaflet mosaic
+
 
 # install rmarkdown
-RUN R CMD BATCH /r-studio/install-rmarkdown.R
-RUN rm /install-rmarkdown.Rout 
+RUN  DEBIAN_FRONTEND=noninteractive pkgInstall.R repos=github rstudio/rmarkdown
 
 # Cliburn also wanted these
 # but they have mega-dependencies, so intall them the other way
-RUN R CMD BATCH /r-studio/install-dendextend.R
-RUN rm /install-dendextend.Rout 
-RUN R CMD BATCH /r-studio/install-igraph.R
-RUN rm /install-igraph.Rout 
+RUN  DEBIAN_FRONTEND=noninteractive pkgInstall.R dendextend igraph
 
 # install sparklyr so we can do Spark via Livy
-RUN  DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("config", "dbplyr", "rappdirs", "r2d3", "forge", "sparklyr"), repos="http://cran.us.r-project.org",quiet=TRUE)'
-   
+RUN  DEBIAN_FRONTEND=noninteractive pkgInstall.R config dbplyr rappdirs r2d3 forge sparklyr
+
 
 # install templates and examples from Reed and the Tufte package
 RUN DEBIAN_FRONTEND=noninteractive wget \
@@ -134,40 +156,38 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    BHH2_2016.05.31.tar.gz   
 RUN rm \
   BHH2_2016.05.31.tar.gz  
-RUN R CMD BATCH /r-studio/install-reed.R
-RUN rm /install-reed.Rout 
+
+RUN  DEBIAN_FRONTEND=noninteractive pkgInstall.R repos=github ismayc/reedoilabs ismayc/reedtemplates andrewpbray/oilabs
+RUN  DEBIAN_FRONTEND=noninteractive pkgInstall.R tufte
 
 
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("rgdal", "rgeos", "uuid"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R rgdal rgeos uuid
 
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R udunits2 units sf rappdirs
 
-RUN R CMD BATCH /r-studio/install-rappdirs.R
-RUN rm /install-rappdirs.Rout 
-	
 # new packages for fall 2018
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("tigris", "tidycensus", "tidyverse", "future", "doMC", "foreach", "doParallel", "furrr", "drat", "tidygraph", "here", "rticles", "styler", "lintr", "testthat", "reprex", "microbenchmark", "modelr", "globals", "listenv", "iterators", "enc", "rematch2", "rex", "stringdist", "praise", "profmem", "bench" ), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R tigris tidycensus tidyverse future doMC foreach doParallel furrr drat \
+    tidygraph here rticles styler lintr testthat reprex microbenchmark modelr globals listenv iterators enc rematch2 \
+    rex stringdist praise profmem bench
 
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("pryr", "profvis", "RcppArmadillo", "servr", "xaringan", "rsconnect", "PKI", "RJSONIO", "packrat", "highlight", "pkgdown", "bookdown", "blogdown", "cowplot", "influenceR", "Rook", "rgexf", "visNetwork", "DiagrammeR", "farver", "tweenr", "polyclip", "ggforce", "RgoogleMaps", "rjson", "mapproj", "jpeg", "geosphere", "ggmap", "ggraph", "shinyjs", "flexdashboard"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R pryr profvis RcppArmadillo servr xaringan rsconnect PKI RJSONIO packrat \
+    highlight pkgdown bookdown blogdown cowplot influenceR Rook rgexf visNetwork DiagrammeR farver tweenr polyclip \
+    ggforce RgoogleMaps rjson mapproj jpeg geosphere ggmap ggraph shinyjs flexdashboard
 
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("nycflights13", "babynames", "janeaustenr", "NHANES", "repurrrsive", "infer", "ipred", "numDeriv", "SQUAREM", "lava", "prodlim", "kernlab", "CVST", "DRR", "dimRed", "timeDate", "sfsmisc", "magic", "lpSolve", "RcppProgress", "geometry", "DEoptimR", "robustbase", "ddalpha"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R nycflights13 babynames janeaustenr NHANES repurrrsive infer ipred numDeriv \
+    SQUAREM lava prodlim kernlab CVST DRR dimRed timeDate sfsmisc magic lpSolve RcppProgress geometry DEoptimR robustbase \
+    ddalpha
 	
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("gower","RcppRoll", "pls", "recipes", "rsample", "hunspell", "SnowballC", "tokenizers", "ISOcodes", "stopwords", "tidytext", "ggridges", "bayesplot", "matrixStats", "checkmate", "loo", "StanHeaders", "inline", "rstan", "rstantools", "tidypredict"), repos="http://cran.us.r-project.org",quiet=TRUE)'
-	
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("pROC", "gtools", "gdata", "gplots", "MLmetrics", "yardstick", "xgboost", "ModelMetrics", "caret", "e1071", "dotCall64", "spam", "fields", "ROCR", "reticulate", "tfruns", "tensorflow", "zeallot", "keras", "coda", "greta" ), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R gower RcppRoll pls recipes rsample hunspell SnowballC tokenizers ISOcodes \
+    stopwords tidytext ggridges bayesplot matrixStats checkmate loo StanHeaders inline rstan rstantools tidypredict
 
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R pROC gtools gdata gplots MLmetrics yardstick xgboost ModelMetrics caret \
+    e1071 dotCall64 spam fields ROCR reticulate tfruns tensorflow zeallot keras coda greta
 
-RUN R CMD BATCH /r-studio/install-2018-packages-1.R
-RUN R CMD BATCH /r-studio/install-2018-packages-2.R
-RUN R CMD BATCH /r-studio/install-2018-packages-3.R
-RUN R CMD BATCH /r-studio/install-2018-packages-4.R
+# install 2018 packages
+RUN DEBIAN_FRONTEND=noninteractive pkgInstall.R repos=http://cran.r-project.org \
+    shinythemes shinydashboard shinystan rstanarm forecast rstan brms BAS tidyposterior tidymodels tidybayes miniUI
 
-# remove install Rout files
-RUN rm \
-   /install-2018-packages-1.Rout \
-   /install-2018-packages-2.Rout \
-   /install-2018-packages-3.Rout \
-   /install-2018-packages-4.Rout 
-   
 	
 # Supervisord
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y supervisor && \
