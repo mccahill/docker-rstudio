@@ -1,131 +1,150 @@
-# mccahill/r-studio
-#
-# VERSION 1.4
+FROM  ubuntu:20.04
 
-FROM  ubuntu:18.04
-MAINTAINER  Mark McCahill "mark.mccahill@duke.edu"
+# install R
+RUN apt update
+RUN apt install -y gnupg2 software-properties-common
 
-# use local repositories 
-RUN sed -i 's/archive.ubuntu.com/archive.linux.duke.edu/' /etc/apt/sources.list
-RUN sed -i 's/security.ubuntu.com/archive.linux.duke.edu/' /etc/apt/sources.list
+# RUN add-apt-repository deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+RUN gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+RUN gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | apt-key add -
+RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
+RUN apt update
+RUN DEBIAN_FRONTEND=noninteractive apt install -y r-base r-base-core r-recommended r-base-dev
 
 
-RUN apt-get    update 
-RUN apt-get  dist-upgrade -y 	
-RUN apt-get  install -y \
-    gnupg2 \
-    apt-utils \
-    libopenblas-base \
-    vim \
-    less \
-    net-tools \
-    inetutils-ping \
-    curl \
-    git \
-    telnet \
-    nmap \
-    socat \
-    software-properties-common \
-    wget \
-    locales
+# we want OpenBLAS for faster linear algebra as described here: http://brettklamer.com/diversions/statistical/faster-blas-in-r/
+RUN apt-get install  -y \
+   apt-utils \
+   libopenblas-base
 
-# Configure default locale
-RUN locale-gen en_US en_US.UTF-8 
-RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
+RUN apt-get update ; \
+   DEBIAN_FRONTEND=noninteractive apt-get  install -y  \
+   vim \
+   less \
+   net-tools \
+   inetutils-ping \
+   curl \
+   git \
+   telnet \
+   nmap \
+   socat \
+   wget \
+   sudo \
+   libcurl4-openssl-dev \
+   libxml2-dev 
 
-	
-# get R from a CRAN archive (we want the 3.5 version of R)
-RUN  echo  "deb http://cran.rstudio.com/bin/linux/ubuntu bionic-cran35/"  >>  /etc/apt/sources.list
-RUN  DEBIAN_FRONTEND=noninteractive apt-key adv   --keyserver keyserver.ubuntu.com   --recv-keys  E084DAB9
-
-RUN apt-get  update ; \
-    apt-get  dist-upgrade -y 
-
-RUN  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 
-RUN  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
-# we need gdal > 2
-#RUN add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
-RUN  add-apt-repository ppa:ubuntugis/ppa
-RUN apt-get update
-
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
-  r-base \
-  r-base-dev \
-  libcurl4-gnutls-dev \
-  libgit2-dev \
+# we need TeX for the rmarkdown package in RStudio, and pandoc is also useful 
+RUN apt-get update 
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
+   texlive \
+   texlive-base \
+   texlive-latex-extra \
+   texlive-pstricks \
+   texlive-publishers \
+   texlive-fonts-extra \
+   texlive-humanities \
+   lmodern \
+   pandoc \
+# dependency for R XML library
+  libxml2 \ 
   libxml2-dev \
-  libssl-dev \
-  libudunits2-dev \
-  libpoppler-cpp-dev \
-  texlive \
-  texlive-base \
-  texlive-latex-extra \
-  texlive-pstricks \
-  pandoc \
-  texlive-publishers \
-  texlive-fonts-extra \
-  texlive-latex-extra \
-  texlive-humanities \
-  lmodern \
-  libxml2  \
-  libxml2-dev  \
-  libssl-dev \
-  libproj-dev \
-  libudunits2-0  \
-  libudunits2-dev \
-  software-properties-common \
-  gdal-bin \
-  python-gdal \
-  libgdal-dev \
-  gdebi-core \
-  libapparmor1 \
-  gdal-bin \
-  python-gdal \
-  libgdal-dev \
-  libproj-dev \
-  libudunits2-0 \
-  libudunits2-dev 
+  libssl-dev 
 
-# R-Studio   
-#RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/rstudio-server-1.1.383-amd64.deb
-#RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.1.383-amd64.deb
-#RUN rm rstudio-server-1.1.383-amd64.deb
- 
-RUN DEBIAN_FRONTEND=noninteractive wget https://s3.amazonaws.com/rstudio-ide-build/server/trusty/amd64/rstudio-server-1.2.907-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.2.907-amd64.deb
-RUN rm rstudio-server-1.2.907-amd64.deb
+# R-Studio
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y gdebi-core
+RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.1056-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.3.1056-amd64.deb
+   
+# install packages via R scripts found in conf directory
+ADD ./conf /r-studio   
 
-# update the R packages we will need for knitr
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("xfun", "knitr", "yaml", "Rcpp", "htmltools", "caTools", "bitops", "digest", "glue", "stringr", "markdown", "highr", "formatR", "evaluate", "mime", "stringi", "magrittr"), repos="http://cran.us.r-project.org",quiet=TRUE)'
 
- # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("processx", "ps", "callr", "crayon", "assertthat", "cli", "desc", "prettyunits", "backports", "rprojroot", "withr", "pkgbuild", "rlang", "rstudioapi", "pkgload", "rcmdcheck", "remotes", "xopen", "clipr", "clisymbols", "sessioninfo", "purrr", "usethis", "sys", "askpass", "openssl", "brew", "roxygen2", "fs", "gh", "rversions", "git2r", "devtools", "R6", "httr", "RCurl", "BH", "xml2", "curl", "jsonlite", "ini", "downloader", "memoise", "plyr", "XML", "whisker", "bitops", "nloptr"), repos="http://cran.us.r-project.org",quiet=TRUE)'
 
-# libraries Eric Green wanted
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("lubridate", "lazyeval", "utf8", "fansi", "zeallot", "vctrs", "pillar", "pkgconfig", "tibble", "ggplot2", "RColorBrewer", "dichromat", "colorspace", "munsell", "labeling", "viridisLite", "scales", "stargazer", "reshape2", "gtable", "proto", "minqa","RcppEigen","lme4"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+# more OS-level libraries
+RUN apt-get update 
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
+  libfreetype6-dev
 
-# more libraries Mine Cetinakya-Rundel asked for
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("openintro", "bindr", "bindrcpp", "plogr", "tidyselect", "dplyr", "DBI"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN /usr/bin/R -e 'options(warn=2); install.packages(c(  \
+    "R.cache", \
+    "R.methodsS3", \
+    "R.rsp", \
+    "R.utils" \
+    ), repos="http://cran.us.r-project.org")'
+
+RUN /usr/bin/R -e 'options(warn=2); install.packages(c( \
+    "timeDate", \
+    "tidymodels", \
+    "tidypredict", \
+    "tidyr", \
+    "tidyselect", \
+    "tidytext", \
+    "tidygraph", \
+    "tidyverse" \
+    ), repos="http://cran.us.r-project.org")'
+
+RUN /usr/bin/R -e 'options(warn=2); install.packages(c( \
+    "statmod", \
+    "car", \
+    "dbplyr", \
+    "dplyr", \
+    "dygraphs", \
+    "evaluate", \
+    "forecast", \
+    "formatR" \
+    ), repos="http://cran.us.r-project.org")'
+
+
+RUN apt-get update 
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
+    libudunits2-dev
+
+RUN /usr/bin/R -e 'options(warn=2); install.packages(c( \
+    "gdata", \
+    "ggforce", \
+    "ggformula", \
+    "ggmap", \
+    "ggplot2", \
+    "ggraph", \
+    "ggrepel", \
+    "ggridges", \
+    "ggstance"  \
+    ),  repos="http://cran.us.r-project.org")'
+
+RUN /usr/bin/R -e 'options(warn=2); install.packages(c(  \
+    "gmodels", \
+    "gtable", \
+    "gtools", \
+    "import", \
+    "jpeg"  \
+    ),  repos="http://cran.us.r-project.org")'
+
+RUN /usr/bin/R -e 'options(warn=2); install.packages(c(  \
+    "matrixStats", \
+    "modelr", \
+    "modeltools", \
+    "mosaic", \
+    "mosaicData", \
+    "mvtnorm"  \
+    ),  repos="http://cran.us.r-project.org")'
+  
+RUN /usr/bin/R -e 'options(warn=2); install.packages(c(  \
+    "nycflights13", \
+    "openintro", \
+    "plyr", \
+    "png", \
+    "purrr", \
+    "readr", \
+    "readxl"  \
+    ), repos="http://cran.us.r-project.org")'
   
 RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("chron", "data.table", "rematch", "cellranger", "tidyr", "googlesheets", "hms", "readr", "selectr", "rvest", "pbkrtest"), repos="http://cran.us.r-project.org",quiet=TRUE)'
-
-# Shiny
-ADD ./conf /r-studio
-RUN wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.7.907-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi -n shiny-server-1.5.7.907-amd64.deb
-RUN rm shiny-server-1.5.7.907-amd64.deb
-RUN R CMD BATCH /r-studio/install-Shiny.R
-RUN rm /install-Shiny.Rout
-
-RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("SparseM", "MatrixModels", "quantreg", "sp", "maptools", "haven", "ellipsis", "forcats", "readxl", "zip", "openxlsx", "rio", "abind", "carData", "car", "mosaicData", "latticeExtra", "gridExtra", "ggdendro", "mnormt", "psych", "generics", "broom", "reshape", "progress", "GGally", "ggstance", "ggformula", "mosaicCore", "ggrepel", "base64enc", "crosstalk", "htmlwidgets", "png", "raster", "viridis", "leaflet", "mosaic"), repos="http://cran.us.r-project.org",quiet=TRUE)'
+RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("SparseM", "MatrixModels", "quantreg", "sp", "maptools", "haven", "ellipsis", "forcats", "readxl", "zip", "openxlsx", "rio", "abind", "carData", "car", "mosaicData", "latticeExtra", "gridExtra", "ggdendro", "mnormt", "psych", "generics", "broom", "reshape", "progress", "ggstance", "ggformula", "mosaicCore", "ggrepel", "base64enc", "crosstalk", "htmlwidgets", "png", "raster", "viridis", "leaflet", "mosaic"), repos="http://cran.us.r-project.org",quiet=TRUE)'
 
 # Cliburn Chan requested these:
 RUN  DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("maps", "zoo", "gcookbook", "corrplot", "grepel", "base64enc", "crosstalk", "htmlwidgets", "png", "raster", "viridis", "leaflet", "mosaic"), repos="http://cran.us.r-project.org",quiet=TRUE)'
    
-
-# install rmarkdown
-RUN R CMD BATCH /r-studio/install-rmarkdown.R
-RUN rm /install-rmarkdown.Rout 
 
 # Cliburn also wanted these
 # but they have mega-dependencies, so intall them the other way
@@ -145,13 +164,10 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    BHH2_2016.05.31.tar.gz   
 RUN rm \
   BHH2_2016.05.31.tar.gz  
-RUN R CMD BATCH /r-studio/install-reed.R
-RUN rm /install-reed.Rout 
+
 
 
 RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("rgdal", "rgeos", "uuid"), repos="http://cran.us.r-project.org",quiet=TRUE)'
-
-
 RUN R CMD BATCH /r-studio/install-rappdirs.R
 RUN rm /install-rappdirs.Rout 
 	
@@ -166,6 +182,8 @@ RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("
 	
 RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("pROC", "gtools", "gdata", "gplots", "MLmetrics", "yardstick", "xgboost", "ModelMetrics", "caret", "e1071", "dotCall64", "spam", "fields", "ROCR", "reticulate", "tfruns", "tensorflow", "zeallot", "keras", "coda", "greta" ), repos="http://cran.us.r-project.org",quiet=TRUE)'
 
+	
+RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'install.packages( c("spatialreg", "patchwork", "tmap", "tmaptools"), repos="http://cran.us.r-project.org",quiet=TRUE)'
 
 RUN R CMD BATCH /r-studio/install-2018-packages-1.R
 RUN R CMD BATCH /r-studio/install-2018-packages-2.R
@@ -205,9 +223,27 @@ RUN echo "" >> /etc/R/Rprofile.site && \
     echo "library(openintro)" >> /etc/R/Rprofile.site && \
     echo "library(broom)" >> /etc/R/Rprofile.site && \
     echo "library(GGally)" >> /etc/R/Rprofile.site && \
+    echo "library(babynames)" >> /etc/R/Rprofile.site && \
+    echo "library(patchwork)" >> /etc/R/Rprofile.site && \
     echo "}" >> /etc/R/Rprofile.site  && \
     echo "" >> /etc/R/Rprofile.site
-	
+
+
+###Fall 2020
+RUN apt -y install libgdal-dev
+RUN Rscript -e 'install.packages("sf")'
+RUN Rscript -e 'install.packages("tmap")'
+RUN Rscript -e 'install.packages("spatialreg")'
+RUN Rscript -e 'install.packages("datasauRus")'
+RUN Rscript -e 'install.packages("fivethirtyeight")'
+RUN Rscript -e 'install.packages("tufte")'
+RUN Rscript -e 'install.packages("skimr")'
+RUN Rscript -e 'install.packages("plotROC")'
+RUN Rscript -e 'install.packages("dslabs")'
+RUN Rscript -e 'install.packages("rms")'
+RUN Rscript -e 'install.packages("palmerpenguins")'
+RUN Rscript -e 'install.packages("anyflights")'
+
 
 # add a non-root user so we can log into R studio as that user; make sure that user is in the group "users"
 RUN adduser --disabled-password --gecos "" --ingroup users guest 
@@ -229,9 +265,9 @@ ADD initialize.sh /
 # expose the RStudio IDE port
 EXPOSE 8787 
 
-# expose the port for the shiny server
-#EXPOSE 3838
-
-RUN echo 'auth-stay-signed-in=0' >> /etc/rstudio/rserver.conf
+# set the locale so RStudio doesn't complain about UTF-8
+RUN apt-get install  -y locales 
+RUN locale-gen en_US en_US.UTF-8
+RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 
 CMD ["/usr/bin/supervisord"]
