@@ -92,3 +92,7 @@ a cluster of rstudio instances front-ended by nginx and docker-gen see
 https://github.com/mccahill/docker-gen/tree/duke
 
 
+### Test Containers
+https://labs-az-01.oit.duke.edu/auth-sign-in
+https://labs-az-02.oit.duke.edu/auth-sign-in
+https://labs-az-03.oit.duke.edu/auth-sign-in
