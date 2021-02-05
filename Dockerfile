@@ -66,6 +66,7 @@ RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
   libfreetype6-dev
 
+RUN echo 'force rebuild of R packages'
 RUN /usr/bin/R -e 'options(warn=2); install.packages(c(  \
     "R.cache", \
     "R.methodsS3", \
@@ -197,7 +198,9 @@ RUN rm \
    /install-2018-packages-3.Rout \
    /install-2018-packages-4.Rout 
    
-	
+# Eric Green requested
+RUN DEBIAN_FRONTEND=noninteractive R --vanilla --quiet -e 'remotes::install_github("rstudio-education/dsbox")'
+
 # Supervisord
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y supervisor && \
    mkdir -p /var/log/supervisor
