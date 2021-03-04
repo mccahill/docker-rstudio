@@ -81,6 +81,12 @@ deploy_staging_13:
     - labs-az-13
   <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
 
+deploy_staging_14:
+  tags: 
+    - rstudio
+    - labs-az-14
+  <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
+
 
 #
 ############# deploy_production ##############
@@ -139,6 +145,12 @@ deploy_production_13:
   tags: 
     - rstudio
     - labs-az-13
+  <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
+
+deploy_production_14:
+  tags: 
+    - rstudio
+    - labs-az-14
   <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
 
 
