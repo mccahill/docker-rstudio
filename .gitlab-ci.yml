@@ -14,7 +14,7 @@ stages:
 build:
   tags: 
     - rstudio
-    - labs-az-01r
+    - labs-az-01
   stage: build
   script: 
     - echo "Building the app in staging"
@@ -42,25 +42,25 @@ build:
 deploy_staging_01:
   tags: 
     - rstudio
-    - labs-az-01r
+    - labs-az-01
   <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
 
 deploy_staging_02:
   tags: 
     - rstudio
-    - labs-az-02r
+    - labs-az-02
   <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
 
 deploy_staging_03:
   tags: 
     - rstudio
-    - labs-az-03r
+    - labs-az-03
   <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
 
 deploy_staging_04:
   tags: 
     - rstudio
-    - labs-az-04r
+    - labs-az-04
   <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
 
 
@@ -84,25 +84,25 @@ deploy_staging_04:
 deploy_production_01:
   tags: 
     - rstudio
-    - labs-az-01r
+    - labs-az-01
   <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
 
 deploy_production_02:
   tags: 
     - rstudio
-    - labs-az-02r
+    - labs-az-02
   <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
 
 deploy_production_03:
   tags: 
     - rstudio
-    - labs-az-03r
+    - labs-az-03
   <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
 
 deploy_production_04:
   tags: 
     - rstudio
-    - labs-az-04r
+    - labs-az-04
   <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
 
 
