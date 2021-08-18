@@ -1,7 +1,10 @@
 FROM  ubuntu:20.04
 
+RUN echo 'force complete rebuild'
+
 # install R
-RUN apt update
+RUN apt update 
+RUN DEBIAN_FRONTEND=noninteractive apt dist-upgrade -y
 RUN apt install -y gnupg2 software-properties-common
 
 # RUN add-apt-repository deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/
@@ -11,7 +14,6 @@ RUN gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | apt-key add -
 RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
 RUN apt update
 RUN DEBIAN_FRONTEND=noninteractive apt install -y r-base r-base-core r-recommended r-base-dev
-
 
 # we want OpenBLAS for faster linear algebra as described here: http://brettklamer.com/diversions/statistical/faster-blas-in-r/
 RUN apt-get install  -y \
@@ -32,11 +34,7 @@ RUN apt-get update ; \
    wget \
    sudo \
    libcurl4-openssl-dev \
-   libxml2-dev 
-
-# we need TeX for the rmarkdown package in RStudio, and pandoc is also useful 
-RUN apt-get update 
-RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
+   libxml2-dev \
    texlive \
    texlive-base \
    texlive-latex-extra \
@@ -47,24 +45,26 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    lmodern \
    pandoc \
 # dependency for R XML library
-  libxml2 \ 
+  libxml2 \
   libxml2-dev \
-  libssl-dev 
+  libssl-dev \
+  libfreetype6-dev \
+  libudunits2-dev
+
+
+# set the locale so RStudio doesn't complain about UTF-8
+RUN apt-get install  -y locales 
+RUN locale-gen en_US en_US.UTF-8
+RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 
 # R-Studio
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y gdebi-core
-RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.1056-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.3.1056-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1717-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.4.1717-amd64.deb
    
 # install packages via R scripts found in conf directory
 ADD ./conf /r-studio   
-
-
-
-# more OS-level libraries
-RUN apt-get update 
-RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
-  libfreetype6-dev
+ 
 
 RUN echo 'force rebuild of R packages'
 RUN /usr/bin/R -e 'options(warn=2); install.packages(c(  \
@@ -95,11 +95,6 @@ RUN /usr/bin/R -e 'options(warn=2); install.packages(c( \
     "forecast", \
     "formatR" \
     ), repos="http://cran.us.r-project.org")'
-
-
-RUN apt-get update 
-RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
-    libudunits2-dev
 
 RUN /usr/bin/R -e 'options(warn=2); install.packages(c( \
     "gdata", \
@@ -267,10 +262,5 @@ ADD initialize.sh /
 
 # expose the RStudio IDE port
 EXPOSE 8787 
-
-# set the locale so RStudio doesn't complain about UTF-8
-RUN apt-get install  -y locales 
-RUN locale-gen en_US en_US.UTF-8
-RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 
 CMD ["/usr/bin/supervisord"]
