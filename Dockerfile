@@ -1,6 +1,6 @@
 FROM  ubuntu:20.04
 
-RUN echo 'force complete rebuild'
+RUN echo 'force a complete rebuild'
 
 # install R
 RUN apt update 
@@ -59,8 +59,11 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 
 # R-Studio
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y gdebi-core
-RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1717-amd64.deb
-RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.4.1717-amd64.deb
+#RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1717-amd64.deb
+#RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.4.1717-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.1056-amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.3.1056-amd64.deb
+RUN rm rstudio-server-1.3.1056-amd64.deb
    
 # install packages via R scripts found in conf directory
 ADD ./conf /r-studio   
@@ -259,6 +262,10 @@ ADD initialize.sh /
 # add these to the supervisord.conf file
 #
 #########
+
+
+RUN apt-get autoremove -y
+RUN apt-get clean
 
 # expose the RStudio IDE port
 EXPOSE 8787 
