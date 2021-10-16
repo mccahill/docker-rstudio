@@ -2,6 +2,8 @@ FROM  ubuntu:20.04
 
 ENV TZ America/New_York
 
+RUN echo 'complete rebuild'
+
 # Core Tools
 RUN apt-get update  \
     && apt-get dist-upgrade -y \
@@ -220,6 +222,7 @@ RUN installGithub.r \
     rstudio-education/dsbox
 
 
+
 RUN install2.r --error -s --deps TRUE \
     igraph \
     BAS  \
@@ -244,6 +247,7 @@ RUN install2.r --error -s --deps TRUE \
     CVST \
     cyclocomp
 
+# broken here
 # Config files
 ADD ./biocInstalls /biocInstalls
 RUN R CMD BATCH /biocInstalls/extras.R
@@ -497,7 +501,8 @@ RUN install2.r --error -s --deps TRUE \
     tidypredict \
     tidyr \
     tidyselect \
-    tidytext 
+    tidytext \
+    tidytuesdayR
 
 
 
