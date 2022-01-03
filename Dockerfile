@@ -78,7 +78,9 @@ RUN apt-get update \
         libtiff-dev \
         libcairo2-dev \
         libxt-dev \
-        libavfilter-dev
+        libavfilter-dev \
+		libopenmpi-dev
+		
 
 RUN apt install --no-install-recommends -y \
     software-properties-common \
