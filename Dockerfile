@@ -101,10 +101,15 @@ RUN apt install --no-install-recommends -y \
 && install.r docopt \
 && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
+# Install R-Studio server latest 
+RUN wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2021.09.1-372-amd64.deb \
+    && DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-2021.09.1-372-amd64.deb \
+    && rm rstudio-server-2021.09.1-372-amd64.deb
+
 # Install R-Studio 1.4
-RUN wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1717-amd64.deb \
-    && DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.4.1717-amd64.deb \
-    && rm rstudio-server-1.4.1717-amd64.deb
+#RUN wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1717-amd64.deb \
+#    && DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-1.4.1717-amd64.deb \
+#    && rm rstudio-server-1.4.1717-amd64.deb
 
 ADD ./Rprofileconf /Rprofile_conf 
 RUN ls -la  /Rprofile_conf/*
