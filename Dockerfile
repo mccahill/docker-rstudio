@@ -548,6 +548,9 @@ RUN cd /r-studio-configs && \
     chown guest /var/log/supervisor
 #RUN rm -rf /r-studio-configs
 
+# Needed by gert which is needed by usethis
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libgit2-dev
+
 
 #########
 #
