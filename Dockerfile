@@ -159,7 +159,7 @@ RUN install2.r --error -s -r "https://fivethirtyeightdata.github.io/drat/" \
     gh \
     gifski \
     gitcreds \
-    googlesheets 
+    googlesheets4 
 
 # R packages H-Z
 RUN install2.r --error -s --deps TRUE \
