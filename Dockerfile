@@ -321,7 +321,7 @@ RUN install2.r --error -s --deps TRUE \
     gh \
     gitcreds \
     gmodels \
-    googlesheets \
+    googlesheets4 \
     gower \
     GPfit \
     gplots \
@@ -531,7 +531,7 @@ RUN echo "" >> /etc/R/Rprofile.site && \
     echo "library(knitr)" >> /etc/R/Rprofile.site && \
     echo "library(rmarkdown)" >> /etc/R/Rprofile.site && \
     echo "library(ggplot2)" >> /etc/R/Rprofile.site && \
-    echo "library(googlesheets)" >> /etc/R/Rprofile.site && \
+    echo "library(googlesheets4)" >> /etc/R/Rprofile.site && \
     echo "library(openintro)" >> /etc/R/Rprofile.site && \
     echo "library(GGally)" >> /etc/R/Rprofile.site && \
     echo "library(babynames)" >> /etc/R/Rprofile.site && \
