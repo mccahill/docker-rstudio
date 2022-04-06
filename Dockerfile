@@ -2,7 +2,7 @@ FROM  ubuntu:20.04
 
 ENV TZ America/New_York
 
-RUN echo 'complete rebuild'
+RUN echo 'rebuild'
 
 # Core Tools
 RUN apt-get update  \
