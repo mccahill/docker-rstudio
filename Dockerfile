@@ -79,7 +79,11 @@ RUN apt-get update \
         libcairo2-dev \
         libxt-dev \
         libavfilter-dev \
-		libopenmpi-dev
+        libopenmpi-dev \
+        libblas-dev \
+        liblapack-dev \
+        libarpack2-dev \
+        libglpk40
 		
 
 RUN apt install --no-install-recommends -y \
@@ -104,17 +108,14 @@ RUN apt install --no-install-recommends -y \
 && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
 # Install R-Studio server latest 
-#RUN wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2021.09.1-372-amd64.deb \
-#    && DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-2021.09.1-372-amd64.deb \
-#    && rm rstudio-server-2021.09.1-372-amd64.deb
+RUN wget https://s3.amazonaws.com/rstudio-ide-build/server/bionic/amd64/rstudio-server-2022.02.0-daily-375-amd64.deb \  
+    && DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-2022.02.0-daily-375-amd64.deb \
+    && rm rstudio-server-2022.02.0-daily-375-amd64.deb
 
-RUN wget https://s3.amazonaws.com/rstudio-ide-build/server/bionic/amd64/rstudio-server-2022.02.0-442-amd64.deb \  
-    && DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-2022.02.0-442-amd64.deb \
-    && rm rstudio-server-2022.02.0-442-amd64.deb
-
-RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.21/quarto-0.9.21-linux-amd64.deb \
-    && DEBIAN_FRONTEND=noninteractive gdebi --n quarto-0.9.21-linux-amd64.deb \
-    && rm quarto-0.9.21-linux-amd64.deb
+# quatro
+RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.0.38/quarto-1.0.38-linux-amd64.deb \
+    && DEBIAN_FRONTEND=noninteractive gdebi --n quarto-1.0.38-linux-amd64.deb \
+    && rm quarto-1.0.38-linux-amd64.deb
 
 ADD ./Rprofileconf /Rprofile_conf 
 RUN ls -la  /Rprofile_conf/*
