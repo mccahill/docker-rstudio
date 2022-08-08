@@ -71,18 +71,18 @@ deploy_staging_16:
   <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
 
 
-deploy_staging_17:
-  tags: 
-    - rstudio
-    - labs-az-17
-  <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
-
-
-deploy_staging_18:
-  tags: 
-    - rstudio
-    - labs-az-18
-  <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
+#deploy_staging_17:
+#  tags: 
+#    - rstudio
+#    - labs-az-17
+#  <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
+#
+#
+#deploy_staging_18:
+#  tags: 
+#    - rstudio
+#    - labs-az-18
+#  <<: *deploy_staging_definition           # Merge the contents of the 'deploy_staging_definition' alias
 
 
 
@@ -134,17 +134,17 @@ deploy_production_16:
     - labs-az-16
   <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
   
-deploy_production_17:
-  tags: 
-    - rstudio
-    - labs-az-17
-  <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
-  
-deploy_production_18:
-  tags: 
-    - rstudio
-    - labs-az-18
-  <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
+#deploy_production_17:
+#  tags: 
+#    - rstudio
+#    - labs-az-17
+#  <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
+#  
+#deploy_production_18:
+#  tags: 
+#    - rstudio
+#    - labs-az-18
+#  <<: *deploy_production_definition           # Merge the contents of the 'deploy_production_definition' alias
 
 
 
