@@ -108,9 +108,9 @@ RUN apt install --no-install-recommends -y \
 && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
 # Install R-Studio server latest 
-RUN wget https://s3.amazonaws.com/rstudio-ide-build/server/bionic/amd64/rstudio-server-2022.02.0-daily-375-amd64.deb \  
-    && DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-2022.02.0-daily-375-amd64.deb \
-    && rm rstudio-server-2022.02.0-daily-375-amd64.deb
+RUN wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.07.1-554-amd64.deb \
+    && DEBIAN_FRONTEND=noninteractive gdebi --n md64/rstudio-server-2022.07.1-554-amd64.deb \
+    && rm md64/rstudio-server-2022.07.1-554-amd64.deb
 
 # quatro
 RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.0.38/quarto-1.0.38-linux-amd64.deb \
