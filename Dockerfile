@@ -130,7 +130,12 @@ RUN install2.r --error -s --deps TRUE \
 
 
 # R packages A-G
-#RUN install2.r --error -s -r "https://fivethirtyeightdata.github.io/drat/" fivethirtyeightdata 
+
+#	install.packages('fivethirtyeightdata', repos = 'https://fivethirtyeightdata.github.io/drat/', type = 'source')
+RUN echo "install.packages('fivethirtyeightdata', repos = 'https://fivethirtyeightdata.github.io/drat/', type = 'source')" > foo.R && \
+    R CMD BATCH /foo.R && \
+    cat /foo.Rout ; rm /foo.Rout  /foo.R
+
 RUN install2.r --error -s --deps TRUE \
     anyflights \
     arm \
@@ -280,12 +285,7 @@ RUN install2.r --error -s --deps TRUE \
     drat \
     DRR \
     dslabs
-	
-#	install.packages('fivethirtyeightdata', repos = 'https://fivethirtyeightdata.github.io/drat/', type = 'source')
-RUN echo "install.packages('fivethirtyeightdata', repos = 'https://fivethirtyeightdata.github.io/drat/', type = 'source')" > foo.R && \
-    R CMD BATCH /foo.R && \
-    cat /foo.Rout ; rm /foo.Rout  /foo.R
-	
+		
 RUN install2.r --error -s --deps TRUE \
     effects \
     enc \
@@ -294,7 +294,6 @@ RUN install2.r --error -s --deps TRUE \
     fda \
     fds \
     fields \
-    fivethirtyeight \
     flexdashboard \
     flexmix \
     FNN \
