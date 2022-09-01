@@ -130,9 +130,8 @@ RUN install2.r --error -s --deps TRUE \
 
 
 # R packages A-G
-RUN install2.r --error -s -r "https://fivethirtyeightdata.github.io/drat/" \
-    fivethirtyeightdata ; \
-    install2.r --error -s --deps TRUE \
+#RUN install2.r --error -s -r "https://fivethirtyeightdata.github.io/drat/" fivethirtyeightdata 
+RUN install2.r --error -s --deps TRUE \
     anyflights \
     arm \
     ash \
