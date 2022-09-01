@@ -280,7 +280,12 @@ RUN install2.r --error -s --deps TRUE \
     drat \
     DRR \
     dslabs
-
+	
+#	install.packages('fivethirtyeightdata', repos = 'https://fivethirtyeightdata.github.io/drat/', type = 'source')
+RUN echo "install.packages('fivethirtyeightdata', repos = 'https://fivethirtyeightdata.github.io/drat/', type = 'source')" > foo.R && \
+    R CMD BATCH /foo.R && \
+    cat /foo.Rout ; rm /foo.Rout  /foo.R
+	
 RUN install2.r --error -s --deps TRUE \
     effects \
     enc \
