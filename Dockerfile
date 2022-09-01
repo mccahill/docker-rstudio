@@ -192,13 +192,11 @@ RUN install2.r --error -s --deps TRUE \
     tufte
 
 # R packages - spatial
-RUN install2.r --error -s --deps  TRUE \
-    raster \
-	remotes
+RUN install2.r --error -s --deps TRUE \
+    raster
 
-#RUN Rscript -e "install.packages('spDataLarge',  repos = 'https://geocompr.r-universe.dev')"
-RUN Rscript -e 'remotes::install_github("Nowosad/spDataLarge")'
-	
+RUN Rscript -e "install.packages('spDataLarge', repos = 'https://geocompr.r-universe.dev')"
+
 RUN install2.r --error -s --deps TRUE \
     sf \
     sp \
