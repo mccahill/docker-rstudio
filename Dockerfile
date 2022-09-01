@@ -54,15 +54,10 @@ ENV LANG en_US.UTF-8
 ENV DEBIAN_FRONTEND noninteractive 
 
 # we need TeX for the rmarkdown package in RStudio, and pandoc is also useful 
-RUN apt-get update \
-    && apt-get  install -y --no-install-recommends \
-        texlive \
-        texlive-base \
-        texlive-latex-extra \
-        texlive-pstricks \
-        texlive-publishers \
-        texlive-fonts-extra \
-        texlive-humanities \
+RUN add-apt-repository universe && \
+    apt-get update && \
+    apt-get  install -y --no-install-recommends \
+        texlive-all \
         lmodern \
         pandoc
 
