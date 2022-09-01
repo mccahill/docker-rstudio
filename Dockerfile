@@ -1,4 +1,4 @@
-FROM  ubuntu:20.04
+FROM  ubuntu:22.04
 
 ENV TZ America/New_York
 
@@ -108,14 +108,14 @@ RUN apt install --no-install-recommends -y \
 && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
 # Install R-Studio server latest 
-RUN wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.07.1-554-amd64.deb \
+RUN wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2022.07.1-554-amd64.deb \
     && DEBIAN_FRONTEND=noninteractive gdebi --n rstudio-server-2022.07.1-554-amd64.deb \
     && rm rstudio-server-2022.07.1-554-amd64.deb
 
-# quatro
-RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.0.38/quarto-1.0.38-linux-amd64.deb \
-    && DEBIAN_FRONTEND=noninteractive gdebi --n quarto-1.0.38-linux-amd64.deb \
-    && rm quarto-1.0.38-linux-amd64.deb
+# quatro - now bundled with rstudio, only needed if we want a newer version
+#RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.0.38/quarto-1.0.38-linux-amd64.deb \
+#    && DEBIAN_FRONTEND=noninteractive gdebi --n quarto-1.0.38-linux-amd64.deb \
+#    && rm quarto-1.0.38-linux-amd64.deb
 
 ADD ./Rprofileconf /Rprofile_conf 
 RUN ls -la  /Rprofile_conf/*
@@ -194,15 +194,17 @@ RUN install2.r --error -s --deps TRUE \
     tufte
 
 # R packages - spatial
-RUN install2.r --error -s -r "https://nowosad.github.io/drat/" \
-    spDataLarge ; \
-    install2.r --error -s --deps TRUE \
+RUN install2.r --error -s --deps TRUE \
+    raster
+
+RUN Rscript -e "install.packages('spDataLarge', repos = 'https://geocompr.r-universe.dev')"
+	
+RUN install2.r --error -s --deps TRUE \
     sf \
     sp \
     rgeos \
     rgdal \
     leaflet \
-    raster \
     spData \
     spdep \
     spatialreg
@@ -481,6 +483,8 @@ RUN install2.r --error -s --deps TRUE \
     dygraphs \
     emmeans 
 
+# needed for something below
+RUN Rscript -e "install.packages('cmdstanr', repos = c('https://mc-stan.org/r-packages/', getOption('repos')))" 
 
 RUN install2.r --error -s --deps TRUE \
     gamm4 \
@@ -515,7 +519,8 @@ RUN install2.r --error -s --deps TRUE \
     tidytext \
     tidytuesdayR
 
-
+RUN install2.r --error -s --deps TRUE \
+    unvotes
 
 # the maintainer removed this package from CRAN, but it is still available in the archives
 RUN DEBIAN_FRONTEND=noninteractive wget  \

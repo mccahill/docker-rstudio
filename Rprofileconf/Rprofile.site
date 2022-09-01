@@ -4,5 +4,5 @@ options(
         "R/%s R (%s)", getRversion(), 
         paste(getRversion(), R.version$platform, R.version$arch, R.version$os)
     ),
-    repos = c(CRAN = "https://packagemanager.rstudio.com/all/__linux__/focal/latest")
+    repos = c(CRAN = "https://packagemanager.rstudio.com/all/__linux__/jammy/latest")
 )
