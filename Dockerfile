@@ -193,9 +193,11 @@ RUN install2.r --error -s --deps TRUE \
 
 # R packages - spatial
 RUN install2.r --error -s --deps  TRUE \
-    raster
+    raster \
+	remotes
 
-RUN Rscript -e "install.packages('spDataLarge',  repos = 'https://geocompr.r-universe.dev')"
+#RUN Rscript -e "install.packages('spDataLarge',  repos = 'https://geocompr.r-universe.dev')"
+RUN Rscript -e 'remotes::install_github("Nowosad/spDataLarge")'
 	
 RUN install2.r --error -s --deps TRUE \
     sf \
