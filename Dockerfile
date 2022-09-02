@@ -135,12 +135,6 @@ RUN install2.r --error -s --deps TRUE \
 
 
 # R packages A-G
-
-#	install.packages('fivethirtyeightdata', repos = 'https://fivethirtyeightdata.github.io/drat/', type = 'source')
-#RUN echo "install.packages('fivethirtyeightdata', repos = 'https://fivethirtyeightdata.github.io/drat/', type = 'source')" > foo.R && \
-#    R CMD BATCH /foo.R && \
-#    cat /foo.Rout ; rm /foo.Rout  /foo.R
-
 RUN install2.r --error -s --deps TRUE \
     anyflights \
     arm \
@@ -563,6 +557,8 @@ RUN cd /r-studio-configs && \
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libgit2-dev
 
 RUN Rscript -e "tinytex::install_tinytex()"
+RUN install2.r --error -s --deps TRUE fivethirtyeight 
+RUN install2.r --error -s -r "https://fivethirtyeightdata.github.io/drat/" fivethirtyeightdata
 
 
 #########
