@@ -559,6 +559,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libgit2-dev
 RUN Rscript -e "tinytex::install_tinytex()"
 RUN install2.r --error -s --deps TRUE fivethirtyeight 
 RUN install2.r --error -s -r "https://fivethirtyeightdata.github.io/drat/" fivethirtyeightdata
+RUN echo "PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH" >> /etc/R/Renviron.site 
 
 
 #########
