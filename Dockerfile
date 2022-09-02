@@ -57,9 +57,14 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN add-apt-repository universe && \
     apt-get update && \
     apt-get install -y --no-install-recommends \
-        texlive-full \
-        lmodern \
         pandoc
+
+RUN  wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz && \
+     tar -zxf install-tl-unx.tar.gz  && \
+     cd install-tl-* && \
+     perl ./install-tl --no-interaction 
+
+RUN echo 'PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH' >> /etc/bash.bashrc		
 
 # Libraries
 RUN apt-get update \
@@ -556,6 +561,8 @@ RUN cd /r-studio-configs && \
 
 # Needed by gert which is needed by usethis
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libgit2-dev
+
+RUN Rscript -e "tinytex::install_tinytex()"
 
 
 #########
