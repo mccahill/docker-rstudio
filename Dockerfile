@@ -561,6 +561,8 @@ RUN install2.r --error -s --deps TRUE fivethirtyeight
 RUN install2.r --error -s -r "https://fivethirtyeightdata.github.io/drat/" fivethirtyeightdata
 RUN echo "PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH" >> /etc/R/Renviron.site 
 
+# set the glorious TZ env variable site-wide for R contexts
+RUN echo 'TZ="America/New_York"' >> /etc/R/Renviron.site 
 
 #########
 #
